@@ -1,0 +1,52 @@
+/*-------------------
+  generic overrides
+-------------------*/
+
+.header,
+.tile,
+.notificationBar,
+.notificationList,
+.container--article {
+    box-shadow: 0 1px 0 0 rgba(7, 7, 33, .15);
+}
+
+.tile--fullyTransparent {
+    box-shadow: none;
+}
+
+.button {
+	border-radius: 4px;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.headingL,
+.headingM,
+.headingS,
+.headingXL,
+.headingXS,
+.headingXXL,
+.headingXXS,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: -0.3px;
+}
+
+.rppb-plan-button {
+    @include sm {
+        margin-left: $half-gutter !important;
+    }
+}
+
+.content {
+    overflow: hidden;
+    padding: 0;
+}
