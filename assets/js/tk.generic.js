@@ -65,7 +65,7 @@ $(document).ready(function () {
                     triggerElement: "#js-sticky-trig",
                     duration: 999999,
                 })
-                .triggerHook(0.9)
+                .triggerHook(0.905)
                 .offset(0)
                 .on("start", function () {
                     $(".js-sticky-bar").toggleClass("is-active");

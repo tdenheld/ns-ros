@@ -49,16 +49,26 @@ h6 {
     padding: 0;
 }
 
-.ovr-container {
-    margin: 0 0 $half-gutter;
+.ovr-content {
+    background-color: $ns-white;
+}
 
+.ovr-container {
+    padding: 14px;
+    box-shadow: none;
     @include sm {
-        margin: $half-gutter; 
+        padding: 0 2rem;
     }
-    @include sm-ex {
-        padding-top: 1.375rem;
+}
+
+.ovr-footer {
+    background-color: $ns-blue;
+
+    .footer__heading {
+        color: $ns-white;
     }
-    @include lg {
-        margin: $gutter auto;
+
+    .iconLink {
+        color: $ns-white;
     }
 }

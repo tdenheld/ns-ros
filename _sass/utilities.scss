@@ -860,6 +860,7 @@
 .br-8    {border-radius: 8px;}
 .br-12   {border-radius: 12px;}
 .br-16   {border-radius: 16px;}
+.br-100   {border-radius: 100px;}
 .br-50ct {border-radius: 50%;}
 
 
@@ -932,7 +933,7 @@
 // --------------------------------------------
 // linear
 .gd-110-vivid {background: linear-gradient(110deg, #0d6b9e 0%, #8ad4e4 100%);}	
-.gd-110-cerulean {background: linear-gradient(110deg, #94DCF6 0%, #C6EDFD 100%);}	
+.gd-110-cerulean {background: linear-gradient(110deg, rgb(189, 235, 252) 0%, rgb(213, 242, 253) 100%);}	
 .gd-90-cobalt {background: linear-gradient(to bottom,rgba($ns-blue, 1) 0%,rgba($ns-blue, 0) 80%);}
 .gd-90-black {background: linear-gradient(to bottom,rgba($ns-black, 1) 20%,rgba($ns-black, 0) 100%);}	
 .gd-110-blue {background: linear-gradient(110deg, #0050A8 0%, $ns-blue 100%);}	

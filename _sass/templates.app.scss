@@ -7,12 +7,31 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 10px 2rem;
+    padding: 14px 21px;
     background-color: $ns-white;
     border-top: 1px solid $ns-grey-7;
-    box-shadow: 0 2px 25px $ns-grey-alpha-20;
 
     &.is-active {
         display: block;
+    }
+}
+
+// .chk-hero {
+//     position: relative;
+// }
+
+// .chk-hero__bg {
+//     position: absolute;
+//     width: 100%;
+//     height: 80%;
+//     @include md {
+//         height: 100%;
+//     }
+// }
+
+.chk-order {
+    position: relative;
+    @include md {
+        top: -62px;
     }
 }
