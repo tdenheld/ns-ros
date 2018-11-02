@@ -1,8 +1,37 @@
 ---
+cta: Naar gegevens
+dest: 2
 ---
 
-<div class="container container--section container--article container--clearHeader">
-    <div class="bodyItem__text">
-        <h1>Heeft u al een OV-chipkaart?</h1>
+<div class="container container--section container--article ovr-container">
+    <div class="grid">
+        <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
+            {% include summary.html class="bo-a bg-grey-8 pa-2" ov-fiets="true" %}
+            <h1 class="headingL mb-2">Heb je al een OV chipkaart?</h1>
+            <div class="bo-t mb-4"></div>
+            <form class="mb-4 mxw-650">
+                <ul class="list formfield__inputGroup pt-0">
+                    <li class="list__item formfield__inputGroupItem mb-0 bg-grey-8 bo-a pa-2">
+                        <div class="radioButton">
+                            <input type="radio" class="radioButton__input" id="input3" name="input3" checked="checked">
+                            <label class="radioButton__label" for="input3" tabindex="-1">
+                                <div class="">Ik heb een OV-chipkaart</div>
+                                <div class="f14 f-grey-4 lh-title">Reis vandaag nog met Dal Voordeel</div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list__item formfield__inputGroupItem bo-b bo-h pa-2">
+                        <div class="radioButton">
+                            <input type="radio" class="radioButton__input" id="input4" name="input3">
+                            <label class="radioButton__label" for="input4" tabindex="-1">
+                                <div class="">Nieuwe OV-chipkaart</div>
+                                <div class="f14 f-grey-4 lh-title">Binnen 1 week gratis in huis</div>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            {% include cta.html %}
+        </div>
     </div>
 </div>

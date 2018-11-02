@@ -26,11 +26,19 @@
 
 <body>
 
-    {% include header.html %}
-    <div class="content">
-        {{ content }}
+    {% include header.html class="a a-fi" %}
+    <div class="content a a-fi">
+        <div class="a a-fi-right-small a-del-200 a-dur-500">
+            {{ content }}
+        </div>
     </div>
-    {% include footer.html %}
+    {% include footer.html class="a a-fi a-del-500" %}
+
+    <div class="sticky-bar visible-xs js-sticky-bar">
+        <a href="/pages/page-{{ page.dest }}.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
+            {{ page.cta }}
+        </a>
+    </div>
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/ns.generic.min.js"></script>

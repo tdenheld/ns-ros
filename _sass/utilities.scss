@@ -56,6 +56,21 @@
      -md = min-width $md
      -lg = min-width $lg
 */
+// auto-margins
+.m-auto {
+    margin: 0 auto;
+}
+
+@include sm {
+    .m-auto-sm {margin: 0 auto;}     
+}
+@include md {
+    .m-auto-md {margin: 0 auto;}     
+}
+@include lg {
+    .m-auto-lg {margin: 0 auto;}     
+}
+
 @for $i from 0 through 20 {	
 	// margin
 	.ma-#{$i} {	@include spacer($i, margin); }
@@ -135,7 +150,6 @@
 }
 
 
-
 /*-------------------
        Widths
 --------------------*/
@@ -211,6 +225,15 @@
 	.w-80-lg {  width:  80%; }
 	.w-90-lg {  width:  90%; }
 	.w-100-lg { width: 100%; }
+}
+
+// max widths
+@for $i from 0 through 32 {
+    $x: $i * 50;
+    $y: $i * 50px;
+    .mxw-#{$x} {
+        max-width: #{$y};
+    }
 }
 
 

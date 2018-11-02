@@ -26,7 +26,7 @@
 
 <body>
 
-    <header class="header a a-fi a-del-250" data-controller="generic/ui/Header" data-noindex="true">
+    <header class="header a a-fi" data-controller="generic/ui/Header" data-noindex="true">
     <div class="container header__content">
         <a href="#mainContent" class="button header__skiplink" data-controller="generic/ui/SmoothScroll">
         Naar content</a>
@@ -1531,21 +1531,95 @@
         </ul>
     </div>
 </header>
-    <div class="content">
-        <div class="container container--section container--article container--clearHeader">
-    <div class="bodyItem__text">
-        <div class="g g-4-1">
-            <h3 class="headingXS fw-b mb-0">Dal Voordeel</h3>
-            <p class="f-blue txt-r mb-0">€ 50,00</p>
+    <div class="content a a-fi">
+        <div class="a a-fi-right-small a-del-200 a-dur-500">
+            <div class="container container--section container--article ovr-container">
+    <div class="grid">
+        <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
+            <div class="mxw-350 mb-6 mb-8-sm bo-a bg-grey-8 pa-2">
+    <div class="g g-1-m">
+        <h3 class="headingXS fw-b mb-1">Dal Voordeel</h3>
+        <p class="f-blue txt-r mb-0">€ 50,00</p>
+    </div>
+    <p class="f-grey-3 f14 lh-copy mb-0">Reisklasse: 2e klas</p>
+    <p class="f-grey-3 f14 lh-copy mb-0">Looptijd: Jaar</p>
+    <p class="f-grey-3 f14 lh-copy mb-0">Ingangsdatum: 18-07-2018</p>
+
+    
+</div>
+            <h1 class="headingL mb-2">Breid je abonnement uit</h1>
+            <div class="bo-t mb-2"></div>
+            <form class="mb-4">
+                
+                <div class="checkbox formfield__checkbox mb-2">
+                    <input required type="checkbox" class="checkbox__input" id="checkbox1" name="checkbox1">
+                    <label class="checkbox__label" for="checkbox1">
+                        <div class="fw-b f-blue">
+                            IC Direct Altijd Toeslagvrij
+                        </div>
+                        <div class="f14 lh-copy">
+                            Onbeperkt reizen op het gehele traject van de Intercity Direct<br>
+                            € 51,00 
+                            / mnd
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="checkbox formfield__checkbox mb-2">
+                    <input required type="checkbox" class="checkbox__input" id="checkbox2" name="checkbox2">
+                    <label class="checkbox__label" for="checkbox2">
+                        <div class="fw-b f-blue">
+                            Keuzedagen 2e klas
+                        </div>
+                        <div class="f14 lh-copy">
+                            7 vrije reisdagen voor 60+<br>
+                            € 49,00 
+                            / jaar
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="checkbox formfield__checkbox mb-2">
+                    <input required type="checkbox" class="checkbox__input" id="checkbox3" name="checkbox3">
+                    <label class="checkbox__label" for="checkbox3">
+                        <div class="fw-b f-blue">
+                            OV-fiets
+                        </div>
+                        <div class="f14 lh-copy">
+                            Huur een fiets en betaal automatisch via je bankrekening<br>
+                             
+                            
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="checkbox formfield__checkbox mb-2">
+                    <input required type="checkbox" class="checkbox__input" id="checkbox4" name="checkbox4">
+                    <label class="checkbox__label" for="checkbox4">
+                        <div class="fw-b f-blue">
+                            Stallen op Rekening
+                        </div>
+                        <div class="f14 lh-copy">
+                            Veilig uw fiets stallen en achteraf betalen<br>
+                             
+                            
+                        </div>
+                    </label>
+                </div>
+                
+            </form>
+            <div class="bo-t mb-2"></div>
+<div class="txt-r" id="js-sticky-trig">
+    <a href="/pages/page-1.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
+        Verder naar bestellen
+    </a>
+</div>
         </div>
-        <p class="f-grey-4 f14 lh-copy mb-0">Reisklasse: 2e klas</p>
-        <p class="f-grey-4 f14 lh-copy">Ingangsdatum: 18-07-2018 (1 jaar)</p>
-        <h1>Wilt u persoonlijk voordeel?</h1>
-        <a href="/pages/page-1.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">Verder</a>
     </div>
 </div>
+        </div>
     </div>
-    <footer class="footer a a-fi a-del-1000">
+    <footer class="footer a a-fi a-del-500">
     <div class="container">
         <div class="grid grid--footer" data-controller="generic/ui/ResponsiveGrid" data-type="footermenu">
             <div class="grid__unit m-6-12 l-3-12" data-type="topfootermenuitem">
@@ -1707,6 +1781,12 @@
         </div>
     </div>
 </footer>
+
+    <div class="sticky-bar visible-xs js-sticky-bar">
+        <a href="/pages/page-1.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
+            Verder naar bestellen
+        </a>
+    </div>
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/ns.generic.min.js"></script>

@@ -26,7 +26,7 @@
 
 <body>
 
-    <header class="header a a-fi a-del-250" data-controller="generic/ui/Header" data-noindex="true">
+    <header class="header a a-fi" data-controller="generic/ui/Header" data-noindex="true">
     <div class="container header__content">
         <a href="#mainContent" class="button header__skiplink" data-controller="generic/ui/SmoothScroll">
         Naar content</a>
@@ -1531,14 +1531,63 @@
         </ul>
     </div>
 </header>
-    <div class="content">
-        <div class="container container--section container--article container--clearHeader">
-    <div class="bodyItem__text">
-        <h1>Heeft u al een OV-chipkaart?</h1>
+    <div class="content a a-fi">
+        <div class="a a-fi-right-small a-del-200 a-dur-500">
+            <div class="container container--section container--article ovr-container">
+    <div class="grid">
+        <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
+            <div class="mxw-350 mb-6 mb-8-sm bo-a bg-grey-8 pa-2">
+    <div class="g g-1-m">
+        <h3 class="headingXS fw-b mb-1">Dal Voordeel</h3>
+        <p class="f-blue txt-r mb-0">€ 50,00</p>
+    </div>
+    <p class="f-grey-3 f14 lh-copy mb-0">Reisklasse: 2e klas</p>
+    <p class="f-grey-3 f14 lh-copy mb-0">Looptijd: Jaar</p>
+    <p class="f-grey-3 f14 lh-copy mb-0">Ingangsdatum: 18-07-2018</p>
+
+    
+    <div class="g g-1-m mt-2 bo-t pt-1">
+        <h3 class="headingXS fw-b mb-0">OV-fiets</h3>
+        <p class="f-blue txt-r mb-0">Op rekening</p>
+    </div>
+    
+</div>
+            <h1 class="headingL mb-2">Heb je al een OV chipkaart?</h1>
+            <div class="bo-t mb-4"></div>
+            <form class="mb-4 mxw-650">
+                <ul class="list formfield__inputGroup pt-0">
+                    <li class="list__item formfield__inputGroupItem mb-0 bg-grey-8 bo-a pa-2">
+                        <div class="radioButton">
+                            <input type="radio" class="radioButton__input" id="input3" name="input3" checked="checked">
+                            <label class="radioButton__label" for="input3" tabindex="-1">
+                                <div class="">Ik heb een OV-chipkaart</div>
+                                <div class="f14 f-grey-4 lh-title">Reis vandaag nog met Dal Voordeel</div>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="list__item formfield__inputGroupItem bo-b bo-h pa-2">
+                        <div class="radioButton">
+                            <input type="radio" class="radioButton__input" id="input4" name="input3">
+                            <label class="radioButton__label" for="input4" tabindex="-1">
+                                <div class="">Nieuwe OV-chipkaart</div>
+                                <div class="f14 f-grey-4 lh-title">Binnen 1 week gratis in huis</div>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div class="bo-t mb-2"></div>
+<div class="txt-r" id="js-sticky-trig">
+    <a href="/pages/page-2.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
+        Naar gegevens
+    </a>
+</div>
+        </div>
     </div>
 </div>
+        </div>
     </div>
-    <footer class="footer a a-fi a-del-1000">
+    <footer class="footer a a-fi a-del-500">
     <div class="container">
         <div class="grid grid--footer" data-controller="generic/ui/ResponsiveGrid" data-type="footermenu">
             <div class="grid__unit m-6-12 l-3-12" data-type="topfootermenuitem">
@@ -1700,6 +1749,12 @@
         </div>
     </div>
 </footer>
+
+    <div class="sticky-bar visible-xs js-sticky-bar">
+        <a href="/pages/page-2.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
+            Naar gegevens
+        </a>
+    </div>
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/ns.generic.min.js"></script>
