@@ -14,9 +14,9 @@
     box-shadow: none;
 }
 
-.button {
-	border-radius: 4px;
-}
+// .button {
+// 	border-radius: 4px;
+// }
 
 .h1,
 .h2,
@@ -50,21 +50,15 @@ h6 {
 }
 
 .ovr-container {
-    padding: 14px;
-    box-shadow: none;
+    margin: 0 0 $half-gutter;
+
     @include sm {
-        padding: 0 2rem;
+        margin: $half-gutter; 
     }
-}
-
-.ovr-footer-blue {
-    background-color: $ns-blue;
-
-    .footer__heading {
-        color: $ns-white;
+    @include sm-ex {
+        padding-top: 1.375rem;
     }
-
-    .iconLink {
-        color: $ns-white;
+    @include lg {
+        margin: $gutter auto;
     }
 }
