@@ -49,10 +49,6 @@ h6 {
     padding: 0;
 }
 
-.ovr-content {
-    background-color: $ns-white;
-}
-
 .ovr-container {
     padding: 14px;
     box-shadow: none;
@@ -61,7 +57,7 @@ h6 {
     }
 }
 
-.ovr-footer {
+.ovr-footer-blue {
     background-color: $ns-blue;
 
     .footer__heading {

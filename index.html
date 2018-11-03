@@ -3,11 +3,11 @@ cta: Verder naar bestellen
 dest: 1
 ---
 
-<div class="gd-r-yellow pv-2 pv-4-sm">
-    <div class="container ovr-container">
+<div class="gd-r-yellow pv-1 pv-4-sm">
+    <div class="container ovr-container a a-fi-right-small a-del-200 a-dur-500">
         <div class="grid">
             <div class="grid__unit s-4-4 l-7-12 xl-8-12">
-                <h1 class="headingXXL fw-b mb-2 db">Uitbreiden maar</h1>
+                <h1 class="headingXXL fw-b mb-2">Uitbreiden maar</h1>
                 <p class="headingM mb-0">
                     OV-fiets en Stallen op Rekening zijn best handig. En als je het niet gebruikt kost
                     het je ook niets.
@@ -16,10 +16,10 @@ dest: 1
         </div>
     </div>
 </div>
-<div class="container ovr-container">
+<div class="container ovr-container a a-fi-right-small a-del-300 a-dur-500">
     <div class="grid">
         <div class="grid__unit s-4-4 l-7-12 xl-8-12">
-            <form>
+            <form class="mt-2-sm">
                 {% for checkbox in site.data.app.checkbox %}
                 <div class="checkbox formfield__checkbox mb-2">
                     <input required type="checkbox" class="checkbox__input" id="checkbox{{ forloop.index }}" name="checkbox{{ forloop.index }}">
