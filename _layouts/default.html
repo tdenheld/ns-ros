@@ -27,13 +27,15 @@
 <body>
 
     {% include header.html class="a a-fi" %}
-    <div class="content bg-white a a-fi">
+    <div class="content a a-fi">
+        <div class="a a-fi-right-small a-del-200 a-dur-500">
             {{ content }}
+        </div>
     </div>
-    {% include footer-blue.html class="a a-fi a-del-500" %}
+    {% include footer.html class="a a-fi a-del-500" %}
 
     <div class="sticky-bar visible-xs js-sticky-bar">
-        <a href="/pages/page-{{ page.dest }}.html" class="button button--arrowRight button--nsYellow br-100 w-100 w-auto-sm">
+        <a href="/pages/page-{{ page.dest }}.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
             {{ page.cta }}
         </a>
     </div>

@@ -3,23 +3,13 @@ cta: Verder naar bestellen
 dest: 1
 ---
 
-<div class="gd-r-yellow pv-1 pv-4-sm">
-    <div class="container ovr-container a a-fi-right-small a-del-200 a-dur-500">
-        <div class="grid">
-            <div class="grid__unit s-4-4 l-7-12 xl-8-12">
-                <h1 class="headingXXL fw-b mb-2">Uitbreiden maar</h1>
-                <p class="headingM mb-0">
-                    OV-fiets en Stallen op Rekening zijn best handig. En als je het niet gebruikt kost
-                    het je ook niets.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container ovr-container a a-fi-right-small a-del-300 a-dur-500">
+<div class="container container--section container--article ovr-container">
     <div class="grid">
-        <div class="grid__unit s-4-4 l-7-12 xl-8-12">
-            <form class="mt-2-sm">
+        <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
+            {% include order-details.html class="bo-a bg-grey-8 pa-2" %}
+            <h1 class="headingL mb-2">Breid je abonnement uit</h1>
+            <div class="bo-t mb-2"></div>
+            <form class="mb-4">
                 {% for checkbox in site.data.app.checkbox %}
                 <div class="checkbox formfield__checkbox mb-2">
                     <input required type="checkbox" class="checkbox__input" id="checkbox{{ forloop.index }}" name="checkbox{{ forloop.index }}">
@@ -29,19 +19,14 @@ dest: 1
                         </div>
                         <div class="f14 lh-copy">
                             {{ checkbox.description }}<br>
-                            {{ checkbox.price }}
+                            {{ checkbox.price }} 
                             {{ checkbox.per }}
                         </div>
                     </label>
                 </div>
                 {% endfor %}
             </form>
-        </div>
-        <div class="grid__unit s-4-4 l-5-12 xl-4-12 mb-2">
-            {% include order-details.html class="chk-order bg-white bs-s pa-4" %}
-        </div>
-        <div class="grid__unit s-4-4 mb-4">
-             {% include cta.html %}
+            {% include cta.html %}
         </div>
     </div>
 </div>
