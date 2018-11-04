@@ -3,30 +3,40 @@ cta: Verder naar bestellen
 dest: 1
 ---
 
-<div class="container container--section container--article ovr-container">
+
+<div class="container ovr-container">
     <div class="grid">
-        <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
-            {% include order-details.html class="bo-a bg-grey-8 pa-2" %}
-            <h1 class="headingL mb-2">Breid je abonnement uit</h1>
-            <div class="bo-t mb-2"></div>
-            <form class="mb-4">
-                {% for checkbox in site.data.app.checkbox %}
-                <div class="checkbox formfield__checkbox mb-2">
-                    <input required type="checkbox" class="checkbox__input" id="checkbox{{ forloop.index }}" name="checkbox{{ forloop.index }}">
-                    <label class="checkbox__label" for="checkbox{{ forloop.index }}">
-                        <div class="fw-b f-blue">
-                            {{ checkbox.title }}
-                        </div>
-                        <div class="f14 lh-copy">
-                            {{ checkbox.description }}<br>
-                            {{ checkbox.price }} 
-                            {{ checkbox.per }}
-                        </div>
-                    </label>
-                </div>
-                {% endfor %}
-            </form>
-            {% include cta.html %}
+        <div class="grid__unit s-4-4 l-7-12 xl-8-12 pv-0">
+            <div class="tile">
+                {% include order-details.html class="bo-a bg-grey-8 pa-2 mb-4 mb-8-sm hidden-md hidden-lg" %}
+                <h1 class="headingXL fw-b mb-2 mb-4-sm">Breid je abonnement uit</h1>
+                <form class="mb-4">
+                    {% for checkbox in site.data.app.checkbox %}
+                    <div class="checkbox formfield__checkbox mb-2">
+                        <input required type="checkbox" class="checkbox__input" id="checkbox{{ forloop.index }}" name="checkbox{{ forloop.index }}">
+                        <label class="checkbox__label" for="checkbox{{ forloop.index }}">
+                            <div class="fw-b f-blue">
+                                {{ checkbox.title }}
+                            </div>
+                            <div class="f14 lh-copy">
+                                {{ checkbox.description }}<br>
+                                {{ checkbox.price }}
+                                {{ checkbox.per }}
+                            </div>
+                        </label>
+                    </div>
+                    {% endfor %}
+                </form>
+                <!-- {% include order-details.html class="bo-a bg-grey-8 pa-2 mb-4 visible-xs" %} -->
+                {% include cta.html %}
+            </div>
+        </div>
+        <div class="grid__unit s-4-4 l-5-12 xl-4-12 pv-0 hidden-xs hidden-sm">
+            <div class="tile">
+                <h4 class="headingS">Jouw overzicht</h4>
+                <div class="bo-b mb-3"></div>
+                {% include order-details.html class="" %}
+            </div>
         </div>
     </div>
 </div>

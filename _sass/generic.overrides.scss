@@ -49,14 +49,17 @@ h6 {
     padding: 0;
 }
 
+.container--article {
+    @include sm-ex {
+        padding-top: 1.375rem;
+    }
+}
+
 .ovr-container {
     margin: 0 0 $half-gutter;
 
     @include sm {
         margin: $half-gutter; 
-    }
-    @include sm-ex {
-        padding-top: 1.375rem;
     }
     @include lg {
         margin: $gutter auto;
