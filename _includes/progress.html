@@ -1,0 +1,110 @@
+<div class="progress">
+    {% if include.step == '1' %}
+    <div class="progress__bar">
+        <div></div>
+        <div class="progress__line"></div>
+        <div class="progress__line"></div>
+        <div class="progress__line"></div>
+        <div></div>
+    </div>
+    <div class="progress__grid">
+        <div class="progress__step progress__step--active">
+            <div class="progress__circle a a-dur-0">1</div>
+            <div class="progress__description hidden-xs">OV-chipkaart</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">2</div>
+            <div class="progress__description hidden-xs">Gegevens</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">3</div>
+            <div class="progress__description hidden-xs">Betalen</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">4</div>
+            <div class="progress__description hidden-xs">Bedankt</div>
+        </div>
+    </div>
+    {% endif %}
+    {% if include.step == '2' %}
+    <div class="progress__bar">
+        <div></div>
+        <div class="progress__line progress__line--done"></div>
+        <div class="progress__line"></div>
+        <div class="progress__line"></div>
+        <div></div>
+    </div>
+    <div class="progress__grid">
+        <div class="progress__step progress__step--done">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">OV-chipkaart</div>
+        </div>
+        <div class="progress__step progress__step--active">
+            <div class="progress__circle a a-dur-300 a-del-550">2</div>
+            <div class="progress__description hidden-xs">Gegevens</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">3</div>
+            <div class="progress__description hidden-xs">Betalen</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">4</div>
+            <div class="progress__description hidden-xs">Bedankt</div>
+        </div>
+    </div>
+    {% endif %}
+    {% if include.step == '3' %}
+    <div class="progress__bar">
+        <div></div>
+        <div class="progress__line progress__line--active"></div>
+        <div class="progress__line progress__line--done"></div>
+        <div class="progress__line"></div>
+        <div></div>
+    </div>
+    <div class="progress__grid">
+        <div class="progress__step progress__step--done">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">OV-chipkaart</div>
+        </div>
+        <div class="progress__step progress__step--done">
+            <div class="progress__circle"></div>
+            <div class="progress__description hidden-xs">Gegevens</div>
+        </div>
+        <div class="progress__step progress__step--active">
+            <div class="progress__circle a a-dur-300 a-del-550">3</div>
+            <div class="progress__description hidden-xs">Betalen</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">4</div>
+            <div class="progress__description hidden-xs">Bedankt</div>
+        </div>
+    </div>
+    {% endif %}
+    {% if include.step == '4' %}
+    <div class="progress__bar">
+            <div></div>
+            <div class="progress__line progress__line--active"></div>
+            <div class="progress__line progress__line--active"></div>
+            <div class="progress__line progress__line--done"></div>
+            <div></div>
+        </div>
+        <div class="progress__grid">
+            <div class="progress__step progress__step--done">
+                <div class="progress__circle"></div>
+                <div class="progress__description hidden-xs">OV-chipkaart</div>
+            </div>
+            <div class="progress__step progress__step--done">
+                <div class="progress__circle"></div>
+                <div class="progress__description hidden-xs">Gegevens</div>
+            </div>
+            <div class="progress__step progress__step--done">
+                <div class="progress__circle"></div>
+                <div class="progress__description hidden-xs">Betalen</div>
+            </div>
+            <div class="progress__step progress__step--active">
+                <div class="progress__circle a a-dur-300 a-del-550">4</div>
+                <div class="progress__description hidden-xs">Bedankt</div>
+            </div>
+        </div>
+    {% endif %}
+</div>

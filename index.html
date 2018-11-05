@@ -3,8 +3,7 @@ cta: Verder naar bestellen
 dest: 1
 ---
 
-
-<div class="container container--section container--article ovr-container mxw-900">
+<div class="container container--section container--article ovr-container a a-fi-right-small a-del-200 a-dur-500">
     <div class="grid">
         <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
             <div class="mb-6 mb-8-sm">
@@ -13,21 +12,25 @@ dest: 1
                     <span class="f24">€ 50,00</span><span class="f14"> / jaar</span>
                 </div>
                 <div class="bo-b-blue-2px mb-3"></div>
-                <p class="f-grey-3 lh-copy mb-0">Reisklasse: 2e klas</p>
-                <p class="f-grey-3 lh-copy mb-0">Ingangsdatum: 18-07-2018</p>
-                <p class="f-grey-3 lh-copy mb-0">Contractduur: 1 jaar. Daarna maandelijks opzegbaar.</p>
+                <div class="g g-m-1 col-gap-2 f14 f16-sm f-grey-3 lh-copy">
+                    <div>Reisklasse:</div>
+                    <div>2e klas</div>
+                    <div>Ingangsdatum:</div>
+                    <div>18-07-2018</div>
+                    <div>Contractduur:</div>
+                    <div>1 jaar. Daarna maandelijks opzegbaar.</div>
+                </div>
             </div>
-            <h2 class="f24 f28-sm mb-1">Voordeel 60+</h2>
+            <h2 class="f24 mb-0">Voordeel 60+</h2>
             <form class="mb-4">
                 {% for checkbox in site.data.app.checkbox %}
-                <div class="checkbox formfield__checkbox pa-2 bo-a mb-2 tr-300 js-chbx js-chbx{{ forloop.index }}">
+                <div class="checkbox formfield__checkbox">
                     <input required type="checkbox" class="checkbox__input" id="checkbox{{ forloop.index }}" name="checkbox{{ forloop.index }}">
-
                     <label class="checkbox__label" for="checkbox{{ forloop.index }}">
-                        <div class="ml-1 fw-b f-blue">
+                        <div class="fw-b f-blue">
                             {{ checkbox.title }}
                         </div>
-                        <div class="ml-1 f14 lh-copy">
+                        <div class="f14 lh-copy">
                             {{ checkbox.description }}<br>
                             {{ checkbox.price }}
                             {{ checkbox.per }}

@@ -3,12 +3,15 @@ cta: Naar gegevens
 dest: 2
 ---
 
-<div class="container container--section container--article ovr-container">
+<div class="container ovr-container a a-fi-down">
+    {% include progress.html step="1" %}
+</div>
+
+<div class="container container--section container--article ovr-container a a-fi-right-small a-del-200 a-dur-500">
     <div class="grid">
         <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
-            <h1 class="headingXL fw-b mb-2 mb-4-sm">Heb je al een OV chipkaart?</h1>
-            <div class="mb-4"></div>
-            <form class="mb-4 mxw-650">
+            <h1 class="headingXL fw-b mb-2 mb-4-sm">1. Heb je al een OV chipkaart?</h1>
+            <form class="mb-4">
                 <ul class="list formfield__inputGroup pt-0">
                     <li class="list__item formfield__inputGroupItem mb-0 bg-grey-8 bo-a pa-2">
                         <div class="radioButton">
@@ -30,6 +33,7 @@ dest: 2
                     </li>
                 </ul>
             </form>
+            <div class="mb-20-sm"></div>
             {% include cta.html %}
         </div>
     </div>

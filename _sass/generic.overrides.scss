@@ -57,11 +57,12 @@ h6 {
 
 .ovr-container {
     margin: 0 0 $half-gutter;
+    max-width: 886px;
 
     @include sm {
         margin: $half-gutter; 
     }
-    @include lg {
+    @include md {
         margin: $gutter auto;
     }
 }

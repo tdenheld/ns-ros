@@ -26,7 +26,7 @@
 
 <body>
 
-    <header class="header a a-fi" data-controller="generic/ui/Header" data-noindex="true">
+    <header class="header " data-controller="generic/ui/Header" data-noindex="true">
     <div class="container header__content">
         <a href="#mainContent" class="button header__skiplink" data-controller="generic/ui/SmoothScroll">
         Naar content</a>
@@ -1531,14 +1531,47 @@
         </ul>
     </div>
 </header>
-    <div class="content a a-fi">
-        <div class="a a-fi-right-small a-del-200 a-dur-500">
-            <div class="container container--section container--article ovr-container">
+    <div class="content">
+        <div class="container ovr-container a a-fi-down">
+    <div class="progress">
+    
+    <div class="progress__bar">
+        <div></div>
+        <div class="progress__line"></div>
+        <div class="progress__line"></div>
+        <div class="progress__line"></div>
+        <div></div>
+    </div>
+    <div class="progress__grid">
+        <div class="progress__step progress__step--active">
+            <div class="progress__circle a a-dur-0">1</div>
+            <div class="progress__description hidden-xs">OV-chipkaart</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">2</div>
+            <div class="progress__description hidden-xs">Gegevens</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">3</div>
+            <div class="progress__description hidden-xs">Betalen</div>
+        </div>
+        <div class="progress__step">
+            <div class="progress__circle">4</div>
+            <div class="progress__description hidden-xs">Bedankt</div>
+        </div>
+    </div>
+    
+    
+    
+    
+</div>
+</div>
+
+<div class="container container--section container--article ovr-container a a-fi-right-small a-del-200 a-dur-500">
     <div class="grid">
         <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
-            <h1 class="headingXL fw-b mb-2 mb-4-sm">Heb je al een OV chipkaart?</h1>
-            <div class="mb-4"></div>
-            <form class="mb-4 mxw-650">
+            <h1 class="headingXL fw-b mb-2 mb-4-sm">1. Heb je al een OV chipkaart?</h1>
+            <form class="mb-4">
                 <ul class="list formfield__inputGroup pt-0">
                     <li class="list__item formfield__inputGroupItem mb-0 bg-grey-8 bo-a pa-2">
                         <div class="radioButton">
@@ -1560,6 +1593,7 @@
                     </li>
                 </ul>
             </form>
+            <div class="mb-20-sm"></div>
             <div class="bo-t mb-2"></div>
 <div class="txt-r" id="js-sticky-trig">
     <a href="/pages/page-2.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
@@ -1569,9 +1603,8 @@
         </div>
     </div>
 </div>
-        </div>
     </div>
-    <footer class="footer a a-fi a-del-500">
+    <footer class="footer ">
     <div class="container">
         <div class="grid grid--footer" data-controller="generic/ui/ResponsiveGrid" data-type="footermenu">
             <div class="grid__unit m-6-12 l-3-12" data-type="topfootermenuitem">
