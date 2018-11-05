@@ -81,6 +81,10 @@
                 color: $ns-white;
             }
         }
+        animation-duration: 550ms;
+        animation-delay: 300ms;
+        animation-fill-mode: both;
+        animation-timing-function: $ease;
         animation-name: color-in;
     }
 }

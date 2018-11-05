@@ -17,13 +17,13 @@
 // Objects
 
 // Components
-@import "components.animate";
 @import "components.buttons";
-@import "components.transitions";
 @import "components.switch";
 
 // Templates
 @import "templates.app";
 
 // Utilities
-@import "utilities";
+@import "utilities.animate";
+@import "utilities.transitions";
+@import "utilities.tachyons";
