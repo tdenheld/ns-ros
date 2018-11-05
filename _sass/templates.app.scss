@@ -15,3 +15,13 @@
         display: block;
     }
 }
+
+// order details
+// ----------------------------------------
+.chk-order {
+    max-width: 450px;
+}
+
+.chk-order__line {
+    border-bottom: 2px solid $ns-blue;
+}

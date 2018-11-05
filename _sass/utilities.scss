@@ -853,6 +853,9 @@
 .bo-l-a15 {border-left: 1px solid $ns-grey-alpha-15;}
 .bo-r-a15 {border-right: 1px solid $ns-grey-alpha-15;}
 
+.bo-b-blue {border-bottom: 1px solid $ns-blue;}
+.bo-b-blue-2px {border-bottom: 2px solid $ns-blue;}
+
 // radius
 // --------------------------------------------
 .br-none {border-radius: none;}
@@ -860,6 +863,7 @@
 .br-8    {border-radius: 8px;}
 .br-12   {border-radius: 12px;}
 .br-16   {border-radius: 16px;}
+.br-pill {border-radius: 100px;}
 .br-50ct {border-radius: 50%;}
 
 

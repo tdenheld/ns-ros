@@ -84,7 +84,7 @@ $(document).ready(function () {
     function addOn() {
         function trig(i) {
             $(".js-chbx" + i).on("change", function () {
-                $(this).toggleClass("gd-110-cerulean");
+                $(this).toggleClass("bg-grey-8");
             });
         };
         $(".js-chbx").each(function (i) {
