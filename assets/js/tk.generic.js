@@ -79,6 +79,24 @@ $(document).ready(function () {
 
 
 
+    // checkboxes
+    // ------------------------------------------------------------
+    function addOn() {
+        function trig(i) {
+            $(".js-chbx" + i).on("change", function () {
+                $(this).toggleClass("gd-110-cerulean");
+            });
+        };
+        $(".js-chbx").each(function (i) {
+            x = i + 1;
+            trig(x);
+        });
+    }
+    addOn();
+
+
+
+
 
     // include html
     // ------------------------------------------------------------
