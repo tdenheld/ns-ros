@@ -2,6 +2,16 @@
          App
 --------------------*/
 
+.heading-fat {
+    @include font-style(36px, bold, 1.25);
+    @include sm {
+        @include font-style(72px, bold, 1.1);
+    }
+    @include lg {
+        @include font-style(96px, bold, 1.1);
+    }
+}
+
 .sticky-bar {
     display: none;
     position: fixed;
@@ -66,18 +76,18 @@
 .progress__step--active {
     .progress__description {
         font-weight: bold;
-        color: $ns-green;
+        color: $ns-green-sexy;
     }
 
     .progress__circle {
         @keyframes color-in {
             from {
                 background-color: $ns-white;
-                color: $ns-green;
+                color: $ns-green-sexy;
             }
 
             to {
-                background-color: $ns-green;
+                background-color: $ns-green-sexy;
                 color: $ns-white;
             }
         }
@@ -91,17 +101,17 @@
 
 .progress__step--done {
     .progress__description {
-        color: $ns-green;
+        color: $ns-green-sexy;
     }
 
     .progress__circle {
-        border: 3px solid $ns-green;
+        border: 3px solid $ns-green-sexy;
 
         &:before {
             content: "";
             width: 1rem;
             height: 1rem;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.75 8.125'%3E%3Ctitle%3Echeck-fat--small%3C/title%3E%3Cpath fill='%23009a42' d='M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.75 8.125'%3E%3Ctitle%3Echeck-fat--small%3C/title%3E%3Cpath fill='%2300AA89' d='M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: 50% 50%;
         }
@@ -122,7 +132,7 @@
 }
 
 .progress__line--active {
-    background-color: $ns-green;
+    background-color: $ns-green-sexy;
 }
 
 .progress__line--done {
@@ -131,7 +141,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        background-color: $ns-green;
+        background-color: $ns-green-sexy;
         transform: scaleX(0);
 
         @keyframes scale-in-x {
