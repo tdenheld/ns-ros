@@ -4,8 +4,13 @@ checkbox:
   price: € 49,00
   per: / jaar
 
-# - title: OV-fiets
-#   description: Huur een fiets en betaal automatisch via je bankrekening
+- title: OV-fiets
+  description: Huur een fiets en betaal automatisch via je bankrekening
 
-# - title: Stallen op Rekening
-#   description: Veilig uw fiets stallen en achteraf betalen
+- title: Stallen op Rekening
+  description: Veilig uw fiets stallen en achteraf betalen
+
+- title: IC Direct Altijd Toeslagvrij
+  description: Onbeperkt reizen op het gehele traject van de Intercity Direct
+  price: € 51,00
+  per: / mnd

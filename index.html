@@ -3,44 +3,24 @@ cta: Verder naar bestellen
 dest: 1
 ---
 
-<div class="container container--section container--article ovr-container a a-fi-right-small a-del-200 a-dur-500">
-    <div class="grid">
-        <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
-            <div class="mb-6 mb-8-sm">
-                <h1 class="headingXL fw-b mb-1">Dal Voordeel</h1>
-                <div class="f-blue mb-2">
-                    <span class="f24">€ 50,00</span><span class="f14"> / jaar</span>
-                </div>
-                <div class="bo-b-blue-2px mb-3"></div>
-                <div class="g g-m-1 col-gap-2 f14 f16-sm f-grey-3 lh-copy">
-                    <div>Reisklasse:</div>
-                    <div>2e klas</div>
-                    <div>Ingangsdatum:</div>
-                    <div>18-07-2018</div>
-                    <div>Contractduur:</div>
-                    <div>1 jaar. Daarna maandelijks opzegbaar.</div>
-                </div>
+<h1 class="headingXL fw-b mb-4">Jouw gekozen abonnement</h1>
+{% include order-details.html %}
+<h2 class="headingL mb-2">Breid je abonnement uit</h2>
+<form class="mb-4">
+    {% for checkbox in site.data.app.checkbox %}
+    <div class="checkbox formfield__checkbox mb-2">
+        <input required type="checkbox" class="checkbox__input" id="checkbox{{ forloop.index }}" name="checkbox{{ forloop.index }}">
+
+        <label class="checkbox__label" for="checkbox{{ forloop.index }}">
+            <div class="ml-1 fw-b f-blue">
+                {{ checkbox.title }}
             </div>
-            <h2 class="f24 mb-0">Voordeel 60+</h2>
-            <form class="mb-4">
-                {% for checkbox in site.data.app.checkbox %}
-                <div class="checkbox formfield__checkbox">
-                    <input required type="checkbox" class="checkbox__input" id="checkbox{{ forloop.index }}" name="checkbox{{ forloop.index }}">
-                    <label class="checkbox__label" for="checkbox{{ forloop.index }}">
-                        <div class="fw-b f-blue">
-                            {{ checkbox.title }}
-                        </div>
-                        <div class="f14 lh-copy">
-                            {{ checkbox.description }}<br>
-                            {{ checkbox.price }}
-                            {{ checkbox.per }}
-                        </div>
-                    </label>
-                </div>
-                {% endfor %}
-            </form>
-            <!-- {% include order-details.html class="pa-2 bo-a bg-grey-8 mb-4 visible-xs" %} -->
-            {% include cta.html %}
-        </div>
+            <div class="ml-1 f14 lh-copy">
+                {{ checkbox.description }}<br>
+                {{ checkbox.price }}
+                {{ checkbox.per }}
+            </div>
+        </label>
     </div>
-</div>
+    {% endfor %}
+</form>

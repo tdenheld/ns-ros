@@ -13,6 +13,10 @@
 .dflex { display: flex; }
 
 
+// overflows
+// ----------------------------------------------------------------------
+.o-hidden { overflow: hidden; }
+
 
 // full fills
 // ----------------------------------------------------------------------
@@ -53,6 +57,7 @@
 	
 	Media Query Extensions:
      -sm = min-width $sm
+     -sm-max = min-width $sm-max (only mobile)
      -md = min-width $md
      -lg = min-width $lg
 */
@@ -61,7 +66,6 @@
 .m-auto {
     margin: 0 auto;
 }
-
 @include sm {
     .m-auto-sm {margin: 0 auto;}     
 }
@@ -89,8 +93,27 @@
 	.pt-#{$i} {	@include spacer($i, padding-top); }
 	.pb-#{$i} {	@include spacer($i, padding-bottom); }
 	.pl-#{$i} {	@include spacer($i, padding-left); }
-	.pr-#{$i} {	@include spacer($i, padding-right); }
-		
+    .pr-#{$i} {	@include spacer($i, padding-right); }
+    
+    @include sm-max {
+        // margin
+        .ma-#{$i}-sm-max {	@include spacer($i, margin); }
+        .mh-#{$i}-sm-max {	@include spacer($i, margin-left); @include spacer($i, margin-right); }
+        .mv-#{$i}-sm-max {	@include spacer($i, margin-top); @include spacer($i, margin-bottom); }
+        .mt-#{$i}-sm-max {	@include spacer($i, margin-top); }
+        .mb-#{$i}-sm-max {	@include spacer($i, margin-bottom); }
+        .ml-#{$i}-sm-max {	@include spacer($i, margin-left); }
+        .mr-#{$i}-sm-max {	@include spacer($i, margin-right); }
+
+        // padding
+        .pa-#{$i}-sm-max {	@include spacer($i, padding); }
+        .ph-#{$i}-sm-max {	@include spacer($i, padding-left); @include spacer($i, padding-right); }
+        .pv-#{$i}-sm-max {	@include spacer($i, padding-top); @include spacer($i, padding-bottom); }
+        .pt-#{$i}-sm-max {	@include spacer($i, padding-top); }
+        .pb-#{$i}-sm-max {	@include spacer($i, padding-bottom); }
+        .pl-#{$i}-sm-max {	@include spacer($i, padding-left); }
+        .pr-#{$i}-sm-max {	@include spacer($i, padding-right); }
+    }		
 	@include sm {
 		// margin
 		.ma-#{$i}-sm {	@include spacer($i, margin); }

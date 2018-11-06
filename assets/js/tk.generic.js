@@ -88,12 +88,11 @@ $(document).ready(function () {
             });
         };
         $(".js-chbx").each(function (i) {
-            x = i + 1;
+            var x = i + 1;
             trig(x);
         });
     }
     addOn();
-
 
 
 

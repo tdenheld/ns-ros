@@ -26,22 +26,51 @@
 
 <body>
 
-    {% include header.html class="" %}
+    {% include header.html %}
     <div class="content">
-        {{ content }}
-    </div>
-    {% include footer.html class="" %}
+        {% if page.progress %}
+        <div class="container ovr-container">
+            {% include progress.html %}
+        </div>
+        {% endif %}
+        {% unless page.step==4 %}
+        <div class="container ovr-container ">
+            <div class="grid">
+                <div class="grid__unit ovr-grid__unit s-4-4 l-7-12 xl-8-12 a a-fi-right-small a-stag-del">
+                    <div class="tile">
+                        {{ content }}
+                        {% if page.cta %}{% include cta.html %}{% endif %}
+                    </div>
+                </div>
+                <div class="grid__unit ovr-grid__unit s-4-4 l-5-12 xl-4-12 a a-fi-right-small a-stag-del">
+                    <div class="tile">
+                        {% include comfort.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="container container--section container--article ovr-container a a-fi-right-small a-del-200 a-dur-500">
+            <div class="grid">
+                <div class="grid__unit s-4-4 m-12-12 l-10-12 l-push-left-1-12">
+                    {{ content }}
+                </div>
+            </div>
+            {% endunless %}
+        </div>
+        {% include footer.html %}
 
-    <div class="sticky-bar visible-xs js-sticky-bar">
-        <a href="/pages/page-{{ page.dest }}.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
-            {{ page.cta }}
-        </a>
-    </div>
+        <div class="sticky-bar visible-xs js-sticky-bar">
+            <a href="/pages/page-{{ page.dest }}.html" class="button button--arrowRight button--nsYellow w-100 w-auto-sm">
+                {{ page.cta }}
+            </a>
+        </div>
 
-    <!-- JAVASCRIPT -->
-    <script src="/assets/js/ns.generic.min.js"></script>
-    <script src="/assets/js/plugins.bundle.min.js"></script>
-    <script src="/assets/js/tk.generic.js"></script>
+
+        <!-- JAVASCRIPT -->
+        <script src="/assets/js/ns.generic.min.js"></script>
+        <script src="/assets/js/plugins.bundle.min.js"></script>
+        <script src="/assets/js/tk.generic.js"></script>
 
 </body>
 

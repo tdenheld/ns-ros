@@ -7,3 +7,7 @@ defaults:
     values:
       layout: "default"
       title: "Dal Voordeel Bestellen | NS"
+  - scope:
+      path: "pages"
+    values:
+      progress: true
