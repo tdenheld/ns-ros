@@ -75,8 +75,13 @@ h6 {
 .ovr-grid__unit {
     padding-top: 0;
     padding-bottom: 0;
+    
     @include md-max {
         margin-bottom: $half-gutter;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
