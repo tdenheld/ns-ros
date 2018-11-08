@@ -10,7 +10,7 @@ checkbox:
 - title: Stallen op Rekening
   description: Veilig uw fiets stallen en achteraf betalen
 
-- title: IC Direct Altijd Toeslagvrij
-  description: Onbeperkt reizen op het gehele traject van de Intercity Direct
-  price: € 51,00
-  per: / mnd
+# - title: IC Direct Altijd Toeslagvrij
+#   description: Onbeperkt reizen op het gehele traject van de Intercity Direct
+#   price: € 51,00
+#   per: / mnd

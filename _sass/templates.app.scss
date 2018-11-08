@@ -2,16 +2,6 @@
          App
 --------------------*/
 
-.heading-fat {
-    @include font-style(36px, bold, 1.25);
-    @include sm {
-        @include font-style(72px, bold, 1.1);
-    }
-    @include lg {
-        @include font-style(96px, bold, 1.1);
-    }
-}
-
 .sticky-bar {
     display: none;
     position: fixed;
