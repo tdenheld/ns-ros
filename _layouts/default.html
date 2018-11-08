@@ -29,8 +29,10 @@
     {% include header.html %}
     <div class="content">
         {% if page.progress %}
-        <div class="container ovr-container">
-            {% include progress.html %}
+        <div class="bg-grey-8 pv-2 pv-4-md">
+            <div class="container ovr-container mv-0">
+                {% include progress.html %}
+            </div>
         </div>
         {% endif %}
         {% unless page.step==4 %}
@@ -56,8 +58,9 @@
                     {{ content }}
                 </div>
             </div>
-            {% endunless %}
         </div>
+        {% endunless %}
+        <div class="bo-b"></div>
         {% include footer.html %}
 
         <div class="visible-xs">

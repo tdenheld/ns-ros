@@ -18,18 +18,11 @@
 
 // progress bar
 // --------------------------------------------
-.progress {
-    margin: $half-gutter 21px 0;
-
-    @include sm {
-        margin: 0;
-    }
-}
-
 .progress__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
+    line-height: 1;
 }
 
 // circle
@@ -39,12 +32,12 @@
     align-items: center;
     justify-self: center;
     justify-content: center;
-    margin-bottom: 5px;
     width: 38px;
     height: 38px;
 
     //styling
     background-color: $ns-white;
+    border: 3px solid $ns-grey-6b;
     border-radius: 50%;
     text-align: center;
     font-weight: bold;
@@ -52,6 +45,7 @@
 }
 
 .progress__description {
+    margin-top: 10px;
     font-size: calculate-rem(14px);
     text-align: center;
     color: $ns-grey-5;
@@ -66,26 +60,36 @@
 .progress__step--active {
     .progress__description {
         font-weight: bold;
-        color: $ns-green-sexy;
+
+        @keyframes color-descr {
+            from {
+                color: $ns-grey-5;
+            }
+
+            to {
+                color: $ns-green-sexy;
+            }
+        }
+
+        animation: color-descr 400ms $ease both 400ms;
     }
 
     .progress__circle {
         @keyframes color-in {
             from {
+                border: 3px solid $ns-grey-6b;
                 background-color: $ns-white;
-                color: $ns-green-sexy;
+                color: $ns-grey-5;
             }
 
             to {
+                border: none;
                 background-color: $ns-green-sexy;
                 color: $ns-white;
             }
         }
-        animation-duration: 400ms;
-        animation-delay: 400ms;
-        animation-fill-mode: both;
-        animation-timing-function: $ease;
-        animation-name: color-in;
+
+        animation: color-in 400ms $ease both 400ms;
     }
 }
 
@@ -117,7 +121,7 @@
 }
 
 .progress__line {
-    background-color: $ns-white;
+    background-color: $ns-grey-6b;
     height: 3px;
 }
 
@@ -134,7 +138,7 @@
         background-color: $ns-green-sexy;
         transform: scaleX(0);
 
-        @keyframes scale-in-x {
+        @keyframes scale-in-line {
             from {
                 transform: scaleX(0);
             }
@@ -144,11 +148,7 @@
             }
         }
 
-        animation-duration: 600ms;
-        animation-delay: 100ms;
-        animation-fill-mode: both;
-        animation-timing-function: $ease;
-        animation-name: scale-in-x;
+        animation: scale-in-line 600ms $ease both 100ms;
         transform-origin: 0 0;
     }
 }
