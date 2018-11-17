@@ -275,7 +275,7 @@
 
 // gap
 // -------------------------
-@for $i from 0 through 8 {
+@for $i from 0 through 12 {
 	.gap-#{$i} { @include spacer($i, grid-gap); }
 	.col-gap-#{$i} { @include spacer($i, grid-column-gap); }
 	.row-gap-#{$i} { @include spacer($i, grid-row-gap); }

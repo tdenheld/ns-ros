@@ -1,112 +1,116 @@
-<div class="progress">
-    {% if page.step == 1 %}
-    <div class="a a-fi-down">
-        <div class="progress__bar">
-            <div></div>
-            <div class="progress__line"></div>
-            <div class="progress__line"></div>
-            <div class="progress__line"></div>
-            <div></div>
-        </div>
-        <div class="progress__grid">
-            <div class="progress__step progress__step--active">
-                <div class="progress__circle">1</div>
-                <div class="progress__description hidden-xs">OV-chipkaart</div>
+<div class="bg-grey-8 pv-2 pv-4-md">
+    <div class="container ovr-container mv-0">
+        <div class="progress">
+            {% if page.step == 1 %}
+            <div class="a a-fi-down">
+                <div class="progress__bar">
+                    <div></div>
+                    <div class="progress__line"></div>
+                    <div class="progress__line"></div>
+                    <div class="progress__line"></div>
+                    <div></div>
+                </div>
+                <div class="progress__grid">
+                    <div class="progress__step progress__step--active">
+                        <div class="progress__circle">1</div>
+                        <div class="progress__description hidden-xs">OV-chipkaart</div>
+                    </div>
+                    <div class="progress__step">
+                        <div class="progress__circle">2</div>
+                        <div class="progress__description hidden-xs">Gegevens</div>
+                    </div>
+                    <div class="progress__step">
+                        <div class="progress__circle">3</div>
+                        <div class="progress__description hidden-xs">Betalen</div>
+                    </div>
+                    <div class="progress__step">
+                        <div class="progress__circle">4</div>
+                        <div class="progress__description hidden-xs">Bedankt</div>
+                    </div>
+                </div>
             </div>
-            <div class="progress__step">
-                <div class="progress__circle">2</div>
-                <div class="progress__description hidden-xs">Gegevens</div>
+            {% endif %}
+            {% if page.step == 2 %}
+            <div class="progress__bar">
+                <div></div>
+                <div class="progress__line progress__line--done"></div>
+                <div class="progress__line"></div>
+                <div class="progress__line"></div>
+                <div></div>
             </div>
-            <div class="progress__step">
-                <div class="progress__circle">3</div>
-                <div class="progress__description hidden-xs">Betalen</div>
+            <div class="progress__grid">
+                <div class="progress__step progress__step--done">
+                    <div class="progress__circle"></div>
+                    <div class="progress__description hidden-xs">OV-chipkaart</div>
+                </div>
+                <div class="progress__step progress__step--active">
+                    <div class="progress__circle">2</div>
+                    <div class="progress__description hidden-xs">Gegevens</div>
+                </div>
+                <div class="progress__step">
+                    <div class="progress__circle">3</div>
+                    <div class="progress__description hidden-xs">Betalen</div>
+                </div>
+                <div class="progress__step">
+                    <div class="progress__circle">4</div>
+                    <div class="progress__description hidden-xs">Bedankt</div>
+                </div>
             </div>
-            <div class="progress__step">
-                <div class="progress__circle">4</div>
-                <div class="progress__description hidden-xs">Bedankt</div>
+            {% endif %}
+            {% if page.step == 3 %}
+            <div class="progress__bar">
+                <div></div>
+                <div class="progress__line progress__line--active"></div>
+                <div class="progress__line progress__line--done"></div>
+                <div class="progress__line"></div>
+                <div></div>
             </div>
+            <div class="progress__grid">
+                <div class="progress__step progress__step--done">
+                    <div class="progress__circle"></div>
+                    <div class="progress__description hidden-xs">OV-chipkaart</div>
+                </div>
+                <div class="progress__step progress__step--done">
+                    <div class="progress__circle"></div>
+                    <div class="progress__description hidden-xs">Gegevens</div>
+                </div>
+                <div class="progress__step progress__step--active">
+                    <div class="progress__circle">3</div>
+                    <div class="progress__description hidden-xs">Betalen</div>
+                </div>
+                <div class="progress__step">
+                    <div class="progress__circle">4</div>
+                    <div class="progress__description hidden-xs">Bedankt</div>
+                </div>
+            </div>
+            {% endif %}
+            {% if page.step == 4 %}
+            <div class="progress__bar">
+                <div></div>
+                <div class="progress__line progress__line--active"></div>
+                <div class="progress__line progress__line--active"></div>
+                <div class="progress__line progress__line--done"></div>
+                <div></div>
+            </div>
+            <div class="progress__grid">
+                <div class="progress__step progress__step--done">
+                    <div class="progress__circle"></div>
+                    <div class="progress__description hidden-xs">OV-chipkaart</div>
+                </div>
+                <div class="progress__step progress__step--done">
+                    <div class="progress__circle"></div>
+                    <div class="progress__description hidden-xs">Gegevens</div>
+                </div>
+                <div class="progress__step progress__step--done">
+                    <div class="progress__circle"></div>
+                    <div class="progress__description hidden-xs">Betalen</div>
+                </div>
+                <div class="progress__step progress__step--active">
+                    <div class="progress__circle">4</div>
+                    <div class="progress__description hidden-xs">Bedankt</div>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
-    {% endif %}
-    {% if page.step == 2 %}
-    <div class="progress__bar">
-        <div></div>
-        <div class="progress__line progress__line--done"></div>
-        <div class="progress__line"></div>
-        <div class="progress__line"></div>
-        <div></div>
-    </div>
-    <div class="progress__grid">
-        <div class="progress__step progress__step--done">
-            <div class="progress__circle"></div>
-            <div class="progress__description hidden-xs">OV-chipkaart</div>
-        </div>
-        <div class="progress__step progress__step--active">
-            <div class="progress__circle">2</div>
-            <div class="progress__description hidden-xs">Gegevens</div>
-        </div>
-        <div class="progress__step">
-            <div class="progress__circle">3</div>
-            <div class="progress__description hidden-xs">Betalen</div>
-        </div>
-        <div class="progress__step">
-            <div class="progress__circle">4</div>
-            <div class="progress__description hidden-xs">Bedankt</div>
-        </div>
-    </div>
-    {% endif %}
-    {% if page.step == 3 %}
-    <div class="progress__bar">
-        <div></div>
-        <div class="progress__line progress__line--active"></div>
-        <div class="progress__line progress__line--done"></div>
-        <div class="progress__line"></div>
-        <div></div>
-    </div>
-    <div class="progress__grid">
-        <div class="progress__step progress__step--done">
-            <div class="progress__circle"></div>
-            <div class="progress__description hidden-xs">OV-chipkaart</div>
-        </div>
-        <div class="progress__step progress__step--done">
-            <div class="progress__circle"></div>
-            <div class="progress__description hidden-xs">Gegevens</div>
-        </div>
-        <div class="progress__step progress__step--active">
-            <div class="progress__circle">3</div>
-            <div class="progress__description hidden-xs">Betalen</div>
-        </div>
-        <div class="progress__step">
-            <div class="progress__circle">4</div>
-            <div class="progress__description hidden-xs">Bedankt</div>
-        </div>
-    </div>
-    {% endif %}
-    {% if page.step == 4 %}
-    <div class="progress__bar">
-        <div></div>
-        <div class="progress__line progress__line--active"></div>
-        <div class="progress__line progress__line--active"></div>
-        <div class="progress__line progress__line--done"></div>
-        <div></div>
-    </div>
-    <div class="progress__grid">
-        <div class="progress__step progress__step--done">
-            <div class="progress__circle"></div>
-            <div class="progress__description hidden-xs">OV-chipkaart</div>
-        </div>
-        <div class="progress__step progress__step--done">
-            <div class="progress__circle"></div>
-            <div class="progress__description hidden-xs">Gegevens</div>
-        </div>
-        <div class="progress__step progress__step--done">
-            <div class="progress__circle"></div>
-            <div class="progress__description hidden-xs">Betalen</div>
-        </div>
-        <div class="progress__step progress__step--active">
-            <div class="progress__circle">4</div>
-            <div class="progress__description hidden-xs">Bedankt</div>
-        </div>
-    </div>
-    {% endif %}
 </div>

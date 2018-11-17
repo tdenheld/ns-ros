@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% if page.progress %} {% include progress.html %} {% endif %}
+
+<div class="container ovr-container ">
+    <div class="grid">
+        <div class="grid__unit ovr-grid__unit s-4-4 a a-fi-right-small a-stag-del">
+            <div class="tile">
+                {{ content }}
+                {% if page.cta %}{% include cta.html %}{% endif %}
+            </div>
+        </div>
+        <div class="grid__unit ovr-grid__unit s-4-4 a a-fi-right-small a-stag-del">
+            <div class="tile">
+                {% include comfort.html %}
+            </div>
+        </div>
+    </div>
+</div>
