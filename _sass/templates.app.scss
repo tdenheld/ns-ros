@@ -2,7 +2,7 @@
          App
 --------------------*/
 
-.sticky-bar {
+.tk-sticky-bar {
     display: none;
     position: fixed;
     bottom: 0;
@@ -18,7 +18,15 @@
 
 // progress bar
 // --------------------------------------------
-.progress__grid {
+.tk-progress {
+    padding: $half-gutter 0;
+
+    @include md {
+        padding: $gutter 0;
+    }
+}
+
+.tk-progress__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
@@ -26,7 +34,7 @@
 }
 
 // circle
-.progress__circle {
+.tk-progress__circle {
     // lay-out
     display: flex;
     align-items: center;
@@ -44,21 +52,21 @@
     color: $ns-grey-5;
 }
 
-.progress__description {
+.tk-progress__description {
     margin-top: 10px;
     font-size: calculate-rem(14px);
     text-align: center;
     color: $ns-grey-5;
 }
 
-.progress__step {
+.tk-progress__step {
     position: relative;
     display: grid;
     justify-content: center;
 }
 
-.progress__step--active {
-    .progress__description {
+.tk-progress__step--active {
+    .tk-progress__description {
         font-weight: bold;
 
         @keyframes color-descr {
@@ -74,7 +82,7 @@
         animation: color-descr 400ms $ease both 400ms;
     }
 
-    .progress__circle {
+    .tk-progress__circle {
         @keyframes color-in {
             from {
                 border: 3px solid $ns-grey-6b;
@@ -93,12 +101,12 @@
     }
 }
 
-.progress__step--done {
-    .progress__description {
+.tk-progress__step--done {
+    .tk-progress__description {
         color: $ns-green-sexy;
     }
 
-    .progress__circle {
+    .tk-progress__circle {
         border: 3px solid $ns-green-sexy;
 
         &:before {
@@ -113,23 +121,23 @@
 }
 
 // bar
-.progress__bar {
+.tk-progress__bar {
     position: relative;
     top: 20px;
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
 }
 
-.progress__line {
+.tk-progress__line {
     background-color: $ns-grey-6b;
     height: 3px;
 }
 
-.progress__line--active {
+.tk-progress__line--active {
     background-color: $ns-green-sexy;
 }
 
-.progress__line--done {
+.tk-progress__line--done {
     &:after {
         content: "";
         display: block;
@@ -150,5 +158,20 @@
 
         animation: scale-in-line 600ms $ease both 100ms;
         transform-origin: 0 0;
+    }
+}
+
+
+
+
+// comfort information – how it works
+// --------------------------------------------
+.tk-comfort__grid {
+    display: grid;
+    grid-gap: $gutter;
+
+    @include sm {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: $double-gutter;
     }
 }

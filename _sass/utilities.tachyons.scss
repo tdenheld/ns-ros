@@ -65,17 +65,21 @@
 */
 
 // auto-margins
-.m-auto {
-    margin: 0 auto;
-}
+// rem padding (NS tile padding)
+.m-auto {margin: 0 auto;}
+.pa-2r {padding: 2rem;}
+
 @include sm {
-    .m-auto-sm {margin: 0 auto;}     
+    .m-auto-sm {margin: 0 auto;} 
+    .pa-2r-sm {padding: 2rem;}    
 }
 @include md {
-    .m-auto-md {margin: 0 auto;}     
+    .m-auto-md {margin: 0 auto;}
+    .pa-2r-md {padding: 2rem;}  
 }
 @include lg {
-    .m-auto-lg {margin: 0 auto;}     
+    .m-auto-lg {margin: 0 auto;}
+    .pa-2r-lg {padding: 2rem;}   
 }
 
 @for $i from 0 through 20 {	
