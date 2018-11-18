@@ -175,3 +175,16 @@
         grid-column-gap: $double-gutter;
     }
 }
+
+.tk-comfort__item {
+    display: grid;
+    grid-template-rows: 56px 1fr;
+}
+
+.tk-comfort__icon {
+    align-self: center;
+
+    svg {
+        fill: $ns-blue;
+    }
+}

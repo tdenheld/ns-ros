@@ -1,27 +1,13 @@
 <div class="tk-comfort">
     <h4 class="headingM fw-b mb-4">Hoe werkt het?</h4>
     <div class="tk-comfort__grid">
-        <div>
-            <div include="/assets/img/icons/counter--large.svg" class="svg-blue"></div>
+        {% for comfort in site.data.app.comfort %}
+        <div class="tk-comfort__item">
+            <div include="/assets/img/icons/{{ comfort.icon }}.svg" class="tk-comfort__icon"></div>
             <div class="f-blue f14 f16-sm lh-copy">
-                U betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling.
-                Na het eerste jaar worden de abonnementskosten jaarlijks van uw rekening afgeschreven, via automatische
-                incasso.
+                {{ comfort.description }}
             </div>
         </div>
-        <div>
-            <div include="/assets/img/icons/ov-chipkaart--large.svg" class="svg-blue"></div>
-            <div class="f-blue f14 f16-sm lh-copy">
-                U krijgt gratis een nieuwe persoonlijke OV-chipkaart bij uw bestelling van een jaarabonnement.
-                Binnen 1 week ontvangt u de OV-chipkaart, mét het abonnement er op, in huis.
-            </div>
-        </div>
-        <div>
-            <div include="/assets/img/icons/train--medium.svg" class="svg-blue"></div>
-            <div class="f-blue f14 f16-sm lh-copy">
-                U krijgt gratis een nieuwe persoonlijke OV-chipkaart bij uw bestelling van een jaarabonnement.
-                Binnen 1 week ontvangt u de OV-chipkaart, mét het abonnement er op, in huis.
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>
