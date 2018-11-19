@@ -4,6 +4,24 @@ layout: funnel
 dest: 1
 ---
 
-<h1 class="f38 f60-md lh-title fw-b mb-4 mb-6-sm">Dit is je bestelling</h1>
-{% include order.html %}
-<h2 class="headingM fw-b">60 jaar of ouder?</h2>
+<h1 class="f38 f60-md lh-title fw-b mb-4">Dit is je bestelling</h1>
+{% include order-details.html %}
+<h2 class="headingL mb-2">Breid je abonnement uit</h2>
+<form class="mb-4">
+    {% for checkbox in site.data.app.checkbox %}
+    <div class="checkbox formfield__checkbox mb-2">
+        <input required type="checkbox" class="checkbox__input" id="checkbox{{ forloop.index }}" name="checkbox{{ forloop.index }}">
+
+        <label class="checkbox__label" for="checkbox{{ forloop.index }}">
+            <div class="ml-1 fw-b f-blue">
+                {{ checkbox.title }}
+            </div>
+            <div class="ml-1 f14 lh-copy">
+                {{ checkbox.description }}<br>
+                {{ checkbox.price }}
+                {{ checkbox.per }}
+            </div>
+        </label>
+    </div>
+    {% endfor %}
+</form>
