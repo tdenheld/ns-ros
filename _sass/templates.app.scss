@@ -196,10 +196,15 @@
 // --------------------------------------------
 
 .tk-order {
+    //layout
     overflow: hidden;
     padding: 21px;
-    max-width: 572px;
+    max-width: 440px;
     margin-bottom: $one-half-gutter;
+
+    // styling
+    box-shadow: 0 5px 20px rgba($ns-black, 0.1);
+    border: 1px solid $ns-grey-7;
 
     @include sm {
         margin-bottom: $double-gutter;
