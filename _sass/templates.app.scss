@@ -188,3 +188,20 @@
         fill: $ns-blue;
     }
 }
+
+
+
+
+// order details
+// --------------------------------------------
+
+.tk-order {
+    overflow: hidden;
+    padding: 21px;
+    max-width: 572px;
+    margin-bottom: $one-half-gutter;
+
+    @include sm {
+        margin-bottom: $double-gutter;
+    }
+}
