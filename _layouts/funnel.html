@@ -6,16 +6,24 @@ layout: default
 
 <section>
     <div class="container ovr-container">
-        <div class="pa-2r mxw-900">
+        <div class="tk-funnel-container pa-2r">
             {{ content }}
-            {% include cta.html %}
+
+            <!-- call to action button -->
+            <div class="bo-t mb-2"></div>
+            <div class="txt-r" id="js-sticky-trig">
+                {% include cta.html %}
+            </div>
         </div>
     </div>
 </section>
-<section class="bg-grey-8">
-    <div class="container ovr-container mb-0">
+
+{% unless page.progress %}
+<section class="bg-grey-8 bo-t">
+    <div class="container ovr-container mv-0">
         <div class="pa-2r">
             {% include comfort.html %}
         </div>
     </div>
 </section>
+{% endunless %}

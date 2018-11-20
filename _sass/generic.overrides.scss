@@ -18,9 +18,9 @@
     box-shadow: none;
 }
 
-// .button {
-// 	border-radius: 4px;
-// }
+.button {
+	border-radius: 4px;
+}
 
 .h1,
 .h2,
@@ -52,6 +52,9 @@ h6 {
     background-color: $ns-white;
     overflow: hidden;
     padding: 0;
+    @include md {
+        min-height: calc(100vh - 140px);
+    }
 }
 
 .container--article {

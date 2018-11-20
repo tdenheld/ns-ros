@@ -10,6 +10,10 @@
         border-radius: 4px;
     }
 
+    &--pill {
+        border-radius: 100px;
+    }
+
     &--yellow {
         background: linear-gradient(110deg, $ns-yellow 0%, #FFE48A 100%);
     }
@@ -25,14 +29,9 @@
         width: auto !important;
     }
 
-    &--small-pill {
-        border-radius: 19px;
-    }
-
     svg {
         position: absolute;
     }
-
 }
 
 .btn-ghost {
@@ -76,6 +75,14 @@
         svg {
             fill: $ns-white;
         }
+    }
+
+    &--small {
+        height: 38px;
+        font-size: 14px;
+        line-height: 1;
+        width: auto !important;
+        box-shadow: none;
     }
 }
 

@@ -2,50 +2,21 @@
 cta: Naar gegevens
 step: 1
 dest: 2
+disabled: disabled
 ---
 
-<h1 class="headingXL fw-b mb-2 mb-4-sm">Heb je al een OV chipkaart?</h1>
-<form class="mb-4">
-    <ul class="list formfield__inputGroup pt-0">
-        <li class="list__item formfield__inputGroupItem mb-0 bo-a pa-2">
-            <div class="radioButton">
-                <input type="radio" class="radioButton__input" id="input1" name="input1" checked="checked">
-                <label class="radioButton__label" for="input1" tabindex="-1">
-                    <div class="">Ik heb een OV-chipkaart</div>
-                    <div class="f14 f-grey-4 lh-title mb-4">Reis vandaag nog met Dal Voordeel</div>
-                    <div class="radio-content">
-                        <label class="ovr-label">Vul je kaartnummer in</label>
-                        <div class="formfield__inputContainer ovr-formfield__inputContainer js-radio-content">
-                            <div class="inputSpacer bg-white">
-                                <div class="inputSpacer__displayContainer" aria-hidden="true" data-spacerinput-element="display"
-                                    style="display: block;"></div>
-                                <span class="inputSpacer__line"></span>
-                                <span class="inputSpacer__line"></span>
-                                <span class="inputSpacer__line"></span>
-                            </div>
-                            <input type="text" class="textInput textInput--ovChipkaart required is-pristine inputSpacer__input inputSpacer__input--input"
-                                id="card_number_ov" name="card_number_ov" value="3528" size="40" data-controller="generic/ui/InputSpacer"
-                                inputmode="numeric" pattern="[0-9]*" autocorrect="off" minlength="16" maxlength="16"
-                                required="" data-privacy-hide="true" style="opacity: 0;">
-                            <a href="#" class="toolTip formfield__toolTip" data-controller="generic/ui/ToolTip">
-                                <span class="toolTip--hidden">
-                                    Vul hier het 16-cijferige nummer in van uw kaart.
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </label>
-            </div>
-        </li>
-        <li class="list__item formfield__inputGroupItem bo-b bo-h pa-2">
-            <div class="radioButton">
-                <input type="radio" class="radioButton__input" id="input2" name="input1">
-                <label class="radioButton__label" for="input2" tabindex="-1">
-                    <div class="">Nieuwe OV-chipkaart</div>
-                    <div class="f14 f-grey-4 lh-title">Binnen 1 week gratis in huis</div>
-                </label>
-            </div>
-        </li>
-    </ul>
+<div class="mb-4 mb-6-sm">
+    <h1 class="f38 f60-sm fw-b mb-4 mb-8-sm">Je gegevens</h1>
+    <h2 class="f24 lh-title mb-2">Heb je al een Mijn NS account?</h2>
+    <!-- <a href="#" class="arrowLink">Log dan in</a> -->
+    <button class="button button--secondary button--arrowRight w-100 w-auto-sm">Log dan in</button>
+</div>
+<form class="mb-8">
+    <div class="tk-form__field">
+        <label for="email" class="tk-label mb-1 js-label">E-mailadres</label>
+        <input class="textInput tk-input js-input" type="email" id="email" required />
+        <p class="mt-1 mb-0 f14 f-grey-4 lh-copy">
+            We hebben je e-mail nodig om te checken of je al een account bij ons hebt.
+        </p>
+    </div>
 </form>
-<div class="mb-20-sm"></div>

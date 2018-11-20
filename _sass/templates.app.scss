@@ -16,6 +16,13 @@
     }
 }
 
+.tk-funnel-container {
+    max-width: 784px;
+}
+
+
+
+
 // progress bar
 // --------------------------------------------
 .tk-progress {
@@ -205,6 +212,7 @@
     // styling
     box-shadow: 0 5px 20px rgba($ns-black, 0.06);
     border: 1px solid $ns-grey-7;
+    border-radius: 8px;
 
     @include sm {
         margin-bottom: $double-gutter;

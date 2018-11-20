@@ -79,20 +79,30 @@ $(document).ready(function () {
 
 
 
-    // checkboxes
+    // form
     // ------------------------------------------------------------
-    function addOn() {
-        function trig(i) {
-            $(".js-chbx" + i).on("change", function () {
-                $(this).toggleClass("bg-grey-8");
-            });
+
+    // when something is typed in the form
+    $(".js-input").keyup(function () {
+        var el = $(this);
+        if (el.val() != '') {
+            $(".js-submit").prop('disabled', false);
+            $(".js-input-email").addClass("is-loading");
+            el.addClass("is-filled");
+        } else {
+            $(".js-submit").prop('disabled', true);
+            $(".js-input-email").removeClass("is-loading");
+            el.removeClass("is-filled");
         };
-        $(".js-chbx").each(function (i) {
-            var x = i + 1;
-            trig(x);
-        });
-    }
-    addOn();
+    });
+
+    // when focus state is triggered
+    $(".js-input").focusin(function () {
+        $(".js-label").addClass("is-focused");
+    });
+    $(".js-input").focusout(function () {
+        $(".js-label").removeClass("is-focused");
+    });
 
 
 

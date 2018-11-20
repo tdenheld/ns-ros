@@ -1,0 +1,61 @@
+/*-------------------
+         Form
+--------------------*/
+
+.tk-form__field {
+    position: relative;
+    margin-bottom: $double-gutter;
+    max-width: 420px;
+}
+
+.tk-label {
+    display: block;
+    transition: $fade-link;
+    @include font-style(16px, normal, 1.25);
+    color: $ns-blue;
+
+    &.is-focused {
+        color: $ns-light-blue;
+    }
+}
+
+.tk-input {
+    // lay-out
+    width: 100%;
+    padding-top: 7px;
+
+    // styling
+    border: 1px solid $ns-grey-5;
+    border-radius: 4px;
+    @include font-style(18px, bold, 1.25);
+    color: $ns-blue;
+    transition: $fade-link;
+
+    &.is-filled {
+        border: 1px solid $ns-blue;
+    }
+
+    &::placeholder {
+        font-weight: normal;
+    }
+
+    &:hover {
+        border: 1px solid $ns-blue;
+    }
+
+    &:focus {
+        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
+        border: 1px solid $ns-light-blue;
+        color: $ns-light-blue;
+    }
+
+    &:-webkit-autofill {
+        -webkit-text-fill-color: $ns-blue;
+    }
+
+    &:-webkit-autofill:focus {
+        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
+        border: 1px solid $ns-light-blue;
+        -webkit-text-fill-color: $ns-light-blue;
+    }
+}
