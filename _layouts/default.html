@@ -32,11 +32,13 @@
     </div>
     {% include footer-light.html class="bo-t" %}
 
+    {% if page.sticky-cta %}
     <div class="visible-xs">
         <div class="tk-sticky-bar js-sticky-bar">
             {% include cta.html %}
         </div>
     </div>
+    {% endif %}
 
 
     <!-- JAVASCRIPT -->

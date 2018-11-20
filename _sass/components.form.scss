@@ -4,7 +4,7 @@
 
 .tk-form__field {
     position: relative;
-    margin-bottom: $double-gutter;
+    margin-bottom: $gutter;
     max-width: 420px;
 }
 
@@ -25,6 +25,7 @@
     padding-top: 7px;
 
     // styling
+    -webkit-appearance: none;
     border: 1px solid $ns-grey-5;
     border-radius: 4px;
     @include font-style(18px, bold, 1.25);
@@ -36,7 +37,9 @@
     }
 
     &::placeholder {
-        font-weight: normal;
+        position: relative;
+        top: 2px;
+        @include font-style(16px, normal, 1.25);
     }
 
     &:hover {
@@ -50,11 +53,12 @@
     }
 
     &:-webkit-autofill {
+        box-shadow: 0 0 0px 1000px $ns-blue-4 inset;
         -webkit-text-fill-color: $ns-blue;
     }
 
     &:-webkit-autofill:focus {
-        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
+        box-shadow: 0 2px 28px rgba($ns-black, 0.1), 0 0 0px 1000px $ns-blue-4 inset;
         border: 1px solid $ns-light-blue;
         -webkit-text-fill-color: $ns-light-blue;
     }
