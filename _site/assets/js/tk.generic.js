@@ -86,13 +86,52 @@ $(document).ready(function () {
     $(".js-input").keyup(function () {
         var el = $(this);
         if (el.val() != '') {
-            $(".js-submit").prop('disabled', false);
-            $(".js-input-email").addClass("is-loading");
             el.addClass("is-filled");
         } else {
-            $(".js-submit").prop('disabled', true);
-            $(".js-input-email").removeClass("is-loading");
             el.removeClass("is-filled");
+        };
+    });
+
+    function doneTyping() {
+        // setup before functions
+        var typingTimer;
+        var doneTypingInterval = 1500;
+        var input = $(".js-input-email");
+
+        // on keyup, start the countdown
+        input.on('keyup', function () {
+            clearTimeout(typingTimer);
+            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+            $(".js-input-email").removeClass("is-loading");
+        });
+
+        // on keydown, clear the countdown 
+        input.on('keydown', function () {
+            clearTimeout(typingTimer);
+        });
+
+        // user is "finished typing," do something
+        function doneTyping() {
+            if ($(".js-input-email").val() != '') {
+                $(".js-input-email").addClass("is-loading");
+            } else {
+                $(".js-input-email").removeClass("is-loading");
+            };
+        };
+    };
+    doneTyping();
+
+    // button validation
+    $(".js-submit-link").click(function (e) {
+        // stop href from loading normal at a click
+        e.preventDefault();
+        // load link into var
+        var linkLocation = this.href;
+        // check if input is not empty
+        if ($(".js-input").val() != '') {
+            window.location = linkLocation;
+        } else {
+            $(".js-input").addClass("is-denied");
         };
     });
 

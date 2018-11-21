@@ -2,7 +2,6 @@
 cta: Naar gegevens
 step: 1
 dest: 2
-disabled: disabled
 ---
 
 <div class="mb-6">
@@ -13,10 +12,10 @@ disabled: disabled
     <button class="button button--secondary button--arrowRight w-100 w-auto-sm">Log dan in</button>
 </div>
 <form class="mb-4">
-    <div class="tk-form__field">
+    <div class="tk-form-field">
         <label for="email" class="tk-label mb-1 js-label">E-mailadres</label>
-        <input class="textInput tk-input js-input" type="email" id="email" required placeholder="......" />
-        <p class="mt-1 mb-0 f14 f-grey-4 lh-copy">
+        <input class="textInput tk-input tk-input--email js-input js-input-email" type="email" id="email" required />
+        <p class="tk-form-field__description">
             We hebben je e-mail nodig om te checken of je al een account bij ons hebt.
         </p>
     </div>
