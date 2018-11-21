@@ -20,6 +20,20 @@
     max-width: 784px;
 }
 
+.tk-heading-xxl {
+    margin: 0 0 $gutter;
+    @include font-style(38px, bold, 1.25);
+
+    @include sm {
+        margin: 0 0 $one-half-gutter;
+        font-size: calculate-rem(48px);
+    }
+
+    @include md {
+        font-size: calculate-rem(60px);
+    }
+}
+
 
 
 
