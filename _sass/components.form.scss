@@ -17,9 +17,74 @@
     color: $ns-grey-4;
 }
 
+.tk-form-field__error {
+    display: none;
+    visibility: hidden;
+    margin: 4px 0 14px;
+    @include font-style(14px, normal, 1.5);
+    color: $ns-red-alert;
+}
+
+.tk-form-field__loading {
+    opacity: 0;
+    transition: $fade-link;
+    position: absolute;
+    top: 40px;
+    right: 14px;
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+    }
+
+    svg {
+        transform-origin: 50% 50%;
+        animation: rotate 600ms linear infinite;
+        fill: $ns-blue;
+        transition: $fade-link;
+    }
+
+    &.is-active {
+        opacity: 1;
+    }
+
+    &.is-focused {
+        svg {
+            line-height: 0;
+            fill: $ns-light-blue;
+        }
+    }
+}
+
+.tk-form-field__val {
+    opacity: 0;
+    transition: $fade-link;
+    position: absolute;
+    top: 40px;
+    right: 14px;
+
+    &.is-active {
+        opacity: 1;
+    }
+}
+
+.tk-form-field__val--approved {
+    svg {
+        fill: $ns-green-sexy;
+    }
+}
+
+.tk-form-field__val--denied {
+    svg {
+        fill: $ns-red-alert;
+    }
+}
 
 
-// misc
+
+
+
+// components
 // ------------------------
 .tk-label {
     display: block;
@@ -49,6 +114,10 @@
         border: 1px solid $ns-blue;
     }
 
+    &.is-error {
+        border: 1px solid $ns-red-alert;
+    }
+
     &::placeholder {
         position: relative;
         top: 2px;
@@ -74,11 +143,5 @@
         box-shadow: 0 2px 28px rgba($ns-black, 0.1), 0 0 0px 1000px $ns-blue-4 inset;
         border: 1px solid $ns-light-blue;
         -webkit-text-fill-color: $ns-light-blue;
-    }
-}
-
-.tk-input--email {
-    &.is-loading {
-        background-color: $ns-grey-8;
     }
 }

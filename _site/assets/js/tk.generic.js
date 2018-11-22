@@ -10,6 +10,9 @@ $(document).ready(function () {
     var mobile = Boolean;
     var scrolled = false;
 
+    // animations
+    var default_ease = Power3.easeInOut;
+
 
 
     // update screen height
@@ -81,28 +84,65 @@ $(document).ready(function () {
 
     // form
     // ------------------------------------------------------------
+    var isValidEmail;
 
-    // when something is typed in the form
-    $(".js-input").keyup(function () {
-        var el = $(this);
-        if (el.val() != '') {
-            el.addClass("is-filled");
-        } else {
-            el.removeClass("is-filled");
-        };
+    // give every form field an ID and trigger functions
+    $(".tk-form-field").each(function (i) {
+        $(this).attr("id", "tk-ff-" + i);
+        forms(i);
     });
 
+    function forms(i) {
+        var id = "#tk-ff-" + i;
+        var input = $(id + " .tk-input");
+        var error = $(id + " .tk-form-field__error");
+
+        // styling when field is filled
+        input.keyup(function () {
+            input.removeClass("is-error");
+            TweenLite.to(error, .3, {
+                ease: default_ease,
+                autoAlpha: 0,
+                display: "none",
+            });
+            isValidEmail = email.checkValidity();
+
+            if (input.val() != "") {
+                input.addClass("is-filled");
+            } else {
+                input.removeClass("is-filled");
+            };
+        });
+
+        $(".js-submit-link").click(function (e) {
+            e.preventDefault();
+            var linkLocation = this.href;
+
+            if (isValidEmail) {
+                window.location = linkLocation;
+            } else {
+                input.addClass("is-error");
+                TweenLite.to(error, .3, {
+                    ease: default_ease,
+                    autoAlpha: 1,
+                    display: "block",
+                });
+            };
+        });
+    };
+
+    // when user is done typing trigger loader / validate
     function doneTyping() {
         // setup before functions
         var typingTimer;
-        var doneTypingInterval = 1500;
-        var input = $(".js-input-email");
+        var doneTypingInterval = 800;
+        var input = $(".tk-input--email");
 
         // on keyup, start the countdown
         input.on('keyup', function () {
             clearTimeout(typingTimer);
             typingTimer = setTimeout(doneTyping, doneTypingInterval);
-            $(".js-input-email").removeClass("is-loading");
+            $(".js-email-loader, .tk-form-field__val--approved").removeClass("is-active");
         });
 
         // on keydown, clear the countdown 
@@ -112,35 +152,25 @@ $(document).ready(function () {
 
         // user is "finished typing," do something
         function doneTyping() {
-            if ($(".js-input-email").val() != '') {
-                $(".js-input-email").addClass("is-loading");
+            if (isValidEmail) {
+                $(".js-email-loader").addClass("is-active");
+                setTimeout(function(){
+                    $(".js-email-loader").removeClass("is-active");
+                    $(".tk-form-field__val--approved").addClass("is-active");
+                }, 500);
             } else {
-                $(".js-input-email").removeClass("is-loading");
+                $(".js-email-loader, .tk-form-field__val--approved").removeClass("is-active");
             };
         };
     };
     doneTyping();
 
-    // button validation
-    $(".js-submit-link").click(function (e) {
-        // stop href from loading normal at a click
-        e.preventDefault();
-        // load link into var
-        var linkLocation = this.href;
-        // check if input is not empty
-        if ($(".js-input").val() != '') {
-            window.location = linkLocation;
-        } else {
-            $(".js-input").addClass("is-denied");
-        };
-    });
-
     // when focus state is triggered
-    $(".js-input").focusin(function () {
-        $(".js-label").addClass("is-focused");
+    $(".tk-input").focusin(function () {
+        $(".tk-label, .tk-form-field__loading").addClass("is-focused");
     });
-    $(".js-input").focusout(function () {
-        $(".js-label").removeClass("is-focused");
+    $(".tk-input").focusout(function () {
+        $(".tk-label, .tk-form-field__loading").removeClass("is-focused");
     });
 
 

@@ -1575,16 +1575,24 @@
     <div class="container ovr-container">
         <div class="tk-funnel-container pa-2r">
             <div class="mb-6">
-    <h1 class="tk-heading-xxl">Je gegevens</h1>
-    <div class="bo-b mb-4"></div>
+    <div class="tk-heading">
+        <h1 class="tk-heading-xxl">Je gegevens</h1>
+        <div class="bo-b mb-4"></div>
+    </div>
     <h2 class="f24 lh-title mb-2">Heb je al een Mijn NS account?</h2>
     <!-- <a href="#" class="arrowLink">Log dan in</a> -->
-    <button class="button button--secondary button--arrowRight w-100 w-auto-sm">Log dan in</button>
+    <button class="button button--secondary button--arrowRight">Inloggen</button>
 </div>
 <form class="mb-4">
     <div class="tk-form-field">
-        <label for="email" class="tk-label mb-1 js-label">E-mailadres</label>
-        <input class="textInput tk-input tk-input--email js-input js-input-email" type="email" id="email" required />
+        <label for="email" class="tk-label mb-1">E-mailadres</label>
+        <input class="textInput tk-input tk-input--email" type="email" id="email" required />
+        <span class="tk-form-field__loading js-email-loader" include="/assets/img/icons/loader--small.svg"></span>
+        <span class="tk-form-field__val tk-form-field__val--approved" include="/assets/img/icons/check-round--small.svg"></span>
+        <span class="tk-form-field__val tk-form-field__val--denied" include="/assets/img/icons/alert--small.svg"></span>
+        <div class="tk-form-field__error">
+            Vul een geldig e-mailadres in
+        </div>
         <p class="tk-form-field__description">
             We hebben je e-mail nodig om te checken of je al een account bij ons hebt.
         </p>
@@ -1595,7 +1603,7 @@
             <div class="bo-t mb-2"></div>
             <div class="txt-r" id="js-sticky-trig">
                 <a href="/bestellen/stap2.html" class="js-submit-link">
-    <button class="button button--arrowRight button--nsYellow btn--pill pl-3 w-100 w-auto-sm js-submit">
+    <button type="submit" class="button button--arrowRight button--nsYellow btn--pill pl-3 w-100 w-auto-sm js-submit">
         Naar gegevens
     </button>
 </a>
