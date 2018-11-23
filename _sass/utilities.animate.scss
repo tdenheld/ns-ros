@@ -99,6 +99,19 @@
 }
 .a-fi-up {animation-name: fade-in-up;}
 
+@keyframes fade-in-up-medium {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+.a-fi-up-medium {animation-name: fade-in-up-medium;}
+
 @keyframes fade-in-up-small {
 	from {
 		opacity: 0;
@@ -110,7 +123,7 @@
 		transform: none;
 	}
 }
-.a-fi-up-s {animation-name: fade-in-up-small;}
+.a-fi-up-small {animation-name: fade-in-up-small;}
 
 @keyframes fade-in-left {
 	from {

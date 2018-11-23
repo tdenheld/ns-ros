@@ -2,12 +2,10 @@
 layout: default
 ---
 
-{% if page.progress %} {% include progress.html %} {% endif %}
-
 <section>
     <div class="container ovr-container">
-        <div class="tk-funnel-container tk-funnel-container--center pa-2r a a-fi-right-small">
-            <div class="tk-heading tk-heading--funnel">
+        <div class="tk-funnel-container pa-2r">
+            <div class="tk-heading">
                 <h1 class="tk-heading__title">{{ page.heading }}</h1>
             </div>
             {{ content }}
@@ -17,6 +15,14 @@ layout: default
             <div class="txt-r" id="js-sticky-trig">
                 {% include cta.html %}
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-grey-8 bo-t">
+    <div class="container ovr-container mv-0">
+        <div class="pa-2r">
+            {% include comfort.html %}
         </div>
     </div>
 </section>

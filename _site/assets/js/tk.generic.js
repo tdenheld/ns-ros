@@ -82,7 +82,10 @@ $(document).ready(function () {
 
 
 
+
+
     // form
+    // ------------------------------------------------------------
     // ------------------------------------------------------------
     var isValidEmail;
 
@@ -95,22 +98,42 @@ $(document).ready(function () {
     function forms(i) {
         var id = "#tk-ff-" + i;
         var input = $(id + " .tk-input");
+        var label = $(id + " .tk-label");
+        var tick = $(id + " .tk-val-standard");
         var error = $(id + " .tk-form-field__error");
+        var emailField = document.getElementById("email");
 
-        // styling when field is filled
-        input.keyup(function () {
+
+        function showError() {
+            input.addClass("is-error");
+            TweenLite.to(error, .3, {
+                ease: default_ease,
+                autoAlpha: 1,
+                display: "block",
+            });
+        };
+
+        function hideError() {
             input.removeClass("is-error");
             TweenLite.to(error, .3, {
                 ease: default_ease,
                 autoAlpha: 0,
                 display: "none",
             });
-            isValidEmail = email.checkValidity();
+        };
 
+        // styling when field is filled
+        input.keyup(function () {
+            hideError();
+            if (emailField) {
+                isValidEmail = email.checkValidity();
+            }
             if (input.val() != "") {
-                input.addClass("is-filled");
+                //input.addClass("is-filled");
+                tick.addClass("is-active");
             } else {
-                input.removeClass("is-filled");
+                //input.removeClass("is-filled");
+                tick.removeClass("is-active");
             };
         });
 
@@ -118,16 +141,29 @@ $(document).ready(function () {
             e.preventDefault();
             var linkLocation = this.href;
 
-            if (isValidEmail) {
-                window.location = linkLocation;
+            if (emailField) {
+                if (isValidEmail) {
+                    window.location = linkLocation;
+                } else {
+                    showError();
+                };
             } else {
-                input.addClass("is-error");
-                TweenLite.to(error, .3, {
-                    ease: default_ease,
-                    autoAlpha: 1,
-                    display: "block",
-                });
+                if (input.val() != "") {
+                    window.location = linkLocation;
+                } else {
+                    showError();
+                };
             };
+        });
+
+        // when focus state is triggered
+        input.focusin(function () {
+            $(label).addClass("is-focused");
+            $(".tk-form-field__loading").addClass("is-focused");
+        });
+        input.focusout(function () {
+            $(label).removeClass("is-focused");
+            $(".tk-form-field__loading").removeClass("is-focused");
         });
     };
 
@@ -137,7 +173,7 @@ $(document).ready(function () {
         var typingTimer;
         var doneTypingInterval = 500;
         var serverCallSym;
-        var serverCallInterval = 1800;
+        var serverCallInterval = 300;
         var input = $(".tk-input--email");
 
         // on keyup, start the countdown
@@ -170,13 +206,8 @@ $(document).ready(function () {
     };
     doneTyping();
 
-    // when focus state is triggered
-    $(".tk-input").focusin(function () {
-        $(".tk-label, .tk-form-field__loading").addClass("is-focused");
-    });
-    $(".tk-input").focusout(function () {
-        $(".tk-label, .tk-form-field__loading").removeClass("is-focused");
-    });
+
+
 
 
 

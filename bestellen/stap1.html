@@ -1,30 +1,29 @@
 ---
-cta: Naar gegevens
+heading: Inloggen
+cta: Verder als nieuwe klant
 step: 1
-dest: 2
+dest: 1b
+progress: false
 ---
 
 <div class="mb-6">
-    <div class="tk-heading">
-        <h1 class="tk-heading-xxl">Je gegevens</h1>
-        <div class="bo-b mb-4"></div>
-    </div>
     <h2 class="f24 lh-title mb-2">Heb je al een Mijn NS account?</h2>
     <!-- <a href="#" class="arrowLink">Log dan in</a> -->
     <button class="button button--secondary button--arrowRight">Inloggen</button>
 </div>
+
 <form class="mb-4">
+    <h2 class="f24 lh-title mb-2 fw-b">Nieuw bij NS?</h2>
     <div class="tk-form-field">
-        <label for="email" class="tk-label mb-1">E-mailadres</label>
+        <label for="email" class="tk-label">E-mailadres</label>
         <input class="textInput tk-input tk-input--email" type="email" id="email" required />
         <span class="tk-form-field__loading js-email-loader" include="/assets/img/icons/loader--small.svg"></span>
-        <span class="tk-form-field__val tk-form-field__val--approved" include="/assets/img/icons/check-round--small.svg"></span>
+        <span class="tk-form-field__val tk-form-field__val--approved" include="/assets/img/icons/check-fat--small.svg"></span>
         <span class="tk-form-field__val tk-form-field__val--denied" include="/assets/img/icons/alert--small.svg"></span>
         <div class="tk-form-field__error">
             Vul een geldig e-mailadres in
         </div>
-        <p class="tk-form-field__description">
-            We hebben je e-mail nodig om te checken of je al een account bij ons hebt.
-        </p>
     </div>
 </form>
+
+<div class="mb-8"></div>

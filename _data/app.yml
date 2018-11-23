@@ -1,3 +1,19 @@
+progress:
+  step1: Gegevens
+  step2: OV-chipkaart
+  step3: Betalen
+  step4: Bedankt
+
+
+comfort:
+- icon: counter--large
+  description: U betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling. Na het eerste jaar worden de abonnementskosten jaarlijks van uw rekening afgeschreven, via automatische incasso.
+- icon: ov-chipkaart--large
+  description: U krijgt gratis een nieuwe persoonlijke OV-chipkaart bij uw bestelling van een jaarabonnement. Binnen 1 week ontvangt u de OV-chipkaart, mét het abonnement er op, in huis.
+- icon: train--medium
+  description: Betalen kan snel, veilig en via uw eigen bank met iDeal. U betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling.
+
+
 checkbox:
 - title: Keuzedagen 2e klas
   description: 7 vrije reisdagen voor 60+
@@ -14,14 +30,3 @@ checkbox:
 #   description: Onbeperkt reizen op het gehele traject van de Intercity Direct
 #   price: € 51,00
 #   per: / mnd
-
-
-
-
-comfort:
-- icon: counter--large
-  description: U betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling. Na het eerste jaar worden de abonnementskosten jaarlijks van uw rekening afgeschreven, via automatische incasso.
-- icon: ov-chipkaart--large
-  description: U krijgt gratis een nieuwe persoonlijke OV-chipkaart bij uw bestelling van een jaarabonnement. Binnen 1 week ontvangt u de OV-chipkaart, mét het abonnement er op, in huis.
-- icon: train--medium
-  description: Betalen kan snel, veilig en via uw eigen bank met iDeal. U betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling.

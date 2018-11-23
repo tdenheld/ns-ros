@@ -8,7 +8,33 @@
 .tk-form-field {
     position: relative;
     margin-bottom: $gutter;
-    max-width: 420px;
+    max-width: 400px;
+}
+
+.tk-form-field--grid {
+    display: grid;
+    grid-column-gap: $gutter;
+    max-width: 600px;
+    margin-bottom: 20px;
+
+    @include sm {
+        grid-template-columns: 2fr 5fr;
+        align-items: center;
+    }
+
+    .tk-label {
+        @include sm {
+            position: relative;
+            top:2px;
+            text-align: right;
+        }
+    }
+
+    .tk-form-field__val {
+        @include sm {
+            top: 12px;
+        }
+    }
 }
 
 .tk-form-field__description {
@@ -39,7 +65,7 @@
 
     svg {
         transform-origin: 50% 50%;
-        animation: rotate 600ms linear infinite;
+        animation: rotate 500ms linear infinite;
         fill: $ns-blue;
         transition: $fade-link;
     }
@@ -58,7 +84,7 @@
 
 .tk-form-field__val {
     opacity: 0;
-    transition: $fade-link;
+    transition: $fade-all;
     position: absolute;
     top: 40px;
     right: 14px;
@@ -70,6 +96,9 @@
 
 .tk-form-field__val--approved {
     svg {
+        position: relative;
+        top: 1px;
+        width: 19px;
         fill: $ns-green-sexy;
     }
 }
@@ -82,6 +111,7 @@
 // ------------------------
 .tk-label {
     display: block;
+    margin-bottom: 7px;
     transition: $fade-link;
     @include font-style(16px, normal, 1.25);
     color: $ns-blue;

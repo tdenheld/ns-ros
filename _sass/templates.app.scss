@@ -18,14 +18,35 @@
 
 .tk-funnel-container {
     max-width: 784px;
+
+    &--center {
+        margin: 0 auto;
+    }
 }
 
-.tk-heading-xxl {
-    margin: 0 0 $gutter;
+// page heading
+.tk-heading {
+    padding-bottom: $half-gutter;
+
+    @include sm {
+        padding-bottom: $gutter;
+    }
+
+    &--funnel {
+        margin-bottom: $gutter;
+        border-bottom: 1px solid $ns-grey-7;
+
+        @include sm {
+            margin-bottom: $double-gutter;
+        }
+    }
+}
+
+.tk-heading__title {
+    margin: 0;
     @include font-style(38px, bold, 1.25);
 
     @include sm {
-        margin: 0 0 $one-half-gutter;
         font-size: calculate-rem(48px);
     }
 
