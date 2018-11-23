@@ -135,12 +135,15 @@ $(document).ready(function () {
     function doneTyping() {
         // setup before functions
         var typingTimer;
-        var doneTypingInterval = 800;
+        var doneTypingInterval = 500;
+        var serverCallSym;
+        var serverCallInterval = 1800;
         var input = $(".tk-input--email");
 
         // on keyup, start the countdown
         input.on('keyup', function () {
             clearTimeout(typingTimer);
+            clearTimeout(serverCallSym);
             typingTimer = setTimeout(doneTyping, doneTypingInterval);
             $(".js-email-loader, .tk-form-field__val--approved").removeClass("is-active");
         });
@@ -154,13 +157,15 @@ $(document).ready(function () {
         function doneTyping() {
             if (isValidEmail) {
                 $(".js-email-loader").addClass("is-active");
-                setTimeout(function(){
-                    $(".js-email-loader").removeClass("is-active");
-                    $(".tk-form-field__val--approved").addClass("is-active");
-                }, 500);
+                serverCallSym = setTimeout(serverCallFinished, serverCallInterval);
             } else {
                 $(".js-email-loader, .tk-form-field__val--approved").removeClass("is-active");
             };
+        };
+
+        function serverCallFinished() {
+            $(".js-email-loader").removeClass("is-active");
+            $(".tk-form-field__val--approved").addClass("is-active");
         };
     };
     doneTyping();
