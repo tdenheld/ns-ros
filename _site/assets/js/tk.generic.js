@@ -129,10 +129,8 @@ $(document).ready(function () {
                 isValidEmail = email.checkValidity();
             }
             if (input.val() != "") {
-                //input.addClass("is-filled");
                 tick.addClass("is-active");
             } else {
-                //input.removeClass("is-filled");
                 tick.removeClass("is-active");
             };
         });

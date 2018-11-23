@@ -15,17 +15,15 @@
     display: grid;
     grid-column-gap: $gutter;
     max-width: 600px;
-    margin-bottom: 20px;
+    margin-bottom: $half-gutter;
 
     @include sm {
         grid-template-columns: 2fr 5fr;
-        align-items: center;
     }
 
     .tk-label {
         @include sm {
-            position: relative;
-            top:2px;
+            line-height: $button-height;
             text-align: right;
         }
     }
@@ -46,7 +44,7 @@
 .tk-form-field__error {
     display: none;
     visibility: hidden;
-    margin: 4px 0 14px;
+    margin: 4px 0 0;
     @include font-style(14px, normal, 1.5);
     color: $ns-red-alert;
 }
@@ -115,28 +113,20 @@
     transition: $fade-link;
     @include font-style(16px, normal, 1.25);
     color: $ns-blue;
-
-    &.is-focused {
-        color: $ns-light-blue;
-    }
 }
 
 .tk-input {
     // lay-out
     width: 100%;
     padding-top: 7px;
+    height: $button-height;
 
     // styling
     -webkit-appearance: none;
-    border: 1px solid $ns-grey-5;
-    border-radius: 4px;
+    border: 1px solid $ns-grey-6b;
     @include font-style(18px, bold, 1.25);
     color: $ns-blue;
     transition: $fade-link;
-
-    &.is-filled {
-        border: 1px solid $ns-blue;
-    }
 
     &.is-error {
         border: 1px solid $ns-red-alert;
@@ -149,13 +139,13 @@
     }
 
     &:hover {
-        border: 1px solid $ns-blue;
+        border: 1px solid $ns-grey-5;
     }
 
     &:focus {
         box-shadow: 0 2px 28px rgba($ns-black, 0.1);
-        border: 1px solid $ns-light-blue;
-        color: $ns-light-blue;
+        border: 1px solid $ns-blue;
+        color: $ns-blue;
     }
 
     &:-webkit-autofill {
@@ -165,7 +155,5 @@
 
     &:-webkit-autofill:focus {
         box-shadow: 0 2px 28px rgba($ns-black, 0.1), 0 0 0px 1000px $ns-blue-4 inset;
-        border: 1px solid $ns-light-blue;
-        -webkit-text-fill-color: $ns-light-blue;
     }
 }

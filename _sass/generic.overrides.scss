@@ -18,7 +18,8 @@
     box-shadow: none;
 }
 
-.button {
+.button, 
+.textInput {
 	border-radius: 4px;
 }
 
@@ -91,13 +92,4 @@ h6 {
             margin-bottom: 0;
         }
     }
-}
-
-.ovr-formfield__inputContainer {
-    padding: 0;
-}
-
-.ovr-label {
-    display: block;
-    margin-bottom: 4px;
 }
