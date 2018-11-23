@@ -153,16 +153,6 @@ $(document).ready(function () {
                 };
             };
         });
-
-        // when focus state is triggered
-        input.focusin(function () {
-            $(label).addClass("is-focused");
-            $(".tk-form-field__loading").addClass("is-focused");
-        });
-        input.focusout(function () {
-            $(label).removeClass("is-focused");
-            $(".tk-form-field__loading").removeClass("is-focused");
-        });
     };
 
     // when user is done typing trigger loader / validate

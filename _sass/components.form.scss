@@ -71,13 +71,6 @@
     &.is-active {
         opacity: 1;
     }
-
-    &.is-focused {
-        svg {
-            line-height: 0;
-            fill: $ns-light-blue;
-        }
-    }
 }
 
 .tk-form-field__val {
