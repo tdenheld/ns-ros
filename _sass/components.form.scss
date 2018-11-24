@@ -113,7 +113,7 @@
     }
 
     &::placeholder {
-        @include font-style(16px, normal, 1.25);
+        @include font-style(16px, normal, 1.5);
     }
 
     &:hover {
