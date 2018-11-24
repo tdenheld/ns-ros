@@ -129,6 +129,18 @@ $(document).ready(function () {
             });
         };
 
+        function checkError() {
+            if (emailField) {
+                if (isValidEmail == false) {
+                    showError();
+                };
+            } else {
+                if (input.val() == "") {
+                    showError();
+                };
+            };
+        };
+
         function checkEmail() {
             if (emailField) {
                 isValidEmail = email.checkValidity();
@@ -146,12 +158,12 @@ $(document).ready(function () {
 
         input.focusout(function(){
             checkInputValue();
+            checkError();
         });
 
         $(".js-submit-link").click(function (e) {
             e.preventDefault();
-            var linkLocation = this.href;
-
+            linkLocation = this.href;
             if (emailField) {
                 if (isValidEmail) {
                     window.location = linkLocation;
