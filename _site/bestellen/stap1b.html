@@ -1540,7 +1540,7 @@
             <div class="tk-heading tk-heading--funnel">
                 <h1 class="tk-heading__title">Nieuwe klant</h1>
             </div>
-            <form class="mb-4">
+            <form>
 
     <div class="tk-form-field tk-form-field--grid">
     <label for="voornaam" class="tk-label">
@@ -1548,7 +1548,7 @@
     </label>
 
     <div>
-        <input class="textInput tk-input" type="text" id="voornaam" />
+        <input class="textInput tk-input " type="text" id="voornaam" placeholder="" />
         <span class="tk-form-field__val tk-form-field__val--approved tk-val-standard" include="/assets/img/icons/check-fat--small.svg"></span>
         <div class="tk-form-field__error">
             Vul je voornaam in
@@ -1563,7 +1563,7 @@
     </label>
 
     <div>
-        <input class="textInput tk-input" type="text" id="achternaam" />
+        <input class="textInput tk-input " type="text" id="achternaam" placeholder="" />
         <span class="tk-form-field__val tk-form-field__val--approved tk-val-standard" include="/assets/img/icons/check-fat--small.svg"></span>
         <div class="tk-form-field__error">
             Vul je achternaam in
@@ -1571,13 +1571,26 @@
         
     </div>
 </div>
+
+    <div class="tk-form-field tk-form-field--grid">
+    <label for="geboortedatum" class="tk-label">
+        Geboortedatum
+    </label>
+
+    <div>
+        <input class="textInput tk-input " type="text" id="geboortedatum" placeholder="DD-MM-JJJJ" />
+        <span class="tk-form-field__val tk-form-field__val--approved tk-val-standard" include="/assets/img/icons/check-fat--small.svg"></span>
+        <div class="tk-form-field__error">
+            Vul je geboortedatum correct in (dd-mm-jjjj)
+        </div>
+        
+    </div>
+</div>
     
 </form>
 
-<div class="mb-8"></div>
-
             <!-- call to action button -->
-            <div class="bo-t mb-2"></div>
+            <div class="bo-t mb-2 mt-8-sm"></div>
             <div class="txt-r" id="js-sticky-trig">
                 <a href="/bestellen/stap2.html" class="js-submit-link">
     <button type="submit" class="button button--arrowRight button--nsYellow w-100 w-auto-sm js-submit">

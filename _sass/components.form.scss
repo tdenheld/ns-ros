@@ -15,9 +15,9 @@
     display: grid;
     grid-column-gap: $gutter;
     max-width: 600px;
-    margin-bottom: $half-gutter;
 
     @include sm {
+        margin-bottom: $half-gutter;
         grid-template-columns: 2fr 5fr;
     }
 
@@ -49,30 +49,7 @@
     color: $ns-red-alert;
 }
 
-.tk-form-field__loading {
-    opacity: 0;
-    transition: $fade-link;
-    position: absolute;
-    top: 40px;
-    right: 14px;
-
-    @keyframes rotate {
-        from { transform: rotate(0deg); }
-        to   { transform: rotate(360deg); }
-    }
-
-    svg {
-        transform-origin: 50% 50%;
-        animation: rotate 500ms linear infinite;
-        fill: $ns-blue;
-        transition: $fade-link;
-    }
-
-    &.is-active {
-        opacity: 1;
-    }
-}
-
+// in field validation
 .tk-form-field__val {
     opacity: 0;
     transition: $fade-all;
@@ -85,16 +62,26 @@
     }
 }
 
-.tk-form-field__val--approved {
+.tk-form-field__val--loading {
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+    }
+
     svg {
-        position: relative;
-        top: 1px;
-        width: 19px;
-        fill: $ns-green-sexy;
+        transform-origin: 50% 50%;
+        animation: rotate 500ms linear infinite;
+        fill: $ns-blue;
+        transition: $fade-link;
     }
 }
 
-
+.tk-form-field__val--approved {
+    svg {
+        width: 17px;
+        fill: $ns-green-sexy;
+    }
+}
 
 
 
@@ -126,8 +113,6 @@
     }
 
     &::placeholder {
-        position: relative;
-        top: 2px;
         @include font-style(16px, normal, 1.25);
     }
 

@@ -98,11 +98,18 @@ $(document).ready(function () {
     function forms(i) {
         var id = "#tk-ff-" + i;
         var input = $(id + " .tk-input");
-        var label = $(id + " .tk-label");
         var tick = $(id + " .tk-val-standard");
         var error = $(id + " .tk-form-field__error");
         var emailField = document.getElementById("email");
 
+        function checkInputValue() {
+            if (input.val() != "") {
+                tick.addClass("is-active");
+            } else {
+                tick.removeClass("is-active");
+            };
+        };
+        checkInputValue();
 
         function showError() {
             input.addClass("is-error");
@@ -122,17 +129,23 @@ $(document).ready(function () {
             });
         };
 
-        // styling when field is filled
-        input.keyup(function () {
-            hideError();
+        function checkEmail() {
             if (emailField) {
                 isValidEmail = email.checkValidity();
-            }
-            if (input.val() != "") {
-                tick.addClass("is-active");
-            } else {
+            };
+        };
+        checkEmail();
+
+        input.keyup(function () {
+            hideError();
+            checkEmail();
+            if (input.val() == "") {
                 tick.removeClass("is-active");
             };
+        });
+
+        input.focusout(function(){
+            checkInputValue();
         });
 
         $(".js-submit-link").click(function (e) {
@@ -169,7 +182,7 @@ $(document).ready(function () {
             clearTimeout(typingTimer);
             clearTimeout(serverCallSym);
             typingTimer = setTimeout(doneTyping, doneTypingInterval);
-            $(".js-email-loader, .tk-form-field__val--approved").removeClass("is-active");
+            $(".tk-form-field__val--loading, .tk-form-field__val--approved").removeClass("is-active");
         });
 
         // on keydown, clear the countdown 
@@ -180,15 +193,16 @@ $(document).ready(function () {
         // user is "finished typing," do something
         function doneTyping() {
             if (isValidEmail) {
-                $(".js-email-loader").addClass("is-active");
+                $(".tk-form-field__val--loading").addClass("is-active");
                 serverCallSym = setTimeout(serverCallFinished, serverCallInterval);
             } else {
-                $(".js-email-loader, .tk-form-field__val--approved").removeClass("is-active");
+                $(".tk-form-field__val--loading, .tk-form-field__val--approved").removeClass("is-active");
             };
         };
+        doneTyping();
 
         function serverCallFinished() {
-            $(".js-email-loader").removeClass("is-active");
+            $(".tk-form-field__val--loading").removeClass("is-active");
             $(".tk-form-field__val--approved").addClass("is-active");
         };
     };

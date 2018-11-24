@@ -4,7 +4,7 @@
     </label>
 
     <div>
-        <input class="textInput tk-input" type="{{ include.val }}" id="{{ include.title }}" />
+        <input class="textInput tk-input {{ include.class }}" type="{{ include.val }}" id="{{ include.title }}" placeholder="{{ include.placeholder }}" />
         <span class="tk-form-field__val tk-form-field__val--approved tk-val-standard" include="/assets/img/icons/check-fat--small.svg"></span>
         <div class="tk-form-field__error">
             {{ include.error }}
