@@ -1542,13 +1542,13 @@
             </div>
             <form>
 
-    <div class="tk-form-field tk-form-field--grid">
+    <div class="tk-form-field tk-form-field--grid tk-form-field--standard">
     <label for="voornaam" class="tk-label">
         Voornaam
     </label>
 
     <div>
-        <input class="textInput tk-input " type="text" id="voornaam" placeholder="" />
+        <input class="textInput tk-input" type="text" id="voornaam" placeholder="" maxlength="" />
         <span class="tk-form-field__val tk-form-field__val--approved tk-val-standard" include="/assets/img/icons/check-fat--small.svg"></span>
         <div class="tk-form-field__error">
             Vul je voornaam in
@@ -1557,13 +1557,13 @@
     </div>
 </div>
 
-    <div class="tk-form-field tk-form-field--grid">
+    <div class="tk-form-field tk-form-field--grid tk-form-field--standard">
     <label for="achternaam" class="tk-label">
         Achternaam
     </label>
 
     <div>
-        <input class="textInput tk-input " type="text" id="achternaam" placeholder="" />
+        <input class="textInput tk-input" type="text" id="achternaam" placeholder="" maxlength="" />
         <span class="tk-form-field__val tk-form-field__val--approved tk-val-standard" include="/assets/img/icons/check-fat--small.svg"></span>
         <div class="tk-form-field__error">
             Vul je achternaam in
@@ -1572,16 +1572,16 @@
     </div>
 </div>
 
-    <div class="tk-form-field tk-form-field--grid">
+    <div class="tk-form-field tk-form-field--grid tk-form-field--date">
     <label for="geboortedatum" class="tk-label">
         Geboortedatum
     </label>
 
     <div>
-        <input class="textInput tk-input " type="text" id="geboortedatum" placeholder="DD-MM-JJJJ" />
-        <span class="tk-form-field__val tk-form-field__val--approved tk-val-standard" include="/assets/img/icons/check-fat--small.svg"></span>
+        <input class="textInput tk-input" type="text" id="geboortedatum" placeholder="dd-mm-jjjj" maxlength="10" />
+        <span class="tk-form-field__val tk-form-field__val--approved tk-val-date" include="/assets/img/icons/check-fat--small.svg"></span>
         <div class="tk-form-field__error">
-            Vul je geboortedatum correct in (dd-mm-jjjj)
+            Vul je geboortedatum in (dd-mm-jjjj)
         </div>
         
     </div>

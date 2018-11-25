@@ -100,6 +100,8 @@ $(document).ready(function () {
         var input = $(id + " .tk-input");
         var tick = $(id + " .tk-val-standard");
         var error = $(id + " .tk-form-field__error");
+        var date = $(".tk-form-field--date .tk-input");
+        var tickDate = $(".tk-form-field--date .tk-form-field__val--approved");
         var emailField = document.getElementById("email");
 
         function checkInputValue() {
@@ -110,6 +112,14 @@ $(document).ready(function () {
             };
         };
         checkInputValue();
+
+        function checkLength(f, l) {
+            if (f.val().length == l) {
+                tickDate.addClass("is-active");
+            } else {
+                tickDate.removeClass("is-active");
+            };
+        };
 
         function showError() {
             input.addClass("is-error");
@@ -151,6 +161,7 @@ $(document).ready(function () {
         input.keyup(function () {
             hideError();
             checkEmail();
+            checkLength(date, 10);
             if (input.val() == "") {
                 tick.removeClass("is-active");
             };
@@ -187,14 +198,17 @@ $(document).ready(function () {
         var doneTypingInterval = 500;
         var serverCallSym;
         var serverCallInterval = 300;
-        var input = $(".tk-input--email");
+        var input = $(".tk-form-field--email .tk-input");
+        var loading = $(".tk-form-field--email .tk-form-field__val--loading");
+        var approved = $(".tk-form-field--email .tk-form-field__val--approved");
 
         // on keyup, start the countdown
         input.on('keyup', function () {
             clearTimeout(typingTimer);
             clearTimeout(serverCallSym);
             typingTimer = setTimeout(doneTyping, doneTypingInterval);
-            $(".tk-form-field__val--loading, .tk-form-field__val--approved").removeClass("is-active");
+            loading.removeClass("is-active");
+            approved.removeClass("is-active");
         });
 
         // on keydown, clear the countdown 
@@ -205,17 +219,18 @@ $(document).ready(function () {
         // user is "finished typing," do something
         function doneTyping() {
             if (isValidEmail) {
-                $(".tk-form-field__val--loading").addClass("is-active");
+                loading.addClass("is-active");
                 serverCallSym = setTimeout(serverCallFinished, serverCallInterval);
             } else {
-                $(".tk-form-field__val--loading, .tk-form-field__val--approved").removeClass("is-active");
+                loading.removeClass("is-active");
+                approved.removeClass("is-active");
             };
         };
         doneTyping();
 
         function serverCallFinished() {
-            $(".tk-form-field__val--loading").removeClass("is-active");
-            $(".tk-form-field__val--approved").addClass("is-active");
+            loading.removeClass("is-active");
+            approved.addClass("is-active");
         };
     };
     doneTyping();
