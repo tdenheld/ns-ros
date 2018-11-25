@@ -90,18 +90,18 @@ $(document).ready(function () {
     var isValidEmail;
 
     // give every form field an ID and trigger functions
-    $(".tk-form-field").each(function (i) {
+    $(".tk-ff").each(function (i) {
         $(this).attr("id", "tk-ff-" + i);
         forms(i);
     });
 
     function forms(i) {
         var id = "#tk-ff-" + i;
-        var input = $(id + " .tk-input");
+        var input = $(id + " .tk-ff__input");
         var tick = $(id + " .tk-val-standard");
-        var error = $(id + " .tk-form-field__error");
-        var date = $(".tk-form-field--date .tk-input");
-        var tickDate = $(".tk-form-field--date .tk-form-field__val--approved");
+        var error = $(id + " .tk-ff__error");
+        var date = $(".tk-ff--date .tk-ff__input");
+        var tickDate = $(".tk-ff--date .tk-ff__icon--approved");
         var emailField = document.getElementById("email");
 
         function checkInputValue() {
@@ -113,12 +113,12 @@ $(document).ready(function () {
         };
         checkInputValue();
 
-        function checkLength(f, t, l) {
-            if (f[0]) {
-                if (f.val().length == l) {
-                    t.addClass("is-active");
+        function checkInputDate() {
+            if (date[0]) {
+                if (date.val().length == 10) {
+                    tickDate.addClass("is-active");
                 } else {
-                    t.removeClass("is-active");
+                    tickDate.removeClass("is-active");
                 };
             };
         };
@@ -163,7 +163,7 @@ $(document).ready(function () {
         input.keyup(function () {
             hideError();
             checkEmail();
-            checkLength(date, tickDate, 10);
+            checkInputDate();
             if (input.val() == "") {
                 tick.removeClass("is-active");
             };
@@ -202,9 +202,9 @@ $(document).ready(function () {
         var doneTypingInterval = 500;
         var serverCallSym;
         var serverCallInterval = 300;
-        var input = $(".tk-form-field--email .tk-input");
-        var loading = $(".tk-form-field--email .tk-form-field__val--loading");
-        var approved = $(".tk-form-field--email .tk-form-field__val--approved");
+        var input = $(".tk-ff--email .tk-ff__input");
+        var loading = $(".tk-ff--email .tk-ff__icon--loading");
+        var approved = $(".tk-ff--email .tk-ff__icon--approved");
 
         // on keyup, start the countdown
         input.on('keyup', function () {

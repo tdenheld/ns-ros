@@ -1,16 +1,26 @@
-<div class="tk-form-field tk-form-field--grid tk-form-field--{{ include.class }}">
-    <label for="{{ include.title }}" class="tk-label">
+<div class="tk-ff tk-ff--grid tk-ff--{{ include.class }}">
+    <label for="{{ include.title }}" class="tk-ff__label">
         {{ include.title | capitalize }}
     </label>
 
     <div>
-        <input class="textInput tk-input" type="{{ include.type }}" id="{{ include.title }}" placeholder="{{ include.placeholder }}" maxlength="{{ include.maxlength }}" {{ include.required }} />
-        <span class="tk-form-field__val tk-form-field__val--approved tk-val-{{ include.class }}" include="/assets/img/icons/check-fat--small.svg"></span>
-        <div class="tk-form-field__error">
+        <input class="textInput tk-ff__input" 
+               type="{{ include.type }}" 
+               id="{{ include.title }}" 
+               placeholder="{{ include.placeholder }}" 
+               maxlength="{{ include.maxlength }}" 
+               {{ include.required }} 
+        />
+        <span class="tk-ff__icon tk-ff__icon--approved tk-val-{{ include.class }}" 
+              include="/assets/img/icons/check-fat--small.svg">
+        </span>
+        
+        <div class="tk-ff__error">
             {{ include.error }}
         </div>
+
         {% if include.description %}
-        <p class="tk-form-field__description">
+        <p class="tk-ff__description">
             {{ include.description }}
         </p>
         {% endif %}
