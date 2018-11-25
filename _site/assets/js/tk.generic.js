@@ -114,10 +114,12 @@ $(document).ready(function () {
         checkInputValue();
 
         function checkLength(f, t, l) {
-            if (f.val().length == l) {
-                t.addClass("is-active");
-            } else {
-                t.removeClass("is-active");
+            if (f[0]) {
+                if (f.val().length == l) {
+                    t.addClass("is-active");
+                } else {
+                    t.removeClass("is-active");
+                };
             };
         };
 
@@ -167,7 +169,7 @@ $(document).ready(function () {
             };
         });
 
-        input.focusout(function(){
+        input.focusout(function () {
             checkInputValue();
             checkError();
         });
