@@ -113,11 +113,11 @@ $(document).ready(function () {
         };
         checkInputValue();
 
-        function checkLength(f, l) {
+        function checkLength(f, t, l) {
             if (f.val().length == l) {
-                tickDate.addClass("is-active");
+                t.addClass("is-active");
             } else {
-                tickDate.removeClass("is-active");
+                t.removeClass("is-active");
             };
         };
 
@@ -161,7 +161,7 @@ $(document).ready(function () {
         input.keyup(function () {
             hideError();
             checkEmail();
-            checkLength(date, 10);
+            checkLength(date, tickDate, 10);
             if (input.val() == "") {
                 tick.removeClass("is-active");
             };
