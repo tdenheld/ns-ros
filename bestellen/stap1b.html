@@ -9,15 +9,27 @@ progress: false
 <form>
 
     {% include /form/input-field.html 
-        title="voornaam" error="Vul je voornaam in" type="text" class="standard" required="required"
+        title="voornaam" 
+        error="Vul je voornaam in" 
+        type="text" class="standard" 
+        required="required"
     %}
 
     {% include /form/input-field.html 
-        title="achternaam" error="Vul je achternaam in" type="text" class="standard" required="required"
+        title="achternaam" 
+        error="Vul je achternaam in" 
+        type="text" 
+        class="standard" 
+        required="required"
     %}
 
     {% include /form/input-field.html 
-        title="geboortedatum" error="Vul je geboortedatum in (dd-mm-jjjj)" type="text" placeholder="dd-mm-jjjj" class="date" maxlength="10" required="required"
+        title="geboortedatum" 
+        error="Vul je geboortedatum in (dd-mm-jjjj)" 
+        type="text"
+        placeholder="dd-mm-jjjj" 
+        class="date" maxlength="10" 
+        required="required"
     %}
     
 </form>
