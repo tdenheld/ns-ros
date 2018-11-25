@@ -146,16 +146,16 @@ $(document).ready(function () {
         submit = false;
 
         if (emailField) {
-            if (isValidEmail == false) {
-                showError(i, e);
-            } else {
+            if (isValidEmail) {
                 submit = true;
+            } else {
+                showError(i, e);                
             };
         } else {
-            if (i.val() == "") {
-                showError(i, e);
-            } else {
+            if (i.val() != "") {
                 submit = true;
+            } else {
+                showError(i, e);
             };
         };
     };
