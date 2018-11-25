@@ -88,112 +88,119 @@ $(document).ready(function () {
     // ------------------------------------------------------------
     // ------------------------------------------------------------
     var isValidEmail;
+    var emailField = document.getElementById("email");
+    var submit = false;
 
-    // give every form field an ID and trigger functions
-    $(".tk-ff").each(function (i) {
-        $(this).attr("id", "tk-ff-" + i);
-        forms(i);
-    });
+    // constructors
+    // -------------
+    function checkValue(i, t) {
+        if (i.val() != "") {
+            t.addClass("is-active");
+        } else {
+            t.removeClass("is-active");
+        };
+    };
 
-    function forms(i) {
+    function checkEmail() {
+        if (emailField) {
+            isValidEmail = email.checkValidity();
+        };
+    };
+    checkEmail();
+
+    function checkDate() {
+        var date = $(".tk-ff--date .tk-ff__input");
+        var tickDate = $(".tk-ff--date .tk-ff__icon--approved");
+
+        if (date[0]) {
+            if (date.val().length == 10) {
+                tickDate.addClass("is-active");
+            } else {
+                tickDate.removeClass("is-active");
+            };
+        };
+    };
+    checkDate();
+
+    // errors
+    function showError(i, e) {
+        i.addClass("is-error");
+        TweenLite.to(e, .3, {
+            ease: default_ease,
+            autoAlpha: 1,
+            display: "block",
+        });
+    };
+
+    function hideError(i, e) {
+        i.removeClass("is-error");
+        TweenLite.to(e, .3, {
+            ease: default_ease,
+            autoAlpha: 0,
+            display: "none",
+        });
+    };
+
+    function checkError(i, e) {
+        // reset submit button
+        submit = false;
+
+        if (emailField) {
+            if (isValidEmail == false) {
+                showError(i, e);
+            } else {
+                submit = true;
+            };
+        } else {
+            if (i.val() == "") {
+                showError(i, e);
+            } else {
+                submit = true;
+            };
+        };
+    };
+
+    // generic formfield contrusctor
+    function formField(i) {
         var id = "#tk-ff-" + i;
         var input = $(id + " .tk-ff__input");
         var tick = $(id + " .tk-val-standard");
         var error = $(id + " .tk-ff__error");
-        var date = $(".tk-ff--date .tk-ff__input");
-        var tickDate = $(".tk-ff--date .tk-ff__icon--approved");
-        var emailField = document.getElementById("email");
 
-        function checkInputValue() {
-            if (input.val() != "") {
-                tick.addClass("is-active");
-            } else {
-                tick.removeClass("is-active");
-            };
-        };
-        checkInputValue();
-
-        function checkInputDate() {
-            if (date[0]) {
-                if (date.val().length == 10) {
-                    tickDate.addClass("is-active");
-                } else {
-                    tickDate.removeClass("is-active");
-                };
-            };
-        };
-
-        function showError() {
-            input.addClass("is-error");
-            TweenLite.to(error, .3, {
-                ease: default_ease,
-                autoAlpha: 1,
-                display: "block",
-            });
-        };
-
-        function hideError() {
-            input.removeClass("is-error");
-            TweenLite.to(error, .3, {
-                ease: default_ease,
-                autoAlpha: 0,
-                display: "none",
-            });
-        };
-
-        function checkError() {
-            if (emailField) {
-                if (isValidEmail == false) {
-                    showError();
-                };
-            } else {
-                if (input.val() == "") {
-                    showError();
-                };
-            };
-        };
-
-        function checkEmail() {
-            if (emailField) {
-                isValidEmail = email.checkValidity();
-            };
-        };
-        checkEmail();
+        checkValue(input, tick);
 
         input.keyup(function () {
-            hideError();
+            hideError(input, error);
             checkEmail();
-            checkInputDate();
+            checkDate();
             if (input.val() == "") {
                 tick.removeClass("is-active");
             };
         });
 
         input.focusout(function () {
-            checkInputValue();
+            checkValue(input, tick);
             if ($(this).prop("required")) {
-                checkError();
+                checkError(input, error);
             };
         });
 
         $(".js-submit-link").click(function (e) {
             e.preventDefault();
             linkLocation = this.href;
-            if (emailField) {
-                if (isValidEmail) {
-                    window.location = linkLocation;
-                } else {
-                    showError();
-                };
-            } else {
-                if (input.val() != "") {
-                    window.location = linkLocation;
-                } else {
-                    showError();
-                };
+            checkError(input, error);
+            if (submit) {
+                window.location = linkLocation;
             };
         });
     };
+
+    // give every form field an ID and init generic formfield methods
+    $(".tk-ff").each(function (i) {
+        $(this).attr("id", "tk-ff-" + i);
+        formField(i);
+    });
+
 
     // when user is done typing trigger loader / validate
     function doneTyping() {
