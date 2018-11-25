@@ -171,7 +171,9 @@ $(document).ready(function () {
 
         input.focusout(function () {
             checkInputValue();
-            checkError();
+            if ($(this).prop("required")) {
+                checkError();
+            };
         });
 
         $(".js-submit-link").click(function (e) {
