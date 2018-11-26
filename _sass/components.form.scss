@@ -49,6 +49,20 @@
     color: $ns-red-alert;
 }
 
+.tk-ff__message {
+    display: none;
+    opacity: 1;
+    margin: 4px 0 0;
+    @include font-style(14px, bold, 1.5);
+    color: $ns-green-sexy;
+    transition: $fade-all;
+
+    &.is-active {
+        display: block;
+        opacity: 1;
+    }
+}
+
 // in field validation icon
 .tk-ff__icon {
     opacity: 0;
@@ -79,6 +93,13 @@
 .tk-ff__icon--approved {
     svg {
         width: 17px;
+        fill: $ns-green-sexy;
+    }
+}
+
+.tk-ff__icon--known {
+    top: 41px;
+    svg {
         fill: $ns-green-sexy;
     }
 }

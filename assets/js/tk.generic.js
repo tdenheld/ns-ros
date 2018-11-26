@@ -88,6 +88,8 @@ $(document).ready(function () {
     // ------------------------------------------------------------
     // ------------------------------------------------------------
     var submit = true;
+    var linkLocationDefault = $(".js-submit-link").attr("href");
+    var linkLocation = linkLocationDefault;
 
     function checkValue(i, t) {
         if (i.val() != "") {
@@ -185,7 +187,7 @@ $(document).ready(function () {
     // email field
     function checkEmail() {
         var typingTimer;
-        var doneTypingInterval = 500;
+        var doneTypingInterval = 750;
         var serverCallSym;
         var serverCallInterval = 300;
         var isValidEmail;
@@ -194,7 +196,10 @@ $(document).ready(function () {
         var input = $(".js-ff-email .tk-ff__input");
         var loading = $(".js-ff-email .tk-ff__icon--loading");
         var tick = $(".js-ff-email .tk-ff__icon--approved");
+        var known = $(".js-ff-email .tk-ff__icon--known");
+        var knownMessage = $(".js-ff-email .tk-ff__message");
         var error = $(".js-ff-email .tk-ff__error");
+        var buttonText = $(".js-submit-button").text();
 
         if (emailField) {
             submit = false;
@@ -208,7 +213,11 @@ $(document).ready(function () {
                 typingTimer = setTimeout(doneTyping, doneTypingInterval);
                 loading.removeClass("is-active");
                 tick.removeClass("is-active");
+                known.removeClass("is-active");
+                knownMessage.removeClass("is-active");
                 isValidEmail = email.checkValidity();
+                $(".js-submit-button").text(buttonText);
+                linkLocation = linkLocationDefault;
             });
 
             // on keydown, clear the countdown 
@@ -229,19 +238,26 @@ $(document).ready(function () {
             function doneTyping() {
                 if (isValidEmail) {
                     loading.addClass("is-active");
-                    serverCallSym = setTimeout(serverCallFinished, serverCallInterval);
+                    serverCallSym = setTimeout(() => {
+                        if (input.val() != "bekend@ns.nl") {
+                            loading.removeClass("is-active");
+                            tick.addClass("is-active");
+                        } else {
+                            loading.removeClass("is-active");
+                            known.addClass("is-active");
+                            knownMessage.addClass("is-active");
+                            $(".js-submit-button").text("Inloggen");
+                            linkLocation = "https://login.ns.nl";
+                        };
+                    }, serverCallInterval);
                 } else {
                     loading.removeClass("is-active");
                     tick.removeClass("is-active");
+                    known.removeClass("is-active");
                 };
             };
+
             doneTyping();
-
-            function serverCallFinished() {
-                loading.removeClass("is-active");
-                tick.addClass("is-active");
-            };
-
             submitButton(input, error);
         };
     };
@@ -250,10 +266,8 @@ $(document).ready(function () {
     function submitButton(i, e) {
         $(".js-submit-link").click(function (event) {
             event.preventDefault();
-            linkLocation = this.href;
             if (submit) {
                 window.location = linkLocation;
-                submit = false;
             } else {
                 showError(i, e);
             };
