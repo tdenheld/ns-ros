@@ -169,6 +169,15 @@ $(document).ready(function () {
                 } else {
                     tick.removeClass("is-active");
                 };
+             
+                // add hyphen when digits are typed
+                var n = input.val();
+                if (input.val().length == 2) {
+                    input.val(n + "-");
+                };
+                if (input.val().length == 5) {
+                    input.val(n + "-");
+                };
             });
             input.focusout(function () {
                 if (input.val().length == 10) {
