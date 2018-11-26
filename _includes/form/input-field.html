@@ -1,4 +1,4 @@
-<div class="tk-ff tk-ff--grid tk-ff--{{ include.class }}">
+<div class="tk-ff tk-ff--grid js-ff-{{ include.class }}">
     <label for="{{ include.title }}" class="tk-ff__label">
         {{ include.title | capitalize }}
     </label>
@@ -11,7 +11,7 @@
                maxlength="{{ include.maxlength }}" 
                {{ include.required }} 
         />
-        <span class="tk-ff__icon tk-ff__icon--approved tk-val-{{ include.class }}" 
+        <span class="tk-ff__icon tk-ff__icon--approved" 
               include="/assets/img/icons/check-fat--small.svg">
         </span>
         

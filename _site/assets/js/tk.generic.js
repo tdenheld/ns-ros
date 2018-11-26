@@ -87,43 +87,20 @@ $(document).ready(function () {
     // form
     // ------------------------------------------------------------
     // ------------------------------------------------------------
-    var isValidEmail;
-    var emailField = document.getElementById("email");
-    var submit = false;
+    var submit = true;
 
-    // constructors
-    // -------------
     function checkValue(i, t) {
         if (i.val() != "") {
             t.addClass("is-active");
+            submit = true;
         } else {
             t.removeClass("is-active");
+            submit = false;
         };
     };
 
-    function checkEmail() {
-        if (emailField) {
-            isValidEmail = email.checkValidity();
-        };
-    };
-    checkEmail();
-
-    function checkDate() {
-        var date = $(".tk-ff--date .tk-ff__input");
-        var tickDate = $(".tk-ff--date .tk-ff__icon--approved");
-
-        if (date[0]) {
-            if (date.val().length == 10) {
-                tickDate.addClass("is-active");
-            } else {
-                tickDate.removeClass("is-active");
-            };
-        };
-    };
-    checkDate();
-
-    // errors
     function showError(i, e) {
+        submit = false;
         i.addClass("is-error");
         TweenLite.to(e, .3, {
             ease: default_ease,
@@ -141,110 +118,147 @@ $(document).ready(function () {
         });
     };
 
-    function checkError(i, e) {
-        // reset submit button
-        submit = false;
-
-        if (emailField) {
-            if (isValidEmail) {
-                submit = true;
-            } else {
-                showError(i, e);                
-            };
-        } else {
-            if (i.val() != "") {
-                submit = true;
-            } else {
-                showError(i, e);
-            };
-        };
-    };
 
     // generic formfield contrusctor
     function formField(i) {
-        var id = "#tk-ff-" + i;
+        var id = "#js-ff-default-" + i;
         var input = $(id + " .tk-ff__input");
-        var tick = $(id + " .tk-val-standard");
+        var tick = $(id + " .tk-ff__icon--approved");
         var error = $(id + " .tk-ff__error");
-
-        checkValue(input, tick);
 
         input.keyup(function () {
             hideError(input, error);
-            checkEmail();
-            checkDate();
-            if (input.val() == "") {
-                tick.removeClass("is-active");
-            };
         });
 
         input.focusout(function () {
             checkValue(input, tick);
             if ($(this).prop("required")) {
-                checkError(input, error);
+                if (input.val() == "") {
+                    showError(input, error);
+                };
             };
         });
 
-        $(".js-submit-link").click(function (e) {
-            e.preventDefault();
-            linkLocation = this.href;
-            checkError(input, error);
-            if (submit) {
-                window.location = linkLocation;
-            };
+        checkValue(input, tick);
+        submitButton(input, error);
+    };
+
+    if ($(".js-ff-default")[0]) {
+        submit = false;
+        $(".js-ff-default").each(function (i) {
+            $(this).attr("id", "js-ff-default-" + i);
+            formField(i);
         });
     };
 
-    // give every form field an ID and init generic formfield methods
-    $(".tk-ff").each(function (i) {
-        $(this).attr("id", "tk-ff-" + i);
-        formField(i);
-    });
 
+    // date field
+    function checkDate() {
+        var input = $(".js-ff-date .tk-ff__input");
+        var error = $(".js-ff-date .tk-ff__error");
+        var tick = $(".js-ff-date .tk-ff__icon--approved");
 
-    // when user is done typing trigger loader / validate
-    function doneTyping() {
-        // setup before functions
+        if (input[0]) {
+            submit = false;
+            input.keyup(function () {
+                hideError(input, error);
+                if (input.val().length == 10) {
+                    tick.addClass("is-active");
+                } else {
+                    tick.removeClass("is-active");
+                };
+            });
+            input.focusout(function () {
+                if (input.val().length == 10) {
+                    submit = true;
+                } else {
+                    showError(input, error);
+                    submit = false;
+                };
+            });
+        };
+
+        submitButton(input, error);
+    };
+    checkDate();
+
+    // email field
+    function checkEmail() {
         var typingTimer;
         var doneTypingInterval = 500;
         var serverCallSym;
         var serverCallInterval = 300;
-        var input = $(".tk-ff--email .tk-ff__input");
-        var loading = $(".tk-ff--email .tk-ff__icon--loading");
-        var approved = $(".tk-ff--email .tk-ff__icon--approved");
+        var isValidEmail;
+        var emailField = document.getElementById("email");
 
-        // on keyup, start the countdown
-        input.on('keyup', function () {
-            clearTimeout(typingTimer);
-            clearTimeout(serverCallSym);
-            typingTimer = setTimeout(doneTyping, doneTypingInterval);
-            loading.removeClass("is-active");
-            approved.removeClass("is-active");
-        });
+        var input = $(".js-ff-email .tk-ff__input");
+        var loading = $(".js-ff-email .tk-ff__icon--loading");
+        var tick = $(".js-ff-email .tk-ff__icon--approved");
+        var error = $(".js-ff-email .tk-ff__error");
 
-        // on keydown, clear the countdown 
-        input.on('keydown', function () {
-            clearTimeout(typingTimer);
-        });
+        if (emailField) {
+            submit = false;
+            isValidEmail = email.checkValidity();
 
-        // user is "finished typing," do something
-        function doneTyping() {
-            if (isValidEmail) {
-                loading.addClass("is-active");
-                serverCallSym = setTimeout(serverCallFinished, serverCallInterval);
-            } else {
+            // on keyup, start the countdown
+            input.keyup(function () {
+                hideError(input, error);
+                clearTimeout(typingTimer);
+                clearTimeout(serverCallSym);
+                typingTimer = setTimeout(doneTyping, doneTypingInterval);
                 loading.removeClass("is-active");
-                approved.removeClass("is-active");
-            };
-        };
-        doneTyping();
+                tick.removeClass("is-active");
+                isValidEmail = email.checkValidity();
+            });
 
-        function serverCallFinished() {
-            loading.removeClass("is-active");
-            approved.addClass("is-active");
+            // on keydown, clear the countdown 
+            input.keydown(function () {
+                clearTimeout(typingTimer);
+            });
+
+            input.focusout(function () {
+                if (isValidEmail) {
+                    submit = true;
+                } else {
+                    showError(input, error);
+                    submit = false;
+                };
+            });
+
+            // user is finished typing
+            function doneTyping() {
+                if (isValidEmail) {
+                    loading.addClass("is-active");
+                    serverCallSym = setTimeout(serverCallFinished, serverCallInterval);
+                } else {
+                    loading.removeClass("is-active");
+                    tick.removeClass("is-active");
+                };
+            };
+            doneTyping();
+
+            function serverCallFinished() {
+                loading.removeClass("is-active");
+                tick.addClass("is-active");
+            };
+
+            submitButton(input, error);
         };
     };
-    doneTyping();
+    checkEmail();
+
+    function submitButton(i, e) {
+        $(".js-submit-link").click(function (event) {
+            event.preventDefault();
+            linkLocation = this.href;
+            if (submit) {
+                window.location = linkLocation;
+                submit = false;
+            } else {
+                showError(i, e);
+            };
+        });
+    };
 
 
 
