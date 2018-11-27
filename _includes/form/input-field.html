@@ -4,16 +4,18 @@
     </label>
 
     <div>
-        <input class="textInput tk-ff__input" 
-               type="{{ include.type }}" 
-               id="{{ include.title }}" 
-               placeholder="{{ include.placeholder }}" 
-               maxlength="{{ include.maxlength }}" 
-               {{ include.required }} 
-        />
-        <span class="tk-ff__icon tk-ff__icon--approved" 
-              include="/assets/img/icons/check-fat--small.svg">
-        </span>
+        <div class="tk-ff__input-container">
+            <input class="textInput tk-ff__input" 
+                type="{{ include.type }}" 
+                id="{{ include.title }}" 
+                placeholder="{{ include.placeholder }}" 
+                maxlength="{{ include.maxlength }}" 
+                {{ include.required }} 
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
         
         <div class="tk-ff__error">
             {{ include.error }}
