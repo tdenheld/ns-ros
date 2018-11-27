@@ -68,8 +68,29 @@ h6 {
     background-color: $ns-white;
 }
 
+.richText p {
+    margin: 0;
+}
+
+.overlay__contentPositioner {
+    @include sm-max {
+        margin: auto;
+        width: 100%;
+        .overlay__close {
+            position: fixed;
+        }
+    }
+}
+
+.overlay .darkener {
+    @include sm-max {
+        background-color: $ns-white;
+    }
+}
+
 
 // extra ovr-classes
+// ------------------------------------------
 .ovr-container {
     margin: 0 0 $half-gutter;
 
