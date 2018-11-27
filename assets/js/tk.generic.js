@@ -94,15 +94,12 @@ $(document).ready(function () {
     function checkValue(i, t) {
         if (i.val() != "") {
             t.addClass("is-active");
-            submit = true;
         } else {
             t.removeClass("is-active");
-            submit = false;
         };
     };
 
     function showError(i, e) {
-        submit = false;
         i.addClass("is-error");
         TweenLite.to(e, .3, {
             ease: default_ease,
@@ -130,6 +127,7 @@ $(document).ready(function () {
 
         input.keyup(function () {
             hideError(input, error);
+            tick.removeClass("is-active");
         });
 
         input.focusout(function () {
@@ -137,6 +135,9 @@ $(document).ready(function () {
             if ($(this).prop("required")) {
                 if (input.val() == "") {
                     showError(input, error);
+                    submit = false;
+                } else {
+                    submit = true;
                 };
             };
         });
