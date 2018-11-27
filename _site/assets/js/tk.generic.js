@@ -169,7 +169,7 @@ $(document).ready(function () {
                 } else {
                     tick.removeClass("is-active");
                 };
-             
+
                 // add hyphen when digits are typed
                 var n = input.val();
                 if (input.val().length == 2) {
@@ -277,7 +277,7 @@ $(document).ready(function () {
             event.preventDefault();
             if (submit) {
                 window.location = linkLocation;
-            } else {
+            } else if (i.prop("required")) {
                 showError(i, e);
             };
         });
