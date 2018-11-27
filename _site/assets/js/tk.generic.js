@@ -248,7 +248,7 @@ $(document).ready(function () {
                 if (isValidEmail) {
                     loading.addClass("is-active");
                     serverCallSym = setTimeout(() => {
-                        if (input.val() != "bekend@ns.nl") {
+                        if (input.val() != "tjeerd@ns.nl") {
                             loading.removeClass("is-active");
                             tick.addClass("is-active");
                         } else {
