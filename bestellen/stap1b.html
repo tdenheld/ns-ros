@@ -8,28 +8,61 @@ progress: false
 
 <form>
 
-    {% include /form/input-field.html 
-        title="voornaam" 
-        error="Vul je voornaam in" 
-        type="text" class="default" 
-        required="required"
+    <div class="tk-ff tk-ff--grid">
+        <label class="tk-ff__label">
+            E-mailadres
+        </label>
+
+        <div class="tk-ff__filled">
+            <span>tibor@ns.nl</span>
+            <a href="/bestellen/stap1a.html" class="btn__link">
+                <span class="svg-light-blue ml-1" include="/assets/img/icons/edit--small.svg"></span>
+            </a>
+        </div>
+    </div>
+
+    {% include /form/input-field.html
+    title="voornaam"
+    error="Vul je voornaam in"
+    type="text" class="default"
+    required="required"
     %}
 
-    {% include /form/input-field.html 
-        title="achternaam" 
-        error="Vul je achternaam in" 
-        type="text" 
-        class="default" 
-        required="required"
+    {% include /form/input-field.html
+    title="achternaam"
+    error="Vul je achternaam in"
+    type="text"
+    class="default"
+    required="required"
     %}
 
-    {% include /form/input-field.html 
-        title="geboortedatum" 
-        error="Vul je geboortedatum in (dd-mm-jjjj)" 
-        type="text"
-        placeholder="dd-mm-jjjj" 
-        class="date" maxlength="10" 
-        required="required"
+    {% include /form/input-field.html
+    title="geboortedatum"
+    error="Vul je geboortedatum in (dd-mm-jjjj)"
+    type="text"
+    placeholder="dd-mm-jjjj"
+    class="date" maxlength="10"
+    required="required"
     %}
-    
+
+    {% include /form/input-field.html
+    title="postcode"
+    error='Vul je postcode in, bijv. "1234AB"'
+    type="text"
+    placeholder="1234AB"
+    class="default" maxlength="6"
+    required="required"
+    %}
+
+    {% include /form/input-field-dual.html
+    title="Huisnummer"
+    error="Vul je huisnummer in"
+    type="text"
+    class="default"
+    required="required"
+
+    title2="toevoeging"
+    placeholder2="Toevoeging"
+    %}
+
 </form>

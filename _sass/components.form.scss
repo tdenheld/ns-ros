@@ -33,6 +33,12 @@
             top: 12px;
         }
     }
+
+    &:last-child {
+        @include sm {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .tk-ff__description {
@@ -78,8 +84,13 @@
 
 .tk-ff__icon--loading {
     @keyframes rotate {
-        from { transform: rotate(0deg); }
-        to   { transform: rotate(360deg); }
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
     }
 
     svg {
@@ -99,12 +110,15 @@
 
 .tk-ff__icon--known {
     top: 38px;
+
     svg {
         fill: $ns-green-sexy;
     }
 }
 
-
+.tk-ff__filled {
+    line-height: $button-height - 2;
+}
 
 .tk-ff__label {
     display: block;
@@ -112,6 +126,10 @@
     transition: $fade-link;
     @include font-style(16px, normal, 1.25);
     color: $ns-blue;
+
+    @include sm {
+        margin-bottom: 0;
+    }
 }
 
 .tk-ff__input {
@@ -156,6 +174,7 @@
     .tk-ff__input:hover {
         border: 1px solid $ns-grey-5;
     }
+
     .tk-ff__input:focus {
         border: 1px solid $ns-blue;
     }

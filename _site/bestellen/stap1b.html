@@ -1542,6 +1542,19 @@
             </div>
             <form>
 
+    <div class="tk-ff tk-ff--grid">
+        <label class="tk-ff__label">
+            E-mailadres
+        </label>
+
+        <div class="tk-ff__filled">
+            <span>tibor@ns.nl</span>
+            <a href="/bestellen/stap1a.html" class="btn__link">
+                <span class="svg-light-blue ml-1" include="/assets/img/icons/edit--small.svg"></span>
+            </a>
+        </div>
+    </div>
+
     <div class="tk-ff tk-ff--grid js-ff-default">
     <label for="voornaam" class="tk-ff__label">
         Voornaam
@@ -1616,7 +1629,80 @@
         
     </div>
 </div>
+
+    <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="postcode" class="tk-ff__label">
+        Postcode
+    </label>
+
+    <div>
+        <input class="textInput tk-ff__input" 
+               type="text" 
+               id="postcode" 
+               placeholder="1234AB" 
+               maxlength="6" 
+               required 
+        />
+        <span class="tk-ff__icon tk-ff__icon--approved" 
+              include="/assets/img/icons/check-fat--small.svg">
+        </span>
+        
+        <div class="tk-ff__error">
+            Vul je postcode in, bijv. "1234AB"
+        </div>
+
+        
+    </div>
+</div>
+
+    <div class="tk-ff tk-ff--grid">
+
+    <label for="Huisnummer" class="tk-ff__label">
+        Huisnummer
+    </label>
+
+    <div class="g g-2 col-gap-2">
+        <div class="pos-r js-ff-default">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="Huisnummer" 
+                placeholder="" 
+                maxlength="" 
+                required 
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+            
+            <div class="tk-ff__error">
+                Vul je huisnummer in
+            </div>
+
+            
+        </div>
+
+        <div class="pos-r js-ff-default">
+            <input class="textInput tk-ff__input" 
+                    type="text" 
+                    id="toevoeging" 
+                    placeholder="Toevoeging" 
+                    maxlength="" 
+                     
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                    include="/assets/img/icons/check-fat--small.svg">
+            </span>
+            
+            <div class="tk-ff__error">
+                
+            </div>
+
+            
+        </div>
+    </div>
     
+</div>
+
 </form>
 
             <!-- call to action button -->

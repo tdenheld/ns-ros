@@ -1,0 +1,55 @@
+<div class="tk-ff tk-ff--grid">
+
+    <label for="{{ include.title }}" class="tk-ff__label">
+        {{ include.title | capitalize }}
+    </label>
+
+    <div class="g g-2 col-gap-2">
+        <div class="pos-r js-ff-{{ include.class }}">
+            <input class="textInput tk-ff__input" 
+                type="{{ include.type }}" 
+                id="{{ include.title }}" 
+                placeholder="{{ include.placeholder }}" 
+                maxlength="{{ include.maxlength }}" 
+                {{ include.required }} 
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+            
+            <div class="tk-ff__error">
+                {{ include.error }}
+            </div>
+
+            {% if include.description %}
+            <p class="tk-ff__description">
+                {{ include.description }}
+            </p>
+            {% endif %}
+        </div>
+
+        <div class="pos-r js-ff-{{ include.class }}">
+            <input class="textInput tk-ff__input" 
+                    type="{{ include.type }}" 
+                    id="{{ include.title2 }}" 
+                    placeholder="{{ include.placeholder2 }}" 
+                    maxlength="{{ include.maxlength2 }}" 
+                    {{ include.required2 }} 
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                    include="/assets/img/icons/check-fat--small.svg">
+            </span>
+            
+            <div class="tk-ff__error">
+                {{ include.error2 }}
+            </div>
+
+            {% if include.description2 %}
+            <p class="tk-ff__description">
+                {{ include.description2 }}
+            </p>
+            {% endif %}
+        </div>
+    </div>
+    
+</div>

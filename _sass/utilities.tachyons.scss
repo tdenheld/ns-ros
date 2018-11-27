@@ -14,9 +14,14 @@
 
 
 
-// overflows
+// overflows | positions
 // ----------------------------------------------------------------------
 .o-hidden { overflow: hidden; }
+.pos-r { position: relative; }
+.pos-a { position: absolute; }
+.pos-f { position: fixed; }
+.pos-s { position: static; }
+.pos-i { position: inherit; }
 
 
 
