@@ -324,7 +324,7 @@ $(document).ready(function () {
     function addAddressNumber() {
         var input = $("#huisnummer");
         input.keyup(function () {
-            $(".tk-ff__address-number").text(input.val());
+            $(".tk-ff__address-number").text(" " + input.val());
         });
     };
     addAddressNumber();
