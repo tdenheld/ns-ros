@@ -1548,9 +1548,9 @@
         </label>
 
         <div class="tk-ff__filled">
-            <span class="fw-b f-blue f18">tibor@ns.nl</span>
-            <a href="/bestellen/stap1a.html" class="btn__link">
-                <span class="svg-light-blue ml-1" include="/assets/img/icons/edit--small.svg"></span>
+            <span>tibor@ns.nl</span>
+            <a onclick="window.history.go(-1)" class="btn__link">
+                <span class="tk-ff__filled-icon" include="/assets/img/icons/edit-S--small.svg"></span>
             </a>
         </div>
     </div>
@@ -1718,11 +1718,69 @@
     <div class="tk-ff tk-ff--grid tk-ff__address">
         <div></div>
         <div class="tk-ff__address-container">
-            Nieuwendammerstraat<span class="tk-ff__address-number"></span>,<br>
-            1023AB AMSTERDAM
+            <div>
+                Nieuwendammerstraat<span class="tk-ff__address-number"></span>,<br>
+                1023AB AMSTERDAM
+            </div>
+            <div class="tk-ff__address-icon svg-link" include="/assets/img/icons/edit-S--small.svg"></div>
         </div>
     </div>
 
+    <div class="js-address-additional dn o-0">
+        <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="straatnaam" class="tk-ff__label">
+        Straatnaam
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="straatnaam" 
+                placeholder="" 
+                maxlength="" 
+                 
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je straatnaam in
+        </div>
+
+        
+    </div>
+</div>
+
+        <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="plaats" class="tk-ff__label">
+        Plaats
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="plaats" 
+                placeholder="" 
+                maxlength="" 
+                 
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je plaatsnaam in
+        </div>
+
+        
+    </div>
+</div>
+    </div>
 </form>
 
             <!-- call to action button -->

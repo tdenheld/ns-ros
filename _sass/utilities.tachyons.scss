@@ -828,6 +828,7 @@
 .svg-grey-6b svg {fill: $ns-grey-6b;}
 .svg-grey-7 svg {fill: $ns-grey-7;}
 .svg-grey-8 svg {fill: $ns-grey-8;}
+.svg-link { svg {cursor: pointer; transition: $fade-link; fill: $ns-light-blue;} &:hover {svg {fill: $ns-blue;}}}
 
 
 

@@ -69,7 +69,8 @@
     }
 }
 
-// in field validation icon
+
+// ------------------------------------
 .tk-ff__icon {
     opacity: 0;
     transition: $fade-all;
@@ -117,10 +118,32 @@
     }
 }
 
+
+// ------------------------------------
 .tk-ff__filled {
-    line-height: $button-height - 4;
+    @include font-style(18px, bold, ($button-height - 4));
+    color: $ns-blue;
 }
 
+.tk-ff__filled-icon {
+    position: relative;
+    top: 1px;
+    margin-left: 7px;
+
+    svg {
+        transition: $fade-link;
+        fill: $ns-light-blue;
+    }
+
+    &:hover {
+        svg {
+            fill: $ns-blue;
+        }
+    }
+}
+
+
+// ------------------------------------
 .tk-ff__label {
     display: block;
     margin-bottom: 7px;
@@ -133,6 +156,8 @@
     }
 }
 
+
+// ------------------------------------
 .tk-ff__address {
     display: none;
     transform: scaleY(0.7);
@@ -140,13 +165,30 @@
 }
 
 .tk-ff__address-container {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
     padding: 14px;
     background-color: $ns-grey-8;
     border: 1px solid $ns-grey-7;
-    @include font-style(16px, normal, 1.5);
-    //color: $ns-grey;
+    @include font-style(14px, normal, 1.5);
+    color: $ns-blue;
 }
 
+.tk-ff__address-icon {
+    position: relative;
+    right: -4px;
+    top: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+
+// ------------------------------------
 .tk-ff__input {
     // lay-out
     width: 100%;
@@ -189,6 +231,8 @@
     position: relative;
 }
 
+
+// ------------------------------------
 .no-touch {
     .tk-ff__input:hover {
         border: 1px solid $ns-grey-5;

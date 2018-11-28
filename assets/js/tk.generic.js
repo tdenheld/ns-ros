@@ -56,7 +56,6 @@ $(document).ready(function () {
 
 
 
-
     // sticky bar
     // ------------------------------------------------------------
     function stickyBar() {
@@ -117,8 +116,6 @@ $(document).ready(function () {
         });
     };
 
-
-    // generic formfield contrusctor
     function formField(i) {
         var id = "#js-ff-default-" + i;
         var input = $(id + " .tk-ff__input");
@@ -194,9 +191,7 @@ $(document).ready(function () {
 
     function checkEmail() {
         var typingTimer;
-        var doneTypingInterval = 750;
         var serverCallSym;
-        var serverCallInterval = 300;
         var isValidEmail;
         var emailField = document.getElementById("email");
 
@@ -217,7 +212,7 @@ $(document).ready(function () {
                 hideError(input, error);
                 clearTimeout(typingTimer);
                 clearTimeout(serverCallSym);
-                typingTimer = setTimeout(doneTyping, doneTypingInterval);
+                typingTimer = setTimeout(doneTyping, 750);
                 loading.removeClass("is-active");
                 tick.removeClass("is-active");
                 known.removeClass("is-active");
@@ -241,6 +236,10 @@ $(document).ready(function () {
                 };
             });
 
+            if (isValidEmail) {
+                submit = true;
+            };
+
             // user is finished typing
             function doneTyping() {
                 if (isValidEmail) {
@@ -256,7 +255,7 @@ $(document).ready(function () {
                             $(".js-submit-button").text("Inloggen");
                             linkLocation = "https://login.ns.nl";
                         };
-                    }, serverCallInterval);
+                    }, 300);
                 } else {
                     loading.removeClass("is-active");
                     tick.removeClass("is-active");
@@ -328,6 +327,29 @@ $(document).ready(function () {
         });
     };
     addAddressNumber();
+
+    function customAddress() {
+        var display = false;
+
+        $(".tk-ff__address-icon").click(() => {
+            if (display) {
+                display = false;
+                TweenLite.to(".js-address-additional", .3, {
+                    ease: default_ease,
+                    autoAlpha: 0,
+                    display: "none",
+                });
+            } else {
+                display = true;
+                TweenLite.to(".js-address-additional", .3, {
+                    ease: default_ease,
+                    autoAlpha: 1,
+                    display: "block",
+                });
+            };
+        });
+    };
+    customAddress();
 
     function submitButton(i, e) {
         $(".js-submit-link").click(function (event) {

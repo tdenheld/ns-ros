@@ -14,9 +14,9 @@ progress: false
         </label>
 
         <div class="tk-ff__filled">
-            <span class="fw-b f-blue f18">tibor@ns.nl</span>
-            <a href="/bestellen/stap1a.html" class="btn__link">
-                <span class="svg-light-blue ml-1" include="/assets/img/icons/edit--small.svg"></span>
+            <span>tibor@ns.nl</span>
+            <a onclick="window.history.go(-1)" class="btn__link">
+                <span class="tk-ff__filled-icon" include="/assets/img/icons/edit-S--small.svg"></span>
             </a>
         </div>
     </div>
@@ -69,9 +69,27 @@ progress: false
     <div class="tk-ff tk-ff--grid tk-ff__address">
         <div></div>
         <div class="tk-ff__address-container">
-            Nieuwendammerstraat<span class="tk-ff__address-number"></span>,<br>
-            1023AB AMSTERDAM
+            <div>
+                Nieuwendammerstraat<span class="tk-ff__address-number"></span>,<br>
+                1023AB AMSTERDAM
+            </div>
+            <div class="tk-ff__address-icon svg-link" include="/assets/img/icons/edit-S--small.svg"></div>
         </div>
     </div>
 
+    <div class="js-address-additional dn o-0">
+        {% include /form/input-field.html
+        title="straatnaam"
+        error="Vul je straatnaam in"
+        type="text"
+        class="default"
+        %}
+
+        {% include /form/input-field.html
+        title="plaats"
+        error="Vul je plaatsnaam in"
+        type="text"
+        class="default"
+        %}
+    </div>
 </form>
