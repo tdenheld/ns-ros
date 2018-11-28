@@ -90,14 +90,6 @@ $(document).ready(function () {
     var linkLocationDefault = $(".js-submit-link").attr("href");
     var linkLocation = linkLocationDefault;
 
-    function checkValue(i, t) {
-        if (i.val() != "") {
-            t.addClass("is-active");
-        } else {
-            t.removeClass("is-active");
-        };
-    };
-
     function showError(i, e) {
         i.addClass("is-error");
         TweenLite.to(e, .3, {
@@ -122,13 +114,21 @@ $(document).ready(function () {
         var tick = $(id + " .tk-ff__icon--approved");
         var error = $(id + " .tk-ff__error");
 
+        function checkValue() {
+            if (input.val() != "") {
+                tick.addClass("is-active");
+            } else {
+                tick.removeClass("is-active");
+            };
+        };
+
         input.keyup(function () {
             hideError(input, error);
             tick.removeClass("is-active");
         });
 
         input.focusout(function () {
-            checkValue(input, tick);
+            checkValue();
             if ($(this).prop("required")) {
                 if (input.val() == "") {
                     showError(input, error);
@@ -139,7 +139,7 @@ $(document).ready(function () {
             };
         });
 
-        checkValue(input, tick);
+        checkValue();
         submitButton(input, error);
     };
 
@@ -156,15 +156,23 @@ $(document).ready(function () {
         var error = $(".js-ff-date .tk-ff__error");
         var tick = $(".js-ff-date .tk-ff__icon--approved");
 
+        function checkValue() {
+            if (input.val().length == 10) {
+                submit = true;
+                tick.addClass("is-active");
+            } else {
+                tick.removeClass("is-active");
+                submit = false;
+            };
+        };
+
         if (input[0]) {
             submit = false;
+            checkValue();
+
             input.keyup(function () {
                 hideError(input, error);
-                if (input.val().length == 10) {
-                    tick.addClass("is-active");
-                } else {
-                    tick.removeClass("is-active");
-                };
+                checkValue();
 
                 // add hyphen when digits are typed
                 var n = input.val();
@@ -175,6 +183,7 @@ $(document).ready(function () {
                     input.val(n + "-");
                 };
             });
+
             input.focusout(function () {
                 if (input.val().length == 10) {
                     submit = true;
@@ -275,8 +284,32 @@ $(document).ready(function () {
         var error = $(".js-ff-postal .tk-ff__error");
         var address = $(".tk-ff__address");
 
+        // check value
+        function checkValue() {
+            if (input.val().length == 6) {
+                tick.addClass("is-active");
+                submit = true;
+                TweenLite.to(address, .2, {
+                    ease: default_ease,
+                    autoAlpha: 1,
+                    scaleY: 1,
+                    display: "grid",
+                });
+            } else {
+                tick.removeClass("is-active");
+                submit = false;
+                TweenLite.to(address, .2, {
+                    ease: default_ease,
+                    autoAlpha: 0,
+                    scaleY: 0.7,
+                    display: "none",
+                });
+            };
+        };
+
         if (input[0]) {
             submit = false;
+            checkValue();
 
             // prevent spacebar input
             input.keypress(function (e) {
@@ -287,23 +320,7 @@ $(document).ready(function () {
             // show or hide address on completed postal code
             input.keyup(function () {
                 hideError(input, error);
-                if (input.val().length == 6) {
-                    tick.addClass("is-active");
-                    TweenLite.to(address, .2, {
-                        ease: default_ease,
-                        autoAlpha: 1,
-                        scaleY: 1,
-                        display: "grid",
-                    });
-                } else {
-                    tick.removeClass("is-active");
-                    TweenLite.to(address, .2, {
-                        ease: default_ease,
-                        autoAlpha: 0,
-                        scaleY: 0.7,
-                        display: "none",
-                    });
-                };
+                checkValue();
             });
 
             // show error on focusout if input is correct
@@ -322,8 +339,22 @@ $(document).ready(function () {
 
     function addAddressNumber() {
         var input = $("#huisnummer");
+        var houseAddition = $("#toevoeging");
+
+        function addNumber() {
+            $(".tk-ff__address-number").text(" " + input.val() + houseAddition.val());
+        };
+
+        if (input.val() != "" || houseAddition.val() != "") {
+            addNumber();
+        };
+
         input.keyup(function () {
-            $(".tk-ff__address-number").text(" " + input.val());
+            addNumber();
+        });
+
+        houseAddition.keyup(function () {
+            addNumber();
         });
     };
     addAddressNumber();
