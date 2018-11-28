@@ -154,8 +154,6 @@ $(document).ready(function () {
         });
     };
 
-
-    // date field
     function checkDate() {
         var input = $(".js-ff-date .tk-ff__input");
         var error = $(".js-ff-date .tk-ff__error");
@@ -194,7 +192,6 @@ $(document).ready(function () {
     };
     checkDate();
 
-    // email field
     function checkEmail() {
         var typingTimer;
         var doneTypingInterval = 750;
@@ -272,6 +269,65 @@ $(document).ready(function () {
         };
     };
     checkEmail();
+
+    function checkPostal() {
+        var input = $(".js-ff-postal .tk-ff__input");
+        var tick = $(".js-ff-postal .tk-ff__icon--approved");
+        var error = $(".js-ff-postal .tk-ff__error");
+        var address = $(".tk-ff__address");
+
+        if (input[0]) {
+            submit = false;
+
+            // prevent spacebar input
+            input.keypress(function (e) {
+                if (e.which === 32)
+                    return false;
+            });
+
+            // show or hide address on completed postal code
+            input.keyup(function () {
+                hideError(input, error);
+                if (input.val().length == 6) {
+                    tick.addClass("is-active");
+                    TweenLite.to(address, .2, {
+                        ease: default_ease,
+                        autoAlpha: 1,
+                        scaleY: 1,
+                        display: "grid",
+                    });
+                } else {
+                    tick.removeClass("is-active");
+                    TweenLite.to(address, .2, {
+                        ease: default_ease,
+                        autoAlpha: 0,
+                        scaleY: 0.7,
+                        display: "none",
+                    });
+                };
+            });
+
+            // show error on focusout if input is correct
+            input.focusout(function () {
+                if (input.val().length == 6) {
+
+                } else {
+                    showError(input, error);
+                };
+            });
+        };
+
+        submitButton(input, error);
+    };
+    checkPostal();
+
+    function addAddressNumber() {
+        var input = $("#huisnummer");
+        input.keyup(function () {
+            $(".tk-ff__address-number").text(input.val());
+        });
+    };
+    addAddressNumber();
 
     function submitButton(i, e) {
         $(".js-submit-link").click(function (event) {

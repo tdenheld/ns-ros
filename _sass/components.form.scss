@@ -133,6 +133,20 @@
     }
 }
 
+.tk-ff__address {
+    display: none;
+    transform: scaleY(0.7);
+    transform-origin: 0 0;
+}
+
+.tk-ff__address-container {
+    padding: 14px;
+    background-color: $ns-grey-8;
+    border: 1px solid $ns-grey-7;
+    @include font-style(16px, normal, 1.5);
+    color: $ns-blue;
+}
+
 .tk-ff__input {
     // lay-out
     width: 100%;

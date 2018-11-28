@@ -50,12 +50,12 @@ progress: false
     error='Vul je postcode in, bijv. "1234AB"'
     type="text"
     placeholder="1234AB"
-    class="default" maxlength="6"
+    class="postal" maxlength="6"
     required="required"
     %}
 
     {% include /form/input-field-dual.html
-    title="Huisnummer"
+    title="huisnummer"
     error="Vul je huisnummer in"
     type="number"
     class="default"
@@ -65,5 +65,13 @@ progress: false
     title2="toevoeging"
     placeholder2="Toevoeging"
     %}
+
+    <div class="tk-ff tk-ff--grid tk-ff__address">
+        <div></div>
+        <div class="tk-ff__address-container">
+            Nieuwendammerstraat, <span class="tk-ff__address-number"></span><br>
+            1023AB AMSTERDAM
+        </div>
+    </div>
 
 </form>
