@@ -160,32 +160,20 @@
 // ------------------------------------
 .tk-ff__address {
     display: none;
+    margin-top: 20px;
     transform: scaleY(0.7);
     transform-origin: 0 0;
 }
 
 .tk-ff__address-container {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    align-items: center;
-    padding: 14px;
-    background-color: $ns-grey-8;
-    border: 1px solid $ns-grey-7;
-    @include font-style(14px, normal, 1.5);
+    @include font-style(16px, bold, 1.5);
     color: $ns-blue;
 }
 
 .tk-ff__address-icon {
-    margin: auto;
     position: relative;
-    right: -4px;
-    top: -1px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
+    top: 1px;
+    margin-left: 7px;
 }
 
 

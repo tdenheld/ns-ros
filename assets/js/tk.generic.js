@@ -360,24 +360,18 @@ $(document).ready(function () {
     addAddressNumber();
 
     function customAddress() {
-        var display = false;
-
         $(".tk-ff__address-icon").click(() => {
-            if (display) {
-                display = false;
-                TweenLite.to(".js-address-additional", .3, {
-                    ease: default_ease,
-                    autoAlpha: 0,
-                    display: "none",
-                });
-            } else {
-                display = true;
-                TweenLite.to(".js-address-additional", .3, {
-                    ease: default_ease,
-                    autoAlpha: 1,
-                    display: "block",
-                });
-            };
+            TweenLite.to(".tk-ff__address", 0, {
+                ease: default_ease,
+                autoAlpha: 0,
+                display: "none",
+            });
+            TweenLite.to(".js-address-additional", 0.3, {
+                ease: default_ease,
+                autoAlpha: 1,
+                display: "block",
+            });
+
         });
     };
     customAddress();
