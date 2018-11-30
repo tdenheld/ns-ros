@@ -35,6 +35,7 @@ $bs-height: 408px;
     }
 
     .overlay__close {
+        position: absolute;
         top: auto;
         bottom: $bs-height - 50;
 
