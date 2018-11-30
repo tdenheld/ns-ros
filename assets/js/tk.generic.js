@@ -371,7 +371,6 @@ $(document).ready(function () {
                 autoAlpha: 1,
                 display: "block",
             });
-
         });
     };
     customAddress();
@@ -386,6 +385,37 @@ $(document).ready(function () {
             };
         });
     };
+
+
+
+
+
+
+
+    // datepicker
+    // ------------------------------------------------------------
+    $(".js-datepicker-bs, .js-datepicker-scr").click(() => {
+        $(".darkener").addClass("overlay__close");
+    });
+
+    $(".js-datepicker-bs").click(() => {
+        $("body").removeClass().addClass("tk-datepicker-bs");
+        TweenLite.fromTo(".overlay__scrollContainer", 0.3, {
+            autoAlpha: 0,
+            y: 300
+        },{
+            ease: default_ease,
+            autoAlpha: 1,
+            y: 0
+        });
+    });
+
+    $(".tk-datepicker__day--enabled").click(function() {
+        $(this).toggleClass("is-active");
+    });
+    
+
+
 
 
 

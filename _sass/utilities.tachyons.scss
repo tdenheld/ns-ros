@@ -42,6 +42,14 @@
 .rotate-270 { transform: rotate(270deg); }
 .rotate-315 { transform: rotate(315deg); }
 
+.rotate-svg-45  { svg { transform: rotate(45deg); }}
+.rotate-svg-90  { svg { transform: rotate(90deg); }}
+.rotate-svg-135 { svg { transform: rotate(135deg); }}
+.rotate-svg-180 { svg { transform: rotate(180deg); }}
+.rotate-svg-225 { svg { transform: rotate(225deg); }}
+.rotate-svg-270 { svg { transform: rotate(270deg); }}
+.rotate-svg-315 { svg { transform: rotate(315deg); }}
+
 
 
 /*-------------------
@@ -71,19 +79,27 @@
 
 // auto-margins
 // rem padding (NS tile padding)
-.m-auto {margin: 0 auto;}
+.ma-auto {margin: auto;}
+.mh-auto {margin: 0 auto;}
+.mv-auto {margin: auto 0;}
 .pa-2r {padding: 2rem;}
 
 @include sm {
-    .m-auto-sm {margin: 0 auto;} 
+    .ma-auto-sm {margin: auto;}
+    .mh-auto-sm {margin: 0 auto;}
+    .mv-auto-sm {margin: auto 0;}
     .pa-2r-sm {padding: 2rem;}    
 }
 @include md {
-    .m-auto-md {margin: 0 auto;}
+    .ma-auto-md {margin: auto;}
+    .mh-auto-md {margin: 0 auto;}
+    .mv-auto-md {margin: auto 0;}
     .pa-2r-md {padding: 2rem;}  
 }
 @include lg {
-    .m-auto-lg {margin: 0 auto;}
+    .ma-auto-lg {margin: auto;}
+    .mh-auto-lg {margin: 0 auto;}
+    .mv-auto-lg {margin: auto 0;}
     .pa-2r-lg {padding: 2rem;}   
 }
 

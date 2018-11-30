@@ -1,0 +1,164 @@
+/*-------------------
+      Datepicker
+--------------------*/
+
+$bs-height: 408px;
+
+
+// bottom sheet layout
+// -------------------------------
+.tk-datepicker-bs {
+    .overlay {
+        @include sm {
+            display: none;
+        }
+    }
+
+    .overlay__contentPositioner {
+        position: relative;
+    }
+
+    .overlay__scrollContainer {
+        top: auto;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border: none;
+        }
+    }
+
+    .overlay__content {
+        border-radius: 8px 8px 0 0;
+        padding: 0;
+        height: $bs-height;
+    }
+
+    .overlay__close {
+        top: auto;
+        bottom: $bs-height - 50;
+
+        .icon {
+            transition: $fade-link;
+        }
+    }
+    
+    .darkener {
+        @include full(fixed);
+        background-color: rgba($ns-black, 0.3);
+        cursor: auto !important;
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    .grid__unit {
+        padding: 0;
+    }
+}
+
+
+
+// datepicker styling and layout
+// ----------------------------------------------
+.tk-datepicker {
+    text-align: center;
+}
+
+.tk-datepicker__header {
+    padding: 0 18px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+}
+
+.tk-datepicker__month {
+    @include font-style(16px, normal, 1.5);
+    color: $ns-light-blue;
+    transition: $fade-link;
+    cursor: pointer;
+
+    svg {
+        transform: rotate(90deg);
+        fill: $ns-light-blue;
+    }
+
+    &:hover {
+        color: $ns-blue;
+
+        svg {
+            fill: $ns-blue;
+        }
+    }
+}
+
+.tk-datepicker__chevron-down {
+    position: relative;
+    top: -1px;
+    margin-left: 3px;
+}
+
+.tk-datepicker__grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-row-gap: 4px;
+    margin-bottom: 4px;
+}
+
+.tk-datepicker__day {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    transition: $fade-all;
+    border: 1px solid rgba($ns-grey-6b, 0);
+
+    &.is-active {
+        background-color: $ns-light-blue;
+        color: $ns-white;
+        
+        &:before {
+            background-color: $ns-white;
+        }
+
+        &:hover {
+            border: 1px solid rgba($ns-light-blue, 1);
+        }
+    }
+}
+
+.tk-datepicker__day--enabled {
+    font-weight: bold;
+    color: $ns-light-blue;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid $ns-grey-6b;
+    }
+}
+
+.tk-datepicker__day--disabled {
+    font-weight: normal;
+    color: $ns-grey-5;
+    cursor: default;
+}
+
+.tk-datepicker__day--today {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 32px;
+        width: 4px;
+        height: 4px;
+        background-color: $ns-light-blue;
+        border-radius: 50%;
+        transform: $fade-all;
+    }
+}
