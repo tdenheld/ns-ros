@@ -81,6 +81,14 @@ $(document).ready(function () {
 
 
 
+    // basic toggle class
+    // ------------------------------------------------------------
+    $(".js-toggle").click(function () {
+        $(this).toggleClass("is-active");
+    });
+
+
+
 
 
     // form
@@ -394,46 +402,40 @@ $(document).ready(function () {
 
     // datepicker
     // ------------------------------------------------------------
-    $(".tk-datepicker-bs-btn").click(() => {
-        $(".tk-overlay-datepicker-bs").show();
+    function dpBottomSheet() {
+        var btn = $(".dp-bs-btn");
+        var overlay = $(".dp-bs");
+        var darkener = $(".dp-bs .tk-overlay__bg");
+        var bottomSheet = $(".tk-datepicker-bs");
+        var close = $(".tk-datepicker-bs__swiper, .dp-bs .tk-overlay__bg");
 
-        TweenLite.fromTo(".tk-datepicker-bs", 0.35, {
-            autoAlpha: 0,
-            y: 300
-        },{
-            ease: default_ease,
-            autoAlpha: 1,
-            y: 0
+        function tween(obj, fromA, toA, fromY, toY, time) {
+            TweenLite.fromTo(obj, time, {
+                autoAlpha: fromA,
+                y: fromY
+            }, {
+                ease: default_ease,
+                autoAlpha: toA,
+                y: toY,
+            });
+        };
+
+        btn.click(() => {
+            overlay.show();
+            tween(bottomSheet, 0, 1, 300, 0, 0.35);
+            tween(darkener, 0, 1, 0, 0, 0.6);
         });
 
-        TweenLite.fromTo(".tk-overlay-datepicker-bs .tk-overlay__bg", 0.6, {
-            autoAlpha: 0,
-        },{
-            ease: default_ease,
-            autoAlpha: 1,
+        close.click(() => {
+            tween(bottomSheet, 1, 0, 0, 300, 0.35);
+            tween(darkener, 1, 0, 0, 0, 0.6);
+            setTimeout(() => {
+                overlay.hide();
+            }, 700);
         });
-    });
+    };
+    dpBottomSheet();
 
-    $(".tk-datepicker-bs__swiper, .tk-overlay-datepicker-bs .tk-overlay__bg").click(() => {
-        TweenLite.to(".tk-datepicker-bs", 0.3, {
-            ease: default_ease,
-            autoAlpha: 0,
-            y: 300,
-        });
-
-        TweenLite.to(".tk-overlay-datepicker-bs .tk-overlay__bg", 0.5, {
-            ease: default_ease,
-            autoAlpha: 0,
-            onComplete: function(){
-                $(".tk-overlay-datepicker-bs").hide();  
-            },
-        });
-    });
-
-    $(".tk-datepicker__day--enabled").click(function() {
-        $(this).toggleClass("is-active");
-    });
-    
 
 
 

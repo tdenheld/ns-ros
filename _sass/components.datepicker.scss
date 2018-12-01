@@ -14,7 +14,7 @@ $bottom-sheet-height: 370px;
 
 .tk-overlay__bg {
     @include full(absolute);
-    background-color: rgba($ns-black, 0.15);
+    background-color: rgba($ns-black, 0.12);
 }
 
 
@@ -29,7 +29,7 @@ $bottom-sheet-height: 370px;
     height: $bottom-sheet-height;
     background-color: $ns-white;
     border-radius: 8px 8px 0 0;
-    box-shadow: 0 0 50px rgba($ns-black, 0.2);
+    box-shadow: 0 0 60px rgba($ns-black, 0.18);
 }
 
 .tk-datepicker-bs__swiper {
