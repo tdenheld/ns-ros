@@ -395,7 +395,7 @@ $(document).ready(function () {
     // datepicker
     // ------------------------------------------------------------
     $(".tk-datepicker-bs-btn").click(() => {
-        $(".tk-overlay").show();
+        $(".tk-overlay-datepicker-bs").show();
 
         TweenLite.fromTo(".tk-datepicker-bs", 0.35, {
             autoAlpha: 0,
@@ -406,7 +406,7 @@ $(document).ready(function () {
             y: 0
         });
 
-        TweenLite.fromTo(".tk-overlay__bg", 0.6, {
+        TweenLite.fromTo(".tk-overlay-datepicker-bs .tk-overlay__bg", 0.6, {
             autoAlpha: 0,
         },{
             ease: default_ease,
@@ -414,18 +414,18 @@ $(document).ready(function () {
         });
     });
 
-    $(".tk-datepicker-bs__swiper, .tk-overlay__bg").click(() => {
+    $(".tk-datepicker-bs__swiper, .tk-overlay-datepicker-bs .tk-overlay__bg").click(() => {
         TweenLite.to(".tk-datepicker-bs", 0.3, {
             ease: default_ease,
             autoAlpha: 0,
             y: 300,
         });
 
-        TweenLite.to(".tk-overlay__bg", 0.5, {
+        TweenLite.to(".tk-overlay-datepicker-bs .tk-overlay__bg", 0.5, {
             ease: default_ease,
             autoAlpha: 0,
             onComplete: function(){
-                $(".tk-overlay").hide();  
+                $(".tk-overlay-datepicker-bs").hide();  
             },
         });
     });
