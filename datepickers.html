@@ -1,0 +1,30 @@
+---
+heading: Datepicker component
+---
+
+<section>
+    <div class="container ovr-container">
+        <div class="tk-funnel-container tk-funnel-container--center pa-2r mb-20">
+            <div class="tk-heading tk-heading--funnel">
+                <h1 class="tk-heading__title">{{ page.heading }}</h1>
+            </div>
+            <a class="arrowLink db mb-2 tk-datepicker-bs-btn">
+                Datepicker Bottom Sheet (MVP)
+            </a>
+            <a class="arrowLink db tk-datepicker-scr-btn">
+                Datepicker Scroll
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- date picker bottom sheet -->
+<div class="tk-overlay is-hidden">
+    <div class="tk-overlay__bg"></div>
+    <div class="tk-datepicker-bs">
+        <div class="tk-datepicker-bs__swiper">
+            <div class="tk-datepicker-bs__swiper-icon"></div>
+        </div>
+        {% include datepicker.html %}
+    </div>
+</div>

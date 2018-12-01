@@ -2,66 +2,52 @@
       Datepicker
 --------------------*/
 
-$bs-height: 408px;
+$bottom-sheet-height: 370px;
 
-
-// bottom sheet layout
+// overlay
 // -------------------------------
-.tk-datepicker-bs {
-    .overlay {
-        @include sm {
-            display: none;
-        }
-    }
+.tk-overlay {
+    z-index: 999;
+    @include full(fixed);
+}
 
-    .overlay__contentPositioner {
-        position: relative;
-    }
-
-    .overlay__scrollContainer {
-        top: auto;
-
-        &:focus {
-            outline: none;
-            box-shadow: none;
-            border: none;
-        }
-    }
-
-    .overlay__content {
-        border-radius: 8px 8px 0 0;
-        padding: 0;
-        height: $bs-height;
-    }
-
-    .overlay__close {
-        position: absolute;
-        top: auto;
-        bottom: $bs-height - 50;
-
-        .icon {
-            transition: $fade-link;
-        }
-    }
-    
-    .darkener {
-        @include full(fixed);
-        background-color: rgba($ns-black, 0.3);
-        cursor: auto !important;
-    }
-
-    .container {
-        margin: 0;
-    }
-
-    .grid__unit {
-        padding: 0;
-    }
+.tk-overlay__bg {
+    @include full(absolute);
+    background-color: rgba($ns-black, 0.15);
 }
 
 
 
-// datepicker styling and layout
+// bottom sheet
+// -------------------------------
+.tk-datepicker-bs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $bottom-sheet-height;
+    background-color: $ns-white;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 0 50px rgba($ns-black, 0.2);
+}
+
+.tk-datepicker-bs__swiper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0 20px;
+}
+
+.tk-datepicker-bs__swiper-icon {
+    background-color: $ns-grey-6b;
+    width: 28px;
+    height: 4px;
+    border-radius: 40px;
+}
+
+
+
+// datepicker component
 // ----------------------------------------------
 .tk-datepicker {
     text-align: center;
@@ -76,7 +62,9 @@ $bs-height: 408px;
 }
 
 .tk-datepicker__month {
-    @include font-style(16px, normal, 1.5);
+    position: relative;
+    top: 1px;
+    @include font-style(16px, bold, 1.5);
     color: $ns-light-blue;
     transition: $fade-link;
     cursor: pointer;

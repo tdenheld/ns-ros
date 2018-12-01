@@ -394,19 +394,39 @@ $(document).ready(function () {
 
     // datepicker
     // ------------------------------------------------------------
-    $(".js-datepicker-bs, .js-datepicker-scr").click(() => {
-        $(".darkener").addClass("overlay__close");
-    });
+    $(".tk-datepicker-bs-btn").click(() => {
+        $(".tk-overlay").show();
 
-    $(".js-datepicker-bs").click(() => {
-        $("body").removeClass().addClass("tk-datepicker-bs");
-        TweenLite.fromTo(".overlay__scrollContainer", 0.3, {
+        TweenLite.fromTo(".tk-datepicker-bs", 0.35, {
             autoAlpha: 0,
             y: 300
         },{
             ease: default_ease,
             autoAlpha: 1,
             y: 0
+        });
+
+        TweenLite.fromTo(".tk-overlay__bg", 0.6, {
+            autoAlpha: 0,
+        },{
+            ease: default_ease,
+            autoAlpha: 1,
+        });
+    });
+
+    $(".tk-datepicker-bs__swiper, .tk-overlay__bg").click(() => {
+        TweenLite.to(".tk-datepicker-bs", 0.3, {
+            ease: default_ease,
+            autoAlpha: 0,
+            y: 300,
+        });
+
+        TweenLite.to(".tk-overlay__bg", 0.5, {
+            ease: default_ease,
+            autoAlpha: 0,
+            onComplete: function(){
+                $(".tk-overlay").hide();  
+            },
         });
     });
 
