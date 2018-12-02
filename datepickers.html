@@ -1,19 +1,24 @@
 ---
 heading: Datepicker component
+bg: bg-yellow
 ---
 
 <section>
     <div class="container ovr-container">
         <div class="tk-funnel-container tk-funnel-container--center pa-2r mb-20">
-            <div class="tk-heading tk-heading--funnel">
+            <div class="tk-heading mb-3">
                 <h1 class="tk-heading__title">{{ page.heading }}</h1>
             </div>
-            <a class="arrowLink db mb-2 dp-bs-btn">
-                Datepicker Bottom Sheet (MVP)
-            </a>
-            <a class="arrowLink db dp-scr-btn">
-                Datepicker Scroll
-            </a>
+            <div class="dp-btn dp-bs-btn">
+                Bottom Sheet (MVP)
+                <span class="dp-btn__icon" include="/assets/img/icons/calendar--small.svg"></span>
+                <div class="tk-datepicker-lg">{% include datepicker.html %}</div>
+            </div>
+            <div class="dp-btn dp-scr-btn">
+                Scroll
+                <span class="dp-btn__icon" include="/assets/img/icons/calendar--small.svg"></span>
+                <div class="tk-datepicker-lg">{% include datepicker.html %}</div>
+            </div>
         </div>
     </div>
 </section>

@@ -48,6 +48,66 @@ $bottom-sheet-height: 370px;
 
 
 
+// desktop box
+// ---------------------------------
+.tk-datepicker-lg {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: -133px;
+    padding: 14px 4px 0;
+    border-radius: 4px;
+    background-color: $ns-white;
+    box-shadow: 0 2px 35px rgba($ns-black, 0.15);
+    transform-origin: 0 0;
+    transform: scaleY(0.8);
+    opacity: 0;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -8px;
+        left: 159px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 14px solid $ns-white;
+    }
+}
+
+
+
+// input field style buttons
+// -------------------------------
+.dp-btn {
+    position: relative;
+    margin-bottom: 14px;
+    padding: 10px 14px;
+    background-color: $ns-white;
+    height: $button-height;
+    border-radius: 4px;
+    color: $ns-blue;
+    max-width: 420px;
+    transition: $fade-all;
+}
+
+.dp-btn__icon {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    cursor: pointer;
+
+    svg {
+        fill: $ns-blue;
+    }
+}
+
+.dp-bs-btn {
+    z-index: 999;
+}
+
+
+
 // datepicker component
 // ----------------------------------------------
 .tk-datepicker {
@@ -55,7 +115,7 @@ $bottom-sheet-height: 370px;
 }
 
 .tk-datepicker__header {
-    padding: 0 18px;
+    padding: 0 20px;
     margin-bottom: 20px;
     display: grid;
     grid-template-columns: max-content 1fr max-content;

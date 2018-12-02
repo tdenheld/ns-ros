@@ -421,9 +421,11 @@ $(document).ready(function () {
         };
 
         btn.click(() => {
-            overlay.show();
-            tween(bottomSheet, 0, 1, 300, 0, 0.35);
-            tween(darkener, 0, 1, 0, 0, 0.6);
+            if (window_width <= 640) {
+                overlay.show();
+                tween(bottomSheet, 0, 1, 300, 0, 0.35);
+                tween(darkener, 0, 1, 0, 0, 0.6);
+            };
         });
 
         close.click(() => {
@@ -435,6 +437,35 @@ $(document).ready(function () {
         });
     };
     dpBottomSheet();
+
+    function dpDesktop() {
+        var active = false;
+        var dp;
+
+        $(".dp-btn").click(function () {
+            dp = $(".tk-datepicker-lg", this);
+            if (window_width > 640) {
+                if (active) {
+                    TweenLite.to(dp, 0.3, {
+                        ease: default_ease,
+                        opacity: 0,
+                        scaleY: 0.8,
+                        display: "none",
+                    });
+                    active = false;
+                } else {
+                    TweenLite.to(dp, 0.3, {
+                        ease: default_ease,
+                        opacity: 1,
+                        scaleY: 1,
+                        display: "block",
+                    });
+                    active = true;
+                }
+            };
+        });
+    };
+    dpDesktop();
 
 
 
