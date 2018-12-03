@@ -433,7 +433,7 @@ $(document).ready(function () {
             tween(darkener, 1, 0, 0, 0, 0.6);
             setTimeout(() => {
                 overlay.hide();
-            }, 700);
+            }, 610);
         });
     };
     dpBottomSheet();
@@ -449,12 +449,15 @@ $(document).ready(function () {
                     TweenLite.to(dp, 0.3, {
                         ease: default_ease,
                         opacity: 0,
-                        scaleY: 0.8,
                         display: "none",
                     });
                     active = false;
                 } else {
-                    TweenLite.to(dp, 0.3, {
+                    TweenLite.fromTo(dp, 0.3, {
+                        opacity: 0,
+                        scaleY: 0.9,
+                        display: "none",
+                    },{
                         ease: default_ease,
                         opacity: 1,
                         scaleY: 1,

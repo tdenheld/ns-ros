@@ -52,15 +52,15 @@ $bottom-sheet-height: 370px;
 // ---------------------------------
 .tk-datepicker-lg {
     display: none;
+    width: 348px;
     position: absolute;
     top: 56px;
-    right: -133px;
-    padding: 14px 4px 0;
+    right: -150px;
+    padding: 14px 0 0;
     border-radius: 4px;
     background-color: $ns-white;
     box-shadow: 0 2px 35px rgba($ns-black, 0.15);
     transform-origin: 0 0;
-    transform: scaleY(0.8);
     opacity: 0;
 
     &:before {
@@ -68,7 +68,7 @@ $bottom-sheet-height: 370px;
         display: block;
         position: absolute;
         top: -8px;
-        left: 159px;
+        left: 166px;
         border-left: 8px solid transparent;
         border-right: 8px solid transparent;
         border-bottom: 14px solid $ns-white;
@@ -88,7 +88,6 @@ $bottom-sheet-height: 370px;
     border-radius: 4px;
     color: $ns-blue;
     max-width: 420px;
-    transition: $fade-all;
 }
 
 .dp-btn__icon {
@@ -102,8 +101,8 @@ $bottom-sheet-height: 370px;
     }
 }
 
-.dp-bs-btn {
-    z-index: 999;
+.dp-btn--z3 {
+    z-index: 3;
 }
 
 
@@ -165,8 +164,8 @@ $bottom-sheet-height: 370px;
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    transition: $fade-all;
     border: 1px solid rgba($ns-grey-6b, 0);
+    transition: $fade-all;
 
     &.is-active {
         background-color: $ns-light-blue;
@@ -175,10 +174,6 @@ $bottom-sheet-height: 370px;
         &:before {
             background-color: $ns-white;
         }
-
-        &:hover {
-            border: 1px solid rgba($ns-light-blue, 1);
-        }
     }
 }
 
@@ -186,10 +181,6 @@ $bottom-sheet-height: 370px;
     font-weight: bold;
     color: $ns-light-blue;
     cursor: pointer;
-
-    &:hover {
-        border: 1px solid $ns-grey-6b;
-    }
 }
 
 .tk-datepicker__day--disabled {
@@ -210,5 +201,20 @@ $bottom-sheet-height: 370px;
         background-color: $ns-light-blue;
         border-radius: 50%;
         transform: $fade-all;
+    }
+}
+
+// for no touch devices
+// -----------------------------------------
+.no-touch {
+    .tk-datepicker__day--enabled {
+        &:hover {
+            border: 1px solid $ns-grey-6b;
+        }
+        &.is-active {
+            &:hover {
+                border: 1px solid rgba($ns-light-blue, 1);
+            }
+        }
     }
 }
