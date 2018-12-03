@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% include progress.html %}
+
+<section>
+    <div class="container ovr-container">
+        <div class="tk-funnel-container pa-2r a a-fi-right-small">
+
+            <div class="hidden-xs">
+                {% include order.html %}
+            </div>
+
+            <div>
+                <div class="tk-heading tk-heading--funnel">
+                    <h1 class="tk-heading__title">{{ page.heading }}</h1>
+                </div>
+                {{ content }}
+
+                <div class="visible-xs">
+                    {% include order.html %}
+                </div>
+
+                <!-- call to action button -->
+                <div class="bo-t mb-2 mt-6-sm"></div>
+                <div class="txt-r" id="js-sticky-trig">
+                    {% include cta.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

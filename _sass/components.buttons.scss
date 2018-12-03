@@ -95,8 +95,10 @@
 }
 
 
-// read more link
-.btn-more {
+
+// icon link
+// ----------------------------------------
+.btn-icon {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -129,7 +131,11 @@
     }
 }
 
+
+
+
 // round scroll down button
+// ----------------------------------------
 .btn-round {
     display: flex;
     justify-content: center;
@@ -159,7 +165,11 @@
     }
 }
 
+
+
+
 // scroll down indicator
+// ----------------------------------------
 .scroll-down {
     cursor: pointer;
 }
@@ -173,7 +183,6 @@
 }
 
 .scroll-down__icon-circle {
-
     // animation
     // this one is a potential chrome helper CPU killer on retina screens
     @keyframes fall-down {

@@ -17,11 +17,22 @@
 }
 
 .tk-funnel-container {
-    max-width: 784px;
+    display: grid;
+    grid-column-gap: $double-gutter;
 
-    &--center {
-        margin: 0 auto;
+    @include md {
+        grid-template-columns: 320px 1fr;
     }
+
+    @include lg {
+        grid-column-gap: $triple-gutter;
+    }
+}
+
+.tk-funnel-container--1col {
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+    max-width: 784px;
 }
 
 // page heading
@@ -31,14 +42,14 @@
     @include sm {
         padding-bottom: $gutter;
     }
+}
 
-    &--funnel {
-        margin-bottom: $gutter;
-        border-bottom: 1px solid $ns-grey-7;
+.tk-heading--funnel {
+    margin-bottom: $gutter;
+    border-bottom: 1px solid $ns-grey-7;
 
-        @include sm {
-            margin-bottom: $double-gutter;
-        }
+    @include sm {
+        margin-bottom: $one-half-gutter;
     }
 }
 
@@ -236,7 +247,6 @@
 
 // order details
 // --------------------------------------------
-
 .tk-order {
     //layout
     overflow: hidden;
@@ -252,4 +262,16 @@
     @include sm {
         margin-bottom: $double-gutter;
     }
+}
+
+
+
+
+// choice selector
+.tk-choice-selector {
+    border: 1px solid $ns-grey-7;
+    padding: 20px;
+    @include font-style(18px, bold, 1.5);
+    color: $ns-blue;
+    border-radius: 4px;
 }

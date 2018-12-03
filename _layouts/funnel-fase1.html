@@ -2,18 +2,18 @@
 layout: default
 ---
 
-{% if page.progress %} {% include progress.html %} {% endif %}
+{% unless page.no-progress %} {% include progress.html %} {% endunless %}
 
 <section>
     <div class="container ovr-container">
-        <div class="tk-funnel-container tk-funnel-container--center pa-2r a a-fi-right-small">
+        <div class="tk-funnel-container tk-funnel-container--1col pa-2r a a-fi-right-small">
             <div class="tk-heading tk-heading--funnel">
                 <h1 class="tk-heading__title">{{ page.heading }}</h1>
             </div>
             {{ content }}
 
             <!-- call to action button -->
-            <div class="bo-t mb-2 mt-8-sm"></div>
+            <div class="bo-t mb-2 mt-6-sm"></div>
             <div class="txt-r" id="js-sticky-trig">
                 {% include cta.html %}
             </div>

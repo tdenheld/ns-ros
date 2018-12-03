@@ -6,9 +6,15 @@
 // form fieds
 // -------------------------
 .tk-ff {
-    position: relative;
     margin-bottom: $gutter;
+    position: relative;
     max-width: 400px;
+
+    &:last-child {
+        @include sm {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .tk-ff--grid {
@@ -31,12 +37,6 @@
     .tk-ff__icon {
         @include sm {
             top: 12px;
-        }
-    }
-
-    &:last-child {
-        @include sm {
-            margin-bottom: 0;
         }
     }
 }

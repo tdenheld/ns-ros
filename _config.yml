@@ -9,8 +9,3 @@ defaults:
     values:
       layout: "default"
       title: "Dal Voordeel Bestellen | NS"
-  - scope:
-      path: "bestellen"
-    values:
-      layout: "funnel"
-      progress: true
