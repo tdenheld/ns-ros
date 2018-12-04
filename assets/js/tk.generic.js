@@ -477,21 +477,10 @@ $(document).ready(function () {
 
     // choice selector
     // ------------------------------------------------------------
-    function choiceSelector(i) {
-        var id = "#js-cs-item-" + i;
-        var btn = $(id + " .js-cs-toggle");
-
-        btn.click(() => {
-            $(id).toggleClass("is-selected");
-        });
-    };
-
-    if ($(".js-cs-item")[0]) {
-        $(".js-cs-item").each(function (i) {
-            $(this).attr("id", "js-cs-item-" + i);
-            choiceSelector(i);
-        });
-    };
+    $(".js-cs-item").click(function() {
+        $(".js-cs-item").removeClass("is-selected");
+        $(this).addClass("is-selected");
+    });
 
 
 

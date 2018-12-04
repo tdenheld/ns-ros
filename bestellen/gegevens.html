@@ -29,6 +29,12 @@ dest: ov-chipkaart
     %}
 
     {% include /form/input-field.html
+    title="tussenvoegsel"
+    type="text" class="default"
+    width="mxw-150"
+    %}
+
+    {% include /form/input-field.html
     title="achternaam"
     error="Vul je achternaam in"
     type="text"
@@ -43,6 +49,7 @@ dest: ov-chipkaart
     placeholder="dd-mm-jjjj"
     class="date" maxlength="10"
     required="required"
+    width="mxw-200"
     %}
 
     {% include /form/input-field.html
@@ -52,6 +59,7 @@ dest: ov-chipkaart
     placeholder="3517AK"
     class="postal" maxlength="6"
     required="required"
+    width="mxw-150"
     %}
 
     {% include /form/input-field-dual.html
@@ -69,8 +77,8 @@ dest: ov-chipkaart
     <div class="tk-ff tk-ff--grid tk-ff__address">
         <div></div>
         <div class="tk-ff__address-container">
-                Jan van Galenstraat<span class="tk-ff__address-number"></span>,<br>
-                Veenendaal
+            Jan van Galenstraat<span class="tk-ff__address-number"></span>,<br>
+            Veenendaal
             <span class="tk-ff__address-icon svg-link" include="/assets/img/icons/edit-S--small.svg"></span>
         </div>
     </div>

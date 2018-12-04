@@ -291,28 +291,39 @@
 .tk-choice-selector__item {
     position: relative;
     margin-bottom: $half-gutter;
-    border: 1px solid $ns-grey-6b;
     padding: 20px;
     border-radius: 4px;
     transition: $fade-all;
     cursor: pointer;
 
+    &:before {
+        content: "";
+        @include full(absolute);
+        border: 1px solid $ns-grey-6b;
+        border-radius: 4px;
+        transition: $fade-all;
+    }
+
     &.is-selected {
-        border: none;
         box-shadow: 0 2px 28px rgba($ns-black, 0.1);
 
         &:before {
-            content: "";
-            @include full(absolute);
             border: 2px solid $ns-light-blue;
-            border-radius: 4px;
-            transition: $fade-all;
         }
     }
 }
 
+.tk-choice-selector__header {
+    display: grid;
+    align-items: center;
+
+    @include sm {
+        grid-template-columns: 1fr max-content;
+    }
+}
+
 .tk-choice-selector__title {
-    margin: 0 0 2px;
+    margin: 0;
     @include font-style(18px, bold, 1.5);
     color: $ns-blue;
 }
@@ -323,12 +334,43 @@
     color: $ns-grey-4;
 }
 
+.tk-choice-selector__price {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-column-gap: 10px;
+    align-items: baseline;
+
+    @include sm {
+        grid-template-columns: 1fr;
+        text-align: right;
+    }
+}
+
+.tk-choice-selector__new-price {
+    @include font-style(14px, normal, 1.5);
+    color: $ns-red-alert;
+
+    @include sm {
+        font-size: calculate-rem(18px);
+    }
+}
+
+.tk-choice-selector__old-price {
+    @include font-style(14px, normal, 1.5);
+    color: $ns-grey-4;
+    text-decoration: line-through;
+}
+
+
+
+
 // no touch
+// ----------------------------------------------------
 .no-touch {
-    .tk-choice-selector__item:hover {
+    .tk-choice-selector__item:hover:before {
         border: 1px solid $ns-grey-5;
     }
-    .tk-choice-selector__item.is-selected:hover {
-        border: none;
+    .tk-choice-selector__item.is-selected:hover:before {
+        border: 2px solid $ns-light-blue;
     }
 }
