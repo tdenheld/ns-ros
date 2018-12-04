@@ -4,14 +4,14 @@
     </label>
 
     <div>
-        <div class="tk-ff__input-container">
+        <div class="tk-ff__input-container {{ include.width }}">
             <input class="textInput tk-ff__input" 
                 type="{{ include.type }}" 
                 id="{{ include.title }}" 
                 placeholder="{{ include.placeholder }}" 
                 maxlength="{{ include.maxlength }}"
                 value="{{ include.value }}"
-                {{ include.required }} 
+                {{ include.required }}
             />
             <span class="tk-ff__icon tk-ff__icon--approved" 
                 include="/assets/img/icons/check-fat--small.svg">

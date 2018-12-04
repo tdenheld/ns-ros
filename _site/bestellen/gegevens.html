@@ -1532,103 +1532,312 @@
     </div>
 </header>
     <div class="content ">
-        <div class="bg-grey-8 bo-b">
+         <div class="bg-grey-8 bo-b">
     <div class="container ovr-container mv-0">
         <div class="tk-progress">
             
-            
-            
-            <div class="tk-progress__bar">
-                <div></div>
-                <div class="tk-progress__line tk-progress__line--active"></div>
-                <div class="tk-progress__line tk-progress__line--done"></div>
-                <div class="tk-progress__line"></div>
-                <div></div>
-            </div>
-            <div class="tk-progress__grid">
-                <a href="/bestellen/stap1a.html" class="btn__link">
-                    <div class="tk-progress__step tk-progress__step--done">
-                        <div class="tk-progress__circle"></div>
+            <div class="a a-fi-down">
+                <div class="tk-progress__bar">
+                    <div></div>
+                    <div class="tk-progress__line"></div>
+                    <div class="tk-progress__line"></div>
+                    <div class="tk-progress__line"></div>
+                    <div></div>
+                </div>
+                <div class="tk-progress__grid">
+                    <div class="tk-progress__step tk-progress__step--active">
+                        <div class="tk-progress__circle">1</div>
                         <div class="tk-progress__description hidden-xs">Gegevens</div>
                     </div>
-                </a>
-                <a href="/bestellen/stap2.html" class="btn__link">
-                    <div class="tk-progress__step tk-progress__step--done">
-                        <div class="tk-progress__circle"></div>
+                    <div class="tk-progress__step">
+                        <div class="tk-progress__circle">2</div>
                         <div class="tk-progress__description hidden-xs">OV-chipkaart</div>
                     </div>
-                </a>
-                <div class="tk-progress__step tk-progress__step--active">
-                    <div class="tk-progress__circle">3</div>
-                    <div class="tk-progress__description hidden-xs">Betalen</div>
-                </div>
-                <div class="tk-progress__step">
-                    <div class="tk-progress__circle">4</div>
-                    <div class="tk-progress__description hidden-xs">Bedankt</div>
+                    <div class="tk-progress__step">
+                        <div class="tk-progress__circle">3</div>
+                        <div class="tk-progress__description hidden-xs">Betalen</div>
+                    </div>
+                    <div class="tk-progress__step">
+                        <div class="tk-progress__circle">4</div>
+                        <div class="tk-progress__description hidden-xs">Bedankt</div>
+                    </div>
                 </div>
             </div>
+            
+            
             
             
         </div>
     </div>
-</div>
+</div> 
 
 <section>
     <div class="container ovr-container">
-        <div class="tk-funnel-container pa-2r a a-fi-right-small">
+        <div class="tk-funnel-container 
+                     tk-funnel-container--1col  
+                    pa-2r a a-fi-right-small">
 
-            <div class="hidden-xs">
-                <div class="tk-order">
-    <div class="g g-m-1 gap-2 items-center mb-1">
-        <div class="svg-blue" include="/assets/img/icons/discount--large.svg"></div>
-        <h3 class="f24 f28-sm lh-title fw-b mb-1">Dal Voordeel</h3>
-    </div>
-    <div class="bo-b-blue mb-3"></div>
-    <p class="f-blue f16 f18-sm lh-title mb-0">2e klas, 1 jaar</p>
-    <P class="f14 f-blue mb-3">(Daarna maandelijks opzeggen)</p>
-    <ul class="f-grey-4 f14 lh-copy">
-        <li>Met gratis nieuwe OV-chipkaart binnen 1 week in huis</li>
-        <li>Met je eigen OV-chipkaart binnen 1 uur bij kaartautomaat</li>
-    </ul>
-    <div class="bo-b mb-2"></div>
-    <div class="f-blue f28">€ 50 <span class="f14">per jaar</span></div>
-</div>
-            </div>
+            
 
             <div>
                 <div class="tk-heading tk-heading--funnel">
-                    <h1 class="tk-heading__title">Betalen</h1>
+                    <h1 class="tk-heading__title">Je gegevens</h1>
                 </div>
-                <form class="mb-4">
+                <form>
 
-</form>
-<div class="mb-20"></div>
-<div class="mb-20"></div>
+    <div class="tk-ff tk-ff--grid">
+        <label class="tk-ff__label">
+            E-mailadres
+        </label>
 
-                <div class="visible-xs">
-                    <div class="tk-order">
-    <div class="g g-m-1 gap-2 items-center mb-1">
-        <div class="svg-blue" include="/assets/img/icons/discount--large.svg"></div>
-        <h3 class="f24 f28-sm lh-title fw-b mb-1">Dal Voordeel</h3>
+        <div class="tk-ff__filled">
+            <span>tibor@ns.nl</span>
+            <a onclick="window.history.go(-1)" class="btn__link">
+                <span class="tk-ff__filled-icon" include="/assets/img/icons/edit-S--small.svg"></span>
+            </a>
+        </div>
     </div>
-    <div class="bo-b-blue mb-3"></div>
-    <p class="f-blue f16 f18-sm lh-title mb-0">2e klas, 1 jaar</p>
-    <P class="f14 f-blue mb-3">(Daarna maandelijks opzeggen)</p>
-    <ul class="f-grey-4 f14 lh-copy">
-        <li>Met gratis nieuwe OV-chipkaart binnen 1 week in huis</li>
-        <li>Met je eigen OV-chipkaart binnen 1 uur bij kaartautomaat</li>
-    </ul>
-    <div class="bo-b mb-2"></div>
-    <div class="f-blue f28">€ 50 <span class="f14">per jaar</span></div>
+
+    <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="voornaam" class="tk-ff__label">
+        Voornaam
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="voornaam" 
+                placeholder="" 
+                maxlength=""
+                value=""
+                required
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je voornaam in
+        </div>
+
+        
+    </div>
 </div>
-                </div>
+
+    <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="achternaam" class="tk-ff__label">
+        Achternaam
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="achternaam" 
+                placeholder="" 
+                maxlength=""
+                value=""
+                required
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je achternaam in
+        </div>
+
+        
+    </div>
+</div>
+
+    <div class="tk-ff tk-ff--grid js-ff-date">
+    <label for="geboortedatum" class="tk-ff__label">
+        Geboortedatum
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="geboortedatum" 
+                placeholder="dd-mm-jjjj" 
+                maxlength="10"
+                value=""
+                required
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je geboortedatum in (dd-mm-jjjj)
+        </div>
+
+        
+    </div>
+</div>
+
+    <div class="tk-ff tk-ff--grid js-ff-postal">
+    <label for="postcode" class="tk-ff__label">
+        Postcode
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="postcode" 
+                placeholder="3517AK" 
+                maxlength="6"
+                value=""
+                required
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je postcode in, bijv. "1234AB"
+        </div>
+
+        
+    </div>
+</div>
+
+    <div class="tk-ff tk-ff--grid">
+
+    <label for="huisnummer" class="tk-ff__label">
+        Huisnummer
+    </label>
+
+    <div class="g g-2 col-gap-2">
+        <div class="js-ff-default">
+            <div class="tk-ff__input-container">
+                <input class="textInput tk-ff__input" 
+                    type="number" 
+                    id="huisnummer" 
+                    placeholder="" 
+                    maxlength="" 
+                    required 
+                />
+                <span class="tk-ff__icon tk-ff__icon--approved" 
+                    include="/assets/img/icons/check-fat--small.svg">
+                </span>
+            </div>
+
+            <div class="tk-ff__error">
+                Vul je huisnummer in
+            </div>
+
+            
+        </div>
+
+        <div class="js-ff-default">
+            <div class="tk-ff__input-container">
+                <input class="textInput tk-ff__input" 
+                        type="text" 
+                        id="toevoeging" 
+                        placeholder="Toevoeging" 
+                        maxlength="" 
+                         
+                />
+                <span class="tk-ff__icon tk-ff__icon--approved" 
+                        include="/assets/img/icons/check-fat--small.svg">
+                </span>
+            </div>
+            
+            <div class="tk-ff__error">
+                
+            </div>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+    <div class="tk-ff tk-ff--grid tk-ff__address">
+        <div></div>
+        <div class="tk-ff__address-container">
+                Jan van Galenstraat<span class="tk-ff__address-number"></span>,<br>
+                Veenendaal
+            <span class="tk-ff__address-icon svg-link" include="/assets/img/icons/edit-S--small.svg"></span>
+        </div>
+    </div>
+
+    <div class="js-address-additional dn o-0">
+        <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="straatnaam" class="tk-ff__label">
+        Straatnaam
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="straatnaam" 
+                placeholder="" 
+                maxlength=""
+                value="Jan van Galenstraat"
+                
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je straatnaam in
+        </div>
+
+        
+    </div>
+</div>
+
+        <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="woonplaats" class="tk-ff__label">
+        Woonplaats
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="woonplaats" 
+                placeholder="" 
+                maxlength=""
+                value="Veenendaal"
+                
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved" 
+                include="/assets/img/icons/check-fat--small.svg">
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je woonplaats in
+        </div>
+
+        
+    </div>
+</div>
+    </div>
+</form>
+
+                
 
                 <!-- call to action button -->
                 <div class="bo-t mb-2 mt-6-sm"></div>
                 <div class="txt-r" id="js-sticky-trig">
-                    <a href="/bestellen/stap4.html" class="js-submit-link">
+                    <a href="/bestellen/ov-chipkaart" class="js-submit-link">
     <button type="submit" class="button button--arrowRight button--nsYellow w-100 w-auto-sm js-submit-button">
-        Afronden
+        Verder naar kaartgegevens
     </button>
 </a>
                 </div>

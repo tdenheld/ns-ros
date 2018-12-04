@@ -2,6 +2,9 @@
          App
 --------------------*/
 
+
+// call to action
+// ---------------------------------------------
 .tk-sticky-bar {
     display: none;
     position: fixed;
@@ -16,6 +19,11 @@
     }
 }
 
+
+
+
+// funnel
+// --------------------------------------------
 .tk-funnel-container {
     display: grid;
     grid-column-gap: $double-gutter;
@@ -35,7 +43,11 @@
     max-width: 784px;
 }
 
+
+
+
 // page heading
+// --------------------------------------------
 .tk-heading {
     padding-bottom: $half-gutter;
 

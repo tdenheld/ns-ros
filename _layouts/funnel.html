@@ -2,15 +2,19 @@
 layout: default
 ---
 
-{% include progress.html %}
+{% unless page.no-progress %} {% include progress.html %} {% endunless %}
 
 <section>
     <div class="container ovr-container">
-        <div class="tk-funnel-container pa-2r a a-fi-right-small">
+        <div class="tk-funnel-container 
+                    {% unless page.order %} tk-funnel-container--1col {% endunless %} 
+                    pa-2r a a-fi-right-small">
 
-            <div class="hidden-xs">
+            {% if page.order %}
+            <div class="hidden-xs hidden-sm">
                 {% include order.html %}
             </div>
+            {% endif %}
 
             <div>
                 <div class="tk-heading tk-heading--funnel">
@@ -18,9 +22,11 @@ layout: default
                 </div>
                 {{ content }}
 
-                <div class="visible-xs">
+                {% if page.order %}
+                <div class="hidden-lg hidden-md">
                     {% include order.html %}
                 </div>
+                {% endif %}
 
                 <!-- call to action button -->
                 <div class="bo-t mb-2 mt-6-sm"></div>
