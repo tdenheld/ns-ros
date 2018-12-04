@@ -280,10 +280,55 @@
 
 
 // choice selector
+// ------------------------------------------
 .tk-choice-selector {
-    border: 1px solid $ns-grey-7;
+    margin-bottom: $gutter;
+    @include sm {
+        margin-bottom: $double-gutter;
+    }
+}
+
+.tk-choice-selector__item {
+    position: relative;
+    margin-bottom: $half-gutter;
+    border: 1px solid $ns-grey-6b;
     padding: 20px;
+    border-radius: 4px;
+    transition: $fade-all;
+    cursor: pointer;
+
+    &.is-selected {
+        border: none;
+        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
+
+        &:before {
+            content: "";
+            @include full(absolute);
+            border: 2px solid $ns-light-blue;
+            border-radius: 4px;
+            transition: $fade-all;
+        }
+    }
+}
+
+.tk-choice-selector__title {
+    margin: 0 0 2px;
     @include font-style(18px, bold, 1.5);
     color: $ns-blue;
-    border-radius: 4px;
+}
+
+.tk-choice-selector__description {
+    margin: 0;
+    @include font-style(14px, normal, 1.5);
+    color: $ns-grey-4;
+}
+
+// no touch
+.no-touch {
+    .tk-choice-selector__item:hover {
+        border: 1px solid $ns-grey-5;
+    }
+    .tk-choice-selector__item.is-selected:hover {
+        border: none;
+    }
 }
