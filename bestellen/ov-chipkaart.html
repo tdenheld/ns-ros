@@ -1,6 +1,6 @@
 ---
 layout: funnel
-heading: OV-chipkaart
+heading: Kies je OV-chipkaart
 cta: Naar betalen
 step: 2
 dest: betalen
@@ -10,7 +10,7 @@ order: true
 <div class="mb-6">
     <div class="mb-2 f-grey-4 lh-copy f14">
         <div class="f16 fw-b f-blue mb-1">Maarten de Vries</div>
-        <div class="g g-2 mxw-350 col-gap-4">
+        <div class="tk-customer">
             <div>
                 maarten.devries@ns.nl <br>
                 30 november 1982
@@ -42,11 +42,31 @@ order: true
             </div>
         </div>
         <div class="tk-choice-selector__content">
-
+            <div class="tk-choice-selector__divider"></div>
+            <form>
+                <div class="radioButton tk-ff__radio">
+                    <input type="radio" class="radioButton__input" id="Today_TravelDate" name="TravelDate" checked>
+                    <label class="radioButton__label pl-5" for="Today_TravelDate">
+                        <span class="tk-ov-chip">3528</span>
+                        <span class="tk-ov-chip">6543</span><br class="tk-ov-break">
+                        <span class="tk-ov-chip">2345</span>
+                        <span class="tk-ov-chip">1121</span>
+                    </label>
+                </div>
+                <div class="radioButton tk-ff__radio">
+                    <input type="radio" class="radioButton__input" id="Tomorrow_TravelDate" name="TravelDate">
+                    <label class="radioButton__label pl-5" for="Tomorrow_TravelDate">
+                        Nieuwe kaart invoeren
+                    </label>
+                </div>
+            </form>
+            <div class="tk-choice-selector__divider"></div>
+            <span class="f-blue mb-1">Ingangsdatum: </span>
+            <span class="f-grey no-wrap">21-12-2018<span class="svg-link ml-2 pos-r top-2px" include="/assets/img/icons/edit-S--small.svg"></span></span>
         </div>
     </div>
 
-    <div class="tk-choice-selector__item js-cs-item is-selected">
+    <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
                 <h3 class="tk-choice-selector__title">Nieuwe OV-chipkaart</h3>
@@ -58,7 +78,8 @@ order: true
             </div>
         </div>
         <div class="tk-choice-selector__content">
-
+            <div class="tk-choice-selector__divider"></div>
+            <h4>Pasfoto kiezen</h4>
         </div>
     </div>
 </div>

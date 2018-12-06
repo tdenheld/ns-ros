@@ -257,28 +257,6 @@
 
 
 
-// order details
-// --------------------------------------------
-.tk-order {
-    //layout
-    overflow: hidden;
-    padding: 21px;
-    max-width: 420px;
-    margin-bottom: $one-half-gutter;
-
-    // styling
-    border: 1px solid $ns-grey-7;
-    //border-radius: 8px;
-    //box-shadow: 0 5px 20px rgba($ns-black, 0.06);
-
-    @include sm {
-        margin-bottom: $double-gutter;
-    }
-}
-
-
-
-
 // choice selector
 // ------------------------------------------
 .tk-choice-selector {
@@ -361,16 +339,64 @@
     text-decoration: line-through;
 }
 
+.tk-choice-selector__content {
+    display: none;
+}
 
-
+.tk-choice-selector__divider {
+    border-bottom: 1px solid $ns-grey-7;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
 
 // no touch
-// ----------------------------------------------------
 .no-touch {
     .tk-choice-selector__item:hover:before {
         border: 1px solid $ns-grey-5;
     }
     .tk-choice-selector__item.is-selected:hover:before {
         border: 2px solid $ns-light-blue;
+    }
+}
+
+
+
+
+// misc
+// --------------------------------------------
+.tk-order {
+    //layout
+    overflow: hidden;
+    padding: 21px;
+    max-width: 420px;
+    margin-bottom: $one-half-gutter;
+
+    // styling
+    border: 1px solid $ns-grey-7;
+    //border-radius: 8px;
+    //box-shadow: 0 5px 20px rgba($ns-black, 0.06);
+
+    @include sm {
+        margin-bottom: $double-gutter;
+    }
+}
+
+.tk-customer {
+    display: grid;
+    max-width: 350px;
+    @media (min-width: 350px) {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: $gutter;
+    }
+}
+
+.tk-ov-chip {
+    letter-spacing: 4px;
+    margin-right: 10px;
+}
+
+.tk-ov-break {
+    @media(min-width: 420px) {
+        display: none;
     }
 }

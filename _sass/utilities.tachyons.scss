@@ -23,6 +23,19 @@
 .pos-s { position: static; }
 .pos-i { position: inherit; }
 
+// nudge elements a tiny bit
+@for $i from 0 through 14 {
+    $y: $i * 1px;
+    .top-#{$i}px {top: $y;}
+    .top-min-#{$i}px {top: -$y;}
+    .bottom-#{$i}px {bottom: $y;}
+    .bottom-min-#{$i}px {bottom: -$y;}
+    .left-#{$i}px {left: $y;}
+    .left-min-#{$i}px {left: -$y;}
+    .right-#{$i}px {right: $y;}
+    .right-min-#{$i}px {right: -$y;}
+}
+
 
 
 // full fills

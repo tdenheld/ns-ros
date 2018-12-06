@@ -457,7 +457,7 @@ $(document).ready(function () {
                         opacity: 0,
                         scaleY: 0.9,
                         display: "none",
-                    },{
+                    }, {
                         ease: default_ease,
                         opacity: 1,
                         scaleY: 1,
@@ -477,10 +477,42 @@ $(document).ready(function () {
 
     // choice selector
     // ------------------------------------------------------------
-    $(".js-cs-item").click(function() {
-        $(".js-cs-item").removeClass("is-selected");
-        $(this).addClass("is-selected");
-    });
+
+    // create ID of each choice selecor item
+    if ($(".js-cs-item")[0]) {
+        $(".js-cs-item").each(function (i) {
+            $(this).attr("id", "js-cs-item-" + i);
+        });
+    };
+
+    // object
+    var choiceSelector = {
+        time: 250,
+        obj: ".js-cs-item",
+        class: "is-selected",
+        initID: "#js-cs-item-0",
+        content: ".tk-choice-selector__content",
+
+        init: function () {
+            $(this.content).slideUp(this.time);
+            $(this.initID + " " + this.content).slideDown(0);
+            $(this.initID).addClass(this.class);
+        },
+
+        button: function () {
+            $(this.obj).click(function () {
+                if ($(this).hasClass(choiceSelector.class) == false) {
+                    $(choiceSelector.obj).removeClass(choiceSelector.class);
+                    $(this).addClass(choiceSelector.class);
+                    $(choiceSelector.content).slideUp(choiceSelector.time);
+                    $(choiceSelector.content, this).slideDown(choiceSelector.time);
+                };
+            });
+        },
+    };
+
+    choiceSelector.init();
+    choiceSelector.button();
 
 
 
