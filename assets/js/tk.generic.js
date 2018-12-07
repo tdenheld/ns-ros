@@ -94,307 +94,360 @@ $(document).ready(function () {
     // form
     // ------------------------------------------------------------
     // ------------------------------------------------------------
-    var submit = true;
-    var linkLocationDefault = $(".js-submit-link").attr("href");
-    var linkLocation = linkLocationDefault;
+    function form() {
+        var submit = true;
+        var linkLocationDefault = $(".js-submit-link").attr("href");
+        var linkLocation = linkLocationDefault;
 
-    function showError(i, e) {
-        i.addClass("is-error");
-        TweenLite.to(e, .3, {
-            ease: default_ease,
-            autoAlpha: 1,
-            display: "block",
-        });
-    };
-
-    function hideError(i, e) {
-        i.removeClass("is-error");
-        TweenLite.to(e, .3, {
-            ease: default_ease,
-            autoAlpha: 0,
-            display: "none",
-        });
-    };
-
-    function formField(i) {
-        var id = "#js-ff-default-" + i;
-        var input = $(id + " .tk-ff__input");
-        var tick = $(id + " .tk-ff__icon--approved");
-        var error = $(id + " .tk-ff__error");
-
-        function checkValue() {
-            if (input.val() != "") {
-                tick.addClass("is-active");
-            } else {
-                tick.removeClass("is-active");
+        // error constructor
+        function DisplayError(input, error) {
+            this.input = input;
+            this.error = error;
+            this.tween = function (toAlpha, toDisplay) {
+                TweenLite.to(this.error, .3, {
+                    ease: default_ease,
+                    autoAlpha: toAlpha,
+                    display: toDisplay,
+                });
+            };
+            this.show = function () {
+                this.input.addClass("is-error");
+                this.tween(1, "block");
+            };
+            this.hide = function () {
+                this.input.removeClass("is-error");
+                this.tween(0, "none");
             };
         };
 
-        input.keyup(function () {
-            hideError(input, error);
-            tick.removeClass("is-active");
-        });
+        function formField(i) {
+            var id = "#js-ff-default-" + i;
+            var input = $(id + " .tk-ff__input");
+            var tick = $(id + " .tk-ff__icon--approved");
+            var error = $(id + " .tk-ff__error");
+            var errorMessage = new DisplayError(input, error);
 
-        input.focusout(function () {
-            checkValue();
-            if ($(this).prop("required")) {
-                if (input.val() == "") {
-                    showError(input, error);
-                    submit = false;
+            function checkValue() {
+                if (input.val() != "") {
+                    tick.addClass("is-active");
                 } else {
-                    submit = true;
+                    tick.removeClass("is-active");
                 };
             };
-        });
-
-        checkValue();
-        submitButton(input, error);
-    };
-
-    if ($(".js-ff-default")[0]) {
-        submit = false;
-        $(".js-ff-default").each(function (i) {
-            $(this).attr("id", "js-ff-default-" + i);
-            formField(i);
-        });
-    };
-
-    function checkDate() {
-        var input = $(".js-ff-date .tk-ff__input");
-        var error = $(".js-ff-date .tk-ff__error");
-        var tick = $(".js-ff-date .tk-ff__icon--approved");
-
-        function checkValue() {
-            if (input.val().length == 10) {
-                submit = true;
-                tick.addClass("is-active");
-            } else {
-                tick.removeClass("is-active");
-                submit = false;
-            };
-        };
-
-        if (input[0]) {
-            submit = false;
-            checkValue();
 
             input.keyup(function () {
-                hideError(input, error);
-                checkValue();
-
-                // add hyphen when digits are typed
-                var n = input.val();
-                if (input.val().length == 2) {
-                    input.val(n + "-");
-                };
-                if (input.val().length == 5) {
-                    input.val(n + "-");
-                };
+                errorMessage.hide();
+                tick.removeClass("is-active");
             });
 
             input.focusout(function () {
+                checkValue();
+                if ($(this).prop("required")) {
+                    if (input.val() == "") {
+                        errorMessage.show();
+                        submit = false;
+                    } else {
+                        submit = true;
+                    };
+                };
+            });
+
+            checkValue();
+            submitButton(input, error);
+        };
+
+        if ($(".js-ff-default")[0]) {
+            submit = false;
+            $(".js-ff-default").each(function (i) {
+                $(this).attr("id", "js-ff-default-" + i);
+                formField(i);
+            });
+        };
+
+        function checkDate() {
+            var input = $(".js-ff-date .tk-ff__input");
+            var error = $(".js-ff-date .tk-ff__error");
+            var tick = $(".js-ff-date .tk-ff__icon--approved");
+            var errorMessage = new DisplayError(input, error);
+
+            function checkValue() {
                 if (input.val().length == 10) {
                     submit = true;
+                    tick.addClass("is-active");
                 } else {
-                    showError(input, error);
+                    tick.removeClass("is-active");
                     submit = false;
                 };
-            });
-        };
-
-        submitButton(input, error);
-    };
-    checkDate();
-
-    function checkEmail() {
-        var typingTimer;
-        var serverCallSym;
-        var isValidEmail;
-        var emailField = document.getElementById("email");
-
-        var input = $(".js-ff-email .tk-ff__input");
-        var loading = $(".js-ff-email .tk-ff__icon--loading");
-        var tick = $(".js-ff-email .tk-ff__icon--approved");
-        var known = $(".js-ff-email .tk-ff__icon--known");
-        var knownMessage = $(".js-ff-email .tk-ff__message");
-        var error = $(".js-ff-email .tk-ff__error");
-        var buttonText = $(".js-submit-button").text();
-
-        if (emailField) {
-            submit = false;
-            isValidEmail = email.checkValidity();
-
-            // on keyup, start the countdown
-            input.keyup(function () {
-                hideError(input, error);
-                clearTimeout(typingTimer);
-                clearTimeout(serverCallSym);
-                typingTimer = setTimeout(doneTyping, 750);
-                loading.removeClass("is-active");
-                tick.removeClass("is-active");
-                known.removeClass("is-active");
-                knownMessage.removeClass("is-active");
-                isValidEmail = email.checkValidity();
-                $(".js-submit-button").text(buttonText);
-                linkLocation = linkLocationDefault;
-            });
-
-            // on keydown, clear the countdown 
-            input.keydown(function () {
-                clearTimeout(typingTimer);
-            });
-
-            input.focusout(function () {
-                if (isValidEmail) {
-                    submit = true;
-                } else {
-                    showError(input, error);
-                    submit = false;
-                };
-            });
-
-            if (isValidEmail) {
-                submit = true;
             };
 
-            // user is finished typing
-            function doneTyping() {
-                if (isValidEmail) {
-                    loading.addClass("is-active");
-                    serverCallSym = setTimeout(() => {
-                        if (input.val() != "tjeerd@ns.nl") {
-                            loading.removeClass("is-active");
-                            tick.addClass("is-active");
-                        } else {
-                            loading.removeClass("is-active");
-                            known.addClass("is-active");
-                            knownMessage.addClass("is-active");
-                            $(".js-submit-button").text("Inloggen");
-                            linkLocation = "https://login.ns.nl";
-                        };
-                    }, 300);
-                } else {
+            if (input[0]) {
+                submit = false;
+                checkValue();
+
+                // only numbers are valid input
+                input.keydown(function (e) {
+                    if ((e.which >= 48 && e.which <= 57) || (e.which >= 96 && e.which <= 105)) {} else {
+                        return false;
+                    };
+                });
+
+                input.keyup(function () {
+                    errorMessage.hide();
+                    checkValue();
+
+                    // add hyphen when digits are typed
+                    var n = input.val();
+                    if (input.val().length == 2) {
+                        input.val(n + "-");
+                    };
+                    if (input.val().length == 5) {
+                        input.val(n + "-");
+                    };
+                });
+
+                input.focusout(function () {
+                    if (input.val().length == 10) {
+                        submit = true;
+                    } else {
+                        errorMessage.show();
+                        submit = false;
+                    };
+                });
+            };
+
+            submitButton(input, error);
+        };
+        checkDate();
+
+        function checkEmail() {
+            var typingTimer;
+            var serverCallSym;
+            var isValidEmail;
+            var emailField = document.getElementById("email");
+
+            var input = $(".js-ff-email .tk-ff__input");
+            var loading = $(".js-ff-email .tk-ff__icon--loading");
+            var tick = $(".js-ff-email .tk-ff__icon--approved");
+            var known = $(".js-ff-email .tk-ff__icon--known");
+            var knownMessage = $(".js-ff-email .tk-ff__message");
+            var error = $(".js-ff-email .tk-ff__error");
+            var buttonText = $(".js-submit-button").text();
+            var errorMessage = new DisplayError(input, error);
+
+            if (emailField) {
+                submit = false;
+                isValidEmail = email.checkValidity();
+
+                // on keyup, start the countdown
+                input.keyup(function () {
+                    errorMessage.hide();
+                    clearTimeout(typingTimer);
+                    clearTimeout(serverCallSym);
+                    typingTimer = setTimeout(doneTyping, 750);
                     loading.removeClass("is-active");
                     tick.removeClass("is-active");
                     known.removeClass("is-active");
+                    knownMessage.removeClass("is-active");
+                    isValidEmail = email.checkValidity();
+                    $(".js-submit-button").text(buttonText);
+                    linkLocation = linkLocationDefault;
+                });
+
+                // on keydown, clear the countdown 
+                input.keydown(function () {
+                    clearTimeout(typingTimer);
+                });
+
+                input.focusout(function () {
+                    if (isValidEmail) {
+                        submit = true;
+                    } else {
+                        errorMessage.show();
+                        submit = false;
+                    };
+                });
+
+                if (isValidEmail) {
+                    submit = true;
+                };
+
+                // user is finished typing
+                function doneTyping() {
+                    if (isValidEmail) {
+                        loading.addClass("is-active");
+                        serverCallSym = setTimeout(() => {
+                            if (input.val() != "tjeerd@ns.nl") {
+                                loading.removeClass("is-active");
+                                tick.addClass("is-active");
+                            } else {
+                                loading.removeClass("is-active");
+                                known.addClass("is-active");
+                                knownMessage.addClass("is-active");
+                                $(".js-submit-button").text("Inloggen");
+                                linkLocation = "https://login.ns.nl";
+                            };
+                        }, 300);
+                    } else {
+                        loading.removeClass("is-active");
+                        tick.removeClass("is-active");
+                        known.removeClass("is-active");
+                    };
+                };
+
+                doneTyping();
+                submitButton(input, error);
+            };
+        };
+        checkEmail();
+
+        function checkPostal() {
+            var input = $(".js-ff-postal .tk-ff__input");
+            var tick = $(".js-ff-postal .tk-ff__icon--approved");
+            var error = $(".js-ff-postal .tk-ff__error");
+            var address = $(".tk-ff__address");
+            var errorMessage = new DisplayError(input, error);
+
+            // check value
+            function checkValue() {
+                if (input.val().length == 6) {
+                    tick.addClass("is-active");
+                    submit = true;
+                    TweenLite.to(address, .2, {
+                        ease: default_ease,
+                        autoAlpha: 1,
+                        scaleY: 1,
+                        display: "grid",
+                    });
+                } else {
+                    tick.removeClass("is-active");
+                    submit = false;
+                    TweenLite.to(address, .2, {
+                        ease: default_ease,
+                        autoAlpha: 0,
+                        scaleY: 0.7,
+                        display: "none",
+                    });
                 };
             };
 
-            doneTyping();
+            if (input[0]) {
+                submit = false;
+                checkValue();
+
+                // prevent spacebar input
+                input.keypress(function (e) {
+                    if (e.which === 32) {
+                        return false;
+                    };
+                });
+
+                // show or hide address on completed postal code
+                input.keyup(function () {
+                    errorMessage.hide();
+                    checkValue();
+                });
+
+                // show error on focusout if input is correct
+                input.focusout(function () {
+                    if (input.val().length == 6) {
+
+                    } else {
+                        errorMessage.show();
+                    };
+                });
+            };
+
             submitButton(input, error);
         };
-    };
-    checkEmail();
+        checkPostal();
 
-    function checkPostal() {
-        var input = $(".js-ff-postal .tk-ff__input");
-        var tick = $(".js-ff-postal .tk-ff__icon--approved");
-        var error = $(".js-ff-postal .tk-ff__error");
-        var address = $(".tk-ff__address");
+        function addAddressNumber() {
+            var input = $("#huisnummer");
+            var houseAddition = $("#toevoeging");
 
-        // check value
-        function checkValue() {
-            if (input.val().length == 6) {
-                tick.addClass("is-active");
-                submit = true;
-                TweenLite.to(address, .2, {
-                    ease: default_ease,
-                    autoAlpha: 1,
-                    scaleY: 1,
-                    display: "grid",
-                });
-            } else {
-                tick.removeClass("is-active");
-                submit = false;
-                TweenLite.to(address, .2, {
+            function addNumber() {
+                $(".tk-ff__address-number").text(" " + input.val() + houseAddition.val());
+            };
+
+            if (input.val() != "" || houseAddition.val() != "") {
+                addNumber();
+            };
+
+            input.keyup(function () {
+                addNumber();
+            });
+
+            houseAddition.keyup(function () {
+                addNumber();
+            });
+        };
+        addAddressNumber();
+
+        function customAddress() {
+            $(".tk-ff__address-icon").click(() => {
+                TweenLite.to(".tk-ff__address", 0, {
                     ease: default_ease,
                     autoAlpha: 0,
-                    scaleY: 0.7,
                     display: "none",
                 });
-            };
+                TweenLite.to(".js-address-additional", 0.3, {
+                    ease: default_ease,
+                    autoAlpha: 1,
+                    display: "block",
+                });
+            });
         };
+        customAddress();
 
-        if (input[0]) {
-            submit = false;
-            checkValue();
-
-            // prevent spacebar input
-            input.keypress(function (e) {
-                if (e.which === 32)
-                    return false;
-            });
-
-            // show or hide address on completed postal code
-            input.keyup(function () {
-                hideError(input, error);
-                checkValue();
-            });
-
-            // show error on focusout if input is correct
-            input.focusout(function () {
-                if (input.val().length == 6) {
-
-                } else {
-                    showError(input, error);
+        function submitButton(i, e) {
+            var errorMessage = new DisplayError(i, e);
+            $(".js-submit-link").click(function (event) {
+                event.preventDefault();
+                if (submit) {
+                    window.location = linkLocation;
+                } else if (i.prop("required")) {
+                    errorMessage.show();
                 };
             });
         };
-
-        submitButton(input, error);
     };
-    checkPostal();
+    form();
 
-    function addAddressNumber() {
-        var input = $("#huisnummer");
-        var houseAddition = $("#toevoeging");
 
-        function addNumber() {
-            $(".tk-ff__address-number").text(" " + input.val() + houseAddition.val());
-        };
 
-        if (input.val() != "" || houseAddition.val() != "") {
-            addNumber();
-        };
 
-        input.keyup(function () {
-            addNumber();
-        });
 
-        houseAddition.keyup(function () {
-            addNumber();
+    // choice selector
+    // ------------------------------------------------------------
+    if ($(".js-cs-item")[0]) {
+        $(".js-cs-item").each(function (i) {
+            $(this).attr("id", "js-cs-item-" + i);
         });
     };
-    addAddressNumber();
 
-    function customAddress() {
-        $(".tk-ff__address-icon").click(() => {
-            TweenLite.to(".tk-ff__address", 0, {
-                ease: default_ease,
-                autoAlpha: 0,
-                display: "none",
+    function choiceSelector() {
+        var time = 250;
+        var obj = ".js-cs-item";
+        var toggleClass = "is-selected";
+        var initID = "#js-cs-item-0";
+        var content = ".tk-choice-selector__content";
+
+        if ($(obj)[0]) {
+            $(content).slideUp(time);
+            $(initID + " " + content).slideDown(0);
+            $(initID).addClass(toggleClass);
+
+            $(obj).click(function () {
+                if ($(this).hasClass(toggleClass) == false) {
+                    $(obj).removeClass(toggleClass);
+                    $(this).addClass(toggleClass);
+                    $(content).slideUp(time);
+                    $(content, this).slideDown(time);
+                };
             });
-            TweenLite.to(".js-address-additional", 0.3, {
-                ease: default_ease,
-                autoAlpha: 1,
-                display: "block",
-            });
-        });
+        };
     };
-    customAddress();
-
-    function submitButton(i, e) {
-        $(".js-submit-link").click(function (event) {
-            event.preventDefault();
-            if (submit) {
-                window.location = linkLocation;
-            } else if (i.prop("required")) {
-                showError(i, e);
-            };
-        });
-    };
-
-
+    choiceSelector();
 
 
 
@@ -469,52 +522,6 @@ $(document).ready(function () {
         });
     };
     dpDesktop();
-
-
-
-
-
-
-    // choice selector
-    // ------------------------------------------------------------
-
-    // create ID of each choice selecor item
-    if ($(".js-cs-item")[0]) {
-        $(".js-cs-item").each(function (i) {
-            $(this).attr("id", "js-cs-item-" + i);
-        });
-    };
-
-    // object
-    var choiceSelector = {
-        time: 250,
-        obj: ".js-cs-item",
-        class: "is-selected",
-        initID: "#js-cs-item-0",
-        content: ".tk-choice-selector__content",
-
-        init: function () {
-            $(this.content).slideUp(this.time);
-            $(this.initID + " " + this.content).slideDown(0);
-            $(this.initID).addClass(this.class);
-        },
-
-        button: function () {
-            $(this.obj).click(function () {
-                if ($(this).hasClass(choiceSelector.class) == false) {
-                    $(choiceSelector.obj).removeClass(choiceSelector.class);
-                    $(this).addClass(choiceSelector.class);
-                    $(choiceSelector.content).slideUp(choiceSelector.time);
-                    $(choiceSelector.content, this).slideDown(choiceSelector.time);
-                };
-            });
-        },
-    };
-
-    choiceSelector.init();
-    choiceSelector.button();
-
-
 
 
 
