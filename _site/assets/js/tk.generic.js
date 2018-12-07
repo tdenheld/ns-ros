@@ -226,13 +226,13 @@ $(document).ready(function () {
             var serverCallSym;
             var isValidEmail;
             var emailField = document.getElementById("email");
-
-            var input = $(".js-ff-email .tk-ff__input");
-            var loading = $(".js-ff-email .tk-ff__icon--loading");
-            var tick = $(".js-ff-email .tk-ff__icon--approved");
-            var known = $(".js-ff-email .tk-ff__icon--known");
-            var knownMessage = $(".js-ff-email .tk-ff__message");
-            var error = $(".js-ff-email .tk-ff__error");
+            var obj = ".js-ff-email";
+            var input = $(obj + " .tk-ff__input");
+            var loading = $(obj + " .tk-ff__icon--loading");
+            var tick = $(obj + " .tk-ff__icon--approved");
+            var known = $(obj + " .tk-ff__icon--known");
+            var knownMessage = $(obj + " .tk-ff__message");
+            var error = $(obj + " .tk-ff__error");
             var buttonText = $(".js-submit-button").text();
             var errorMessage = new DisplayError(input, error);
 
