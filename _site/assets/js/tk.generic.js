@@ -452,6 +452,7 @@ $(document).ready(function () {
 
 
     // basic tween object constructor for smooth transitions
+    // ------------------------------------------------------------
     function Transition(obj, y, scaleY) {
         this.obj = obj;
         this.y = y;
