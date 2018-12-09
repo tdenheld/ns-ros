@@ -186,9 +186,7 @@ $(document).ready(function () {
 
                 // only numbers are valid input
                 input.keydown(function (e) {
-                    if ((e.which >= 48 && e.which <= 57) || (e.which >= 96 && e.which <= 105) || (e.which === 8)) {
-                        // do nothing
-                    } else {
+                    if (!((e.which >= 48 && e.which <= 57) || (e.which >= 96 && e.which <= 105) || (e.which === 8))) {
                         return false;
                     };
                 });
@@ -453,6 +451,25 @@ $(document).ready(function () {
 
 
 
+    // basic tween object constructor for smooth transitions
+    function Transition(obj, y, scaleY) {
+        this.obj = obj;
+        this.y = y;
+        this.scaleY = scaleY;
+
+        this.tween = TweenMax.fromTo(this.obj, 1, {
+            autoAlpha: 0,
+            y: this.y,
+            scaleY: this.scaleY,
+            display: "none"
+        }, {
+            ease: default_ease,
+            autoAlpha: 1,
+            y: 0,
+            scaleY: 1,
+            display: "block",
+        }).pause();
+    };
 
 
     // datepicker
@@ -460,32 +477,21 @@ $(document).ready(function () {
     function dpBottomSheet() {
         var btn = $(".dp-bs-btn");
         var overlay = $(".dp-bs");
-        var darkener = $(".dp-bs .tk-overlay__bg");
-        var bottomSheet = $(".tk-datepicker-bs");
         var close = $(".tk-datepicker-bs__swiper, .dp-bs .tk-overlay__bg");
-
-        function tween(obj, fromA, toA, fromY, toY, time) {
-            TweenLite.fromTo(obj, time, {
-                autoAlpha: fromA,
-                y: fromY
-            }, {
-                ease: default_ease,
-                autoAlpha: toA,
-                y: toY,
-            });
-        };
+        var bottomSheet = new Transition(".tk-datepicker-bs", 300, 1);
+        var darkener = new Transition(".dp-bs .tk-overlay__bg", 0, 1);
 
         btn.click(() => {
             if (window_width <= 640) {
                 overlay.show();
-                tween(bottomSheet, 0, 1, 300, 0, 0.35);
-                tween(darkener, 0, 1, 0, 0, 0.6);
+                bottomSheet.tween.duration(0.35).play();
+                darkener.tween.duration(0.6).play();
             };
         });
 
         close.click(() => {
-            tween(bottomSheet, 1, 0, 0, 300, 0.35);
-            tween(darkener, 1, 0, 0, 0, 0.6);
+            bottomSheet.tween.duration(0.35).play().reverse();
+            darkener.tween.duration(0.6).play().reverse();
             setTimeout(() => {
                 overlay.hide();
             }, 610);
@@ -499,15 +505,9 @@ $(document).ready(function () {
 
         $(".dp-btn").click(function () {
             dp = $(".tk-datepicker-lg", this);
+
             if (window_width > 640) {
-                if (active) {
-                    TweenLite.to(dp, 0.3, {
-                        ease: default_ease,
-                        opacity: 0,
-                        display: "none",
-                    });
-                    active = false;
-                } else {
+                if (!active) {
                     TweenLite.fromTo(dp, 0.3, {
                         opacity: 0,
                         scaleY: 0.9,
@@ -519,6 +519,13 @@ $(document).ready(function () {
                         display: "block",
                     });
                     active = true;
+                } else {
+                    TweenLite.to(dp, 0.3, {
+                        ease: default_ease,
+                        opacity: 0,
+                        display: "none",
+                    });
+                    active = false;
                 }
             };
         });
