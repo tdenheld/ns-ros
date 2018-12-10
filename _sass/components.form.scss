@@ -180,13 +180,20 @@
 // ------------------------------------
 .tk-ff__radio {
     margin-bottom: 10px;
+
     &:last-child {
         margin-bottom: 0;
     }
 }
 
 
+// input field
 // ------------------------------------
+$bs-focus:          0 0 0 1px $ns-light-blue,
+                    0 2px 28px rgba($ns-black, 0.1);
+$bs-autofill:       0 0 0px 1000px $ns-blue-4 inset;
+$bs-autofill-focus: $bs-focus, $bs-autofill;
+
 .tk-ff__input {
     // lay-out
     width: 100%;
@@ -210,18 +217,18 @@
     }
 
     &:focus {
-        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
-        border: 1px solid $ns-blue;
+        border: 1px solid $ns-light-blue;
+        box-shadow: $bs-focus;
         color: $ns-blue;
     }
 
     &:-webkit-autofill {
-        box-shadow: 0 0 0px 1000px $ns-blue-4 inset;
+        box-shadow: $bs-autofill;
         -webkit-text-fill-color: $ns-blue;
     }
 
     &:-webkit-autofill:focus {
-        box-shadow: 0 2px 28px rgba($ns-black, 0.1), 0 0 0px 1000px $ns-blue-4 inset;
+        box-shadow: $bs-autofill-focus;
     }
 }
 
@@ -237,6 +244,11 @@
     }
 
     .tk-ff__input:focus {
-        border: 1px solid $ns-blue;
+        border: 1px solid $ns-light-blue;
+        box-shadow: $bs-focus;
+    }
+
+    .tk-ff__input:-webkit-autofill:focus {
+        box-shadow: $bs-autofill-focus;
     }
 }

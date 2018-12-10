@@ -506,7 +506,6 @@ $(document).ready(function () {
 
         $(".dp-btn").click(function () {
             dp = $(".tk-datepicker-lg", this);
-
             if (window_width > 640) {
                 if (!active) {
                     TweenLite.fromTo(dp, 0.3, {
