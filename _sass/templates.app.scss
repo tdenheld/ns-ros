@@ -260,9 +260,9 @@
 // choice selector
 // ------------------------------------------
 .tk-choice-selector {
-    margin-bottom: $gutter;
-    @include sm {
-        margin-bottom: $double-gutter;
+    margin-bottom: $one-half-gutter;
+    @include md {
+        margin-bottom: $gutter;
     }
 }
 
@@ -362,25 +362,70 @@
 
 
 
-// misc
+
+// order
 // --------------------------------------------
 .tk-order {
-    //layout
     overflow: hidden;
+    max-width: 380px;
+    margin-bottom: $gutter;
     padding: 21px;
-    max-width: 420px;
-    margin-bottom: $one-half-gutter;
-
-    // styling
     border: 1px solid $ns-grey-7;
-    //border-radius: 8px;
-    //box-shadow: 0 5px 20px rgba($ns-black, 0.06);
 
-    @include sm {
+    @include md {
         margin-bottom: $double-gutter;
     }
 }
 
+.tk-order--grey {
+    background-color: $ns-grey-8;
+
+    ul {
+        color: $ns-grey;
+    }
+}
+
+
+
+
+// pasfoto
+// --------------------------------------------
+.tk-pasfoto {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border: 1px dashed $ns-light-blue;
+    border-radius: 50%;
+    transition: $fade-all;
+
+    &:hover {
+        border: 1px solid $ns-light-blue;
+    }
+
+    svg {
+        position: relative;
+        width: 26px;
+        fill: $ns-light-blue;
+    }
+}
+
+.tk-pasfoto__photo {
+    margin-bottom: 2px;
+}
+
+.tk-pasfoto__description {
+    @include font-style(14px, normal, 1.2);
+    color: $ns-light-blue;
+}
+
+
+
+
+// misc
+// --------------------------------------------
 .tk-customer {
     display: grid;
     max-width: 350px;

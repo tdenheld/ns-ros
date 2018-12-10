@@ -37,10 +37,39 @@ $(document).ready(function () {
 
 
 
+    // basic toggle class
+    // ------------------------------------------------------------
+    $(".js-toggle").click(function () {
+        $(this).toggleClass("is-active");
+    });
+
+
+
+    // basic tween object constructor for smooth transitions
+    // ------------------------------------------------------------
+    function Transition(obj, y, scaleY) {
+        this.obj = obj;
+        this.y = y;
+        this.scaleY = scaleY;
+
+        this.tween = TweenMax.fromTo(this.obj, 1, {
+            autoAlpha: 0,
+            y: this.y,
+            scaleY: this.scaleY,
+            display: "none"
+        }, {
+            ease: default_ease,
+            autoAlpha: 1,
+            y: 0,
+            scaleY: 1,
+            display: "block",
+        }).pause();
+    };
+
+
 
     // functionality that"s on linked on scroll
     // ------------------------------------------------------------
-
     $(window).scroll(() => {
         scrolled = true;
         if (scrolled) {
@@ -78,14 +107,6 @@ $(document).ready(function () {
     };
     stickyBar();
 
-
-
-
-    // basic toggle class
-    // ------------------------------------------------------------
-    $(".js-toggle").click(function () {
-        $(this).toggleClass("is-active");
-    });
 
 
 
@@ -410,6 +431,15 @@ $(document).ready(function () {
                 };
             });
         };
+
+        // give checkboxes id's
+        if ($(".tk-ff__checkbox")[0]) {
+            $(".tk-ff__checkbox").each(function (i) {
+                var obj = "checkbox" + i;
+                $(".checkbox__input", this).attr("id", obj).attr("name", obj);
+                $(".checkbox__label", this).attr("id", obj).attr("for", obj);
+            });
+        };
     };
     form();
 
@@ -429,7 +459,7 @@ $(document).ready(function () {
         var time = 250;
         var obj = ".js-cs-item";
         var toggleClass = "is-selected";
-        var initID = "#js-cs-item-0";
+        var initID = "#js-cs-item-0"; // set default on current card
         var content = ".tk-choice-selector__content";
 
         if ($(obj)[0]) {
@@ -449,28 +479,6 @@ $(document).ready(function () {
     };
     choiceSelector();
 
-
-
-    // basic tween object constructor for smooth transitions
-    // ------------------------------------------------------------
-    function Transition(obj, y, scaleY) {
-        this.obj = obj;
-        this.y = y;
-        this.scaleY = scaleY;
-
-        this.tween = TweenMax.fromTo(this.obj, 1, {
-            autoAlpha: 0,
-            y: this.y,
-            scaleY: this.scaleY,
-            display: "none"
-        }, {
-            ease: default_ease,
-            autoAlpha: 1,
-            y: 0,
-            scaleY: 1,
-            display: "block",
-        }).pause();
-    };
 
 
     // datepicker

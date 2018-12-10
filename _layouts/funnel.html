@@ -23,8 +23,12 @@ layout: default
                 {{ content }}
 
                 {% if page.order %}
-                <div class="hidden-lg hidden-md">
-                    {% include order.html %}
+                <div class="hidden-xs hidden-sm">
+                    {% include /form/legal.html %}
+                </div>
+                <div class="hidden-lg hidden-md mb-4">
+                    {% include order.html class="tk-order--grey" %}
+                    {% include /form/legal.html %}
                 </div>
                 {% endif %}
 
