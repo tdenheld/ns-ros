@@ -438,13 +438,12 @@
 .tk-banks__item {
     overflow: hidden;
     display: grid;
-    grid-template-rows: 130px 1fr;
-    grid-row-gap: 10px;
+    grid-template-columns: 36px 1fr max-content;
+    grid-gap: 10px;
     border: 1px solid $ns-grey-7;
     border-radius: 4px;
-    padding: 20px;
+    padding: 14px;
     align-items: center;
-    text-align: center;
     cursor: pointer;
     transition: $fade-all;
 

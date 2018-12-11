@@ -33,10 +33,12 @@ layout: default
                 {% endif %}
 
                 <!-- call to action button -->
+                {% unless page.betalen %}
                 <div class="bo-t mb-2 mt-6-sm"></div>
                 <div class="txt-r" id="js-sticky-trig">
                     {% include cta.html %}
                 </div>
+                {% endunless %}
             </div>
         </div>
     </div>

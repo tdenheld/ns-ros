@@ -4,18 +4,20 @@ heading: Kies je bank
 cta: Afronden
 step: 3
 dest: bedankt
+betalen: true
 ---
 
-<div class="mb-4">
+<div class="mb-4 mb-6-sm">
     {% include ideal.html %}
 </div>
 <div class="tk-banks">
     {% for banks in site.data.app.banks %}
     <div class="tk-banks__item">
-        <img src="/assets/img/banks/{{ forloop.index }}.jpg" class="w-100" />
-        <div class="f-blue fw-b">
+        <img src="/assets/img/payment/mastercard.svg" class="w-100" />
+        <div class="f-blue">
             {{ banks.title }}
         </div>
+        <span class="svg-blue lh-none" include="/assets/img/icons/chevron-M--small.svg"></span>
     </div>
     {% endfor %}
 </div>
