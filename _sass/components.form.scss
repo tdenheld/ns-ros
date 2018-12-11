@@ -184,6 +184,10 @@
     &:last-child {
         margin-bottom: 0;
     }
+
+    .radioButton__input + .radioButton__label:before {
+        outline: none;
+    }
 }
 
 .tk-ff__checkbox {    

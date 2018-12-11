@@ -260,10 +260,7 @@
 // choice selector
 // ------------------------------------------
 .tk-choice-selector {
-    margin-bottom: $one-half-gutter;
-    @include md {
-        margin-bottom: $gutter;
-    }
+    margin-bottom: 2rem;
 }
 
 .tk-choice-selector__item {
