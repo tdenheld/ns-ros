@@ -1,13 +1,21 @@
 ---
 layout: funnel
-heading: Betalen
+heading: Kies je bank
 cta: Afronden
 step: 3
 dest: bedankt
 ---
 
-<form class="mb-4">
-
-</form>
-<div class="mb-20"></div>
-<div class="mb-20"></div>
+<div class="mb-4">
+    {% include ideal.html %}
+</div>
+<div class="tk-banks">
+    {% for banks in site.data.app.banks %}
+    <div class="tk-banks__item">
+        <img src="/assets/img/banks/{{ forloop.index }}.jpg" class="w-100" />
+        <div class="f-blue fw-b">
+            {{ banks.title }}
+        </div>
+    </div>
+    {% endfor %}
+</div>

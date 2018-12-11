@@ -185,12 +185,12 @@
         margin-bottom: 0;
     }
 
-    .radioButton__input + .radioButton__label:before {
+    .radioButton__input+.radioButton__label:before {
         outline: none;
     }
 }
 
-.tk-ff__checkbox {    
+.tk-ff__checkbox {
     .checkbox__label:after {
         border: none;
         transform: none;
@@ -198,29 +198,40 @@
         height: 14px;
         top: 5px;
         left: 3px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.25 7.626'%3E%3Cpath fill='%2300AA89' d='M3.25,7.626a.747.747,0,0,1-.53-.22l-2.5-2.5A.75.75,0,1,1,1.28,3.845L3.208,5.773,7.931.262a.75.75,0,1,1,1.138.977L3.819,7.364a.75.75,0,0,1-.54.261Z'/%3E%3C/svg%3E");
+        // width: 16px;
+        // height: 16px;
+        // top: 3px;
+        // left: 2px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.25 7.626'%3E%3Cpath fill='%230079D3' d='M3.25,7.626a.747.747,0,0,1-.53-.22l-2.5-2.5A.75.75,0,1,1,1.28,3.845L3.208,5.773,7.931.262a.75.75,0,1,1,1.138.977L3.819,7.364a.75.75,0,0,1-.54.261Z'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
-        background-position: 50% 50%;   
+        background-position: 50% 50%;
         transition: $fade-link;
     }
 
-    .checkbox__input:checked + .checkbox__label:after {
+    .checkbox__input:checked+.checkbox__label:after {
         opacity: 1;
     }
 
-    .checkbox__input:checked + .checkbox__label:before {
+    // .checkbox__input:checked+.checkbox__label:before {
+    //    border: none;
+    // }
+
+    // remove focus outline
+    .checkbox__label,
+    .checkbox__label:before,
+    .checkbox__input:checked+.checkbox__label:before {
         outline: none;
-        //border: none;
     }
 }
 
 
 // input field
 // ------------------------------------
-$bs-focus:          0 0 0 1px $ns-light-blue,
-                    0 2px 28px rgba($ns-black, 0.1);
-$bs-autofill:       0 0 0px 1000px $ns-blue-4 inset;
-$bs-autofill-focus: $bs-focus, $bs-autofill;
+$bs-focus: 0 0 0 1px $ns-light-blue,
+0 2px 28px rgba($ns-black, 0.1);
+$bs-autofill: 0 0 0px 1000px $ns-blue-4 inset;
+$bs-autofill-focus: $bs-focus,
+$bs-autofill;
 
 .tk-ff__input {
     // lay-out

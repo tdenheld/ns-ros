@@ -323,7 +323,7 @@
 
 .tk-choice-selector__new-price {
     @include font-style(14px, normal, 1.5);
-    color: $ns-red-alert;
+    color: $ns-blue;
 
     @include sm {
         font-size: calculate-rem(18px);
@@ -420,6 +420,42 @@
 
 
 
+// banks
+// --------------------------------------------
+.tk-banks {
+    display: grid;
+    grid-gap: $half-gutter;
+    
+    @include sm {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include md {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.tk-banks__item {
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 130px 1fr;
+    grid-row-gap: 10px;
+    border: 1px solid $ns-grey-7;
+    border-radius: 4px;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: $fade-all;
+
+    &:hover {
+        border: 1px solid $ns-grey-6b;
+        box-shadow: $box-shadow-soft;
+    }
+}
+
+
+
 
 // misc
 // --------------------------------------------
@@ -439,5 +475,16 @@
     @media(min-width: 400px) {
         letter-spacing: 4px;
         margin-right: 10px;
+    }
+}
+
+.tk-ideal {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-column-gap: 10px;
+    align-items: center;
+
+    svg {
+        height: 22px;
     }
 }
