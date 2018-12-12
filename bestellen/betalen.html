@@ -1,5 +1,5 @@
 ---
-layout: funnel
+layout: thanks
 heading: Kies je bank
 cta: Afronden
 step: 3
@@ -14,7 +14,7 @@ betalen: true
     {% for banks in site.data.app.banks %}
     <div class="tk-banks__item">
         <img src="/assets/img/banks/{{ forloop.index }}.jpg" class="w-100" />
-        <div class="f-blue fw-b">
+        <div class="f-blue">
             {{ banks.title }}
         </div>
     </div>
