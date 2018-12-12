@@ -26,6 +26,12 @@
 // --------------------------------------------
 .tk-funnel-container {
     display: grid;
+    margin: 0 auto;
+    max-width: 784px;
+}
+
+.tk-funnel-container--2-columns {
+    max-width: 100%;
     grid-column-gap: $double-gutter;
 
     @include md {
@@ -35,12 +41,6 @@
     @include lg {
         grid-column-gap: $triple-gutter;
     }
-}
-
-.tk-funnel-container--1col {
-    margin: 0 auto;
-    grid-template-columns: 1fr;
-    max-width: 784px;
 }
 
 
@@ -452,7 +452,6 @@
 
     @include sm {
         margin: 0;
-        border: 1px solid $ns-grey-7;
         border-radius: 4px;
     }
 
@@ -467,7 +466,42 @@
 
 .no-touch {
     .tk-banks__item:hover {
-        box-shadow: $box-shadow-soft;
+        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
+    }
+}
+
+
+
+// thanks
+// --------------------------------------------
+.tk-thanks__item {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 7px;
+    margin-bottom: $gutter;
+    @include font-style(16px, normal, 1.5);
+    color: $ns-grey-4;
+
+    b {
+        color: $ns-blue;
+    }
+
+    a {
+        @extend .tk-link;
+    }
+
+    svg {
+        fill: $ns-blue;
+        width: 48px;
+    }
+
+    @include sm {
+        font-size: calculate-rem(18px);
+        align-items: center;
+
+        svg {
+            width: 64px;
+        }
     }
 }
 

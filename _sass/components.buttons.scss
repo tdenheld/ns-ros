@@ -86,8 +86,13 @@
     }
 }
 
-.btn-link,
-.btn-link:hover {
+
+
+
+// links
+// -------------------------------------------
+.tk-link-reset,
+.tk-link-reset:hover {
     text-decoration: none;
     outline: none;
     border: none;
@@ -95,11 +100,30 @@
     font-weight: normal;
 }
 
+.tk-link {
+    color: $ns-light-blue;
+    box-shadow: 0 1px 0 rgba($ns-light-blue, 1);
+    font-weight: normal;
+    transition: $fade-link;
 
+    &:hover {
+        color: $ns-blue;
+        box-shadow: 0 1px 0 rgba($ns-blue, 1);
+    }
+}
+
+.tk-link-blue {
+    color: $ns-blue;
+    box-shadow: 0 1px 0 $ns-grey-alpha-40;
+    font-weight: normal;
+
+    &:hover {
+        box-shadow: 0 1px 0 rgba($ns-blue, 1);
+    }
+}
 
 // icon link
-// ----------------------------------------
-.btn-icon {
+.tk-link-icon {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -121,14 +145,14 @@
             transform: translateX(5px);
         }
     }
+}
 
-    &--blue {
-        font-weight: bold;
-        color: $ns-blue;
+.tk-link-icon--blue {
+    font-weight: bold;
+    color: $ns-blue;
 
-        svg {
-            fill: $ns-blue;
-        }
+    svg {
+        fill: $ns-blue;
     }
 }
 
@@ -184,6 +208,7 @@
 }
 
 .scroll-down__icon-circle {
+
     // animation
     // this one is a potential chrome helper CPU killer on retina screens
     @keyframes fall-down {

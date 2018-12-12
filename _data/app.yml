@@ -56,3 +56,13 @@ banks:
   icon: triodos
 - title: van Lanschot
   icon: lanschot
+
+thanks:
+- icon: mail
+  copy: "Je ontvangt een bevestiging op <b>maartendevries@gmail.com</b>"
+- icon: ov-chipkaart
+  copy: "Binnen <b>7 dagen</b> wordt je OV&#8209;chipkaart opgestuurd."
+- icon: user
+  copy: "Je <b>NS-account</b> staat klaar om geactiveerd te worden. Je ontvangt daar zometeen een aparte e-mail over."
+- icon: chat
+  copy: "Vragen? Kijk dan op het <a>NS Serviceforum</a> of bel ons op <a>030 751 51 55.</a>"
