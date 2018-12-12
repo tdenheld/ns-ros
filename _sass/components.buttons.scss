@@ -86,12 +86,13 @@
     }
 }
 
-.btn__link,
-.btn__link:hover {
+.btn-link,
+.btn-link:hover {
     text-decoration: none;
     outline: none;
     border: none;
     box-shadow: none;
+    font-weight: normal;
 }
 
 

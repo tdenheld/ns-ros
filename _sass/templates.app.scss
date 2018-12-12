@@ -424,10 +424,10 @@
 // --------------------------------------------
 .tk-banks {
     display: grid;
-    grid-gap: $half-gutter;
     
     @include sm {
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: $half-gutter;
     }
 
     @include md {
@@ -436,19 +436,37 @@
 }
 
 .tk-banks__item {
+    //layout
     overflow: hidden;
     display: grid;
     grid-template-columns: 36px 1fr max-content;
     grid-gap: 10px;
-    border: 1px solid $ns-grey-7;
-    border-radius: 4px;
-    padding: 14px;
+    margin-bottom: -1px;
+    padding: 10px 20px 10px 10px;
     align-items: center;
+
+    // styling
+    border: 1px solid $ns-grey-7;
     cursor: pointer;
     transition: $fade-all;
 
-    &:hover {
-        border: 1px solid $ns-grey-6b;
+    @include sm {
+        margin: 0;
+        border: 1px solid $ns-grey-7;
+        border-radius: 4px;
+    }
+
+    svg {
+        fill: $ns-blue;
+    }
+}
+
+.tk-banks__title {
+    color: $ns-blue;
+}
+
+.no-touch {
+    .tk-banks__item:hover {
         box-shadow: $box-shadow-soft;
     }
 }
