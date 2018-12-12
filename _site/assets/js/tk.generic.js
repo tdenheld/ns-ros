@@ -468,7 +468,7 @@ $(document).ready(function () {
             $(initID).addClass(toggleClass);
 
             $(obj).click(function () {
-                if ($(this).hasClass(toggleClass) == false) {
+                if (!$(this).hasClass(toggleClass)) {
                     $(obj).removeClass(toggleClass);
                     $(this).addClass(toggleClass);
                     $(content).slideUp(time);
