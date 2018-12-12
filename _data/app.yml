@@ -31,6 +31,8 @@ checkbox:
 #   price: € 51,00
 #   per: / mnd
 
+
+
 banks:
 - title: ABN AMRO
   icon: abn
@@ -56,6 +58,8 @@ banks:
   icon: triodos
 - title: van Lanschot
   icon: lanschot
+
+
 
 thanks:
 - icon: mail
