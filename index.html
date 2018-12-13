@@ -1,5 +1,5 @@
 ---
-heading: Jouw keuze
+heading: Dit is je bestelling
 cta: Verder naar bestellen
 layout: default
 dest: aanmelden
@@ -14,14 +14,25 @@ sticky-cta: true
             </div>
 
             {% include order.html %}
-            
+
             <div class="mb-6">
-                <h2 class="f24 f28-sm mb-0">60 jaar of ouder?</h2>
-                <p class="mb-2">Dan is Dal Voordeel voor u nog voordeliger met Keuzedagen!</p>
-                <a href="#" class="arrowLink" data-controller="generic/ui/ContentOpener" data-config="{&quot;type&quot;: &quot;Overlay&quot;, &quot;contentId&quot;: &quot;overlay-content&quot;}"
-                    title="Keuzedagen">
-                    Bekijk en bestel
-                </a>
+
+                <!-- add ons -->
+                <div class="tk-add-on" data-controller="generic/ui/ContentOpener" data-config="{&quot;type&quot;: &quot;Overlay&quot;, &quot;contentId&quot;: &quot;overlay-content&quot;}">
+                    <div>
+                        <h2 class="tk-add-on__title">60 jaar of ouder?</h2>
+                        <p class="mb-0 mb-1-sm f14 f16-sm f-grey-4 lh-copy">Dan is Dal Voordeel voor u nog voordeliger
+                            met Keuzedagen!</p>
+                        <a href="#" class="arrowLink hidden-xs">
+                            Bekijk en bestel
+                        </a>
+                    </div>
+                    <!-- <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__slider"></span>
+                    </label> -->
+                    <div class="lh-none visible-xs" include="/assets/img/icons/chevron-M--small.svg"></div>
+                </div>
 
                 <!-- overlay -->
                 <div class="richText richText--overlay is-hidden" data-controller="generic/ui/RichText" id="overlay-content">
@@ -34,7 +45,7 @@ sticky-cta: true
                     <a href="https://www.ns.nl/klantenservice/keuzedagen" class="arrowLink mt-2 mb-6" target="_blank">
                         Lees meer
                     </a>
-                    <div class="tk-order mb-0">
+                    <div class="tk-order mxw-350 mb-0">
                         <h3 class="f24 f28-sm lh-title fw-b mb-1">Keuzedagen</h3>
                         <div class="bo-b-blue mb-3"></div>
                         <ul class="f-grey-4 f14 lh-copy">
@@ -47,6 +58,9 @@ sticky-cta: true
                         <button class="button w-100">＋ Toevoegen</button>
                     </div>
                 </div>
+
+                <!-- receipt-->
+                {% include receipt.html %}
             </div>
 
             <!-- call to action button -->

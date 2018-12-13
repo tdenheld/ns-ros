@@ -12,7 +12,7 @@ layout: default
 
             {% if page.order %}
             <div class="hidden-xs hidden-sm">
-                {% include order.html %}
+                {% include receipt.html option='true' %}
             </div>
             {% endif %}
 
@@ -27,7 +27,8 @@ layout: default
                     {% include /form/legal.html %}
                 </div>
                 <div class="hidden-lg hidden-md mb-4">
-                    {% include order.html class="tk-order--grey" %}
+                    {% include receipt.html option='true' %}
+                    <div class="mb-4"></div>
                     {% include /form/legal.html %}
                 </div>
                 {% endif %}

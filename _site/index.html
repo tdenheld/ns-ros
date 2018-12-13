@@ -1536,32 +1536,46 @@
     <div class="container ovr-container">
         <div class="tk-funnel-container pa-2r">
             <div class="tk-heading tk-heading--funnel">
-                <h1 class="tk-heading__title">Jouw keuze</h1>
+                <h1 class="tk-heading__title">Dit is je bestelling</h1>
             </div>
 
             <div class="tk-order ">
-    <div class="g g-m-1 gap-2 items-center mb-1">
+    <div class="tk-order__grid">
         <div class="svg-blue" include="/assets/img/icons/discount--large.svg"></div>
         <h3 class="f24 f28-sm lh-title fw-b mb-1">Dal Voordeel</h3>
     </div>
     <div class="bo-b-blue mb-3"></div>
-    <p class="f-blue f16 f18-sm lh-title mb-0">2e klas, 1 jaar</p>
-    <P class="f14 f-blue mb-3">(Daarna maandelijks opzeggen)</p>
-    <ul class="f-grey-4 f14 lh-copy mb-3">
+
+    <div class="g g-1-m gap-4">
+        <p class="f-blue f16 f18-sm mb-0">2e klas, 1 jaar</p>
+        <p class="f-blue f16 f18-sm mb-0">€ 50,00</p>
+    </div>
+    <p class="f14 f-blue mb-3 lh-copy">(Daarna maandelijks opzeggen)</p>
+
+    <ul class="f-grey-4 f14 lh-copy mb-0">
         <li>Met gratis nieuwe OV-chipkaart binnen 1 week in huis</li>
-        <li>Met je eigen OV-chipkaart binnen 1 uur bij kaartautomaat</li>
+        <li class="mb-0">Met je eigen OV-chipkaart binnen 1 uur bij kaartautomaat</li>
     </ul>
-    <div class="bo-b mb-2"></div>
-    <div class="f-blue f28">€ 50 <span class="f14">per jaar</span></div>
 </div>
-            
+
             <div class="mb-6">
-                <h2 class="f24 f28-sm mb-0">60 jaar of ouder?</h2>
-                <p class="mb-2">Dan is Dal Voordeel voor u nog voordeliger met Keuzedagen!</p>
-                <a href="#" class="arrowLink" data-controller="generic/ui/ContentOpener" data-config="{&quot;type&quot;: &quot;Overlay&quot;, &quot;contentId&quot;: &quot;overlay-content&quot;}"
-                    title="Keuzedagen">
-                    Bekijk en bestel
-                </a>
+
+                <!-- add ons -->
+                <div class="tk-add-on" data-controller="generic/ui/ContentOpener" data-config="{&quot;type&quot;: &quot;Overlay&quot;, &quot;contentId&quot;: &quot;overlay-content&quot;}">
+                    <div>
+                        <h2 class="tk-add-on__title">60 jaar of ouder?</h2>
+                        <p class="mb-0 mb-1-sm f14 f16-sm f-grey-4 lh-copy">Dan is Dal Voordeel voor u nog voordeliger
+                            met Keuzedagen!</p>
+                        <a href="#" class="arrowLink hidden-xs">
+                            Bekijk en bestel
+                        </a>
+                    </div>
+                    <!-- <label class="switch">
+                        <input type="checkbox">
+                        <span class="switch__slider"></span>
+                    </label> -->
+                    <div class="lh-none visible-xs" include="/assets/img/icons/chevron-M--small.svg"></div>
+                </div>
 
                 <!-- overlay -->
                 <div class="richText richText--overlay is-hidden" data-controller="generic/ui/RichText" id="overlay-content">
@@ -1574,7 +1588,7 @@
                     <a href="https://www.ns.nl/klantenservice/keuzedagen" class="arrowLink mt-2 mb-6" target="_blank">
                         Lees meer
                     </a>
-                    <div class="tk-order mb-0">
+                    <div class="tk-order mxw-350 mb-0">
                         <h3 class="f24 f28-sm lh-title fw-b mb-1">Keuzedagen</h3>
                         <div class="bo-b-blue mb-3"></div>
                         <ul class="f-grey-4 f14 lh-copy">
@@ -1587,6 +1601,27 @@
                         <button class="button w-100">＋ Toevoegen</button>
                     </div>
                 </div>
+
+                <!-- receipt-->
+                <div class="tk-receipt">
+
+    
+
+    <div class="g g-1-m gap-2 mb-5">
+        <div class="f-blue fw-b">Totaal per jaar</div>
+        <div class="f-blue fw-b txt-r">€ 50,00</div>
+    </div>
+    <div class="g g-1-m gap-2 mb-1">
+        <div class="f-grey-4">Eerste factuur (1 jaar)</div>
+        <div class="f-grey-4 txt-r">€ 50,00</div>
+    </div>
+    <div class="bo-b-blue-2px mb-1"></div>
+    <div class="g g-1-m gap-2">
+        <div class="f-blue fw-b">Nu te betalen</div>
+        <div class="f-blue fw-b f20 txt-r">€ 50,00</div>
+    </div>
+
+</div>
             </div>
 
             <!-- call to action button -->

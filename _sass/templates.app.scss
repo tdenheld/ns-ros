@@ -364,14 +364,9 @@
 // --------------------------------------------
 .tk-order {
     overflow: hidden;
-    max-width: 380px;
-    margin-bottom: $gutter;
-    padding: 21px;
+    margin-bottom: $half-gutter;
+    padding: 20px;
     border: 1px solid $ns-grey-7;
-
-    @include md {
-        margin-bottom: $double-gutter;
-    }
 }
 
 .tk-order--grey {
@@ -380,6 +375,14 @@
     ul {
         color: $ns-grey;
     }
+}
+
+.tk-order__grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: $half-gutter;
+    align-items: center;
+    margin-bottom: 7px;
 }
 
 
@@ -506,6 +509,53 @@
 }
 
 
+
+// add ons
+// --------------------------------------------
+.tk-add-on {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-gap: $gutter;
+    align-items: center;
+    margin-bottom: $one-half-gutter;
+    border: 1px solid $ns-grey-7;
+    padding: 20px;
+    border-radius: 4px;
+    transition: $fade-all;
+    cursor: pointer;
+
+    svg {
+        fill: $ns-blue;
+        transition: $fade-all;
+    }
+
+    &:hover {
+        box-shadow: 0 2px 28px rgba($ns-black, 0.1);
+    }
+
+    @include xs {
+        margin-bottom: $half-gutter;
+    }
+
+    @include sm {
+        border-radius: 0;
+    }
+}
+
+.tk-add-on__title {
+    @include font-style(20px, bold, 1.25);
+    margin-bottom: 4px;
+}
+
+
+
+// receipt
+// --------------------------------------------
+.tk-receipt {
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+}
 
 
 // misc
