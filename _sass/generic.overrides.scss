@@ -64,6 +64,10 @@ h2 {
 }
 
 .overlay__contentPositioner {
+    @extend .a;
+    @extend .a-fi-right;
+    @extend .a-dur-350;
+
     @include sm-max {
         margin: auto;
         width: 100%;
@@ -78,6 +82,8 @@ h2 {
         background-color: $ns-white;
     }
 }
+
+
 
 
 // extra ovr-classes
