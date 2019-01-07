@@ -9,14 +9,14 @@ bg: bg-yellow
             <div class="tk-heading mb-3">
                 <h1 class="tk-heading__title">{{ page.heading }}</h1>
             </div>
-            <div class="dp-btn dp-btn--z3 dp-bs-btn">
+            <div class="tk-datepicker__btn tk-datepicker__btn--z3 js-dp-btn js-dp-bs-btn">
                 Bottom Sheet (MVP)
-                <span class="dp-btn__icon" include="/assets/img/icons/calendar--small.svg"></span>
+                <span class="tk-datepicker__icon" include="/assets/img/icons/calendar--small.svg"></span>
                 <div class="tk-datepicker-lg">{% include datepicker.html %}</div>
             </div>
-            <div class="dp-btn dp-scr-btn">
+            <div class="tk-datepicker__btn js-dp-btn js-dp-scr-btn">
                 Scroll
-                <span class="dp-btn__icon" include="/assets/img/icons/calendar--small.svg"></span>
+                <span class="tk-datepicker__icon" include="/assets/img/icons/calendar--small.svg"></span>
                 <div class="tk-datepicker-lg">{% include datepicker.html %}</div>
             </div>
         </div>
@@ -25,7 +25,7 @@ bg: bg-yellow
 </section>
 
 <!-- date picker bottom sheet -->
-<div class="tk-overlay dp-bs">
+<div class="tk-overlay js-dp-bs">
     <div class="tk-overlay__bg"></div>
     <div class="tk-datepicker-bs">
         <div class="tk-datepicker-bs__swiper">

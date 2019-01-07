@@ -22,7 +22,7 @@ $bottom-sheet-height: 370px;
 
 // input field style buttons
 // -------------------------------
-.dp-btn {
+.tk-datepicker__btn {
     position: relative;
     margin-bottom: 14px;
     padding: 10px 14px;
@@ -33,7 +33,7 @@ $bottom-sheet-height: 370px;
     max-width: 420px;
 }
 
-.dp-btn__icon {
+.tk-datepicker__icon {
     position: absolute;
     top: 12px;
     right: 14px;
@@ -44,7 +44,7 @@ $bottom-sheet-height: 370px;
     }
 }
 
-.dp-btn--z3 {
+.tk-datepicker__btn--z3 {
     z-index: 3;
 }
 
@@ -66,6 +66,7 @@ $bottom-sheet-height: 370px;
     box-shadow: 0 2px 35px rgba($ns-black, 0.15);
     transform-origin: 0 0;
     opacity: 0;
+    z-index: 1;
 
     &:before {
         content: "";
@@ -77,6 +78,11 @@ $bottom-sheet-height: 370px;
         border-right: 8px solid transparent;
         border-bottom: 14px solid $ns-white;
     }
+}
+
+.tk-datepicker-lg--edit {
+    top: 32px;
+    right: -167px;
 }
 
 
