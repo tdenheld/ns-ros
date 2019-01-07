@@ -1,0 +1,89 @@
+<header class="header {{ include.class }}" data-controller="generic/ui/Header" data-noindex="true">
+    <div class="container header__content">
+        <a href="#mainContent" class="button header__skiplink" data-controller="generic/ui/SmoothScroll">
+        Naar content</a>
+        <h2 class="alt">Hoofdnavigatie</h2>
+        <div class="nslogo nslogo--header header__logo">
+            <a class="nslogo__link" href="/" title="Ga naar de homepagina">
+            <img class="nslogo__image" src="/assets/img/NS_logo.svg" height="20" width="52" alt="Logo Nederlandse Spoorwegen">
+            </a>
+        </div>
+        <ul class="header__container header__container--right" data-controller="generic/ui/Auth">
+            <li class="header__item headerItem" data-header-module="mijnns-loggedOut" data-type="mijnnsheader">
+                <div class="headerItem__main">
+                    <a href="#" class="headerLink headerLink--myns" data-header-toggle="mijnns-loggedOut" aria-expanded="false">
+                    <span class="headerLink__text">Mijn NS</span>
+                    </a>
+                    <a href="#" class="headerCloseLink headerItem__closeLink" data-header-close="">
+                    Sluiten</a>
+                </div>
+                <div class="headerItem__expander">
+                    <a href="/mijnns" class="button button--arrowRight button--fullWidth headerItem--myns__button">
+                    Inloggen Consumenten</a>
+                    <ul class="submenuList headerItem--myns__menulist">
+                        <li class="submenuItem">
+                            <a href="https://login.ns.nl/personal/sign-up-unp" class="arrowLink">
+                            Account aanmaken
+                            </a>
+                        </li>
+                        <li class="submenuItem">
+                            <a href="/klantenservice/inloggen/wat-is-mijn-ns.html" class="arrowLink">
+                            Wat is Mijn NS?
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="submenuList headerItem--myns__menulist">
+                        <li class="submenuItem">
+                            <a href="/mijnnszakelijk/login" class="arrowLink">
+                            Inloggen Zakelijk
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header__item headerItem headerItem--myns headerItem--myns-loggedIn is-hidden" data-header-module="mijnns-loggedIn"
+                data-type="mijnnsheaderLoggedIn">
+                <div class="headerItem__main">
+                    <a href="#" class="headerLink headerLink--myns" data-header-toggle="mijnns-loggedIn" aria-expanded="false">
+                        <div class="headerLink__text headerLink__text--loggedIn">
+                            <span class="alt">Mijn NS</span>
+                            <span class="alt">Ingelogd met:</span>
+                            <span class="headerLink__text-shortened" aria-hidden="true" data-email="short"
+                                data-privacy-hide="true" data-hj-suppress="">{{e}}</span>
+                            <span class="headerLink__text-full" data-email="long" data-privacy-hide="true"
+                                data-hj-suppress="">{{emailaddress}}</span>
+                        </div>
+                    </a>
+                    <a href="#" class="headerCloseLink headerItem__closeLink" data-header-close="">
+                    Sluiten</a>
+                </div>
+                <div class="headerItem__expander">
+                    <div class="headerItem--myns__status small" aria-hidden="true">Ingelogd met</div>
+                    <p class="headerItem--myns__name" data-email="long" aria-hidden="true" data-privacy-hide="true"
+                        data-hj-suppress="">{{emailaddress}}</p>
+                    <ul class="submenuList headerItem--myns__menulist">
+                        <li class="submenuItem">
+                            <a href="/mijnns#/dashboard" class="arrowLink">
+                            Startpagina Mijn NS
+                            </a>
+                        </li>
+                        <li class="submenuItem">
+                            <a href="https://login.ns.nl/personal/logout" class="arrowLink">
+                            Uitloggen
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header__item headerItem miniCart" data-type="winkelwagenheader" data-controller="generic/ui/MiniCart"
+                data-config="{&quot;cartUrl&quot;:&quot;/producten/winkelwagen&quot;,&quot;labels&quot;:{&quot;articlePlural&quot;:&quot;artikelen&quot;,&quot;articleSingular&quot;:&quot;artikel&quot;,&quot;shoppingCartText&quot;:&quot;Winkelwagen&quot;}}"></li>
+            <li class="header__item headerItem">
+                <div class="headerItem__main">
+                    <a href="/en" class="headerLink headerLink--enLang" rel="alternate" hreflang="en" data-type="languageSwitch">
+                    <span class="headerLink__text">English</span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
