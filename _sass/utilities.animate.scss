@@ -24,6 +24,10 @@
 	animation-timing-function: $ease;
 }
 
+.a-l {
+    animation: 600ms infinite linear;
+}
+
 // durations & delays
 // --------------------------------
 @for $i from 0 through 64 {
@@ -240,3 +244,16 @@
 	}
 }
 .a-fo-up-s {animation-name: fade-out-up-small;}
+
+// infinite
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.a-rotate {
+    animation-name: rotate;
+}

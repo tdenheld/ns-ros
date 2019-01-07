@@ -248,12 +248,6 @@ function form() {
         var buttonText = $(".js-submit-button").text();
         var errorMessage = new DisplayError(input, error);
 
-        function clear() {
-            clearTimeout(typingTimer);
-            clearTimeout(serverCallSym);
-            typingTimer = setTimeout(doneTyping, 750);
-        };
-
         // user is finished typing
         function doneTyping() {
             if (isValidEmail) {
@@ -285,7 +279,9 @@ function form() {
             // on keyup, start the countdown
             input.keyup(function () {
                 errorMessage.hide();
-                clear();
+                clearTimeout(typingTimer);
+                clearTimeout(serverCallSym);
+                typingTimer = setTimeout(doneTyping, 750);
                 loading.removeClass("is-active");
                 tick.removeClass("is-active");
                 known.removeClass("is-active");
@@ -301,7 +297,6 @@ function form() {
             });
 
             input.focusout(function () {
-                clear();
                 if (isValidEmail) {
                     submit = true;
                 } else {
@@ -436,7 +431,9 @@ function form() {
         });
     };
 };
-form();
+$(function () {
+    form();
+});
 
 
 
@@ -573,3 +570,30 @@ function includeHtml() {
     };
 };
 includeHtml();
+
+
+
+// preloader
+// ------------------------------------------------------------	
+function loader() {
+    // init loader view
+    TweenMax.to(".js-loader", 0.1, {
+        opacity: 1
+    });
+
+    // load website
+    window.addEventListener("load", function () {
+        TweenLite.to(".js-loader", 0.3, {
+            delay: 0.7,
+            ease: Power3.easeInOut,
+            autoAlpha: 0,
+            display: "none",
+            onComplete: function () {
+                TweenLite.set(".js-loaded", {
+                    display: "block",
+                });
+            }
+        });
+    });
+};
+loader();

@@ -589,3 +589,18 @@
         height: 22px;
     }
 }
+
+.tk-loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 140px);
+    background-color: $ns-grey-8;
+
+    svg {
+        width: 33px;
+        fill: $ns-blue;
+        @extend .a-l;
+        @extend .a-rotate;
+    }
+}

@@ -1532,14 +1532,19 @@
     </div>
 </header>
     <div class="content ">
-        <section>
-    <div class="container ovr-container">
-        <div class="tk-funnel-container pa-2r">
-            <div class="tk-heading tk-heading--funnel">
-                <h1 class="tk-heading__title">Dit is je bestelling</h1>
-            </div>
+        <div class="tk-loader js-loader">
+    <div include="/assets/img/icons/loader-res--small.svg"></div>
+</div>
 
-            <div class="tk-order ">
+<div class="js-loaded is-hidden">
+    <section class="a a-fi-right-small">
+        <div class="container ovr-container">
+            <div class="tk-funnel-container pa-2r">
+                <div class="tk-heading tk-heading--funnel">
+                    <h1 class="tk-heading__title">Dit is je bestelling</h1>
+                </div>
+
+                <div class="tk-order ">
     <div class="tk-order__grid">
         <div class="svg-blue" include="/assets/img/icons/discount--large.svg"></div>
         <h3 class="f24 f28-sm lh-title fw-b mb-1">Dal Voordeel</h3>
@@ -1558,55 +1563,54 @@
     </ul>
 </div>
 
-            <div class="mb-6">
+                <div class="mb-6">
 
-                <!-- add ons -->
-                <div class="tk-add-on" 
-                     data-controller="generic/ui/ContentOpener"
-                     data-config="{&quot;type&quot;: &quot;Overlay&quot;,
+                    <!-- add ons -->
+                    <div class="tk-add-on" data-controller="generic/ui/ContentOpener" data-config="{&quot;type&quot;: &quot;Overlay&quot;,
                      &quot;contentId&quot;: &quot;overlay-content&quot;}">
-                    <div>
-                        <h2 class="tk-add-on__title">60 jaar of ouder?</h2>
-                        <p class="mb-0 mb-1-sm f14 f16-sm f-grey-4 lh-copy">Dan is Dal Voordeel voor u nog voordeliger
-                            met Keuzedagen!</p>
-                        <a href="#" class="arrowLink hidden-xs">
-                            Bekijk en bestel
-                        </a>
-                    </div>
-                    <!-- <label class="switch">
+                        <div>
+                            <h2 class="tk-add-on__title">60 jaar of ouder?</h2>
+                            <p class="mb-0 mb-1-sm f14 f16-sm f-grey-4 lh-copy">Dan is Dal Voordeel voor u nog
+                                voordeliger
+                                met Keuzedagen!</p>
+                            <a href="#" class="arrowLink hidden-xs">
+                                Bekijk en bestel
+                            </a>
+                        </div>
+                        <!-- <label class="switch">
                         <input type="checkbox">
                         <span class="switch__slider"></span>
                     </label> -->
-                    <div class="lh-none visible-xs" include="/assets/img/icons/chevron-M--small.svg"></div>
-                </div>
-
-                <!-- overlay -->
-                <div class="richText richText--overlay is-hidden" data-controller="generic/ui/RichText" id="overlay-content">
-                    <h2 class="headingXL">Keuzedagen</h2>
-                    <p>
-                        60 jaar of ouder? Dan is Dal Voordeel voor u nog voordeliger!
-                        Met Keuzedagen reizen NS-abonnementhouders van 60 jaar of ouder
-                        7 dagen per jaar onbeperkt met de trein.
-                    </p>
-                    <a href="https://www.ns.nl/klantenservice/keuzedagen" class="arrowLink mt-2 mb-6" target="_blank">
-                        Lees meer
-                    </a>
-                    <div class="tk-order mxw-350 mb-0">
-                        <h3 class="f24 f28-sm lh-title fw-b mb-1">Keuzedagen</h3>
-                        <div class="bo-b-blue mb-3"></div>
-                        <ul class="f-grey-4 f14 lh-copy">
-                            <li>7 dagen per jaar onbeperkt met de trein.</li>
-                            <li>Reizen in heel Nederland</li>
-                            <li>Alle dagen van de week geldig (doordeweeks na 9.00 uur).</li>
-                        </ul>
-                        <div class="bo-b mb-2"></div>
-                        <div class="f-blue f28 mb-2">€ 24,50 <span class="f14">per jaar</span></div>
-                        <button class="button w-100">＋ Toevoegen</button>
+                        <div class="lh-none visible-xs" include="/assets/img/icons/chevron-M--small.svg"></div>
                     </div>
-                </div>
 
-                <!-- receipt-->
-                <div class="tk-receipt">
+                    <!-- overlay -->
+                    <div class="richText richText--overlay is-hidden" data-controller="generic/ui/RichText" id="overlay-content">
+                        <h2 class="headingXL">Keuzedagen</h2>
+                        <p>
+                            60 jaar of ouder? Dan is Dal Voordeel voor u nog voordeliger!
+                            Met Keuzedagen reizen NS-abonnementhouders van 60 jaar of ouder
+                            7 dagen per jaar onbeperkt met de trein.
+                        </p>
+                        <a href="https://www.ns.nl/klantenservice/keuzedagen" class="arrowLink mt-2 mb-6" target="_blank">
+                            Lees meer
+                        </a>
+                        <div class="tk-order mxw-350 mb-0">
+                            <h3 class="f24 f28-sm lh-title fw-b mb-1">Keuzedagen</h3>
+                            <div class="bo-b-blue mb-3"></div>
+                            <ul class="f-grey-4 f14 lh-copy">
+                                <li>7 dagen per jaar onbeperkt met de trein.</li>
+                                <li>Reizen in heel Nederland</li>
+                                <li>Alle dagen van de week geldig (doordeweeks na 9.00 uur).</li>
+                            </ul>
+                            <div class="bo-b mb-2"></div>
+                            <div class="f-blue f28 mb-2">€ 24,50 <span class="f14">per jaar</span></div>
+                            <button class="button w-100">＋ Toevoegen</button>
+                        </div>
+                    </div>
+
+                    <!-- receipt-->
+                    <div class="tk-receipt">
 
     
 
@@ -1625,25 +1629,25 @@
     </div>
 
 </div>
-            </div>
+                </div>
 
-            <!-- call to action button -->
-            <div class="bo-t mb-2"></div>
-            <div class="txt-r" id="js-sticky-trig">
-                <a href="/bestellen/aanmelden" class="js-submit-link">
+                <!-- call to action button -->
+                <div class="bo-t mb-2"></div>
+                <div class="txt-r" id="js-sticky-trig">
+                    <a href="/bestellen/aanmelden" class="js-submit-link">
     <button type="submit" class="button button--arrowRight button--nsYellow w-100 w-auto-sm js-submit-button">
         Verder naar bestellen
     </button>
 </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="bg-grey-8 bo-t">
-    <div class="container ovr-container mv-0">
-        <div class="pa-2r">
-            <div class="tk-comfort">
+    <section class="bg-grey-8 bo-t a a-fi a-del-250">
+        <div class="container ovr-container mv-0">
+            <div class="pa-2r">
+                <div class="tk-comfort">
     <h4 class="headingM fw-b mb-4">Hoe werkt het?</h4>
     <div class="tk-comfort__grid">
         
@@ -1670,9 +1674,10 @@
         
     </div>
 </div>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
     </div>
     <footer class="footer bo-t">
     <div class="container">
