@@ -592,6 +592,12 @@ function loader() {
                 TweenLite.set(".js-loaded", {
                     display: "block",
                 });
+                TweenLite.from(".js-sticky-bar", 0.5, {
+                    delay: 0.25,
+                    ease: Power3.easeInOut,
+                    autoAlpha: 0,
+                    y: "100%"
+                });
             }
         });
     });
