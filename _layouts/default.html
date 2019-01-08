@@ -30,17 +30,7 @@
     <div class="content {{ page.bg }}">
         {{ content }}
     </div>
-    {% include footer-light.html %}
-
-    {% if page.sticky-cta %}
-    <div class="visible-xs">
-        <div class="js-loaded is-hidden">
-            <div class="tk-sticky-bar js-sticky-bar">
-                {% include cta.html %}
-            </div>
-        </div>
-    </div>
-    {% endif %}
+    {% include footer-light.html class="bo-t" %}
 
 
     <!-- JAVASCRIPT -->

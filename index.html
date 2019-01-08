@@ -3,7 +3,6 @@ heading: Dit is je bestelling
 cta: Verder naar bestellen
 layout: default
 dest: aanmelden
-sticky-cta: true
 ---
 
 <div class="tk-loader js-loader">
@@ -86,4 +85,10 @@ sticky-cta: true
             </div>
         </div>
     </section>
+
+    <div class="visible-xs">
+        <div class="tk-sticky-bar js-sticky-bar">
+            {% include cta.html %}
+        </div>
+    </div>
 </div>
