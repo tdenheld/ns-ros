@@ -346,6 +346,18 @@
     padding-bottom: 20px;
 }
 
+.tk-choice-selector__edit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 2px;
+    left: -4px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
 // no touch
 .no-touch {
     .tk-choice-selector__item:hover:before {

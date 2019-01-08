@@ -2,7 +2,7 @@
       Datepicker
 --------------------*/
 
-$bottom-sheet-height: 370px;
+$bottom-sheet-height: 402px;
 
 // overlay
 // -------------------------------
@@ -81,8 +81,8 @@ $bottom-sheet-height: 370px;
 }
 
 .tk-datepicker-lg--edit {
-    top: 32px;
-    right: -167px;
+    top: 38px;
+    right: -158px;
 }
 
 
@@ -100,6 +100,23 @@ $bottom-sheet-height: 370px;
     background-color: $ns-white;
     border-radius: 8px 8px 0 0;
     box-shadow: 0 0 60px rgba($ns-black, 0.18);
+}
+
+.tk-datepicker-bs__label {
+    @include font-style(18px, bold, 1.5);
+    color: $ns-blue;
+    padding: $half-gutter 0;
+    margin-bottom: $half-gutter;
+    border-bottom: 1px solid $ns-grey-7;
+    text-align: center;
+}
+
+.tk-datepicker-bs__close {
+    position: absolute;
+    width: 31px;
+    height: 35px;
+    top: 18px;
+    right: 0;
 }
 
 .tk-datepicker-bs__swiper {
@@ -137,22 +154,13 @@ $bottom-sheet-height: 370px;
 .tk-datepicker__month {
     position: relative;
     top: 1px;
-    @include font-style(16px, bold, 1.5);
+    @include font-style(16px, normal, 1.5);
     color: $ns-light-blue;
     transition: $fade-link;
     cursor: pointer;
 
-    svg {
-        transform: rotate(90deg);
-        fill: $ns-light-blue;
-    }
-
     &:hover {
         color: $ns-blue;
-
-        svg {
-            fill: $ns-blue;
-        }
     }
 }
 

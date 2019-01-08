@@ -23,7 +23,7 @@ function Transition(obj, y, scaleY) {
 function dpBottomSheet() {
     var btn = $(".js-dp-bs-btn");
     var overlay = $(".js-dp-bs");
-    var close = $(".tk-datepicker-bs__swiper, .js-dp-bs .tk-overlay__bg");
+    var close = $(".js-dp-bs-close, .js-dp-bs .tk-overlay__bg, .js-dp-toggle");
     var bottomSheet = new Transition(".tk-datepicker-bs", 300, 1);
     var darkener = new Transition(".js-dp-bs .tk-overlay__bg", 0, 1);
 
@@ -41,6 +41,11 @@ function dpBottomSheet() {
         setTimeout(() => {
             overlay.hide();
         }, 610);
+    });
+
+    $(".js-dp-toggle").click(function(){
+        $(".js-dp-toggle").removeClass("is-active");
+        $(this).addClass("is-active");
     });
 };
 dpBottomSheet();

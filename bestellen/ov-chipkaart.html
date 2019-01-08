@@ -5,6 +5,7 @@ cta: Naar betalen
 step: 2
 dest: betalen
 order: true
+date: "24-02-2019"
 ---
 
 <div class="mb-6">
@@ -60,12 +61,12 @@ order: true
                     </label>
                 </div>
             </form>
-            <div class="tk-choice-selector__divider"></div>
-            <span class="f-blue mb-1">Ingangsdatum: </span>
+            <div class="tk-choice-selector__divider mb-1"></div>
+            <span class="f-blue">Ingangsdatum: </span>
             <span class="f-grey no-wrap">
-                21-01-2019
-                <span class="svg-link ml-1 pos-r top-2px js-dp-btn js-dp-bs-btn">
-                    <span include="/assets/img/icons/edit-S--small.svg"></span>
+                {{ page.date }}
+                <span class="tk-choice-selector__edit svg-link js-dp-btn js-dp-bs-btn">
+                    <div class="lh-none" include="/assets/img/icons/edit-S--small.svg"></div>
                     <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
                 </span>
             </span>
@@ -94,12 +95,12 @@ order: true
                     </div>
                 </div>
             </div>
-            <div class="tk-choice-selector__divider"></div>
+            <div class="tk-choice-selector__divider mb-1"></div>
             <span class="f-blue mb-1">Ingangsdatum: </span>
             <span class="f-grey no-wrap">
-                21-01-2019
-                <span class="svg-link ml-1 pos-r top-2px js-dp-btn js-dp-bs-btn">
-                    <span include="/assets/img/icons/edit-S--small.svg"></span>
+                {{ page.date }}
+                <span class="tk-choice-selector__edit svg-link js-dp-btn js-dp-bs-btn">
+                    <div class="lh-none" include="/assets/img/icons/edit-S--small.svg"></div>
                     <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
                 </span>
             </span>
