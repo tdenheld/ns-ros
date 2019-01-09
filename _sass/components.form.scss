@@ -191,6 +191,12 @@
 }
 
 .tk-ff__checkbox {
+    padding: 0 0 $half-gutter;
+
+    &:last-child {
+        padding: 0;
+    }
+
     .checkbox__label:after {
         border: none;
         transform: none;

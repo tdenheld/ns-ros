@@ -1,0 +1,45 @@
+---
+layout: funnel
+heading: Bestellen
+cta: Naar betalen
+step: 2
+dest: betalen
+order: true
+date: "24-02-2019"
+---
+
+<div class="mb-6">
+    <div class="mb-2 f-grey-4 lh-copy f14">
+        <h2 class="tk-heading__subtitle">Even je gegevens checken</h2>
+        <div class="f16 fw-b f-blue mb-1">Maarten de Vries</div>
+        <div class="tk-customer">
+            <div>
+                <span class="js-set-email">maarten.devries@ns.nl</span> <br>
+                30 november 1982
+            </div>
+            <div>
+                Westermaatsweg 1 <br>
+                7556 BW Hengelo
+            </div>
+        </div>
+    </div>
+    <a class="tk-link-reset dib">
+        <div class="tk-link-icon">
+            <span class="svg-link" include="/assets/img/icons/info--small.svg"></span>
+            Iets onjuist?
+        </div>
+    </a>
+</div>
+
+<div class="tk-other mb-6">
+    <div class="tk-other__switch">
+        <div class="js-other-user-label">Iemand anders gaat met deze kaart reizen</div>
+        <label class="switch js-other-user">
+            <input type="checkbox">
+            <span class="switch__slider"></span>
+        </label>
+    </div>
+</div>
+
+
+{% include ov-chip-select.html %}

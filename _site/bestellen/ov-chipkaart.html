@@ -137,7 +137,7 @@
                 </a>
                 <div class="tk-progress__step tk-progress__step--active">
                     <div class="tk-progress__circle">2</div>
-                    <div class="tk-progress__description hidden-xs">OV-chipkaart</div>
+                    <div class="tk-progress__description hidden-xs">Bestellen</div>
                 </div>
                 <div class="tk-progress__step">
                     <div class="tk-progress__circle">3</div>
@@ -167,8 +167,8 @@
 
     
     <div class="mb-2"></div>
-    <h3 class="f24 mb-3">Dit is je bestelling</h3>
-    <div class="g g-1-m gap-2 items-baseline mb-0">
+    <h3 class="tk-heading__subtitle">Dit is je bestelling</h3>
+    <div class="g g-1-m gap-2 items-baseline">
         <div class="f-grey-4">Dal Voordeel</div>
         <div class="f-grey-4 txt-r">€ 50,00</div>
     </div>
@@ -199,14 +199,18 @@
 
             <div>
                 <div class="tk-heading tk-heading--funnel">
-                    <h1 class="tk-heading__title">Kies je OV&#8209;chipkaart</h1>
+                    <h1 class="tk-heading__title">Bestellen</h1>
                 </div>
                 <div class="mb-6">
     <div class="mb-2 f-grey-4 lh-copy f14">
-        <div class="f16 fw-b f-blue mb-1">Maarten de Vries</div>
+        <div class="f16 fw-b f-blue mb-1">
+            <span class="js-set-firstName">Maarten</span>
+            <span class="js-set-tussenvoegsel">de</span>
+            <span class="js-set-lastName">Vries</span>
+        </div>
         <div class="tk-customer">
             <div>
-                maarten.devries@ns.nl <br>
+                <span class="js-set-email">maarten.devries@ns.nl</span> <br>
                 30 november 1982
             </div>
             <div>
@@ -224,6 +228,9 @@
 </div>
 
 <div class="tk-choice-selector">
+    <h2 class="tk-heading__subtitle">OV-chipkaart</h2>
+
+    <!-- option 1 -->
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
@@ -258,14 +265,14 @@
             <span class="f-blue">Ingangsdatum: </span>
             <span class="f-grey no-wrap">
                 24-02-2019
-                <span class="tk-choice-selector__edit svg-link js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none" include="/assets/img/icons/edit-S--small.svg"></div>
+                <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
+                    <div class="lh-none svg-link" include="/assets/img/icons/edit-S--small.svg"></div>
                     <div class="tk-datepicker-lg tk-datepicker-lg--edit"><div class="tk-datepicker">
     <div class="tk-datepicker__header">
         <span class="rotate-svg-180 svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
-        <span class="tk-datepicker__month">
+        <span class="tk-datepicker__month svg-link">
             februari 2019
-            <span class="tk-datepicker__chevron-down svg-link rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
+            <span class="tk-datepicker__chevron-down rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
         </span>
         <span class="svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
     </div>
@@ -323,6 +330,7 @@
         </div>
     </div>
 
+    <!-- option 2 -->
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
@@ -349,14 +357,14 @@
             <span class="f-blue mb-1">Ingangsdatum: </span>
             <span class="f-grey no-wrap">
                 24-02-2019
-                <span class="tk-choice-selector__edit svg-link js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none" include="/assets/img/icons/edit-S--small.svg"></div>
+                <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
+                    <div class="lh-none svg-link" include="/assets/img/icons/edit-S--small.svg"></div>
                     <div class="tk-datepicker-lg tk-datepicker-lg--edit"><div class="tk-datepicker">
     <div class="tk-datepicker__header">
         <span class="rotate-svg-180 svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
-        <span class="tk-datepicker__month">
+        <span class="tk-datepicker__month svg-link">
             februari 2019
-            <span class="tk-datepicker__chevron-down svg-link rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
+            <span class="tk-datepicker__chevron-down rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
         </span>
         <span class="svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
     </div>
@@ -417,6 +425,7 @@
 
                 
                 <div class="hidden-xs hidden-sm">
+                    <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
                     <form>
     <div class="checkbox formfield__checkbox tk-ff__checkbox">
         <input required type="checkbox" class="checkbox__input">
@@ -437,8 +446,8 @@
 
     
     <div class="mb-2"></div>
-    <h3 class="f24 mb-3">Dit is je bestelling</h3>
-    <div class="g g-1-m gap-2 items-baseline mb-0">
+    <h3 class="tk-heading__subtitle">Dit is je bestelling</h3>
+    <div class="g g-1-m gap-2 items-baseline">
         <div class="f-grey-4">Dal Voordeel</div>
         <div class="f-grey-4 txt-r">€ 50,00</div>
     </div>
@@ -464,7 +473,8 @@
     </div>
 
 </div>
-                    <div class="mb-4"></div>
+                    <div class="mb-6"></div>
+                    <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
                     <form>
     <div class="checkbox formfield__checkbox tk-ff__checkbox">
         <input required type="checkbox" class="checkbox__input">
@@ -507,9 +517,9 @@
         <div class="tk-datepicker">
     <div class="tk-datepicker__header">
         <span class="rotate-svg-180 svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
-        <span class="tk-datepicker__month">
+        <span class="tk-datepicker__month svg-link">
             februari 2019
-            <span class="tk-datepicker__chevron-down svg-link rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
+            <span class="tk-datepicker__chevron-down rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
         </span>
         <span class="svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
     </div>

@@ -228,18 +228,18 @@ function form() {
         // user is finished typing
         function doneTyping() {
             if (isValidEmail) {
-                submit = true;
                 loading.addClass("is-active");
                 serverCallSym = setTimeout(() => {
-                    if (input.val() != "tjeerd@ns.nl") {
-                        loading.removeClass("is-active");
-                        tick.addClass("is-active");
-                    } else {
+                    submit = true;
+                    if (input.val().indexOf("@ns.nl") != -1) {
                         loading.removeClass("is-active");
                         known.addClass("is-active");
                         knownMessage.addClass("is-active");
                         $(".js-submit-button").text("Inloggen");
-                        linkLocation = "https://login.ns.nl";
+                        linkLocation = "/bestellen/ov-chipkaart-user";
+                    } else {
+                        loading.removeClass("is-active");
+                        tick.addClass("is-active");
                     };
                 }, 300);
             } else {
@@ -270,15 +270,16 @@ function form() {
 
             // on keydown, clear the countdown 
             input.keydown(function () {
+                submit = false;
                 clearTimeout(typingTimer);
             });
 
             input.focusout(function () {
                 if (isValidEmail) {
                     submit = true;
+                    sessionStorage.setItem("email", $("#email").val());
                 } else {
                     errorMessage.show();
-                    submit = false;
                 };
             });
 
@@ -337,9 +338,7 @@ function form() {
 
             // show error on focusout if input is correct
             input.focusout(function () {
-                if (input.val().length == 6) {
-
-                } else {
+                if (input.val().length != 6) {
                     errorMessage.show();
                 };
             });
@@ -387,6 +386,21 @@ function form() {
     };
     customAddress();
 
+    // handle some form data
+    function setFormData() {
+        sessionStorage.setItem("firstName", $("#voornaam").val());
+        sessionStorage.setItem("tussenvoegsel", $("#tussenvoegsel").val());
+        sessionStorage.setItem("lastName", $("#achternaam").val());
+    };
+
+    function getFormData() {
+        $(".js-set-email").text(sessionStorage.getItem("email"));
+        $(".js-set-firstName").text(sessionStorage.getItem("firstName"));
+        $(".js-set-tussenvoegsel").text(sessionStorage.getItem("tussenvoegsel"));
+        $(".js-set-lastName").text(sessionStorage.getItem("lastName"));
+    };
+    getFormData();
+
     function submitButton(i, e) {
         var errorMessage = new DisplayError(i, e);
         $(".js-submit-link").click(function (event) {
@@ -396,6 +410,7 @@ function form() {
             } else if (i.prop("required")) {
                 errorMessage.show();
             };
+            setFormData();
         });
     };
 

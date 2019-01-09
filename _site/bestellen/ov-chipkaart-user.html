@@ -115,149 +115,413 @@
         </ul>
     </div>
 </header>
-    <div class="content bg-yellow">
-        <section>
+    <div class="content ">
+         <div class="bg-grey-8 bo-b">
+    <div class="container ovr-container mv-0">
+        <div class="tk-progress">
+            
+            
+            <div class="tk-progress__bar">
+                <div></div>
+                <div class="tk-progress__line tk-progress__line--done"></div>
+                <div class="tk-progress__line"></div>
+                <div class="tk-progress__line"></div>
+                <div></div>
+            </div>
+            <div class="tk-progress__grid">
+                <a onclick="window.history.go(-1)" class="tk-link-reset">
+                    <div class="tk-progress__step tk-progress__step--done">
+                        <div class="tk-progress__circle"></div>
+                        <div class="tk-progress__description hidden-xs">Gegevens</div>
+                    </div>
+                </a>
+                <div class="tk-progress__step tk-progress__step--active">
+                    <div class="tk-progress__circle">2</div>
+                    <div class="tk-progress__description hidden-xs">Bestellen</div>
+                </div>
+                <div class="tk-progress__step">
+                    <div class="tk-progress__circle">3</div>
+                    <div class="tk-progress__description hidden-xs">Betalen</div>
+                </div>
+                <div class="tk-progress__step">
+                    <div class="tk-progress__circle">4</div>
+                    <div class="tk-progress__description hidden-xs">Bedankt</div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</div> 
+
+<section>
     <div class="container ovr-container">
-        <div class="tk-funnel-container tk-funnel-container--1col pa-2r mb-20">
-            <div class="tk-heading mb-3">
-                <h1 class="tk-heading__title">Datepicker component</h1>
+        <div class="tk-funnel-container 
+                     tk-funnel-container--2-columns  
+                    pa-2r a a-fi-right-small">
+
+            
+            <div class="hidden-xs hidden-sm">
+                <div class="tk-receipt">
+
+    
+    <div class="mb-2"></div>
+    <h3 class="tk-heading__subtitle">Dit is je bestelling</h3>
+    <div class="g g-1-m gap-2 items-baseline">
+        <div class="f-grey-4">Dal Voordeel</div>
+        <div class="f-grey-4 txt-r">€ 50,00</div>
+    </div>
+    <div class="g g-1-m gap-2 items-baseline mb-1">
+        <div class="f-grey-4">2e klas</div>
+        <div class="f-grey-4 txt-r"></div>
+    </div>
+    <div class="bo-b mb-1"></div>
+    
+
+    <div class="g g-1-m gap-2 items-baseline mb-4">
+        <div class="f-blue fw-b">Totaal per jaar</div>
+        <div class="f-blue fw-b txt-r">€ 50,00</div>
+    </div>
+    <div class="g g-1-m gap-2 items-baseline mb-1">
+        <div class="f-grey-4">Eerste factuur (1 jaar)</div>
+        <div class="f-grey-4 txt-r">€ 50,00</div>
+    </div>
+    <div class="bo-b-blue-2px mb-1"></div>
+    <div class="g g-1-m gap-2 items-baseline">
+        <div class="f-blue fw-b">Nu te betalen</div>
+        <div class="f-blue fw-b txt-r">€ 50,00</div>
+    </div>
+
+</div>
             </div>
-            <div class="tk-datepicker__btn tk-datepicker__btn--z3 js-dp-btn js-dp-bs-btn">
-                Bottom Sheet (MVP)
-                <span class="tk-datepicker__icon" include="/assets/img/icons/calendar--small.svg"></span>
-                <div class="tk-datepicker-lg"><div class="tk-datepicker">
-    <div class="tk-datepicker__header">
-        <span class="rotate-svg-180 svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
-        <span class="tk-datepicker__month svg-link">
-            februari 2019
-            <span class="tk-datepicker__chevron-down rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
-        </span>
-        <span class="svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
-    </div>
+            
 
-    <div class="tk-datepicker__grid f-grey">
-        <div>ma</div>
-        <div>di</div>
-        <div>wo</div>
-        <div>do</div>
-        <div>vr</div>
-        <div>za</div>
-        <div>zo</div>
-    </div>
-    <div class="bo-b mb-2"></div>
-
-    <div class="tk-datepicker__grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">1</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">2</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">3</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">4</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">5</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">6</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">7</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">8</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">9</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">10</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">11</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">12</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">13</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">14</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">15</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">16</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">17</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">18</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">19</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">20</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">21</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">22</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">23</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle tk-datepicker__day--today is-active">24</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">25</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">26</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">27</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">28</div>
-        <!-- <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">29</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">30</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">31</div> -->
-    </div>
-</div></div>
+            <div>
+                <div class="tk-heading tk-heading--funnel">
+                    <h1 class="tk-heading__title">Bestellen</h1>
+                </div>
+                <div class="mb-6">
+    <div class="mb-2 f-grey-4 lh-copy f14">
+        <h2 class="tk-heading__subtitle">Even je gegevens checken</h2>
+        <div class="f16 fw-b f-blue mb-1">Maarten de Vries</div>
+        <div class="tk-customer">
+            <div>
+                <span class="js-set-email">maarten.devries@ns.nl</span> <br>
+                30 november 1982
             </div>
-            <div class="tk-datepicker__btn js-dp-btn js-dp-scr-btn">
-                Scroll
-                <span class="tk-datepicker__icon" include="/assets/img/icons/calendar--small.svg"></span>
-                <div class="tk-datepicker-lg"><div class="tk-datepicker">
-    <div class="tk-datepicker__header">
-        <span class="rotate-svg-180 svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
-        <span class="tk-datepicker__month svg-link">
-            februari 2019
-            <span class="tk-datepicker__chevron-down rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
-        </span>
-        <span class="svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
-    </div>
-
-    <div class="tk-datepicker__grid f-grey">
-        <div>ma</div>
-        <div>di</div>
-        <div>wo</div>
-        <div>do</div>
-        <div>vr</div>
-        <div>za</div>
-        <div>zo</div>
-    </div>
-    <div class="bo-b mb-2"></div>
-
-    <div class="tk-datepicker__grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">1</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">2</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">3</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">4</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">5</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">6</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">7</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">8</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">9</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">10</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">11</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">12</div>
-        <div class="tk-datepicker__day tk-datepicker__day--disabled">13</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">14</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">15</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">16</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">17</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">18</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">19</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">20</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">21</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">22</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">23</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle tk-datepicker__day--today is-active">24</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">25</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">26</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">27</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">28</div>
-        <!-- <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">29</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">30</div>
-        <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">31</div> -->
-    </div>
-</div></div>
+            <div>
+                Westermaatsweg 1 <br>
+                7556 BW Hengelo
             </div>
         </div>
     </div>
-    <div class="pv-20"></div>
+    <a class="tk-link-reset dib">
+        <div class="tk-link-icon">
+            <span class="svg-link" include="/assets/img/icons/info--small.svg"></span>
+            Iets onjuist?
+        </div>
+    </a>
+</div>
+
+<div class="tk-other mb-6">
+    <div class="tk-other__switch">
+        <div class="js-other-user-label">Iemand anders gaat met deze kaart reizen</div>
+        <label class="switch js-other-user">
+            <input type="checkbox">
+            <span class="switch__slider"></span>
+        </label>
+    </div>
+</div>
+
+
+<div class="tk-choice-selector">
+    <h2 class="tk-heading__subtitle">OV-chipkaart</h2>
+
+    <!-- option 1 -->
+    <div class="tk-choice-selector__item js-cs-item">
+        <div class="tk-choice-selector__header">
+            <div>
+                <h3 class="tk-choice-selector__title">Bestaande OV-chipkaart</h3>
+                <p class="tk-choice-selector__description">Binnen 1 uur bij kaartautomaat</p>
+            </div>
+            <div class="tk-choice-selector__price">
+                <div class="tk-choice-selector__new-price"></div>
+                <div class="tk-choice-selector__old-price"></div>
+            </div>
+        </div>
+        <div class="tk-choice-selector__content">
+            <div class="tk-choice-selector__divider"></div>
+            <form>
+                <div class="radioButton tk-ff__radio">
+                    <input type="radio" class="radioButton__input" id="Today_TravelDate" name="TravelDate" checked>
+                    <label class="radioButton__label" for="Today_TravelDate">
+                        <span class="tk-ov-chip">3528</span>
+                        <span class="tk-ov-chip">6543</span>
+                        <span class="tk-ov-chip">2345</span>
+                        <span class="tk-ov-chip">1121</span>
+                    </label>
+                </div>
+                <div class="radioButton tk-ff__radio">
+                    <input type="radio" class="radioButton__input" id="Tomorrow_TravelDate" name="TravelDate">
+                    <label class="radioButton__label" for="Tomorrow_TravelDate">
+                        Nieuwe kaart invoeren
+                    </label>
+                </div>
+            </form>
+            <div class="tk-choice-selector__divider mb-1"></div>
+            <span class="f-blue">Ingangsdatum: </span>
+            <span class="f-grey no-wrap">
+                24-02-2019
+                <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
+                    <div class="lh-none svg-link" include="/assets/img/icons/edit-S--small.svg"></div>
+                    <div class="tk-datepicker-lg tk-datepicker-lg--edit"><div class="tk-datepicker">
+    <div class="tk-datepicker__header">
+        <span class="rotate-svg-180 svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
+        <span class="tk-datepicker__month svg-link">
+            februari 2019
+            <span class="tk-datepicker__chevron-down rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
+        </span>
+        <span class="svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
+    </div>
+
+    <div class="tk-datepicker__grid f-grey">
+        <div>ma</div>
+        <div>di</div>
+        <div>wo</div>
+        <div>do</div>
+        <div>vr</div>
+        <div>za</div>
+        <div>zo</div>
+    </div>
+    <div class="bo-b mb-2"></div>
+
+    <div class="tk-datepicker__grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">1</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">2</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">3</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">4</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">5</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">6</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">7</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">8</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">9</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">10</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">11</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">12</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">13</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">14</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">15</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">16</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">17</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">18</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">19</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">20</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">21</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">22</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">23</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle tk-datepicker__day--today is-active">24</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">25</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">26</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">27</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">28</div>
+        <!-- <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">29</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">30</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">31</div> -->
+    </div>
+</div></div>
+                </span>
+            </span>
+        </div>
+    </div>
+
+    <!-- option 2 -->
+    <div class="tk-choice-selector__item js-cs-item">
+        <div class="tk-choice-selector__header">
+            <div>
+                <h3 class="tk-choice-selector__title">Nieuwe OV-chipkaart</h3>
+                <p class="tk-choice-selector__description">Binnen 5 werkdagen in huis</p>
+            </div>
+            <div class="tk-choice-selector__price">
+                <div class="tk-choice-selector__new-price">Gratis</div>
+                <div class="tk-choice-selector__old-price">€ 7,50</div>
+            </div>
+        </div>
+        <div class="tk-choice-selector__content">
+            <div class="tk-choice-selector__divider"></div>
+            <h4 class="headingXXS">Voor een nieuwe OV-chipkaart hebben wij een pasfoto van je nodig.</h4>
+            <div class="tk-pasfoto">
+                <div class="txt-c">
+                    <div class="tk-pasfoto__photo" include="/assets/img/icons/user--small--res.svg"></div>
+                    <div class="tk-pasfoto__description">
+                        Pasfoto<br>uploaden
+                    </div>
+                </div>
+            </div>
+            <div class="tk-choice-selector__divider mb-1"></div>
+            <span class="f-blue mb-1">Ingangsdatum: </span>
+            <span class="f-grey no-wrap">
+                24-02-2019
+                <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
+                    <div class="lh-none svg-link" include="/assets/img/icons/edit-S--small.svg"></div>
+                    <div class="tk-datepicker-lg tk-datepicker-lg--edit"><div class="tk-datepicker">
+    <div class="tk-datepicker__header">
+        <span class="rotate-svg-180 svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
+        <span class="tk-datepicker__month svg-link">
+            februari 2019
+            <span class="tk-datepicker__chevron-down rotate-svg-90" include="/assets/img/icons/chevron-S--small.svg"></span>
+        </span>
+        <span class="svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>
+    </div>
+
+    <div class="tk-datepicker__grid f-grey">
+        <div>ma</div>
+        <div>di</div>
+        <div>wo</div>
+        <div>do</div>
+        <div>vr</div>
+        <div>za</div>
+        <div>zo</div>
+    </div>
+    <div class="bo-b mb-2"></div>
+
+    <div class="tk-datepicker__grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">1</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">2</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">3</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">4</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">5</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">6</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">7</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">8</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">9</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">10</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">11</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">12</div>
+        <div class="tk-datepicker__day tk-datepicker__day--disabled">13</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">14</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">15</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">16</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">17</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">18</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">19</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">20</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">21</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">22</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">23</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle tk-datepicker__day--today is-active">24</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">25</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">26</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">27</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-dp-toggle">28</div>
+        <!-- <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">29</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">30</div>
+        <div class="tk-datepicker__day tk-datepicker__day--enabled js-toggle">31</div> -->
+    </div>
+</div></div>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>
+
+                
+                <div class="hidden-xs hidden-sm">
+                    <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
+                    <form>
+    <div class="checkbox formfield__checkbox tk-ff__checkbox">
+        <input required type="checkbox" class="checkbox__input">
+        <label class="checkbox__label" tabindex="-1">
+            Ik wil graag aanbiedingen van NS ontvangen via e-mail.
+        </label>
+    </div>
+    <div class="checkbox formfield__checkbox tk-ff__checkbox">
+        <input required type="checkbox" class="checkbox__input">
+        <label class="checkbox__label" tabindex="-1">
+            Ik ga akkoord met de algemene voorwaarden, privacybeleid en automatische incasso.
+        </label>
+    </div>
+</form>
+                </div>
+                <div class="hidden-lg hidden-md mb-4">
+                    <div class="tk-receipt">
+
+    
+    <div class="mb-2"></div>
+    <h3 class="tk-heading__subtitle">Dit is je bestelling</h3>
+    <div class="g g-1-m gap-2 items-baseline">
+        <div class="f-grey-4">Dal Voordeel</div>
+        <div class="f-grey-4 txt-r">€ 50,00</div>
+    </div>
+    <div class="g g-1-m gap-2 items-baseline mb-1">
+        <div class="f-grey-4">2e klas</div>
+        <div class="f-grey-4 txt-r"></div>
+    </div>
+    <div class="bo-b mb-1"></div>
+    
+
+    <div class="g g-1-m gap-2 items-baseline mb-4">
+        <div class="f-blue fw-b">Totaal per jaar</div>
+        <div class="f-blue fw-b txt-r">€ 50,00</div>
+    </div>
+    <div class="g g-1-m gap-2 items-baseline mb-1">
+        <div class="f-grey-4">Eerste factuur (1 jaar)</div>
+        <div class="f-grey-4 txt-r">€ 50,00</div>
+    </div>
+    <div class="bo-b-blue-2px mb-1"></div>
+    <div class="g g-1-m gap-2 items-baseline">
+        <div class="f-blue fw-b">Nu te betalen</div>
+        <div class="f-blue fw-b txt-r">€ 50,00</div>
+    </div>
+
+</div>
+                    <div class="mb-6"></div>
+                    <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
+                    <form>
+    <div class="checkbox formfield__checkbox tk-ff__checkbox">
+        <input required type="checkbox" class="checkbox__input">
+        <label class="checkbox__label" tabindex="-1">
+            Ik wil graag aanbiedingen van NS ontvangen via e-mail.
+        </label>
+    </div>
+    <div class="checkbox formfield__checkbox tk-ff__checkbox">
+        <input required type="checkbox" class="checkbox__input">
+        <label class="checkbox__label" tabindex="-1">
+            Ik ga akkoord met de algemene voorwaarden, privacybeleid en automatische incasso.
+        </label>
+    </div>
+</form>
+                </div>
+                
+
+                <!-- call to action button -->
+                
+                <div class="bo-t mb-2 mt-6-sm"></div>
+                <div class="txt-r" id="js-sticky-trig">
+                    <a href="/bestellen/betalen" class="js-submit-link">
+    <button type="submit" class="button button--arrowRight button--nsYellow w-100 w-auto-sm js-submit-button">
+        Naar betalen
+    </button>
+</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- date picker bottom sheet -->
 <div class="tk-overlay js-dp-bs">
     <div class="tk-overlay__bg"></div>
     <div class="tk-datepicker-bs">
-        <div class="tk-datepicker-bs__swiper">
-            <div class="tk-datepicker-bs__swiper-icon"></div>
-        </div>
+        <div class="tk-datepicker-bs__close svg-link js-dp-bs-close" include="/assets/img/icons/close-m--small.svg"></div>
+        <div class="tk-datepicker-bs__label">Ingangsdatum</div>
         <div class="tk-datepicker">
     <div class="tk-datepicker__header">
         <span class="rotate-svg-180 svg-link g items-center" include="/assets/img/icons/chevron-M--small.svg"></span>

@@ -1,6 +1,6 @@
 ---
 layout: funnel
-heading: Kies je OV&#8209;chipkaart
+heading: Bestellen
 cta: Naar betalen
 step: 2
 dest: betalen
@@ -10,10 +10,14 @@ date: "24-02-2019"
 
 <div class="mb-6">
     <div class="mb-2 f-grey-4 lh-copy f14">
-        <div class="f16 fw-b f-blue mb-1">Maarten de Vries</div>
+        <div class="f16 fw-b f-blue mb-1">
+            <span class="js-set-firstName">Maarten</span>
+            <span class="js-set-tussenvoegsel">de</span>
+            <span class="js-set-lastName">Vries</span>
+        </div>
         <div class="tk-customer">
             <div>
-                maarten.devries@ns.nl <br>
+                <span class="js-set-email">maarten.devries@ns.nl</span> <br>
                 30 november 1982
             </div>
             <div>
@@ -30,80 +34,4 @@ date: "24-02-2019"
     </a>
 </div>
 
-<div class="tk-choice-selector">
-    <div class="tk-choice-selector__item js-cs-item">
-        <div class="tk-choice-selector__header">
-            <div>
-                <h3 class="tk-choice-selector__title">Bestaande OV-chipkaart</h3>
-                <p class="tk-choice-selector__description">Binnen 1 uur bij kaartautomaat</p>
-            </div>
-            <div class="tk-choice-selector__price">
-                <div class="tk-choice-selector__new-price"></div>
-                <div class="tk-choice-selector__old-price"></div>
-            </div>
-        </div>
-        <div class="tk-choice-selector__content">
-            <div class="tk-choice-selector__divider"></div>
-            <form>
-                <div class="radioButton tk-ff__radio">
-                    <input type="radio" class="radioButton__input" id="Today_TravelDate" name="TravelDate" checked>
-                    <label class="radioButton__label" for="Today_TravelDate">
-                        <span class="tk-ov-chip">3528</span>
-                        <span class="tk-ov-chip">6543</span>
-                        <span class="tk-ov-chip">2345</span>
-                        <span class="tk-ov-chip">1121</span>
-                    </label>
-                </div>
-                <div class="radioButton tk-ff__radio">
-                    <input type="radio" class="radioButton__input" id="Tomorrow_TravelDate" name="TravelDate">
-                    <label class="radioButton__label" for="Tomorrow_TravelDate">
-                        Nieuwe kaart invoeren
-                    </label>
-                </div>
-            </form>
-            <div class="tk-choice-selector__divider mb-1"></div>
-            <span class="f-blue">Ingangsdatum: </span>
-            <span class="f-grey no-wrap">
-                {{ page.date }}
-                <span class="tk-choice-selector__edit svg-link js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none" include="/assets/img/icons/edit-S--small.svg"></div>
-                    <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
-                </span>
-            </span>
-        </div>
-    </div>
-
-    <div class="tk-choice-selector__item js-cs-item">
-        <div class="tk-choice-selector__header">
-            <div>
-                <h3 class="tk-choice-selector__title">Nieuwe OV-chipkaart</h3>
-                <p class="tk-choice-selector__description">Binnen 5 werkdagen in huis</p>
-            </div>
-            <div class="tk-choice-selector__price">
-                <div class="tk-choice-selector__new-price">Gratis</div>
-                <div class="tk-choice-selector__old-price">€ 7,50</div>
-            </div>
-        </div>
-        <div class="tk-choice-selector__content">
-            <div class="tk-choice-selector__divider"></div>
-            <h4 class="headingXXS">Voor een nieuwe OV-chipkaart hebben wij een pasfoto van je nodig.</h4>
-            <div class="tk-pasfoto">
-                <div class="txt-c">
-                    <div class="tk-pasfoto__photo" include="/assets/img/icons/user--small--res.svg"></div>
-                    <div class="tk-pasfoto__description">
-                        Pasfoto<br>uploaden
-                    </div>
-                </div>
-            </div>
-            <div class="tk-choice-selector__divider mb-1"></div>
-            <span class="f-blue mb-1">Ingangsdatum: </span>
-            <span class="f-grey no-wrap">
-                {{ page.date }}
-                <span class="tk-choice-selector__edit svg-link js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none" include="/assets/img/icons/edit-S--small.svg"></div>
-                    <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
-                </span>
-            </span>
-        </div>
-    </div>
-</div>
+{% include ov-chip-select.html %}

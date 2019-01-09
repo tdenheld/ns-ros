@@ -78,6 +78,11 @@
     }
 }
 
+.tk-heading__subtitle {
+    margin-bottom: $half-gutter;
+    font-size: calculate-rem(24px);
+}
+
 
 
 
@@ -260,7 +265,7 @@
 // choice selector
 // ------------------------------------------
 .tk-choice-selector {
-    margin-bottom: 2rem;
+    margin-bottom: $one-half-gutter;
 }
 
 .tk-choice-selector__item {
@@ -567,6 +572,22 @@
     width: 100%;
     max-width: 350px;
     margin-left: auto;
+}
+
+
+// order for somebody else
+// --------------------------------------------
+.tk-other {
+    padding: $half-gutter 0;
+    border-top: 1px solid $ns-grey-7;
+    border-bottom: 1px solid $ns-grey-7;
+}
+
+.tk-other__switch {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-gap: $half-gutter;
+    align-items: center;
 }
 
 
