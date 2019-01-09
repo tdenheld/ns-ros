@@ -590,6 +590,23 @@
     align-items: center;
 }
 
+.tk-other__label {
+    transition: $fade-link;
+    color: $ns-grey;
+
+    &.is-active {
+        color: $ns-blue;
+    }
+}
+
+// .tk-other__form {
+//     .tk-ff__label {
+//         @include sm {
+//             text-align: left;
+//         }
+//     }
+// }
+
 
 // misc
 // --------------------------------------------
