@@ -131,7 +131,6 @@ function form() {
         var typingTimer;
         var serverCallSym;
         var isValidEmail;
-        var emailField = document.getElementById("email");
         var obj = ".js-ff-email";
         var input = $(obj + " .tk-ff__input");
         var loading = $(obj + " .tk-ff__icon--loading");
@@ -166,7 +165,7 @@ function form() {
             };
         };
 
-        if (emailField) {
+        if ($(".js-ff-email")[0]) {
             submit = false;
             isValidEmail = email.checkValidity();
 
@@ -300,21 +299,27 @@ function form() {
     };
     customAddress();
 
-    // handle some form data
+    // handle form data
     function setFormData() {
-        sessionStorage.setItem("firstName", $("#voornaam").val());
-        sessionStorage.setItem("tussenvoegsel", $("#tussenvoegsel").val());
-        sessionStorage.setItem("lastName", $("#achternaam").val());
+        if ($("#customer-data")[0]) {
+            $(".tk-ff__input").each(function () {
+                sessionStorage.setItem(this.id, $("#" + this.id).val());
+            });
+        };
     };
+    setFormData();
 
     function getFormData() {
-        $(".js-set-email").text(sessionStorage.getItem("email"));
-        $(".js-set-firstName").text(sessionStorage.getItem("firstName"));
-        $(".js-set-tussenvoegsel").text(sessionStorage.getItem("tussenvoegsel"));
-        $(".js-set-lastName").text(sessionStorage.getItem("lastName"));
+        $(".js-customer-data").each(function () {
+            var data = sessionStorage.getItem(this.id);
+            if (data !== "") {
+                $(this).text(data);
+            };
+        });
     };
     getFormData();
 
+    // submit button
     function submitButton(i, e) {
         var errorMessage = new DisplayError(i, e);
         $(".js-submit-link").click(function (event) {

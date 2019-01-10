@@ -604,9 +604,8 @@
 // --------------------------------------------
 .tk-customer {
     display: grid;
-    max-width: 350px;
-    @media (min-width: 350px) {
-        grid-template-columns: 1fr 1fr;
+    @include xs {
+        grid-template-columns: max-content 1fr;
         grid-column-gap: $gutter;
     }
 }
