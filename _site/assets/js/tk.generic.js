@@ -80,31 +80,6 @@ stickyBar();
 
 
 
-// order for someone else
-// ------------------------------------------------------------
-function otherUser() {
-    var time = 250;
-    var className = ".js-other-switch";
-    var obj = $(className);
-
-    if (obj[0]) {
-        obj.click(function () {
-            if ($(className + " input").is(':checked')) {
-                $(".js-other-form").slideDown(time);
-                $(".js-other-label").addClass("is-active");
-                $(".js-other-margin").show();
-            } else {
-                $(".js-other-form").slideUp(200);
-                $(".js-other-label").removeClass("is-active");
-                $(".js-other-margin").hide(time);
-            };
-        });
-    };
-};
-otherUser();
-
-
-
 
 // choice selector
 // ------------------------------------------------------------

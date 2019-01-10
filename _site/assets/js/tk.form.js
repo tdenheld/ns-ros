@@ -336,6 +336,31 @@ function form() {
             $(".checkbox__label", this).attr("id", obj).attr("for", obj);
         });
     };
+
+    // switch to order for someone else
+    // ------------------------------------------------------------
+    function otherUser() {
+        var time = 250;
+        var className = ".js-other-switch";
+        var obj = $(className);
+
+        if (obj[0]) {
+            submit = true;
+            obj.click(function () {
+                if (!$(this).hasClass("is-active")) {
+                    $(".js-other-margin").show();
+                    submit = false;
+                } else {
+                    $(".js-other-margin").delay(100).hide(time);
+                    submit = true;
+                }
+                $(this).toggleClass("is-active");
+                $(".js-other-form").slideToggle(time);
+                $(".js-other-label").toggleClass("is-active");
+            });
+        };
+    };
+    otherUser();
 };
 
 $(function () {
