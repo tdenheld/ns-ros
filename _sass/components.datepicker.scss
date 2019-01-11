@@ -2,8 +2,6 @@
       Datepicker
 --------------------*/
 
-$bottom-sheet-height: 402px;
-
 // overlay
 // -------------------------------
 .tk-overlay {
@@ -14,7 +12,7 @@ $bottom-sheet-height: 402px;
 
 .tk-overlay__bg {
     @include full(absolute);
-    background-color: rgba($ns-black, 0.12);
+    background-color: rgba($ns-black, 0.2);
 }
 
 
@@ -96,10 +94,25 @@ $bottom-sheet-height: 402px;
     bottom: 0;
     left: 0;
     right: 0;
-    height: $bottom-sheet-height;
+    height: 350px;
+    padding-top: $half-gutter;
     background-color: $ns-white;
     border-radius: 8px 8px 0 0;
     box-shadow: 0 0 60px rgba($ns-black, 0.18);
+}
+
+.tk-datepicker-bs--swiper {
+    padding: 0;
+    height: 370px;
+}
+
+.tk-datepicker-bs--label {
+    padding: 0;
+    height: 402px;
+
+    .tk-datepicker-bs__close {
+        top: 18px;
+    }
 }
 
 .tk-datepicker-bs__label {
@@ -115,7 +128,7 @@ $bottom-sheet-height: 402px;
     position: absolute;
     width: 31px;
     height: 35px;
-    top: 18px;
+    top: -35px;
     right: 0;
 }
 

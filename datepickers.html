@@ -24,13 +24,43 @@ bg: bg-yellow
     <div class="pv-20"></div>
 </section>
 
-<!-- date picker bottom sheet -->
-<div class="tk-overlay js-dp-bs">
+
+
+<!-- date picker bottom sheet with swiper -->
+
+<!-- <div class="tk-overlay js-dp-bs">
     <div class="tk-overlay__bg"></div>
-    <div class="tk-datepicker-bs">
+    <div class="tk-datepicker-bs tk-datepicker-bs--swiper">
         <div class="tk-datepicker-bs__swiper">
             <div class="tk-datepicker-bs__swiper-icon"></div>
         </div>
+        {% include datepicker.html %}
+    </div>
+</div> -->
+
+
+
+
+<!-- date picker bottom sheet with label -->
+
+<!-- <div class="tk-overlay js-dp-bs">
+    <div class="tk-overlay__bg"></div>
+    <div class="tk-datepicker-bs tk-datepicker-bs--label">
+        <div class="tk-datepicker-bs__close svg-link js-dp-bs-close" include="/assets/img/icons/close-m--small.svg"></div>
+        <div class="tk-datepicker-bs__label">Ingangsdatum</div>
+        {% include datepicker.html %}
+    </div>
+</div> -->
+
+
+<!-- date picker bottom sheet with close in background -->
+<div class="tk-overlay js-dp-bs">
+    <div class="tk-overlay__bg"></div>
+    <div class="tk-datepicker-bs">
+        <div class="tk-datepicker-bs__close
+                js-dp-bs-close svg-white
+                a a-fi a-dur-300 a-del-200"
+                include="/assets/img/icons/close-m--small.svg"></div>
         {% include datepicker.html %}
     </div>
 </div>
