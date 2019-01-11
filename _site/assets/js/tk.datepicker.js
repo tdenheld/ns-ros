@@ -43,41 +43,64 @@ function dpBottomSheet() {
         }, 610);
     });
 
-    $(".js-dp-toggle").click(function(){
+    $(".js-dp-toggle").click(function () {
         $(".js-dp-toggle").removeClass("is-active");
         $(this).addClass("is-active");
     });
 };
-dpBottomSheet();
+if ($(".js-dp-bs-btn")[0]) {
+    dpBottomSheet();
+};
 
 function dpDesktop() {
     var active = false;
     var dp;
 
+    function fadeIn(obj) {
+        TweenLite.fromTo(obj, 0.3, {
+            opacity: 0,
+            scaleY: 0.9,
+            display: "none",
+        }, {
+            ease: Power3.easeInOut,
+            opacity: 1,
+            scaleY: 1,
+            display: "block",
+        });
+    };
+
+    function fadeOut(obj) {
+        TweenLite.to(obj, 0.3, {
+            ease: Power3.easeInOut,
+            opacity: 0,
+            display: "none",
+        });
+    };
+
     $(".js-dp-btn").click(function () {
         dp = $(".tk-datepicker-lg", this);
         if (vw > 640) {
             if (!active) {
-                TweenLite.fromTo(dp, 0.3, {
-                    opacity: 0,
-                    scaleY: 0.9,
-                    display: "none",
-                }, {
-                    ease: Power3.easeInOut,
-                    opacity: 1,
-                    scaleY: 1,
-                    display: "block",
-                });
+                fadeIn(dp);
                 active = true;
             } else {
-                TweenLite.to(dp, 0.3, {
-                    ease: Power3.easeInOut,
-                    opacity: 0,
-                    display: "none",
-                });
+                fadeOut(dp);
                 active = false;
             }
         };
     });
+
+    // click elsewhere to close datepicker
+    $(document).click(function (e) {
+        if (!$(e.target).closest(".js-dp-btn").length) {
+            if (active) {
+                fadeOut(".tk-datepicker-lg");
+                active = false;
+            };
+        }
+    });
+
 };
-dpDesktop();
+if ($(".js-dp-btn")[0] && vw > 640) {
+    dpDesktop();
+};
