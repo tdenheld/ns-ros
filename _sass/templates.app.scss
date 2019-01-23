@@ -621,19 +621,12 @@
 }
 
 .tk-ideal {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    grid-column-gap: 10px;
+    display: flex;
     align-items: center;
-
-    svg {
-        height: 22px;
-    }
 }
 
 .tk-ideal__img {
-    position: relative;
-    top: -1px;
+    margin-right: 10px;
     width: 24px;
 }
 
