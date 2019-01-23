@@ -631,6 +631,12 @@
     }
 }
 
+.tk-ideal__img {
+    position: relative;
+    top: -1px;
+    width: 24px;
+}
+
 .tk-loader {
     display: flex;
     align-items: center;
