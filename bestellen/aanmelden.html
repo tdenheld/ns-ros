@@ -19,9 +19,15 @@ no-progress: true
         <label for="email" class="tk-ff__label mb-1">E-mailadres</label>
         <div class="tk-ff__input-container">
             <input class="textInput tk-ff__input" type="email" id="email" required />
-            <span class="tk-ff__icon tk-ff__icon--loading" include="/assets/img/icons/loader--small.svg"></span>
-            <span class="tk-ff__icon tk-ff__icon--approved" include="/assets/img/icons/check-fat--small.svg"></span>
-            <span class="tk-ff__icon tk-ff__icon--known" include="/assets/img/icons/star--small.svg"></span>
+            <span class="tk-ff__icon tk-ff__icon--loading">
+                {% include /icons/loader--small.svg %}
+            </span>
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                {% include /icons/check-fat--small.svg %}
+            </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                {% include /icons/star--small.svg %}
+            </span>
         </div>
         <div class="tk-ff__error">
             Vul een geldig e-mailadres in

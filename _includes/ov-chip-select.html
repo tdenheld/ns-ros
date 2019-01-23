@@ -37,7 +37,9 @@
             <span class="f-grey no-wrap">
                 {{ page.date }}
                 <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none svg-link" include="/assets/img/icons/edit-S--small.svg"></div>
+                    <div class="lh-none svg-link">
+                        {% include /icons/edit-s--small.svg %}
+                    </div>
                     <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
                 </span>
             </span>
@@ -61,7 +63,9 @@
             <h4 class="headingXXS">Voor een nieuwe OV-chipkaart hebben wij een pasfoto van je nodig.</h4>
             <div class="tk-pasfoto">
                 <div class="txt-c">
-                    <div class="tk-pasfoto__photo" include="/assets/img/icons/user--small--res.svg"></div>
+                    <div class="tk-pasfoto__photo">
+                        {% include /icons/user--small--res.svg %}
+                    </div>
                     <div class="tk-pasfoto__description">
                         Pasfoto<br>uploaden
                     </div>
@@ -72,7 +76,9 @@
             <span class="f-grey no-wrap">
                 {{ page.date }}
                 <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none svg-link" include="/assets/img/icons/edit-S--small.svg"></div>
+                    <div class="lh-none svg-link">
+                        {% include /icons/edit-s--small.svg %}
+                    </div>
                     <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
                 </span>
             </span>

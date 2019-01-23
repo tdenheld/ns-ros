@@ -3,7 +3,9 @@
     <div class="tk-comfort__grid">
         {% for comfort in site.data.app.comfort %}
         <div class="tk-comfort__item">
-            <div include="/assets/img/icons/{{ comfort.icon }}.svg" class="tk-comfort__icon"></div>
+            <div class="tk-comfort__icon">
+                {% include /icons/{{ comfort.icon }}.svg %}
+            </div>
             <div class="f-blue f14 f16-sm lh-copy">
                 {{ comfort.description }}
             </div>

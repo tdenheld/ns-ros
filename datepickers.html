@@ -11,12 +11,16 @@ bg: bg-yellow
             </div>
             <div class="tk-datepicker__btn tk-datepicker__btn--z3 js-dp-btn js-dp-bs-btn">
                 Bottom Sheet (MVP)
-                <span class="tk-datepicker__icon" include="/assets/img/icons/calendar--small.svg"></span>
+                <span class="tk-datepicker__icon">
+                    {% include /icons/calendar--small.svg %}
+                </span>
                 <div class="tk-datepicker-lg">{% include datepicker.html %}</div>
             </div>
             <div class="tk-datepicker__btn js-dp-btn js-dp-scr-btn">
                 Scroll
-                <span class="tk-datepicker__icon" include="/assets/img/icons/calendar--small.svg"></span>
+                <span class="tk-datepicker__icon">
+                    {% include /icons/calendar--small.svg %}
+                </span>
                 <div class="tk-datepicker-lg">{% include datepicker.html %}</div>
             </div>
         </div>
@@ -46,7 +50,9 @@ bg: bg-yellow
 <!-- <div class="tk-overlay js-dp-bs">
     <div class="tk-overlay__bg"></div>
     <div class="tk-datepicker-bs tk-datepicker-bs--label">
-        <div class="tk-datepicker-bs__close svg-link js-dp-bs-close" include="/assets/img/icons/close-m--small.svg"></div>
+        <div class="tk-datepicker-bs__close svg-link js-dp-bs-close">
+            {% include /icons/close-m--small.svg %}
+        </div>
         <div class="tk-datepicker-bs__label">Ingangsdatum</div>
         {% include datepicker.html %}
     </div>
@@ -59,8 +65,9 @@ bg: bg-yellow
     <div class="tk-datepicker-bs">
         <div class="tk-datepicker-bs__close
                 js-dp-bs-close svg-white
-                a a-fi a-dur-300 a-del-200"
-                include="/assets/img/icons/close-m--small.svg"></div>
+                a a-fi a-dur-300 a-del-200">
+                    {% include /icons/close-m--small.svg %}
+                </div>
         {% include datepicker.html %}
     </div>
 </div>

@@ -17,7 +17,9 @@ dest: bedankt
             <div class="tk-banks__title">
                 {{ banks.title }}
             </div>
-            <span class="lh-none" include="/assets/img/icons/chevron-M--small.svg"></span>
+            <span class="lh-none">
+                {% include /icons/chevron-m--small.svg %}
+            </span>
         </div>
     </a>
     {% endfor %}

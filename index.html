@@ -6,7 +6,7 @@ dest: aanmelden
 ---
 
 <div class="tk-loader js-loader">
-    <div include="/assets/img/icons/loader-res--small.svg"></div>
+    {% include /icons/loader-res--small.svg %}
 </div>
 
 <div class="js-loaded is-hidden">
@@ -36,8 +36,10 @@ dest: aanmelden
                         <!-- <label class="switch">
                         <input type="checkbox">
                         <span class="switch__slider"></span>
-                    </label> -->
-                        <div class="lh-none visible-xs" include="/assets/img/icons/chevron-M--small.svg"></div>
+                        </label> -->
+                        <div class="lh-none visible-xs">
+                            {% include /icons/chevron-m--small.svg %}
+                        </div>
                     </div>
 
                     <!-- overlay -->

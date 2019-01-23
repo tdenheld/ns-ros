@@ -9,7 +9,9 @@ step: 4
     <h2 class="mb-3">En nu?</h2>
     {% for thanks in site.data.app.thanks %}
     <div class="tk-thanks__item">
-        <span class="lh-none" include="/assets/img/thanks/{{ thanks.icon }}.svg"></span>
+        <span class="lh-none">
+            {% include /icons/thanks/{{ thanks.icon }}.svg %}
+        </span>
         <span>{{ thanks.copy }}</span>
     </div>
     {% endfor %}
