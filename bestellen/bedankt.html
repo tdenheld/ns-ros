@@ -5,23 +5,4 @@ cta: 'false'
 step: 4
 ---
 
-<div class="tk-thanks">
-    <h2 class="mb-3">En nu?</h2>
-    {% for thanks in site.data.app.thanks %}
-    <div class="tk-thanks__item">
-        <span class="lh-none">
-            {% include /icons/thanks/{{ thanks.icon }}.svg %}
-        </span>
-        <span>{{ thanks.copy }}</span>
-    </div>
-    {% endfor %}
-
-    <div class="tk-thanks__reference">
-        <div class="bo-b mb-4 mb-6-sm"></div>
-        <h3>Uw referentienummer is <b>3B512A2643</b></h3>
-        <p class="mb-0">
-            Met dit nummer kunnen wij uw bestelling herkennen als er vragen zijn.
-            U ontvangt dit nummer ook in de bevestigingsmail.
-        </p>
-    </div>
-</div>
+{% include thanks.html %}

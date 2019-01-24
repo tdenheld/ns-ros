@@ -1,8 +1,8 @@
 ---
-heading: Dit is je bestelling
-cta: Verder naar bestellen
+heading: Bestellen
+cta: Naar betalen
 layout: default
-dest: aanmelden
+dest: bedankt-onepager
 ---
 
 <div class="tk-loader js-loader">
@@ -67,26 +67,51 @@ dest: aanmelden
                     {% include receipt.html %}
                 </div>
 
-                <!-- call to action button -->
-                <div class="bo-t mb-2"></div>
-                <div class="txt-r" id="js-sticky-trig">
-                    {% include cta.html %}
+                <div class="mb-6">
+                    <h2 class="f24 lh-title mb-2">Heb je al een Mijn NS account?</h2>
+                    <button class="button button--secondary button--arrowRight">Inloggen</button>
+                </div>
+
+                <form id="customer-data">
+                    <h2 class="f24 lh-title mb-2 fw-b">Nieuw bij NS?</h2>
+                    <div class="tk-ff js-ff-email">
+                        <label for="email" class="tk-ff__label mb-1">E-mailadres</label>
+                        <div class="tk-ff__input-container">
+                            <input class="textInput tk-ff__input" type="email" id="email" required />
+                            <span class="tk-ff__icon tk-ff__icon--loading">
+                                {% include /icons/loader--small.svg %}
+                            </span>
+                            <span class="tk-ff__icon tk-ff__icon--approved">
+                                {% include /icons/check-fat--small.svg %}
+                            </span>
+                            <span class="tk-ff__icon tk-ff__icon--known">
+                                {% include /icons/star--small.svg %}
+                            </span>
+                        </div>
+                        <div class="tk-ff__error">
+                            Vul een geldig e-mailadres in
+                        </div>
+                        <div class="tk-ff__message">
+                            Het lijkt erop dat je niet nieuw bent. Log in om verder te gaan of probeer een ander
+                            <span class="no-wrap">e-mailadres</span>.
+                        </div>
+                    </div>
+                </form>
+
+                <div class="op-c-data is-hidden mt-4-sm">
+                    {% include customer-data.html %}
+                    <div class="mb-6"></div>
+                    {% include other.html %}
+                    {% include ov-chip-select.html %}
+                    {% include form/legal.html %}
+
+                    <!-- call to action button -->
+                    <div class="bo-t mb-2 mt-4"></div>
+                    <div class="txt-r">
+                        {% include cta.html %}
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="bg-grey-8 bo-t a a-fi a-del-250">
-        <div class="container ovr-container mv-0">
-            <div class="pa-2r">
-                {% include comfort.html %}
-            </div>
-        </div>
-    </section>
-
-    <div class="visible-xs">
-        <div class="tk-sticky-bar js-sticky-bar">
-            {% include cta.html %}
-        </div>
-    </div>
 </div>

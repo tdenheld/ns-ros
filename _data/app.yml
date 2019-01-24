@@ -14,25 +14,6 @@ comfort:
   description: Betalen kan snel, veilig en via uw eigen bank met iDeal. U betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling.
 
 
-checkbox:
-- title: Keuzedagen 2e klas
-  description: 7 vrije reisdagen voor 60+
-  price: € 49,00
-  per: / jaar
-
-- title: OV-fiets
-  description: Huur een fiets en betaal automatisch via je bankrekening
-
-- title: Stallen op Rekening
-  description: Veilig uw fiets stallen en achteraf betalen
-
-# - title: IC Direct Altijd Toeslagvrij
-#   description: Onbeperkt reizen op het gehele traject van de Intercity Direct
-#   price: € 51,00
-#   per: / mnd
-
-
-
 banks:
 - title: ABN AMRO
   icon: abn
@@ -58,7 +39,6 @@ banks:
   icon: triodos
 - title: van Lanschot
   icon: lanschot
-
 
 
 thanks:

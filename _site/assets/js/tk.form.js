@@ -156,6 +156,7 @@ function form() {
                     } else {
                         loading.removeClass("is-active");
                         tick.addClass("is-active");
+                        $(".op-c-data").slideDown(200);
                     };
                 }, 300);
             } else {
@@ -182,6 +183,7 @@ function form() {
                 isValidEmail = email.checkValidity();
                 $(".js-submit-button").text(buttonText);
                 linkLocation = linkLocationDefault;
+                $(".op-c-data").slideUp(200);
             });
 
             // on keydown, clear the countdown 
