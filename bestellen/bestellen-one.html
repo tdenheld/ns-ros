@@ -1,0 +1,104 @@
+---
+heading: Bestellen
+cta: Naar betalen
+layout: default
+dest: bedankt-one
+date: "24-02-2019"
+---
+
+<section>
+    <div class="container ovr-container">
+        <div class="tk-funnel-container tk-funnel-container--2-columns pa-2r a a-fi-right-small">
+            <div class="hidden-xs hidden-sm">
+                {% include receipt.html option='true' %}
+            </div>
+
+            <div>
+                <div class="tk-heading tk-heading--funnel">
+                    <h1 class="tk-heading__title">{{ page.heading }}</h1>
+                </div>
+
+                <div class="mb-6">
+                    <h2 class="f24 lh-title mb-2">Heb je al een Mijn NS account?</h2>
+                    <button class="button button--secondary button--arrowRight">Inloggen</button>
+                </div>
+
+                <form id="customer-data">
+                    <h2 class="f24 lh-title mb-2 fw-b">Nieuw bij NS?</h2>
+                    <div class="tk-ff js-ff-email">
+                        <label for="email" class="tk-ff__label mb-1">E-mailadres</label>
+                        <div class="tk-ff__input-container">
+                            <input class="textInput tk-ff__input" type="email" id="email" required />
+                            <span class="tk-ff__icon tk-ff__icon--loading">
+                                {% include /icons/loader--small.svg %}
+                            </span>
+                            <span class="tk-ff__icon tk-ff__icon--approved">
+                                {% include /icons/check-fat--small.svg %}
+                            </span>
+                            <span class="tk-ff__icon tk-ff__icon--known">
+                                {% include /icons/star--small.svg %}
+                            </span>
+                        </div>
+                        <div class="tk-ff__error">
+                            Vul een geldig e-mailadres in
+                        </div>
+                        <div class="tk-ff__message">
+                            Het lijkt erop dat je niet nieuw bent. Log in om verder te gaan of probeer een ander
+                            <span class="no-wrap">e-mailadres</span>.
+                        </div>
+                    </div>
+                </form>
+                <div class="bo-b mv-6"></div>
+                <div class="op-c-data is-hidden">
+                    {% include customer-data.html %}
+                    <div class="mb-6"></div>
+                    {% include other.html %}
+                    {% include ov-chip-select.html %}
+                    <div class="hidden-md hidden-lg mb-8">
+                        {% include receipt.html option='true' %}
+                    </div>
+                    <div class="bo-b mv-6 hidden-md hidden-lg"></div>
+                    <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
+                    {% include form/legal.html %}
+
+                    <!-- payment -->
+                    <div class="bo-b mv-6"></div>
+                    <h2 class="tk-heading__subtitle">Kies je bank</h2>
+                    <div class="mb-4 mb-6-sm">
+                        {% include ideal.html %}
+                    </div>
+                    <div class="tk-banks">
+                        {% for banks in site.data.app.banks %}
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                {{ banks.title }}
+                            </div>
+                            <img src="/assets/img/payment/{{ banks.icon }}.svg" class="w-100" />
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- call to action button -->
+                    <div class="bo-t mb-2 mt-4"></div>
+                    <div class="txt-r">
+                        {% include cta.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- date picker bottom sheet -->
+<div class="tk-overlay js-dp-bs">
+    <div class="tk-overlay__bg"></div>
+    <div class="tk-datepicker-bs">
+        <div class="tk-datepicker-bs__close
+                    js-dp-bs-close svg-white
+                    a a-fi a-dur-300 a-del-200">
+            {% include /icons/close-m--small.svg %}
+        </div>
+        {% include datepicker.html %}
+    </div>
+</div>

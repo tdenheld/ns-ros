@@ -1532,52 +1532,9 @@
     </div>
 </header>
     <div class="content ">
-         <div class="bg-grey-8 bo-b">
-    <div class="container ovr-container mv-0">
-        <div class="tk-progress">
-            
-            
-            <div class="tk-progress__bar">
-                <div></div>
-                <div class="tk-progress__line tk-progress__line--done"></div>
-                <div class="tk-progress__line"></div>
-                <div class="tk-progress__line"></div>
-                <div></div>
-            </div>
-            <div class="tk-progress__grid">
-                <a onclick="window.history.go(-1)" class="tk-link-reset">
-                    <div class="tk-progress__step tk-progress__step--done">
-                        <div class="tk-progress__circle"></div>
-                        <div class="tk-progress__description hidden-xs">Gegevens</div>
-                    </div>
-                </a>
-                <div class="tk-progress__step tk-progress__step--active">
-                    <div class="tk-progress__circle">2</div>
-                    <div class="tk-progress__description hidden-xs">Bestellen</div>
-                </div>
-                <div class="tk-progress__step">
-                    <div class="tk-progress__circle">3</div>
-                    <div class="tk-progress__description hidden-xs">Betalen</div>
-                </div>
-                <div class="tk-progress__step">
-                    <div class="tk-progress__circle">4</div>
-                    <div class="tk-progress__description hidden-xs">Bedankt</div>
-                </div>
-            </div>
-            
-            
-            
-        </div>
-    </div>
-</div> 
-
-<section>
+        <section>
     <div class="container ovr-container">
-        <div class="tk-funnel-container 
-                     tk-funnel-container--2-columns  
-                    pa-2r a a-fi-right-small">
-
-            
+        <div class="tk-funnel-container tk-funnel-container--2-columns pa-2r a a-fi-right-small">
             <div class="hidden-xs hidden-sm">
                 <div class="tk-receipt">
 
@@ -1611,38 +1568,313 @@
 
 </div>
             </div>
-            
 
             <div>
                 <div class="tk-heading tk-heading--funnel">
                     <h1 class="tk-heading__title">Bestellen</h1>
                 </div>
-                <div class="mb-4">
-    <div class="mb-2 f-grey-4 lh-copy f14">
-        <h2 class="tk-heading__subtitle">Even je gegevens checken</h2>
-        <div class="f16 fw-b f-blue mb-1">Maarten Vriesman</div>
-        <div class="tk-customer">
-            <div>
-                <span class="js-set-email">maarten.vriesman@ns.nl</span> <br>
-                30 november 1982
-            </div>
-            <div>
-                Westermaatsweg 1 <br>
-                7556 BW Hengelo
-            </div>
-        </div>
-    </div>
-    <a class="tk-link-reset dib">
-        <div class="tk-link-icon">
-            <span class="svg-link">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>info--small</title><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg>
+
+                <div class="mb-6">
+                    <h2 class="f24 lh-title mb-2">Heb je al een Mijn NS account?</h2>
+                    <button class="button button--secondary button--arrowRight">Inloggen</button>
+                </div>
+
+                <form id="customer-data">
+                    <h2 class="f24 lh-title mb-2 fw-b">Nieuw bij NS?</h2>
+                    <div class="tk-ff js-ff-email">
+                        <label for="email" class="tk-ff__label mb-1">E-mailadres</label>
+                        <div class="tk-ff__input-container">
+                            <input class="textInput tk-ff__input" type="email" id="email" required />
+                            <span class="tk-ff__icon tk-ff__icon--loading">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18.8" viewBox="0 0 19 18.8"><path d="M0,9.4a9.645,9.645,0,0,0,8,9.4v-1A8.54,8.54,0,0,1,8,1V0A9.645,9.645,0,0,0,0,9.4ZM11,0V1a8.54,8.54,0,0,1,0,16.8v1A9.522,9.522,0,0,0,11,0Z"/></svg>
+                            </span>
+                            <span class="tk-ff__icon tk-ff__icon--approved">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+                            </span>
+                            <span class="tk-ff__icon tk-ff__icon--known">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+                            </span>
+                        </div>
+                        <div class="tk-ff__error">
+                            Vul een geldig e-mailadres in
+                        </div>
+                        <div class="tk-ff__message">
+                            Het lijkt erop dat je niet nieuw bent. Log in om verder te gaan of probeer een ander
+                            <span class="no-wrap">e-mailadres</span>.
+                        </div>
+                    </div>
+                </form>
+                <div class="bo-b mv-6"></div>
+                <div class="op-c-data is-hidden">
+                    <form id="customer-data">
+    
+
+    <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="voornaam" class="tk-ff__label">
+        Voornaam
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="voornaam" 
+                placeholder="" 
+                maxlength=""
+                value=""
+                required
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
-            Iets onjuist?
         </div>
-    </a>
+        
+        <div class="tk-ff__error">
+            Vul je voornaam in
+        </div>
+
+        
+    </div>
 </div>
 
-<div class="tk-other mb-8">
+    <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="tussenvoegsel" class="tk-ff__label">
+        Tussenvoegsel
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container mxw-150">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="tussenvoegsel" 
+                placeholder="" 
+                maxlength=""
+                value=""
+                
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            
+        </div>
+
+        
+    </div>
+</div>
+
+    <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="achternaam" class="tk-ff__label">
+        Achternaam
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="achternaam" 
+                placeholder="" 
+                maxlength=""
+                value=""
+                required
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je achternaam in
+        </div>
+
+        
+    </div>
+</div>
+
+    <div class="tk-ff tk-ff--grid js-ff-date">
+    <label for="geboortedatum" class="tk-ff__label">
+        Geboortedatum
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container mxw-200">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="geboortedatum" 
+                placeholder="dd-mm-jjjj" 
+                maxlength="10"
+                value=""
+                required
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je geboortedatum in (dd-mm-jjjj)
+        </div>
+
+        
+    </div>
+</div>
+
+    <div class="tk-ff tk-ff--grid js-ff-postal">
+    <label for="postcode" class="tk-ff__label">
+        Postcode
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container mxw-150">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="postcode" 
+                placeholder="3517AK" 
+                maxlength="6"
+                value=""
+                required
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je postcode in, bijv. "1234AB"
+        </div>
+
+        
+    </div>
+</div>
+
+    <div class="tk-ff tk-ff--grid">
+
+    <label for="huisnummer" class="tk-ff__label">
+        Huisnummer
+    </label>
+
+    <div class="g g-2 col-gap-2">
+        <div class="js-ff-default">
+            <div class="tk-ff__input-container">
+                <input class="textInput tk-ff__input" 
+                    type="number" 
+                    id="huisnummer" 
+                    placeholder="" 
+                    maxlength="" 
+                    required 
+                />
+                <span class="tk-ff__icon tk-ff__icon--approved">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+                </span>
+            </div>
+
+            <div class="tk-ff__error">
+                Vul je huisnummer in
+            </div>
+
+            
+        </div>
+
+        <div class="js-ff-default">
+            <div class="tk-ff__input-container">
+                <input class="textInput tk-ff__input" 
+                        type="text" 
+                        id="toevoeging" 
+                        placeholder="Toevoeging" 
+                        maxlength="" 
+                         
+                />
+                <span class="tk-ff__icon tk-ff__icon--approved">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+                </span>
+            </div>
+            
+            <div class="tk-ff__error">
+                
+            </div>
+
+            
+        </div>
+    </div>
+    
+</div>
+
+    <div class="tk-ff tk-ff--grid tk-ff__address">
+        <div></div>
+        <div class="tk-ff__address-container">
+            Jan van Galenstraat<span class="tk-ff__address-number"></span>,<br>
+            Veenendaal
+            <span class="tk-ff__address-icon svg-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
+    <path d="M13.5,17H.5a.472.472,0,0,1-.5-.5v-.1A.458.458,0,0,1,.5,16h13a.472.472,0,0,1,.5.5v.1A.458.458,0,0,1,13.5,17Z"/>
+    <path d="M11.9,8.2,3.7,0H2.3L0,2.3V3.7l8.2,8.2,5.6,1.9ZM1,3.3V2.7L2.7,1h.6l7.8,7.8.8,2.4-.7.7-2.4-.8Z"/>
+</svg>
+            </span>
+        </div>
+    </div>
+
+    <div class="js-address-additional dn o-0">
+        <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="straatnaam" class="tk-ff__label">
+        Straatnaam
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="straatnaam" 
+                placeholder="" 
+                maxlength=""
+                value="Jan van Galenstraat"
+                
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je straatnaam in
+        </div>
+
+        
+    </div>
+</div>
+
+        <div class="tk-ff tk-ff--grid js-ff-default">
+    <label for="woonplaats" class="tk-ff__label">
+        Woonplaats
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container ">
+            <input class="textInput tk-ff__input" 
+                type="text" 
+                id="woonplaats" 
+                placeholder="" 
+                maxlength=""
+                value="Veenendaal"
+                
+            />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+            </span>
+        </div>
+        
+        <div class="tk-ff__error">
+            Vul je woonplaats in
+        </div>
+
+        
+    </div>
+</div>
+    </div>
+</form>
+                    <div class="mb-6"></div>
+                    <div class="tk-other mb-8">
     <div class="tk-other__switch">
         <label class="tk-other__label js-other-label">Ik bestel dit voor mijn kind</label>
         <div class="switch js-other-switch"></div>
@@ -1945,7 +2177,7 @@
         -->
     </form>
 </div>
-<div class="tk-choice-selector">
+                    <div class="tk-choice-selector">
     <h2 class="tk-heading__subtitle">OV-chipkaart</h2>
 
     <!-- option 1 -->
@@ -2168,48 +2400,8 @@
         </div>
     </div>
 </div>
-
-                
-                <div class="hidden-xs hidden-sm">
-                    <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
-                    <form>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox">
-        <input required type="checkbox" class="checkbox__input">
-        <label class="checkbox__label" tabindex="-1">
-            Ik ga akkoord met:
-        </label>
-        <ul class="pl-4 pt-1 mb-0 f12 lh-copy">
-            <li><a class="tk-link">Algemene vervoersvoorwaarden</a> (AVR-NS)</li>
-            <li>Productvoorwaarden <a class="tk-link">Dal Voordeel</a></li>
-            <li>
-                Automatische incasso. U geeft toestemming aan (A) NS Groep N.V. inzake NS Reizigers B.V. (Laan van Puntenburg 100, 3511 ER, Utrecht, Nederland, SEPA identificatiecode: NL03 ZZZ 30124358) opdrachten te sturen aan uw bank om uw rekening te debiteren en aan (B) uw bank uw rekening te debiteren conform de opdrachten van NS Groep N.V. U heeft onder meer het recht op terugboeking door uw bank conform de met uw bank overeengekomen voorwaarden. Een verzoek tot terugboeking moet ingediend worden binnen 8 weken vanaf de datum waarop uw rekening werd gedebiteerd. Uw rechten met betrekking tot de hierboven genoemde machtiging worden uiteengezet in een toelichting die u via uw bank kunt verkrijgen.
-            </li>
-            <li>En ik heb het <a class="tk-link">privacy statement</a> gelezen en begrijp dat NS mijn gegevens verstrekt aan samenwerkende partijen als Translink.</li>
-        </ul>
-    </div>
-    <h3 class="mb-2 f16 fw-b">Blijf op de hoogte per e-mail van</h3>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox">
-        <input required type="checkbox" class="checkbox__input">
-        <label class="checkbox__label" tabindex="-1">
-            Serviceberichten
-        </label>
-    </div>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox">
-        <input required type="checkbox" class="checkbox__input">
-        <label class="checkbox__label" tabindex="-1">
-            Aanbiedingen
-        </label>
-    </div>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox">
-        <input required type="checkbox" class="checkbox__input">
-        <label class="checkbox__label" tabindex="-1">
-            Verbeteren producten en diensten
-        </label>
-    </div>
-</form>
-                </div>
-                <div class="hidden-lg hidden-md mb-4">
-                    <div class="tk-receipt">
+                    <div class="hidden-md hidden-lg mb-8">
+                        <div class="tk-receipt">
 
     
     <div class="mb-2"></div>
@@ -2240,7 +2432,8 @@
     </div>
 
 </div>
-                    <div class="mb-8"></div>
+                    </div>
+                    <div class="bo-b mv-6 hidden-md hidden-lg"></div>
                     <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
                     <form>
     <div class="checkbox formfield__checkbox tk-ff__checkbox">
@@ -2277,20 +2470,126 @@
         </label>
     </div>
 </form>
-                </div>
-                
 
-                <!-- call to action button -->
-                
-                <div class="bo-t mb-2 mt-6-sm"></div>
-                <div class="txt-r" id="js-sticky-trig">
-                    <a href="/bestellen/betalen" class="js-submit-link">
+                    <!-- payment -->
+                    <div class="bo-b mv-6"></div>
+                    <h2 class="tk-heading__subtitle">Kies je bank</h2>
+                    <div class="mb-4 mb-6-sm">
+                        <div class="tk-ideal">
+    <img class="tk-ideal__img" src="/assets/img/payment/ideal.svg" />
+    <p class="mb-0">Veilig en gemakkelijk betalen via jouw eigen bank.</p>
+</div>
+                    </div>
+                    <div class="tk-banks">
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                ABN AMRO
+                            </div>
+                            <img src="/assets/img/payment/abn.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                ASN Bank
+                            </div>
+                            <img src="/assets/img/payment/asn.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                bunq
+                            </div>
+                            <img src="/assets/img/payment/bunq.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                Handelsbanken
+                            </div>
+                            <img src="/assets/img/payment/handelsbanken.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                ING
+                            </div>
+                            <img src="/assets/img/payment/ing.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                Knab
+                            </div>
+                            <img src="/assets/img/payment/knab.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                Moneyou
+                            </div>
+                            <img src="/assets/img/payment/moneyou.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                Rabobank
+                            </div>
+                            <img src="/assets/img/payment/rabobank.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                RegioBank
+                            </div>
+                            <img src="/assets/img/payment/regiobank.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                SNS
+                            </div>
+                            <img src="/assets/img/payment/sns.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                Triodos Bank
+                            </div>
+                            <img src="/assets/img/payment/triodos.svg" class="w-100" />
+                        </div>
+                        
+                        <div class="tk-banks__item tk-banks__item--radio js-radio">
+                            <div class="tk-banks__radio"></div>
+                            <div class="tk-banks__title">
+                                van Lanschot
+                            </div>
+                            <img src="/assets/img/payment/lanschot.svg" class="w-100" />
+                        </div>
+                        
+                    </div>
+
+                    <!-- call to action button -->
+                    <div class="bo-t mb-2 mt-4"></div>
+                    <div class="txt-r">
+                        <a href="/bestellen/bedankt-one" class="js-submit-link">
     <button type="submit" class="button button--arrowRight button--nsYellow w-100 w-auto-sm js-submit-button">
         Naar betalen
     </button>
 </a>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -2303,8 +2602,8 @@
         <div class="tk-datepicker-bs__close
                     js-dp-bs-close svg-white
                     a a-fi a-dur-300 a-del-200">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.999" viewBox="0 0 15 14.999"><title>close-m--small</title><path d="M14.5,15a.5.5,0,0,1-.354-.146l-14-14A.5.5,0,0,1,.853.146l14,14A.5.5,0,0,1,14.5,15Z"/><path d="M.5,15a.5.5,0,0,1-.354-.853l14-14a.5.5,0,0,1,.707.707l-14,14A.5.5,0,0,1,.5,15Z"/></svg>
-            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14.999" viewBox="0 0 15 14.999"><title>close-m--small</title><path d="M14.5,15a.5.5,0,0,1-.354-.146l-14-14A.5.5,0,0,1,.853.146l14,14A.5.5,0,0,1,14.5,15Z"/><path d="M.5,15a.5.5,0,0,1-.354-.853l14-14a.5.5,0,0,1,.707.707l-14,14A.5.5,0,0,1,.5,15Z"/></svg>
+        </div>
         <div class="tk-datepicker">
     <div class="tk-datepicker__header">
         <span class="rotate-svg-180 svg-link g items-center">

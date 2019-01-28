@@ -81,6 +81,11 @@
 .tk-heading__subtitle {
     margin-bottom: $half-gutter;
     font-size: calculate-rem(24px);
+
+    @include md {
+        margin-bottom: $gutter;
+        font-size: calculate-rem(36px);
+    }
 }
 
 
@@ -265,7 +270,7 @@
 // choice selector
 // ------------------------------------------
 .tk-choice-selector {
-    margin-bottom: $one-half-gutter;
+    margin-bottom: $double-gutter;
 }
 
 .tk-choice-selector__item {
@@ -368,6 +373,7 @@
     .tk-choice-selector__item:hover:before {
         border: 1px solid $ns-grey-5;
     }
+
     .tk-choice-selector__item.is-selected:hover:before {
         border: 2px solid $ns-light-blue;
     }
@@ -444,7 +450,7 @@
 // --------------------------------------------
 .tk-banks {
     display: grid;
-    
+
     @include sm {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: $half-gutter;
@@ -480,8 +486,39 @@
     }
 }
 
+.tk-banks__item--radio {
+    grid-template-columns: max-content 1fr 36px;
+
+    &.is-active {
+        .tk-banks__radio:before {
+            opacity: 1;
+        }
+    }
+}
+
 .tk-banks__title {
     color: $ns-blue;
+}
+
+.tk-banks__radio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $ns-grey-6b;
+    border-radius: 50%;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+        background-color: $ns-light-blue;
+        opacity: 0;
+        transition: $fade-link;
+    }
 }
 
 .no-touch {
@@ -604,6 +641,7 @@
 // --------------------------------------------
 .tk-customer {
     display: grid;
+
     @include xs {
         grid-template-columns: max-content 1fr;
         grid-column-gap: $gutter;
