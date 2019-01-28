@@ -537,14 +537,14 @@
     grid-gap: 7px;
     margin-bottom: $gutter;
     @include font-style(16px, normal, 1.5);
-    color: $ns-grey-4;
-
-    b {
-        color: $ns-blue;
-    }
+    color: $ns-grey;
 
     a {
         @extend .tk-link;
+    }
+
+    blue {
+        color: $ns-blue;
     }
 
     svg {
@@ -557,7 +557,7 @@
         align-items: center;
 
         svg {
-            width: 64px;
+            width: 72px;
         }
     }
 }

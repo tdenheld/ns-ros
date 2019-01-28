@@ -43,10 +43,10 @@ banks:
 
 thanks:
 - icon: mail
-  copy: "Je ontvangt een bevestiging op <b>maartendevries@gmail.com</b>"
+  copy: "Je ontvangt een bevestiging op <blue>maartendevries@gmail.com</blue>"
 - icon: ov-chipkaart
-  copy: "Binnen <b>7 dagen</b> wordt je OV&#8209;chipkaart opgestuurd."
+  copy: "Binnen <blue>7 dagen</blue> wordt je OV&#8209;chipkaart opgestuurd naar Jan van Galenstraat 56. Je kunt dan meteen gebruik maken van jouw abonnement."
 - icon: user
-  copy: "Je <b>NS-account</b> staat klaar om geactiveerd te worden. Je ontvangt daar zometeen een aparte e-mail over."
-- icon: chat
-  copy: "Vragen? Kijk dan op het <a>NS Serviceforum</a> of bel ons op <a>030 751 51 55.</a>"
+  copy: "Je <blue>NS-account</blue> staat klaar om geactiveerd te worden. Je ontvangt daar zometeen een aparte e-mail over."
+- icon: invoice
+  copy: "Je hebt betaald voor <blue>1 jaar</blue>. Na deze periode wordt het bedrag automatisch van jouw bankrekening afgeschreven."
