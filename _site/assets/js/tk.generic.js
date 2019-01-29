@@ -46,19 +46,27 @@ $(".js-radio").click(function () {
 
 // sticky receipt
 // ------------------------------------------------------------
+
 var receipt = {
-    className: ".js-receipt",
-    add: function() {
-        $(this.className).addClass("is-active");
+    className: $(".js-receipt"),
+    top: 90,
+    offset: function () {
+        return this.className.offset().top - this.top
     },
-    remove: function() {
-        $(this.className).removeClass("is-active");
+    add: function () {
+        this.className.addClass("is-active");
+    },
+    remove: function () {
+        this.className.removeClass("is-active");
     }
+};
+if (receipt.className[0]) {
+    var receiptOffset = receipt.offset();
 };
 
 
 
-// functionality that"s on linked on scroll
+// functionality that's on linked on scroll
 // ------------------------------------------------------------
 $(window).scroll(() => {
     scrolled = true;
@@ -69,10 +77,12 @@ $(window).scroll(() => {
 
 function scrolling() {
     var pos = $(window).scrollTop();
-    if (pos > 160) {
-        receipt.add();
-    } else {
-        receipt.remove();
+    if (receipt.className[0]) {
+        if (pos > receiptOffset) {
+            receipt.add();
+        } else {
+            receipt.remove();
+        };
     };
     scrolled = false;
 };

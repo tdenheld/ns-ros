@@ -276,7 +276,7 @@
 .tk-choice-selector__item {
     position: relative;
     margin-bottom: $half-gutter;
-    padding: 20px 20px 16px;
+    padding: 20px;
     border-radius: 4px;
     transition: $fade-all;
     cursor: pointer;
@@ -611,10 +611,13 @@
     max-width: 350px;
     margin-left: auto;
 
-    &.is-active {
-        position: sticky;
-        height: 600px;
-        top: 90px;
+    @include md {
+        &.is-active {
+            position: sticky;
+            position: -webkit-sticky;
+            height: 600px;
+            top: 90px;
+        }
     }
 }
 
@@ -666,12 +669,19 @@
 
 .tk-ideal {
     display: flex;
-    align-items: center;
 }
 
 .tk-ideal__img {
-    margin-right: 10px;
-    width: 24px;
+    position: relative;
+    top: 5px;
+    margin-right: 14px;
+    width: 28px;
+    align-self: start;
+
+    @include xs {
+        align-self: center;
+        top: 0;
+    }
 }
 
 .tk-loader {
