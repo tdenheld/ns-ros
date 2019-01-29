@@ -153,6 +153,7 @@ function form() {
                         knownMessage.addClass("is-active");
                         $(".js-submit-button").text("Inloggen");
                         linkLocation = "/bestellen/ov-chipkaart-user";
+                        $("#customer-data").attr("action", linkLocation);
                     } else {
                         loading.removeClass("is-active");
                         tick.addClass("is-active");
