@@ -33,6 +33,14 @@ h2 {
     letter-spacing: -0.3px;
 }
 
+p {
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 .rppb-plan-button {
     @include sm {
         margin-left: $half-gutter !important;

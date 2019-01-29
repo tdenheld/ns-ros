@@ -1,34 +1,37 @@
-<div class="tk-thanks">
-    <h2 class="headingL mb-4">Wij gaan het in orde maken</h2>
+<section class="mb-6 mb-12-sm mt-10-sm">
+    <h2 class="tk-heading__subtitle">Wij gaan het in orde maken</h2>
     {% for thanks in site.data.app.thanks %}
-    <div class="tk-thanks__item">
+    <div class="tk-thanks">
         <span class="lh-none">
             {% include /icons/thanks/{{ thanks.icon }}.svg %}
         </span>
         <span>{{ thanks.copy }}</span>
     </div>
     {% endfor %}
-
-    <h3 class="headingL mt-8 mb-3">Je bestelling</h3>
-    <div class="mxw-500 mb-8">
+</section>
+<section class="mb-6 mb-12-sm">
+    <h3 class="tk-heading__subtitle">Je bestelling</h3>
+    <div class="g g-2-sm gap-2 f14 lh-copy f-blue">
         <div class="bo-a pa-3">
             <h4 class="f18 lh-copy fw-b mb-0">Dal Voordeel</h4>
-            <p class="f-grey-4 f16 mb-0">2e klas, 1 jaar, € 50,00</p>
+            <p class="f-grey-4">2e klas</p>
+            <p>€ 50,00 / jaar</p>
         </div>
-        <div class="bo-h bo-b pa-3">
+        <div class="bo-a pa-3">
             <h4 class="f18 lh-copy fw-b mb-0">Keuzedagen</h4>
-            <p class="f-grey-4 f16 mb-0">7 dagen per jaar onbeperkt met de trein, € 24,50</p>
+            <p class="f-grey-4">7 dagen per jaar onbeperkt met de trein</p>
+            <p>€ 24,50 / jaar</p>
         </div>
     </div>
-
-    <div class="tk-thanks__reference">
-        <h3>Uw referentienummer is <b>3B512A2643</b></h3>
-        <p class="f18-sm">
-            Met dit nummer kunnen wij uw bestelling herkennen als er vragen zijn.
-            U ontvangt dit nummer ook in de bevestigingsmail.
-        </p>
-        <p class="f18-sm">
-            Vragen? Kijk dan op het <a href="https://community.ns.nl" target="_blank" class="tk-link">NS Serviceforum</a> of benader ons via <a href="https://twitter.com/ns_online" target="_blank" class="tk-link">Twitter</a>.
-        </p>
-    </div>
-</div>
+</section>
+<section>
+    <h3 class="mb-3">Uw referentienummer is <b>3B512A2643</b></h3>
+    <p class="f18-sm mb-3">
+        Met dit nummer kunnen wij uw bestelling herkennen als er vragen zijn.
+        U ontvangt dit nummer ook in de bevestigingsmail.
+    </p>
+    <p class="f18-sm">
+        Vragen? Kijk dan op het <a href="https://community.ns.nl" target="_blank" class="tk-link">NS Serviceforum</a>
+        of benader ons via <a href="https://twitter.com/ns_online" target="_blank" class="tk-link">Twitter</a>.
+    </p>
+</section>
