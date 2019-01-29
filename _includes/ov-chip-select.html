@@ -1,12 +1,12 @@
 <div class="tk-choice-selector">
-    <h2 class="tk-heading__subtitle">OV-chipkaart</h2>
+    <h2 class="tk-heading__subtitle">Kies OV&#8209;chipkaart</h2>
 
     <!-- option 1 -->
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
-                <h3 class="tk-choice-selector__title">Bestaande OV-chipkaart</h3>
-                <p class="tk-choice-selector__description">Binnen 1 uur bij kaartautomaat</p>
+                <h3 class="tk-choice-selector__title">Ik heb al een OV&#8209;chipkaart</h3>
+                <p class="tk-choice-selector__description">Binnen 1 uur op te halen bij een NS kaartautomaat</p>
             </div>
             <div class="tk-choice-selector__price">
                 <div class="tk-choice-selector__new-price"></div>
@@ -28,16 +28,16 @@
                 <div class="radioButton tk-ff__radio">
                     <input type="radio" class="radioButton__input" id="Tomorrow_TravelDate" name="TravelDate">
                     <label class="radioButton__label" for="Tomorrow_TravelDate">
-                        Kaart invoeren
+                        Andere kaart invoeren
                     </label>
                 </div>
             </form>
-            <div class="tk-choice-selector__divider mb-1"></div>
-            <span class="f-blue">Ingangsdatum: </span>
+            <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
+            <span class="f-blue">Ingangsdatum bestelling: </span>
             <span class="f-grey no-wrap">
                 {{ page.date }}
                 <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none svg-link">
+                    <div class="svg-link">
                         {% include /icons/edit-s--small.svg %}
                     </div>
                     <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
@@ -50,7 +50,7 @@
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
-                <h3 class="tk-choice-selector__title">Nieuwe OV-chipkaart</h3>
+                <h3 class="tk-choice-selector__title">Ik wil een nieuwe OV&#8209;chipkaart</h3>
                 <p class="tk-choice-selector__description">Binnen 5 werkdagen in huis</p>
             </div>
             <div class="tk-choice-selector__price">
@@ -71,12 +71,12 @@
                     </div>
                 </div>
             </div>
-            <div class="tk-choice-selector__divider mb-1"></div>
-            <span class="f-blue mb-1">Ingangsdatum: </span>
+            <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
+            <span class="f-blue">Ingangsdatum bestelling: </span>
             <span class="f-grey no-wrap">
                 {{ page.date }}
                 <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none svg-link">
+                    <div class="svg-link">
                         {% include /icons/edit-s--small.svg %}
                     </div>
                     <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>

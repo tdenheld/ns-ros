@@ -80,10 +80,10 @@
 
 .tk-heading__subtitle {
     margin-bottom: $half-gutter;
-    font-size: calculate-rem(24px);
+    @include font-style(24px, normal, 1.25);
 
     @include md {
-        margin-bottom: $gutter;
+        margin-bottom: 20px;
         font-size: calculate-rem(36px);
     }
 }
@@ -276,7 +276,7 @@
 .tk-choice-selector__item {
     position: relative;
     margin-bottom: $half-gutter;
-    padding: 20px;
+    padding: 20px 20px 16px;
     border-radius: 4px;
     transition: $fade-all;
     cursor: pointer;
@@ -308,7 +308,7 @@
 }
 
 .tk-choice-selector__title {
-    margin: 0;
+    margin: 0 0 4px;
     @include font-style(18px, bold, 1.5);
     color: $ns-blue;
 }
@@ -544,6 +544,7 @@
     }
 
     blue {
+        font-weight: bold;
         color: $ns-blue;
     }
 
@@ -609,8 +610,13 @@
     width: 100%;
     max-width: 350px;
     margin-left: auto;
-}
 
+    &.is-active {
+        position: sticky;
+        height: 600px;
+        top: 90px;
+    }
+}
 
 // order for somebody else
 // --------------------------------------------

@@ -43,18 +43,37 @@ $(".js-radio").click(function () {
 
 
 
+
+// sticky receipt
+// ------------------------------------------------------------
+var receipt = {
+    className: ".js-receipt",
+    add: function() {
+        $(this.className).addClass("is-active");
+    },
+    remove: function() {
+        $(this.className).removeClass("is-active");
+    }
+};
+
+
+
 // functionality that"s on linked on scroll
 // ------------------------------------------------------------
 $(window).scroll(() => {
     scrolled = true;
     if (scrolled) {
-        //requestAnimationFrame(scrolling);
+        requestAnimationFrame(scrolling);
     };
 });
 
 function scrolling() {
     var pos = $(window).scrollTop();
-    // fade arrow scroll down button
+    if (pos > 160) {
+        receipt.add();
+    } else {
+        receipt.remove();
+    };
     scrolled = false;
 };
 
@@ -81,6 +100,7 @@ function stickyBar() {
     };
 };
 stickyBar();
+
 
 
 

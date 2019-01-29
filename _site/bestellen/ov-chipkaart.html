@@ -1579,8 +1579,7 @@
 
             
             <div class="hidden-xs hidden-sm">
-                <div class="tk-receipt">
-
+                <div class="tk-receipt js-receipt">
     
     <div class="mb-2"></div>
     <h3 class="f24 mb-3">Dit is je bestelling</h3>
@@ -1608,7 +1607,6 @@
         <div class="f-blue fw-b">Nu te betalen</div>
         <div class="f-blue fw-b txt-r">€ 50,00</div>
     </div>
-
 </div>
             </div>
             
@@ -1956,14 +1954,14 @@
     </form>
 </div>
 <div class="tk-choice-selector">
-    <h2 class="tk-heading__subtitle">OV-chipkaart</h2>
+    <h2 class="tk-heading__subtitle">Kies OV&#8209;chipkaart</h2>
 
     <!-- option 1 -->
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
-                <h3 class="tk-choice-selector__title">Bestaande OV-chipkaart</h3>
-                <p class="tk-choice-selector__description">Binnen 1 uur bij kaartautomaat</p>
+                <h3 class="tk-choice-selector__title">Ik heb al een OV&#8209;chipkaart</h3>
+                <p class="tk-choice-selector__description">Binnen 1 uur op te halen bij een NS kaartautomaat</p>
             </div>
             <div class="tk-choice-selector__price">
                 <div class="tk-choice-selector__new-price"></div>
@@ -1985,16 +1983,16 @@
                 <div class="radioButton tk-ff__radio">
                     <input type="radio" class="radioButton__input" id="Tomorrow_TravelDate" name="TravelDate">
                     <label class="radioButton__label" for="Tomorrow_TravelDate">
-                        Kaart invoeren
+                        Andere kaart invoeren
                     </label>
                 </div>
             </form>
-            <div class="tk-choice-selector__divider mb-1"></div>
-            <span class="f-blue">Ingangsdatum: </span>
+            <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
+            <span class="f-blue">Ingangsdatum bestelling: </span>
             <span class="f-grey no-wrap">
                 24-02-2019
                 <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none svg-link">
+                    <div class="svg-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
     <path d="M13.5,17H.5a.472.472,0,0,1-.5-.5v-.1A.458.458,0,0,1,.5,16h13a.472.472,0,0,1,.5.5v.1A.458.458,0,0,1,13.5,17Z"/>
     <path d="M11.9,8.2,3.7,0H2.3L0,2.3V3.7l8.2,8.2,5.6,1.9ZM1,3.3V2.7L2.7,1h.6l7.8,7.8.8,2.4-.7.7-2.4-.8Z"/>
@@ -2073,7 +2071,7 @@
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
-                <h3 class="tk-choice-selector__title">Nieuwe OV-chipkaart</h3>
+                <h3 class="tk-choice-selector__title">Ik wil een nieuwe OV&#8209;chipkaart</h3>
                 <p class="tk-choice-selector__description">Binnen 5 werkdagen in huis</p>
             </div>
             <div class="tk-choice-selector__price">
@@ -2098,12 +2096,12 @@
                     </div>
                 </div>
             </div>
-            <div class="tk-choice-selector__divider mb-1"></div>
-            <span class="f-blue mb-1">Ingangsdatum: </span>
+            <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
+            <span class="f-blue">Ingangsdatum bestelling: </span>
             <span class="f-grey no-wrap">
                 24-02-2019
                 <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
-                    <div class="lh-none svg-link">
+                    <div class="svg-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
     <path d="M13.5,17H.5a.472.472,0,0,1-.5-.5v-.1A.458.458,0,0,1,.5,16h13a.472.472,0,0,1,.5.5v.1A.458.458,0,0,1,13.5,17Z"/>
     <path d="M11.9,8.2,3.7,0H2.3L0,2.3V3.7l8.2,8.2,5.6,1.9ZM1,3.3V2.7L2.7,1h.6l7.8,7.8.8,2.4-.7.7-2.4-.8Z"/>
@@ -2183,7 +2181,7 @@
                 <div class="hidden-xs hidden-sm">
                     <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
                     <form>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox">
+    <div class="checkbox formfield__checkbox tk-ff__checkbox mb-4">
         <input required type="checkbox" class="checkbox__input">
         <label class="checkbox__label" tabindex="-1">
             Ik ga akkoord met:
@@ -2197,30 +2195,23 @@
             <li>En ik heb het <a class="tk-link">privacy statement</a> gelezen en begrijp dat NS mijn gegevens verstrekt aan samenwerkende partijen als Translink.</li>
         </ul>
     </div>
-    <h3 class="mb-2 f16 fw-b">Blijf op de hoogte per e-mail van</h3>
+    <h3 class="tk-heading__subtitle mb-3">Blijf op de hoogte per e&#8209;mail</h3>
     <div class="checkbox formfield__checkbox tk-ff__checkbox">
         <input required type="checkbox" class="checkbox__input">
         <label class="checkbox__label" tabindex="-1">
-            Serviceberichten
+            Ernstige storingen, wijzigingen in dienstregeling en stations
         </label>
     </div>
     <div class="checkbox formfield__checkbox tk-ff__checkbox">
         <input required type="checkbox" class="checkbox__input">
         <label class="checkbox__label" tabindex="-1">
-            Aanbiedingen
-        </label>
-    </div>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox">
-        <input required type="checkbox" class="checkbox__input">
-        <label class="checkbox__label" tabindex="-1">
-            Verbeteren producten en diensten
+            Aanbiedingen, exclusieve kortingen, nieuwe producten en diensten
         </label>
     </div>
 </form>
                 </div>
                 <div class="hidden-lg hidden-md mb-4">
-                    <div class="tk-receipt">
-
+                    <div class="tk-receipt js-receipt">
     
     <div class="mb-2"></div>
     <h3 class="f24 mb-3">Dit is je bestelling</h3>
@@ -2248,12 +2239,11 @@
         <div class="f-blue fw-b">Nu te betalen</div>
         <div class="f-blue fw-b txt-r">€ 50,00</div>
     </div>
-
 </div>
                     <div class="mb-8"></div>
                     <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
                     <form>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox">
+    <div class="checkbox formfield__checkbox tk-ff__checkbox mb-4">
         <input required type="checkbox" class="checkbox__input">
         <label class="checkbox__label" tabindex="-1">
             Ik ga akkoord met:
@@ -2267,23 +2257,17 @@
             <li>En ik heb het <a class="tk-link">privacy statement</a> gelezen en begrijp dat NS mijn gegevens verstrekt aan samenwerkende partijen als Translink.</li>
         </ul>
     </div>
-    <h3 class="mb-2 f16 fw-b">Blijf op de hoogte per e-mail van</h3>
+    <h3 class="tk-heading__subtitle mb-3">Blijf op de hoogte per e&#8209;mail</h3>
     <div class="checkbox formfield__checkbox tk-ff__checkbox">
         <input required type="checkbox" class="checkbox__input">
         <label class="checkbox__label" tabindex="-1">
-            Serviceberichten
+            Ernstige storingen, wijzigingen in dienstregeling en stations
         </label>
     </div>
     <div class="checkbox formfield__checkbox tk-ff__checkbox">
         <input required type="checkbox" class="checkbox__input">
         <label class="checkbox__label" tabindex="-1">
-            Aanbiedingen
-        </label>
-    </div>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox">
-        <input required type="checkbox" class="checkbox__input">
-        <label class="checkbox__label" tabindex="-1">
-            Verbeteren producten en diensten
+            Aanbiedingen, exclusieve kortingen, nieuwe producten en diensten
         </label>
     </div>
 </form>
