@@ -31,15 +31,20 @@
 }
 
 .tk-funnel-container--2-columns {
-    max-width: 100%;
+    max-width: 600px;
     grid-column-gap: $double-gutter;
 
     @include md {
+        max-width: 100%;
         grid-template-columns: 320px 1fr;
     }
 
     @include lg {
         grid-column-gap: $triple-gutter;
+    }
+
+    .tk-receipt {
+        max-width: 100%;
     }
 }
 
