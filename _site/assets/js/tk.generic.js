@@ -154,30 +154,32 @@ choiceSelector();
 // preloader
 // ------------------------------------------------------------	
 function loader() {
-    // init loader view
-    TweenMax.to(".js-loader", 0.1, {
-        opacity: 1
-    });
-
-    // load website
-    window.addEventListener("load", function () {
-        TweenLite.to(".js-loader", 0.3, {
-            delay: 0.7,
-            ease: Power3.easeInOut,
-            autoAlpha: 0,
-            display: "none",
-            onComplete: function () {
-                TweenLite.set(".js-loaded", {
-                    display: "block",
-                });
-                TweenLite.from(".js-sticky-bar", 0.5, {
-                    delay: 0.25,
-                    ease: Power3.easeInOut,
-                    autoAlpha: 0,
-                    y: "100%"
-                });
-            }
+    if ($(".js-loader")[0]) {
+        // init loader view
+        TweenMax.to(".js-loader", 0.1, {
+            opacity: 1
         });
-    });
+
+        // load website
+        window.addEventListener("load", function () {
+            TweenLite.to(".js-loader", 0.3, {
+                delay: 0.7,
+                ease: Power3.easeInOut,
+                autoAlpha: 0,
+                display: "none",
+                onComplete: function () {
+                    TweenLite.set(".js-loaded", {
+                        display: "block",
+                    });
+                    TweenLite.from(".js-sticky-bar", 0.5, {
+                        delay: 0.25,
+                        ease: Power3.easeInOut,
+                        autoAlpha: 0,
+                        y: "100%"
+                    });
+                }
+            });
+        });
+    };
 };
 loader();
