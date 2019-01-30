@@ -677,16 +677,9 @@
 }
 
 .tk-ideal__img {
-    position: relative;
-    top: 5px;
-    margin-right: 14px;
-    width: 28px;
-    align-self: start;
-
-    @include xs {
-        align-self: center;
-        top: 0;
-    }
+    margin-right: $half-gutter;
+    width: 26px;
+    align-self: center;
 }
 
 .tk-loader {

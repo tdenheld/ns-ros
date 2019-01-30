@@ -1,9 +1,13 @@
 <div class="tk-ideal">
     <img class="tk-ideal__img" src="/assets/img/payment/ideal.svg" />
     <div>
-        <p>Veilig en gemakkelijk betalen via jouw eigen bank.</p>
         {% if include.pay %}
-        <p class="f-blue">Nu te betalen: <b>€ 50,00</b></p>
+        <p class="f-blue f14 f16-sm lh-copy">
+            Nu te betalen: <b>€ 50,00</b><br>
+            Veilig en gemakkelijk via je eigen bank.
+        </p>
+        {% else %}
+        <p>Veilig en gemakkelijk betalen via jouw eigen bank.</p>
         {% endif %}
     </div>
 </div>
