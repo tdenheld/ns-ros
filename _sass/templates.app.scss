@@ -395,6 +395,10 @@
     margin-bottom: $half-gutter;
     padding: 20px;
     border: 1px solid $ns-grey-7;
+
+    .overlay__close {
+        position: static;
+    }
 }
 
 .tk-order--grey {
@@ -407,10 +411,28 @@
 
 .tk-order__grid {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: 48px 1fr;
     grid-gap: $half-gutter;
     align-items: center;
     margin-bottom: 7px;
+}
+
+.tk-order__grid--add-on {
+    grid-template-columns: 48px 1fr max-content;
+}
+
+.tk-order__trash {
+    position: relative;
+    right: 5px;
+}
+
+.tk-order__title {
+    @include font-style(20px, bold, 1.25);
+    margin-bottom: 7px;
+
+    @include sm {
+        font-size: calculate-rem(24px);
+    }
 }
 
 
@@ -573,14 +595,10 @@
 // add ons
 // --------------------------------------------
 .tk-add-on {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    grid-gap: $gutter;
-    align-items: center;
     margin-bottom: $one-half-gutter;
     border: 1px solid $ns-grey-7;
     padding: 20px;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: $fade-all;
     cursor: pointer;
 
@@ -597,9 +615,20 @@
         margin-bottom: $half-gutter;
     }
 
-    @include sm {
-        border-radius: 0;
+    &.is-added {
+        cursor: auto;
+
+        &:hover {
+            box-shadow: none;
+        }
     }
+}
+
+.tk-add-on__grid {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    grid-gap: $gutter;
+    align-items: center;
 }
 
 .tk-add-on__title {

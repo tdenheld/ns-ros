@@ -16,59 +16,12 @@ dest: bestellen-one
                 <div class="tk-heading tk-heading--funnel">
                     <h1 class="tk-heading__title">{{ page.heading }}</h1>
                 </div>
-
                 {% include order.html %}
-
-                <div class="mb-6">
-
-                    <!-- add ons -->
-                    <div class="tk-add-on" data-controller="generic/ui/ContentOpener" data-config="{&quot;type&quot;: &quot;Overlay&quot;,
-                     &quot;contentId&quot;: &quot;overlay-content&quot;}">
-                        <div>
-                            <h2 class="tk-add-on__title">60 jaar of ouder?</h2>
-                            <p class="mb-0 mb-1-sm f14 f16-sm f-grey-4 lh-copy">Dan is Dal Voordeel voor u nog
-                                voordeliger
-                                met Keuzedagen!</p>
-                            <a href="#" class="arrowLink hidden-xs">
-                                Bekijk en bestel
-                            </a>
-                        </div>
-                        <div class="lh-none visible-xs">
-                            {% include /icons/chevron-m--small.svg %}
-                        </div>
-                    </div>
-
-                    <!-- overlay -->
-                    <div class="richText richText--overlay is-hidden" data-controller="generic/ui/RichText" id="overlay-content">
-                        <h2 class="headingXL">Keuzedagen</h2>
-                        <p>
-                            60 jaar of ouder? Dan is Dal Voordeel voor u nog voordeliger!
-                            Met Keuzedagen reizen NS-abonnementhouders van 60 jaar of ouder
-                            7 dagen per jaar onbeperkt met de trein.
-                        </p>
-                        <a href="https://www.ns.nl/klantenservice/keuzedagen" class="arrowLink mt-2 mb-6" target="_blank">
-                            Lees meer
-                        </a>
-                        <div class="tk-order mxw-350 mb-0">
-                            <h3 class="f24 f28-sm lh-title fw-b mb-1">Keuzedagen</h3>
-                            <div class="bo-b-blue mb-3"></div>
-                            <ul class="f-grey-4 f14 lh-copy">
-                                <li>7 dagen per jaar onbeperkt met de trein.</li>
-                                <li>Reizen in heel Nederland</li>
-                                <li>Alle dagen van de week geldig (doordeweeks na 9.00 uur).</li>
-                            </ul>
-                            <div class="bo-b mb-2"></div>
-                            <div class="f-blue f28 mb-2">€ 24,50 <span class="f14">per jaar</span></div>
-                            <button class="button w-100">＋ Toevoegen</button>
-                        </div>
-                    </div>
-
-                    <!-- receipt-->
-                    {% include receipt.html %}
-                </div>
-
+                {% include add-on.html %}
+                {% include receipt.html %}
+                
                 <!-- call to action button -->
-                <div class="bo-t mb-2"></div>
+                <div class="bo-t mb-2 mt-6"></div>
                 <div class="txt-r" id="js-sticky-trig">
                     {% include cta.html %}
                 </div>

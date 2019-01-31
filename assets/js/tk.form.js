@@ -302,7 +302,7 @@ function form() {
     };
     customAddress();
 
-    // handle form data
+    // handle form data in session
     function setFormData() {
         if ($("#customer-data")[0]) {
             $(".tk-ff__input").each(function () {

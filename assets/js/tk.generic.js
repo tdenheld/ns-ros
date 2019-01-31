@@ -115,6 +115,55 @@ stickyBar();
 
 
 
+// add-ons
+// ------------------------------------------------------------
+function addOns() {
+    var btn = $(".js-add-on-btn");
+    var priceLabel = $(".js-rcpt-price");
+    var banner = $(".js-add-on-banner");
+    var order = $(".js-add-on-order");
+    var kd = $(".js-add-on-kd");
+    var trash = $(".js-add-on-trash");
+    var data = "rcpt-price";
+
+    if (sessionStorage.getItem(data) !== null) {
+        priceLabel.text(sessionStorage.getItem(data));
+    };
+
+    if (sessionStorage.getItem(data) == "€ 75,50") {
+        kd.show();
+    } else {
+        kd.hide();
+    };
+
+    btn.click(() => {
+        banner.hide();
+        order.show();
+        sessionStorage.setItem(data, "€ 75,50");
+        priceLabel.text(sessionStorage.getItem(data));
+        kd.show();
+    });
+
+    trash.click(() => {
+        banner.show();
+        order.hide();
+        sessionStorage.setItem(data, "€ 50,00");
+        priceLabel.text(sessionStorage.getItem(data));
+        kd.hide();
+    });
+};
+addOns();
+
+
+
+
+// clear session data when clicked on logo in header
+// ------------------------------------------------------------
+$(".js-clear-session").click(() => {
+    sessionStorage.clear();
+});
+
+
 
 // choice selector
 // ------------------------------------------------------------

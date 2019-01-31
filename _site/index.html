@@ -32,7 +32,7 @@
         Naar content</a>
         <h2 class="alt">Hoofdnavigatie</h2>
         <div class="nslogo nslogo--header header__logo">
-            <a class="nslogo__link" href="/" title="Ga naar de homepagina">
+            <a class="nslogo__link js-clear-session" href="/" title="Ga naar de homepagina">
             <img class="nslogo__image" src="/assets/img/NS_logo.svg" height="20" width="52" alt="Logo Nederlandse Spoorwegen">
             </a>
         </div>
@@ -1531,7 +1531,7 @@
         </ul>
     </div>
 </header>
-    <div class="content ">
+    <div class="content  js-content">
         <div class="tk-loader js-loader">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19">
     <path d="M0,9.4a9.645,9.645,0,0,0,8,9.4v-1A8.54,8.54,0,0,1,8,1V0A9.645,9.645,0,0,0,0,9.4ZM11,0V1a8.54,8.54,0,0,1,0,16.8v1A9.522,9.522,0,0,0,11,0Z"/>
@@ -1545,19 +1545,18 @@
                 <div class="tk-heading tk-heading--funnel">
                     <h1 class="tk-heading__title">Dit is je bestelling</h1>
                 </div>
-
                 <div class="tk-order ">
     <div class="tk-order__grid">
         <div class="svg-blue">
             <svg xmlns="http://www.w3.org/2000/svg" width="46.083" height="46.17" viewBox="0 0 46.083 46.17"><defs><style>.a{fill:none;}</style></defs><title>discount--large</title><circle class="a" cx="17.542" cy="17.586" r="2"/><circle class="a" cx="28.542" cy="28.586" r="2"/><path class="a" d="M43.391,23.084l1.532-3.8-2.75-3.061.112-4.092-3.65-1.946L37.325,6.3l-4.1-.6-2.578-3.21-4.065.822-3.535-2.14L19.5,3.308l-4.064-.822L12.863,5.7l-4.105.6-1.31,3.888L3.8,12.129l.109,4.094L1.16,19.281l1.527,3.8L1.16,26.893l2.749,3.06L3.8,34.045l3.65,1.943,1.31,3.883,4.1.6,2.578,3.211,4.062-.824L23.042,45l3.537-2.144,4.066.828,2.574-3.213,4.1-.6,1.31-3.883,3.65-1.945-.112-4.091,2.75-3.062Zm-25.849-8.5a3,3,0,1,1-3,3A3,3,0,0,1,17.542,14.586ZM15.9,30.939a.5.5,0,0,1-.708-.707l15-15a.5.5,0,1,1,.707.707Zm12.647.647a3,3,0,1,1,3-3A3,3,0,0,1,28.542,31.586Z"/><path d="M44.469,23.084l1.614-4.009-2.9-3.227.118-4.313L39.455,9.486,38.077,5.4l-4.323-.634L31.041,1.386l-4.28.865L23.042,0,19.318,2.251l-4.279-.865L12.328,4.764,8,5.4,6.626,9.49,2.782,11.537,2.9,15.85,0,19.075l1.609,4.009L0,27.1l2.9,3.227-.117,4.313,3.846,2.047,1.378,4.087,4.322.636,2.713,3.38,4.277-.868,3.724,2.251,3.721-2.255,4.281.872L33.755,41.4l4.322-.634,1.378-4.087L43.3,34.635l-.12-4.312,2.9-3.229ZM42.285,34.043l-3.65,1.945-1.31,3.883-4.105.6-2.574,3.213-4.066-.828L23.043,45l-3.54-2.14-4.062.824-2.578-3.211-4.1-.6-1.31-3.883L3.8,34.045l.111-4.093L1.16,26.892l1.527-3.808L1.16,19.28l2.747-3.058L3.8,12.129l3.648-1.943L8.756,6.3l4.105-.6,2.576-3.21,4.064.822,3.54-2.14,3.535,2.14,4.065-.822L33.219,5.7l4.1.6,1.31,3.883,3.65,1.946-.112,4.092,2.75,3.061-1.532,3.8,1.532,3.806-2.75,3.062Z"/><path d="M17.542,20.586a3,3,0,1,0-3-3A3,3,0,0,0,17.542,20.586Zm0-5a2,2,0,1,1-2,2A2,2,0,0,1,17.542,15.586Z"/><path d="M28.542,25.586a3,3,0,1,0,3,3A3,3,0,0,0,28.542,25.586Zm0,5a2,2,0,1,1,2-2A2,2,0,0,1,28.542,30.586Z"/><path d="M30.9,15.232a.5.5,0,0,0-.707,0l-15,15a.5.5,0,0,0,.708.707l15-15A.5.5,0,0,0,30.9,15.232Z"/></svg>
         </div>
-        <h3 class="f24 f28-sm lh-title fw-b mb-1">Dal Voordeel</h3>
+        <h3 class="tk-order__title">Dal Voordeel</h3>
     </div>
     <div class="bo-b-blue mb-3"></div>
 
-    <div class="g g-1-m gap-4">
-        <p class="f-blue f16 f18-sm mb-0">2e klas, 1 jaar</p>
-        <p class="f-blue f16 f18-sm mb-0">€ 50,00</p>
+    <div class="g g-1-m gap-4 f-blue f16 f18-sm">
+        <p>2e klas, 1 jaar</p>
+        <p>€ 50,00</p>
     </div>
     <p class="f14 f-blue mb-3 lh-copy">(Daarna maandelijks opzeggen)</p>
 
@@ -1566,72 +1565,96 @@
         <li class="mb-0">Met je eigen OV-chipkaart binnen 1 uur bij kaartautomaat</li>
     </ul>
 </div>
+                <!-- add on default -->
+<div class="tk-add-on js-add-on-banner" data-controller="generic/ui/ContentOpener" data-config="{&quot;type&quot;: &quot;Overlay&quot;, &quot;contentId&quot;: &quot;overlay-content&quot;}">
+    <div class="tk-add-on__grid">
+        <div>
+            <h2 class="tk-add-on__title">60 jaar of ouder?</h2>
+            <p class="mb-1-sm f14 f16-sm f-grey-4 lh-copy">
+                Dan is Dal Voordeel voor u nog voordeliger met Keuzedagen!
+            </p>
+            <a href="#" class="arrowLink hidden-xs">
+                Bekijk en bestel
+            </a>
+        </div>
+        <div class="lh-none visible-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" width="7.1" height="11" viewBox="0 0 7.1 11"><title>chevron-m--small</title><polygon points="5.5 5.5 0 11 1.6 11 7.1 5.5 1.6 0 0 0 5.5 5.5"/></svg>
+        </div>
+    </div>
+</div>
 
-                <div class="mb-6">
-                    <!-- add ons -->
-                    <div class="tk-add-on" data-controller="generic/ui/ContentOpener" data-config="{&quot;type&quot;: &quot;Overlay&quot;,
-                     &quot;contentId&quot;: &quot;overlay-content&quot;}">
-                        <div>
-                            <h2 class="tk-add-on__title">60 jaar of ouder?</h2>
-                            <p class="mb-0 mb-1-sm f14 f16-sm f-grey-4 lh-copy">Dan is Dal Voordeel voor u nog
-                                voordeliger
-                                met Keuzedagen!</p>
-                            <a href="#" class="arrowLink hidden-xs">
-                                Bekijk en bestel
-                            </a>
-                        </div>
-                        <div class="lh-none visible-xs">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="7.1" height="11" viewBox="0 0 7.1 11"><title>chevron-m--small</title><polygon points="5.5 5.5 0 11 1.6 11 7.1 5.5 1.6 0 0 0 5.5 5.5"/></svg>
-                        </div>
-                    </div>
+<!-- add on added -->
+<div class="tk-order js-add-on-order is-hidden">
+    <div class="tk-order__grid tk-order__grid--add-on">
+        <div class="svg-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43"><path d="M41,4H33V1a1,1,0,0,0-2,0V4H10V1A1,1,0,0,0,8,1V4H0V41H41ZM40,40H1V5H8V7a1,1,0,0,0,2,0V5H31V7a1,1,0,0,0,2,0V5h7Z"/><rect x="8" y="12" width="2" height="2"/><rect x="16" y="12" width="2" height="2"/><rect x="23" y="12" width="2" height="2"/><rect x="31" y="12" width="2" height="2"/><rect x="16" y="19" width="2" height="2"/><rect x="31" y="19" width="2" height="2"/><rect x="8" y="26" width="2" height="2"/><rect x="16" y="26" width="2" height="2"/><rect x="23" y="19" width="2" height="2"/><rect x="31" y="26" width="2" height="2"/><rect x="8" y="33" width="2" height="2"/><rect x="16" y="33" width="2" height="2"/><rect x="23" y="33" width="2" height="2"/><path d="M6,23h6V17H6Zm2-4h2v2H8Z"/><path d="M21,30h6V24H21Zm2-4h2v2H23Z"/><polygon points="42 6 42 42 2 42 2 43 43 43 43 6 42 6"/></svg>
+        </div>
+        <h3 class="tk-order__title">Keuzedagen</h3>
+        <div class="tk-order__trash svg-link js-add-on-trash">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="19" viewBox="0 0 17 19"><title>trash--small</title><path d="M16.5,3H11V0H6V3H.5a.5.5,0,0,0,0,1H2V19H15V4h1.5a.5.5,0,1,0,0-1ZM7,1h3V3H7Zm7,17H3V4H14Z"/><path d="M5.5,6a.5.5,0,0,0-.5.5v9a.5.5,0,1,0,1,0v-9A.5.5,0,0,0,5.5,6Z"/><path d="M8.5,6a.5.5,0,0,0-.5.5v9a.5.5,0,1,0,1,0v-9A.5.5,0,0,0,8.5,6Z"/><path d="M11,15.5a.5.5,0,0,0,1,0v-9a.5.5,0,0,0-1,0Z"/></svg>
+        </div>
+    </div>
+    <div class="bo-b-blue mb-3"></div>
+    <div class="g g-1-m gap-2 mb-2">
+        <p class="f-blue f16 f18-sm lh-copy">2e klas, 1 jaar</p>
+        <p class="f-blue f16 f18-sm">€ 25,50</p>
+    </div>
+    <ul class="f-grey-4 f14 lh-copy mb-0">
+        <li>7 dagen per jaar onbeperkt met de trein</li>
+        <li class="mb-0">Voor NS-abonnementhouders van 60 jaar of ouder</li>
+    </ul>
+</div>
 
-                    <!-- overlay -->
-                    <div class="richText richText--overlay is-hidden" data-controller="generic/ui/RichText" id="overlay-content">
-                        <h2 class="headingXL">Keuzedagen</h2>
-                        <p>
-                            60 jaar of ouder? Dan is Dal Voordeel voor u nog voordeliger!
-                            Met Keuzedagen reizen NS-abonnementhouders van 60 jaar of ouder
-                            7 dagen per jaar onbeperkt met de trein.
-                        </p>
-                        <a href="https://www.ns.nl/klantenservice/keuzedagen" class="arrowLink mt-2 mb-6" target="_blank">
-                            Lees meer
-                        </a>
-                        <div class="tk-order mxw-350 mb-0">
-                            <h3 class="f24 f28-sm lh-title fw-b mb-1">Keuzedagen</h3>
-                            <div class="bo-b-blue mb-3"></div>
-                            <ul class="f-grey-4 f14 lh-copy">
-                                <li>7 dagen per jaar onbeperkt met de trein.</li>
-                                <li>Reizen in heel Nederland</li>
-                                <li>Alle dagen van de week geldig (doordeweeks na 9.00 uur).</li>
-                            </ul>
-                            <div class="bo-b mb-2"></div>
-                            <div class="f-blue f28 mb-2">€ 24,50 <span class="f14">per jaar</span></div>
-                            <button class="button w-100">＋ Toevoegen</button>
-                        </div>
-                    </div>
 
-                    <!-- receipt-->
-                    <div class="tk-receipt ">
+<!-- overlay -->
+<div class="richText richText--overlay is-hidden" data-controller="generic/ui/RichText" id="overlay-content">
+    <h2 class="headingXL">60 jaar of ouder?</h2>
+    <p>
+        Dan is Dal Voordeel voor u nog voordeliger!
+        Met Keuzedagen reizen NS-abonnementhouders van 60 jaar of ouder
+        7 dagen per jaar onbeperkt met de trein.
+    </p>
+    <a href="https://www.ns.nl/klantenservice/keuzedagen" class="arrowLink mt-2 mb-6" target="_blank">
+        Lees meer
+    </a>
+    <div class="tk-order mxw-350 mb-0">
+        <div class="tk-order__grid">
+            <div class="svg-blue">
+                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43"><path d="M41,4H33V1a1,1,0,0,0-2,0V4H10V1A1,1,0,0,0,8,1V4H0V41H41ZM40,40H1V5H8V7a1,1,0,0,0,2,0V5H31V7a1,1,0,0,0,2,0V5h7Z"/><rect x="8" y="12" width="2" height="2"/><rect x="16" y="12" width="2" height="2"/><rect x="23" y="12" width="2" height="2"/><rect x="31" y="12" width="2" height="2"/><rect x="16" y="19" width="2" height="2"/><rect x="31" y="19" width="2" height="2"/><rect x="8" y="26" width="2" height="2"/><rect x="16" y="26" width="2" height="2"/><rect x="23" y="19" width="2" height="2"/><rect x="31" y="26" width="2" height="2"/><rect x="8" y="33" width="2" height="2"/><rect x="16" y="33" width="2" height="2"/><rect x="23" y="33" width="2" height="2"/><path d="M6,23h6V17H6Zm2-4h2v2H8Z"/><path d="M21,30h6V24H21Zm2-4h2v2H23Z"/><polygon points="42 6 42 42 2 42 2 43 43 43 43 6 42 6"/></svg>
+            </div>
+            <h3 class="tk-order__title">Keuzedagen</h3>
+        </div>
+        <div class="bo-b-blue mb-3"></div>
+        <ul class="f-grey-4 f14 lh-copy">
+            <li>7 dagen per jaar onbeperkt met de trein.</li>
+            <li>Reizen in heel Nederland</li>
+            <li>Alle dagen van de week geldig (doordeweeks na 9.00 uur).</li>
+        </ul>
+        <div class="bo-b mb-2"></div>
+        <div class="f-blue f28 mb-2">€ 25,50 <span class="f14">per jaar</span></div>
+        <button class="button w-100 overlay__close js-add-on-btn">＋ Toevoegen</button>
+    </div>
+</div>
+                <div class="tk-receipt ">
     
 
     <div class="g g-1-m gap-2 items-baseline mb-4">
         <div class="f-blue fw-b">Totaal per jaar</div>
-        <div class="f-blue fw-b txt-r">€ 50,00</div>
+        <div class="f-blue fw-b txt-r js-rcpt-price">€ 50,00</div>
     </div>
     <div class="g g-1-m gap-2 items-baseline mb-1">
         <div class="f-grey-4">Eerste factuur (1 jaar)</div>
-        <div class="f-grey-4 txt-r">€ 50,00</div>
+        <div class="f-grey-4 txt-r js-rcpt-price">€ 50,00</div>
     </div>
     <div class="bo-b-blue-2px mb-1"></div>
     <div class="g g-1-m gap-2 items-baseline">
         <div class="f-blue fw-b">Nu te betalen</div>
-        <div class="f-blue fw-b txt-r">€ 50,00</div>
+        <div class="f-blue fw-b txt-r js-rcpt-price">€ 50,00</div>
     </div>
 </div>
-                </div>
-
+                
                 <!-- call to action button -->
-                <div class="bo-t mb-2"></div>
+                <div class="bo-t mb-2 mt-6"></div>
                 <div class="txt-r" id="js-sticky-trig">
                     <a href="/bestellen/aanmelden" class="js-submit-link">
     <button type="submit" class="button button--arrowRight button--nsYellow w-100 w-auto-sm js-submit-button">

@@ -48,13 +48,13 @@ p {
 }
 
 .content {
-    padding: 0;
+    //padding: 0;
     background-color: $ns-white;
 
     @include sm-max {
         overflow: hidden;
     }
-    
+
     @include md {
         min-height: calc(100vh - 140px);
     }
