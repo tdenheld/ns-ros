@@ -96,7 +96,7 @@
 
     svg {
         transform-origin: 50% 50%;
-        animation: rotate 500ms linear infinite;
+        animation: rotate $loader-speed linear infinite;
         fill: $ns-blue;
         transition: $fade-link;
     }
