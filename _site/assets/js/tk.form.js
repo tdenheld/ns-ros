@@ -6,6 +6,7 @@ function form() {
     var submit = true;
     var linkLocationDefault = $(".js-submit-link").attr("href");
     var linkLocation = linkLocationDefault;
+    var addressIsCustom;
 
     // error constructor
     function DisplayError(input, error) {
@@ -284,7 +285,7 @@ function form() {
 
 
 
-    
+
     // address
     // -----------------------------------------------------------------
     // when done typing house number show full address
@@ -294,24 +295,29 @@ function form() {
         var obj = ".js-ff-house";
         var input = $(obj + " .tk-ff__input");
         var tick = $(obj + " .tk-ff__icon--approved");
-        var loading = $(obj + " .tk-ff__icon--loading");
+        var loading = $(".tk-ff__address .tk-ff__icon--loading");
         var error = $(obj + " .tk-ff__error");
         var address = $(".tk-ff__address");
+        var addressContainer = $(".tk-ff__address-container");
         var errorMessage = new DisplayError(input, error);
 
         function doneTyping() {
-            if (input.val() != "") {
-                loading.addClass("is-active");
-                serverCallSym = setTimeout(() => {
-                    submit = true;
-                    loading.removeClass("is-active");
-                    tick.addClass("is-active");
+            if (!addressIsCustom) {
+                addressContainer.removeClass("is-active");
+                if (input.val() != "") {
+                    loading.addClass("is-active");
                     address.slideDown(100);
-                }, 500);
-            } else {
-                loading.removeClass("is-active");
-                tick.removeClass("is-active");
-                address.slideUp(100);
+                    serverCallSym = setTimeout(() => {
+                        submit = true;
+                        loading.removeClass("is-active");
+                        tick.addClass("is-active");
+                        addressContainer.addClass("is-active");
+                    }, 500);
+                } else {
+                    loading.removeClass("is-active");
+                    tick.removeClass("is-active");
+                    address.slideUp(100);
+                };
             };
         };
 
@@ -321,7 +327,9 @@ function form() {
                 clearTimeout(serverCallSym);
                 typingTimer = setTimeout(doneTyping, 500);
                 errorMessage.hide();
-                tick.removeClass("is-active");
+                if (!addressIsCustom) {
+                    tick.removeClass("is-active");
+                };
             });
 
             input.keydown(function () {
@@ -365,6 +373,7 @@ function form() {
 
     function customAddress() {
         $(".tk-ff__address-icon").click(() => {
+            addressIsCustom = true;
             TweenLite.to(".tk-ff__address", 0, {
                 ease: Power3.easeInOut,
                 autoAlpha: 0,

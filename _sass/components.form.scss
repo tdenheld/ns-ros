@@ -102,6 +102,11 @@
     }
 }
 
+.tk-ff__icon--left {
+    left: 28px;
+    right: auto;
+}
+
 .tk-ff__icon--approved {
     svg {
         width: 17px;
@@ -164,8 +169,14 @@
 }
 
 .tk-ff__address-container {
+    opacity: 0;
     @include font-style(16px, bold, 1.5);
     color: $ns-blue;
+    transition: $fade-all;
+
+    &.is-active {
+        opacity: 1;
+    }
 }
 
 .tk-ff__address-icon {
