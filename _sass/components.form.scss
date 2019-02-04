@@ -105,6 +105,10 @@
 .tk-ff__icon--left {
     left: 28px;
     right: auto;
+
+    @include sm {
+        left: 214px;
+    }
 }
 
 .tk-ff__icon--approved {
