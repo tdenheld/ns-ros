@@ -28,6 +28,12 @@ function form() {
         };
     };
 
+
+
+
+
+    // default form field
+    // --------------------------------------------------------------------------
     function formField(i) {
         var id = "#js-ff-default-" + i;
         var input = $(id + " .tk-ff__input");
@@ -72,6 +78,13 @@ function form() {
         });
     };
 
+
+
+
+
+
+    // date of birth field
+    // --------------------------------------------------------------------------
     function checkDate() {
         var input = $(".js-ff-date .tk-ff__input");
         var error = $(".js-ff-date .tk-ff__error");
@@ -127,6 +140,12 @@ function form() {
     };
     checkDate();
 
+
+
+
+
+    // email field
+    // --------------------------------------------------------------------------
     function checkEmail() {
         var typingTimer;
         var serverCallSym;
@@ -167,7 +186,7 @@ function form() {
             };
         };
 
-        if ($(".js-ff-email")[0]) {
+        if ($(obj)[0]) {
             submit = false;
             isValidEmail = email.checkValidity();
 
@@ -208,11 +227,18 @@ function form() {
     };
     checkEmail();
 
+
+
+
+
+
+
+    // postal code
+    // -----------------------------------------------------------------
     function checkPostal() {
         var input = $(".js-ff-postal .tk-ff__input");
         var tick = $(".js-ff-postal .tk-ff__icon--approved");
         var error = $(".js-ff-postal .tk-ff__error");
-        var address = $(".tk-ff__address");
         var errorMessage = new DisplayError(input, error);
 
         // check value
@@ -220,21 +246,9 @@ function form() {
             if (input.val().length == 6) {
                 tick.addClass("is-active");
                 submit = true;
-                TweenLite.to(address, .2, {
-                    ease: Power3.easeInOut,
-                    autoAlpha: 1,
-                    scaleY: 1,
-                    display: "grid",
-                });
             } else {
                 tick.removeClass("is-active");
                 submit = false;
-                TweenLite.to(address, .2, {
-                    ease: Power3.easeInOut,
-                    autoAlpha: 0,
-                    scaleY: 0.7,
-                    display: "none",
-                });
             };
         };
 
@@ -266,6 +280,69 @@ function form() {
         submitButton(input, error);
     };
     checkPostal();
+
+
+
+
+    
+    // address
+    // -----------------------------------------------------------------
+    // when done typing house number show full address
+    function address() {
+        var typingTimer;
+        var serverCallSym;
+        var obj = ".js-ff-house";
+        var input = $(obj + " .tk-ff__input");
+        var tick = $(obj + " .tk-ff__icon--approved");
+        var loading = $(obj + " .tk-ff__icon--loading");
+        var error = $(obj + " .tk-ff__error");
+        var address = $(".tk-ff__address");
+        var errorMessage = new DisplayError(input, error);
+
+        function doneTyping() {
+            if (input.val() != "") {
+                loading.addClass("is-active");
+                serverCallSym = setTimeout(() => {
+                    submit = true;
+                    loading.removeClass("is-active");
+                    tick.addClass("is-active");
+                    address.slideDown(100);
+                }, 500);
+            } else {
+                loading.removeClass("is-active");
+                tick.removeClass("is-active");
+                address.slideUp(100);
+            };
+        };
+
+        if ($(obj)[0]) {
+            input.keyup(function () {
+                clearTimeout(typingTimer);
+                clearTimeout(serverCallSym);
+                typingTimer = setTimeout(doneTyping, 500);
+                errorMessage.hide();
+                tick.removeClass("is-active");
+            });
+
+            input.keydown(function () {
+                submit = false;
+                clearTimeout(typingTimer);
+            });
+
+            input.focusout(function () {
+                if (input.val() == "") {
+                    errorMessage.show();
+                    submit = false;
+                } else {
+                    submit = true;
+                };
+            });
+
+            doneTyping();
+            submitButton(input, error);
+        };
+    };
+    address();
 
     function addAddressNumber() {
         var input = $("#huisnummer");
@@ -302,7 +379,15 @@ function form() {
     };
     customAddress();
 
+
+
+
+
+
+
+
     // handle form data in session
+    // ----------------------------------------------------------------
     function setFormData() {
         if ($("#customer-data")[0]) {
             $(".tk-ff__input").each(function () {
@@ -322,7 +407,15 @@ function form() {
     };
     getFormData();
 
+
+
+
+
+
+
+
     // submit button
+    // -------------------------------------------------------------------------
     function submitButton(i, e) {
         var errorMessage = new DisplayError(i, e);
         $(".js-submit-link").click(function (event) {
@@ -336,6 +429,13 @@ function form() {
         });
     };
 
+
+
+
+
+
+
+
     // give checkboxes id's
     if ($(".tk-ff__checkbox")[0]) {
         $(".tk-ff__checkbox").each(function (i) {
@@ -344,6 +444,8 @@ function form() {
             $(".checkbox__label", this).attr("id", obj).attr("for", obj);
         });
     };
+
+
 
     // switch to order for someone else
     // ------------------------------------------------------------

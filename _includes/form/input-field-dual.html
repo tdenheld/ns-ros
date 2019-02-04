@@ -14,6 +14,9 @@
                     maxlength="{{ include.maxlength }}" 
                     {{ include.required }} 
                 />
+                <span class="tk-ff__icon tk-ff__icon--loading">
+                    {% include /icons/loader--small.svg %}
+                </span>
                 <span class="tk-ff__icon tk-ff__icon--approved">
                     {% include /icons/check-fat--small.svg %}
                 </span>
@@ -30,7 +33,7 @@
             {% endif %}
         </div>
 
-        <div class="js-ff-{{ include.class }}">
+        <div class="js-ff-{{ include.class2 }}">
             <div class="tk-ff__input-container">
                 <input class="textInput tk-ff__input" 
                         type="{{ include.type2 }}" 

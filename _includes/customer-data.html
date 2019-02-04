@@ -61,22 +61,25 @@
     title="huisnummer"
     error="Vul je huisnummer in"
     type="number"
-    class="house-number"
+    class="house"
     required="required"
 
     type2="text"
     title2="toevoeging"
     placeholder2="Toevoeging"
+    class2="default"
     %}
 
-    <div class="tk-ff tk-ff--grid tk-ff__address">
-        <div></div>
-        <div class="tk-ff__address-container">
-            Jan van Galenstraat<span class="tk-ff__address-number"></span>,<br>
-            Veenendaal
-            <span class="tk-ff__address-icon svg-link">
-                {% include /icons/edit-s--small.svg %}
-            </span>
+    <div class="tk-ff__address">
+        <div class="tk-ff tk-ff--grid">
+            <div></div>
+            <div class="tk-ff__address-container">
+                Jan van Galenstraat <span class="tk-ff__address-number"></span>,<br>
+                Veenendaal
+                <span class="tk-ff__address-icon svg-link">
+                    {% include /icons/edit-s--small.svg %}
+                </span>
+            </div>
         </div>
     </div>
 
