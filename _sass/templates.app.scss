@@ -450,6 +450,7 @@
     height: 120px;
     border: 1px dashed $ns-light-blue;
     border-radius: 50%;
+    cursor: pointer;
 
     &:hover {
         border: 1px solid $ns-light-blue;
