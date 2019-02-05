@@ -37,6 +37,7 @@
     &.is-loading:hover {
         background-color: $ns-grey-8;
         box-shadow: inset 0 -2px $ns-grey-7;
+        outline: none;
 
         &:after {
             transition: $fade-link;
