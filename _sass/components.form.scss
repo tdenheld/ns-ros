@@ -83,16 +83,6 @@
 }
 
 .tk-ff__icon--loading {
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
     svg {
         transform-origin: 50% 50%;
         animation: rotate $loader-speed linear infinite;

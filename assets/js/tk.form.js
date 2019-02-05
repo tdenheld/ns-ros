@@ -430,11 +430,23 @@ function form() {
     // submit button
     // -------------------------------------------------------------------------
     function submitButton(i, e) {
+        var obj = $(".js-submit-link");
+        var btn = $(".js-submit-button");
+        var loader = $(".js-submit-loader-icon");
         var errorMessage = new DisplayError(i, e);
-        $(".js-submit-link").click(function (event) {
+
+        obj.click((event) => {
             event.preventDefault();
             if (submit) {
-                window.location = linkLocation;
+                if (!obj.hasClass("js-submit-loader")) {
+                    window.location = linkLocation;
+                } else {
+                    btn.addClass("is-loading");
+                    loader.addClass("is-active");
+                    setTimeout(() => {
+                        window.location = linkLocation;
+                    },1500);
+                };
             } else if (i.prop("required")) {
                 errorMessage.show();
             };
