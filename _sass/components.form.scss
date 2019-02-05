@@ -49,7 +49,6 @@
 
 .tk-ff__error {
     display: none;
-    visibility: hidden;
     margin: 4px 0 0;
     @include font-style(14px, normal, 1.5);
     color: $ns-red-alert;

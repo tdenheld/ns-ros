@@ -12,23 +12,15 @@ function form() {
     function DisplayError(input, error) {
         this.input = input;
         this.error = error;
-        this.tween = function (toAlpha, toDisplay) {
-            TweenLite.to(this.error, .3, {
-                ease: Power3.easeInOut,
-                autoAlpha: toAlpha,
-                display: toDisplay,
-            });
-        };
         this.show = function () {
             this.input.addClass("is-error");
-            this.tween(1, "block");
+            this.error.slideDown(200);
         };
         this.hide = function () {
             this.input.removeClass("is-error");
-            this.tween(0, "none");
+            this.error.slideUp(200);
         };
     };
-
 
 
 
@@ -50,7 +42,7 @@ function form() {
             };
         };
 
-        input.keyup(function () {
+        input.keyup(() => {
             errorMessage.hide();
             tick.removeClass("is-active");
         });
@@ -113,7 +105,7 @@ function form() {
                 };
             });
 
-            input.keyup(function () {
+            input.keyup(() => {
                 errorMessage.hide();
                 checkValue();
 
@@ -127,7 +119,7 @@ function form() {
                 };
             });
 
-            input.focusout(function () {
+            input.focusout(() => {
                 if (input.val().length == 10) {
                     submit = true;
                 } else {
@@ -192,7 +184,7 @@ function form() {
             isValidEmail = email.checkValidity();
 
             // on keyup, start the countdown
-            input.keyup(function () {
+            input.keyup(() => {
                 errorMessage.hide();
                 clearTimeout(typingTimer);
                 clearTimeout(serverCallSym);
@@ -208,12 +200,12 @@ function form() {
             });
 
             // on keydown, clear the countdown 
-            input.keydown(function () {
+            input.keydown(() => {
                 submit = false;
                 clearTimeout(typingTimer);
             });
 
-            input.focusout(function () {
+            input.focusout(() => {
                 if (isValidEmail) {
                     submit = true;
                     sessionStorage.setItem("email", $("#email").val());
@@ -265,13 +257,13 @@ function form() {
             });
 
             // show or hide address on completed postal code
-            input.keyup(function () {
+            input.keyup(() => {
                 errorMessage.hide();
                 checkValue();
             });
 
             // show error on focusout if input is correct
-            input.focusout(function () {
+            input.focusout(() => {
                 if (input.val().length != 6) {
                     errorMessage.show();
                 };
@@ -300,11 +292,12 @@ function form() {
         var address = $(".tk-ff__address");
         var addressContainer = $(".tk-ff__address-container");
         var errorMessage = new DisplayError(input, error);
+        var inputPostal = $(".js-ff-postal .tk-ff__input");
 
         function doneTyping() {
             if (!addressIsCustom) {
                 addressContainer.removeClass("is-active");
-                if (input.val() != "") {
+                if (input.val() != "" && inputPostal.val().length == 6) {
                     loading.addClass("is-active");
                     address.slideDown(100);
                     serverCallSym = setTimeout(() => {
@@ -321,8 +314,19 @@ function form() {
             };
         };
 
+        if ($(".js-ff-postal")[0]) {
+            inputPostal.keyup(() => {
+                clearTimeout(typingTimer);
+                clearTimeout(serverCallSym);
+                typingTimer = setTimeout(doneTyping, 500);
+            });
+            inputPostal.keydown(() => {
+                clearTimeout(typingTimer);
+            });
+        };
+
         if ($(obj)[0]) {
-            input.keyup(function () {
+            input.keyup(() => {
                 clearTimeout(typingTimer);
                 clearTimeout(serverCallSym);
                 typingTimer = setTimeout(doneTyping, 500);
@@ -332,12 +336,12 @@ function form() {
                 };
             });
 
-            input.keydown(function () {
+            input.keydown(() => {
                 submit = false;
                 clearTimeout(typingTimer);
             });
 
-            input.focusout(function () {
+            input.focusout(() => {
                 if (input.val() == "") {
                     errorMessage.show();
                     submit = false;
@@ -362,10 +366,10 @@ function form() {
         if (input.val() != "" || houseAddition.val() != "") {
             addNumber();
         };
-        input.keyup(function () {
+        input.keyup(() => {
             addNumber();
         });
-        houseAddition.keyup(function () {
+        houseAddition.keyup(() => {
             addNumber();
         });
     };
