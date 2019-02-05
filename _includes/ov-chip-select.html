@@ -61,14 +61,17 @@
         <div class="tk-choice-selector__content">
             <div class="tk-choice-selector__divider"></div>
             <h4 class="headingXXS">Voor een nieuwe OV-chipkaart hebben wij een pasfoto van je nodig.</h4>
-            <div class="tk-pasfoto">
-                <div class="txt-c">
+            <div class="tk-pasfoto js-photo">
+                <div class="txt-c js-photo-empty">
                     <div class="tk-pasfoto__photo">
                         {% include /icons/user--small--res.svg %}
                     </div>
                     <div class="tk-pasfoto__description">
                         Pasfoto<br>uploaden
                     </div>
+                </div>
+                <div class="tk-pasfoto__description tk-pasfoto__description--filled js-photo-filled is-hidden">
+                    Verwijderen
                 </div>
             </div>
             <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>

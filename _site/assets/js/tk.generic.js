@@ -159,8 +159,9 @@ addOns();
 
 // clear session data when clicked on logo in header
 // ------------------------------------------------------------
-$(".js-clear-session").click(() => {
-    sessionStorage.clear();
+$(".js-photo").click(function (){
+    $(this).toggleClass("is-filled");
+    $(".js-photo-empty, .js-photo-filled").toggleClass("is-hidden");
 });
 
 
@@ -196,6 +197,14 @@ function choiceSelector() {
     };
 };
 choiceSelector();
+
+
+
+// pasfoto
+// ------------------------------------------------------------
+$(".js-clear-session").click(() => {
+    sessionStorage.clear();
+});
 
 
 
