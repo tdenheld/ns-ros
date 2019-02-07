@@ -190,7 +190,7 @@ function form() {
                 errorMessage.hide();
                 clearTimeout(typingTimer);
                 clearTimeout(serverCallSym);
-                typingTimer = setTimeout(doneTyping, 750);
+                typingTimer = setTimeout(doneTyping, 1000);
                 loading.removeClass("is-active");
                 tick.removeClass("is-active");
                 known.removeClass("is-active");
@@ -447,7 +447,7 @@ function form() {
                     loader.addClass("is-active");
                     setTimeout(() => {
                         window.location = linkLocation;
-                    },1500);
+                    }, 1500);
                 };
             } else if (i.prop("required")) {
                 errorMessage.show();
