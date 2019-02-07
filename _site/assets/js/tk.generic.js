@@ -130,7 +130,7 @@ function addOns() {
         priceLabel.text(sessionStorage.getItem(data));
     };
 
-    if (sessionStorage.getItem(data) == "€ 75,50") {
+    if (sessionStorage.getItem(data) == "€ 77,50") {
         kd.show();
     } else {
         kd.hide();
@@ -139,7 +139,7 @@ function addOns() {
     btn.click(() => {
         banner.hide();
         order.show();
-        sessionStorage.setItem(data, "€ 75,50");
+        sessionStorage.setItem(data, "€ 77,50");
         priceLabel.text(sessionStorage.getItem(data));
         kd.show();
     });
@@ -147,7 +147,7 @@ function addOns() {
     trash.click(() => {
         banner.show();
         order.hide();
-        sessionStorage.setItem(data, "€ 50,00");
+        sessionStorage.setItem(data, "€ 52,00");
         priceLabel.text(sessionStorage.getItem(data));
         kd.hide();
     });
