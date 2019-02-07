@@ -7,7 +7,7 @@
         <div class="tk-ff__input-container {{ include.width }}">
             <input class="textInput tk-ff__input" 
                 type="{{ include.type }}" 
-                id="{{ include.title }}{% if include.id-extra %}{{2}}{% endif %}" 
+                id="{{ include.title }}{% if include.id-extra %}{{ include.id-extra }}{% endif %}" 
                 placeholder="{{ include.placeholder }}" 
                 maxlength="{{ include.maxlength }}"
                 value="{{ include.value }}"

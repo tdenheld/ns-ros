@@ -78,10 +78,11 @@ function form() {
 
     // date of birth field
     // --------------------------------------------------------------------------
-    function checkDate() {
-        var input = $(".js-ff-date .tk-ff__input");
-        var error = $(".js-ff-date .tk-ff__error");
-        var tick = $(".js-ff-date .tk-ff__icon--approved");
+    function checkDate(x) {
+        var obj = ".js-ff-date-" + x;
+        var input = $(obj + " .tk-ff__input");
+        var error = $(obj + " .tk-ff__error");
+        var tick = $(obj + " .tk-ff__icon--approved");
         var errorMessage = new DisplayError(input, error);
 
         function checkValue() {
@@ -131,64 +132,8 @@ function form() {
 
         submitButton(input, error);
     };
-    checkDate();
-
-    // date of birth field
-    // --------------------------------------------------------------------------
-    function checkDate2() {
-        var input = $(".js-ff-date2 .tk-ff__input");
-        var error = $(".js-ff-date2 .tk-ff__error");
-        var tick = $(".js-ff-date2 .tk-ff__icon--approved");
-        var errorMessage = new DisplayError(input, error);
-
-        function checkValue() {
-            if (input.val().length == 10) {
-                submit = true;
-                tick.addClass("is-active");
-            } else {
-                tick.removeClass("is-active");
-                submit = false;
-            };
-        };
-
-        if (input[0]) {
-            submit = false;
-            checkValue();
-
-            // only numbers are valid input
-            input.keydown(function (e) {
-                if (!((e.which >= 48 && e.which <= 57) || (e.which >= 96 && e.which <= 105) || (e.which === 8) || (e.which === 9))) {
-                    return false;
-                };
-            });
-
-            input.keyup(() => {
-                errorMessage.hide();
-                checkValue();
-
-                // add hyphen when digits are typed
-                var n = input.val();
-                if (input.val().length == 2) {
-                    input.val(n + "-");
-                };
-                if (input.val().length == 5) {
-                    input.val(n + "-");
-                };
-            });
-
-            input.focusout(() => {
-                if (input.val().length == 10) {
-                    submit = true;
-                } else {
-                    errorMessage.show();
-                    submit = false;
-                };
-            });
-        };
-
-        submitButton(input, error);
-    };
-    checkDate2();
+    checkDate("customer");
+    checkDate("child");
 
 
 

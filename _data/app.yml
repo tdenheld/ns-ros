@@ -43,7 +43,7 @@ banks:
 
 thanks:
 - icon: mail
-  copy: "Je ontvangt een bevestiging op <blue>maartendevries@gmail.com</blue>"
+  copy: "Je ontvangt een bevestiging op <blue class='js-customer-data' id='email'>maartendevries@gmail.com</blue>"
 - icon: ov-chipkaart
   # copy: "Binnen <blue>7 dagen</blue> wordt je OV&#8209;chipkaart opgestuurd naar Jan van Galenstraat 56. Je kunt dan meteen gebruik maken van jouw abonnement."
   copy: "Binnen <blue>1 uur</blue> kun je met je OV-Chipkaart (3528 1865 9452 0045) jouw bestelling ophalen bij een NS-kaartautomaat. Daarna kan je er direct mee reizen."
