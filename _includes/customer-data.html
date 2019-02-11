@@ -17,6 +17,17 @@
     {% endif %}
 
     {% include /form/input-field.html
+    title="geboortedatum"
+    error="Vul je geboortedatum in (dd-mm-jjjj)"
+    message="Bestel je voor je kind? Vul hier je eigen gegevens in en bij de volgende stap de gegevens van je kind."
+    type="text"
+    placeholder="dd-mm-jjjj"
+    class="date-customer" maxlength="10"
+    required="required"
+    width="mxw-200"
+    %}
+
+    {% include /form/input-field.html
     title="voornaam"
     error="Vul je voornaam in"
     type="text" class="default"
@@ -35,16 +46,6 @@
     type="text"
     class="default"
     required="required"
-    %}
-
-    {% include /form/input-field.html
-    title="geboortedatum"
-    error="Vul je geboortedatum in (dd-mm-jjjj)"
-    type="text"
-    placeholder="dd-mm-jjjj"
-    class="date-customer" maxlength="10"
-    required="required"
-    width="mxw-200"
     %}
 
     {% include /form/input-field.html

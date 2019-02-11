@@ -83,15 +83,25 @@ function form() {
         var input = $(obj + " .tk-ff__input");
         var error = $(obj + " .tk-ff__error");
         var tick = $(obj + " .tk-ff__icon--approved");
+        var known = $(obj + " .tk-ff__icon--known");
+        var knownMessage = $(obj + " .tk-ff__message");
         var errorMessage = new DisplayError(input, error);
 
         function checkValue() {
-            if (input.val().length == 10) {
-                submit = true;
+            if (input.val().length == 10 && input.val() != "01-01-2006") {
                 tick.addClass("is-active");
+                submit = true;
             } else {
                 tick.removeClass("is-active");
                 submit = false;
+            };
+
+            if (input.val() == "01-01-2006") {
+                known.addClass("is-active");
+                knownMessage.slideDown(200);
+            } else {
+                known.removeClass("is-active");
+                knownMessage.slideUp(200);
             };
         };
 
@@ -164,7 +174,7 @@ function form() {
                     if (input.val().indexOf("@ns.nl") != -1) {
                         loading.removeClass("is-active");
                         known.addClass("is-active");
-                        knownMessage.addClass("is-active");
+                        knownMessage.slideDown(200);
                         $(".js-submit-button").text("Inloggen");
                         linkLocation = "/bestellen/ov-chipkaart-user";
                         $("#customer-data").attr("action", linkLocation);
@@ -194,7 +204,7 @@ function form() {
                 loading.removeClass("is-active");
                 tick.removeClass("is-active");
                 known.removeClass("is-active");
-                knownMessage.removeClass("is-active");
+                knownMessage.slideUp(200);
                 isValidEmail = email.checkValidity();
                 $(".js-submit-button").text(buttonText);
                 linkLocation = linkLocationDefault;

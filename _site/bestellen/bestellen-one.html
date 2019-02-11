@@ -1617,6 +1617,37 @@
                     <form id="customer-data" action="/bestellen/bedankt-one">
     
 
+    <div class="tk-ff tk-ff--grid js-ff-date-customer">
+    <label for="geboortedatum" class="tk-ff__label">
+        Geboortedatum
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container mxw-200">
+            <input class="textInput tk-ff__input" type="text"
+                id="geboortedatum"
+                placeholder="dd-mm-jjjj" maxlength="10" value=""
+                required />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+            </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
+        </div>
+
+        <div class="tk-ff__error">
+            Vul je geboortedatum in (dd-mm-jjjj)
+        </div>
+
+        <div class="tk-ff__message">
+            Bestel je voor je kind? Vul hier je eigen gegevens in en bij de volgende stap de gegevens van je kind.
+        </div>
+
+        
+    </div>
+</div>
+
     <div class="tk-ff tk-ff--grid js-ff-default">
     <label for="voornaam" class="tk-ff__label">
         Voornaam
@@ -1624,21 +1655,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="voornaam" 
-                placeholder="" 
-                maxlength=""
-                value=""
-                required
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="voornaam"
+                placeholder="" maxlength="" value=""
+                required />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je voornaam in
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -1652,20 +1686,23 @@
 
     <div>
         <div class="tk-ff__input-container mxw-150">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="tussenvoegsel" 
-                placeholder="" 
-                maxlength=""
-                value=""
-                
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="tussenvoegsel"
+                placeholder="" maxlength="" value=""
+                 />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
+            
+        </div>
+
+        <div class="tk-ff__message">
             
         </div>
 
@@ -1680,49 +1717,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="achternaam" 
-                placeholder="" 
-                maxlength=""
-                value=""
-                required
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="achternaam"
+                placeholder="" maxlength="" value=""
+                required />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je achternaam in
         </div>
 
-        
-    </div>
-</div>
-
-    <div class="tk-ff tk-ff--grid js-ff-date-customer">
-    <label for="geboortedatum" class="tk-ff__label">
-        Geboortedatum
-    </label>
-
-    <div>
-        <div class="tk-ff__input-container mxw-200">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="geboortedatum" 
-                placeholder="dd-mm-jjjj" 
-                maxlength="10"
-                value=""
-                required
-            />
-            <span class="tk-ff__icon tk-ff__icon--approved">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-            </span>
-        </div>
-        
-        <div class="tk-ff__error">
-            Vul je geboortedatum in (dd-mm-jjjj)
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -1736,21 +1748,24 @@
 
     <div>
         <div class="tk-ff__input-container mxw-150">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="postcode" 
-                placeholder="3517AK" 
-                maxlength="6"
-                value=""
-                required
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="postcode"
+                placeholder="3517AK" maxlength="6" value=""
+                required />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je postcode in, bijv. "1234AB"
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -1838,21 +1853,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="straatnaam" 
-                placeholder="" 
-                maxlength=""
-                value="Jan van Galenstraat"
-                
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="straatnaam"
+                placeholder="" maxlength="" value="Jan van Galenstraat"
+                 />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je straatnaam in
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -1866,21 +1884,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="woonplaats" 
-                placeholder="" 
-                maxlength=""
-                value="Veenendaal"
-                
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="woonplaats"
+                placeholder="" maxlength="" value="Veenendaal"
+                 />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je woonplaats in
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -1903,21 +1924,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="voornaam" 
-                placeholder="" 
-                maxlength=""
-                value=""
-                required
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="voornaam"
+                placeholder="" maxlength="" value=""
+                required />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je voornaam in
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -1931,20 +1955,23 @@
 
     <div>
         <div class="tk-ff__input-container mxw-150">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="tussenvoegsel" 
-                placeholder="" 
-                maxlength=""
-                value=""
-                
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="tussenvoegsel"
+                placeholder="" maxlength="" value=""
+                 />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
+            
+        </div>
+
+        <div class="tk-ff__message">
             
         </div>
 
@@ -1959,21 +1986,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="achternaam" 
-                placeholder="" 
-                maxlength=""
-                value=""
-                required
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="achternaam"
+                placeholder="" maxlength="" value=""
+                required />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je achternaam in
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -1987,21 +2017,24 @@
 
     <div>
         <div class="tk-ff__input-container mxw-200">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="geboortedatum-kind" 
-                placeholder="dd-mm-jjjj" 
-                maxlength="10"
-                value=""
-                required
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="geboortedatum-kind"
+                placeholder="dd-mm-jjjj" maxlength="10" value=""
+                required />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je geboortedatum in (dd-mm-jjjj)
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -2016,21 +2049,24 @@
 
     <div>
         <div class="tk-ff__input-container mxw-150">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="postcode" 
-                placeholder="3517AK" 
-                maxlength="6"
-                value=""
-                required
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="postcode"
+                placeholder="3517AK" maxlength="6" value=""
+                required />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je postcode in, bijv. "1234AB"
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -2111,21 +2147,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="straatnaam" 
-                placeholder="" 
-                maxlength=""
-                value="Jan van Galenstraat"
-                
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="straatnaam"
+                placeholder="" maxlength="" value="Jan van Galenstraat"
+                 />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je straatnaam in
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -2139,21 +2178,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="woonplaats" 
-                placeholder="" 
-                maxlength=""
-                value="Veenendaal"
-                
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="woonplaats"
+                placeholder="" maxlength="" value="Veenendaal"
+                 />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je woonplaats in
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
@@ -2168,21 +2210,24 @@
 
     <div>
         <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" 
-                type="text" 
-                id="e-mailadres" 
-                placeholder="" 
-                maxlength=""
-                value=""
-                required
-            />
+            <input class="textInput tk-ff__input" type="text"
+                id="e-mailadres"
+                placeholder="" maxlength="" value=""
+                required />
             <span class="tk-ff__icon tk-ff__icon--approved">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
             </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
         </div>
-        
+
         <div class="tk-ff__error">
             Vul je e-mail adres in
+        </div>
+
+        <div class="tk-ff__message">
+            
         </div>
 
         
