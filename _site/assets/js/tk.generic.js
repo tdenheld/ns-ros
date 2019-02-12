@@ -178,7 +178,7 @@ function choiceSelector() {
     var time = 250;
     var obj = ".js-cs-item";
     var toggleClass = "is-selected";
-    var initID = "#js-cs-item-0"; // set default on current card
+    var initID = "#js-cs-item-1"; // set default on current card
     var content = ".tk-choice-selector__content";
 
     if ($(obj)[0]) {

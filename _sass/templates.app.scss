@@ -446,14 +446,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
-    border: 1px dashed $ns-light-blue;
+    width: 140px;
+    height: 140px;
+    border: 2px dashed $ns-light-blue;
     border-radius: 50%;
     cursor: pointer;
 
     &:hover {
-        border: 1px solid $ns-light-blue;
+        border: 2px solid $ns-light-blue;
     }
 
     svg {
@@ -484,16 +484,17 @@
 }
 
 .tk-pasfoto__description {
-    @include font-style(14px, normal, 1.2);
+    @include font-style(14px, bold, 1.25);
     color: $ns-light-blue;
 }
 
 .tk-pasfoto__description--filled {
     font-size: calculate-rem(12px);
+    font-weight: normal;
     text-align: center;
     color: $ns-white;
     position: relative;
-    top: 42px;
+    top: 56px;
     transition: $fade-link;
 }
 

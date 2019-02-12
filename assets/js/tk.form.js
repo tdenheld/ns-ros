@@ -98,10 +98,10 @@ function form() {
 
             if (input.val() == "01-01-2006") {
                 known.addClass("is-active");
-                knownMessage.slideDown(200);
+                knownMessage.addClass("is-active");
             } else {
                 known.removeClass("is-active");
-                knownMessage.slideUp(200);
+                knownMessage.removeClass("is-active");
             };
         };
 
@@ -174,7 +174,7 @@ function form() {
                     if (input.val().indexOf("@ns.nl") != -1) {
                         loading.removeClass("is-active");
                         known.addClass("is-active");
-                        knownMessage.slideDown(200);
+                        knownMessage.addClass("is-active");
                         $(".js-submit-button").text("Inloggen");
                         linkLocation = "/bestellen/ov-chipkaart-user";
                         $("#customer-data").attr("action", linkLocation);
@@ -204,7 +204,7 @@ function form() {
                 loading.removeClass("is-active");
                 tick.removeClass("is-active");
                 known.removeClass("is-active");
-                knownMessage.slideUp(200);
+                knownMessage.removeClass("is-active");
                 isValidEmail = email.checkValidity();
                 $(".js-submit-button").text(buttonText);
                 linkLocation = linkLocationDefault;

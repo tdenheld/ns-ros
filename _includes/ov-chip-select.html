@@ -5,6 +5,47 @@
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
+                <h3 class="tk-choice-selector__title">Nieuwe OV&#8209;chipkaart</h3>
+                <p class="tk-choice-selector__description">Binnen 5 werkdagen in huis</p>
+            </div>
+            <div class="tk-choice-selector__price">
+                <div class="tk-choice-selector__new-price">Gratis</div>
+                <div class="tk-choice-selector__old-price">€ 7,50</div>
+            </div>
+        </div>
+        <div class="tk-choice-selector__content">
+            <div class="tk-choice-selector__divider"></div>
+            <div class="tk-pasfoto js-photo">
+                <div class="txt-c js-photo-empty">
+                    <div class="tk-pasfoto__photo">
+                        {% include /icons/user--small--res.svg %}
+                    </div>
+                    <div class="tk-pasfoto__description">
+                        Kies of<br>maak foto
+                    </div>
+                </div>
+                <div class="tk-pasfoto__description tk-pasfoto__description--filled js-photo-filled is-hidden">
+                    Verwijderen
+                </div>
+            </div>
+            <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
+            <span class="f-blue">Ingangsdatum bestelling: </span>
+            <span class="f-grey no-wrap">
+                {{ page.date }}
+                <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
+                    <div class="svg-link">
+                        {% include /icons/edit-s--small.svg %}
+                    </div>
+                    <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
+                </span>
+            </span>
+        </div>
+    </div>
+
+    <!-- option 2 -->
+    <div class="tk-choice-selector__item js-cs-item">
+        <div class="tk-choice-selector__header">
+            <div>
                 <h3 class="tk-choice-selector__title">Ik heb al een OV&#8209;chipkaart</h3>
                 <p class="tk-choice-selector__description">Binnen 1 uur op te halen bij een NS kaartautomaat</p>
             </div>
@@ -32,48 +73,6 @@
                     </label>
                 </div>
             </form>
-            <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
-            <span class="f-blue">Ingangsdatum bestelling: </span>
-            <span class="f-grey no-wrap">
-                {{ page.date }}
-                <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
-                    <div class="svg-link">
-                        {% include /icons/edit-s--small.svg %}
-                    </div>
-                    <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
-                </span>
-            </span>
-        </div>
-    </div>
-
-    <!-- option 2 -->
-    <div class="tk-choice-selector__item js-cs-item">
-        <div class="tk-choice-selector__header">
-            <div>
-                <h3 class="tk-choice-selector__title">Ik wil een nieuwe OV&#8209;chipkaart</h3>
-                <p class="tk-choice-selector__description">Binnen 5 werkdagen in huis</p>
-            </div>
-            <div class="tk-choice-selector__price">
-                <div class="tk-choice-selector__new-price">Gratis</div>
-                <div class="tk-choice-selector__old-price">€ 7,50</div>
-            </div>
-        </div>
-        <div class="tk-choice-selector__content">
-            <div class="tk-choice-selector__divider"></div>
-            <h4 class="headingXXS">Voor een nieuwe OV-chipkaart hebben wij een pasfoto van je nodig.</h4>
-            <div class="tk-pasfoto js-photo">
-                <div class="txt-c js-photo-empty">
-                    <div class="tk-pasfoto__photo">
-                        {% include /icons/user--small--res.svg %}
-                    </div>
-                    <div class="tk-pasfoto__description">
-                        Pasfoto<br>uploaden
-                    </div>
-                </div>
-                <div class="tk-pasfoto__description tk-pasfoto__description--filled js-photo-filled is-hidden">
-                    Verwijderen
-                </div>
-            </div>
             <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
             <span class="f-blue">Ingangsdatum bestelling: </span>
             <span class="f-grey no-wrap">
