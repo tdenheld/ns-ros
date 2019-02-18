@@ -50,16 +50,9 @@
 
 .tk-ff__message {
     display: none;
-    opacity: 1;
     margin: 6px 0;
     @include font-style(14px, bold, 1.5);
     color: $ns-green-sexy;
-    transition: $fade-all;
-
-    &.is-active {
-        display: block;
-        opacity: 1;
-    }
 }
 
 
