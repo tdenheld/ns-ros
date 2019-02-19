@@ -28,7 +28,7 @@ function dpBottomSheet() {
     var darkener = new Transition(".js-dp-bs .tk-overlay__bg", 0, 1);
 
     btn.click(() => {
-        if (vw <= 640) {
+        if (vw <= 480) {
             overlay.show();
             bottomSheet.tween.duration(0.35).play();
             darkener.tween.duration(0.6).play();
@@ -48,10 +48,13 @@ function dpBottomSheet() {
         $(this).addClass("is-active");
     });
 };
+
 if ($(".js-dp-bs-btn")[0]) {
     dpBottomSheet();
 };
 
+// desktop
+// -----------------------------
 function dpDesktop() {
     var active = false;
     var dp;
@@ -79,7 +82,7 @@ function dpDesktop() {
 
     $(".js-dp-btn").click(function () {
         dp = $(".tk-datepicker-lg", this);
-        if (vw > 640) {
+        if (vw > 480) {
             if (!active) {
                 fadeIn(dp);
                 active = true;
@@ -101,6 +104,7 @@ function dpDesktop() {
     });
 
 };
-if ($(".js-dp-btn")[0] && vw > 640) {
+
+if ($(".js-dp-btn")[0] && vw > 480) {
     dpDesktop();
 };
