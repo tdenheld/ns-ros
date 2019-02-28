@@ -71,23 +71,7 @@
     class2="default"
     %}
 
-    <div class="tk-ff__address">
-        <div class="tk-ff tk-ff--grid">
-            <div></div>
-            <div>
-                <div class="tk-ff__icon tk-ff__icon--loading tk-ff__icon--left">
-                    {% include /icons/loader--small.svg %}
-                </div>
-                <div class="tk-ff__address-container">
-                    Jan van Galenstraat <span class="tk-ff__address-number"></span>,<br>
-                    Veenendaal
-                    <span class="tk-ff__address-icon svg-link">
-                        {% include /icons/edit-s--small.svg %}
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% include form/address.html %}
 
     <div class="js-address-additional dn o-0">
         {% include /form/input-field.html

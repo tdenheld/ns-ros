@@ -388,7 +388,7 @@ function form() {
     addAddressNumber();
 
     function customAddress() {
-        $(".tk-ff__address-icon").click(() => {
+        $(".js-custom-address").click(() => {
             addressIsCustom = true;
             TweenLite.to(".tk-ff__address", 0, {
                 ease: Power3.easeInOut,

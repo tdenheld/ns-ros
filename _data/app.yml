@@ -6,12 +6,12 @@ progress:
 
 
 comfort:
-- icon: counter--large
-  description: Je betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling. Na het eerste jaar worden de abonnementskosten jaarlijks van je rekening afgeschreven, via automatische incasso.
 - icon: ov-chipkaart--large
-  description: Je krijgt gratis een nieuwe persoonlijke OV&#8209;chipkaart bij de bestelling van een jaarabonnement. Binnen 1 week ontvang je de OV&#8209;chipkaart, mét het abonnement er op, in huis.
-- icon: train--medium
-  description: Betalen kan snel, veilig en via uw eigen bank met iDeal. Je betaalt de abonnementskosten voor het eerste jaar aan het einde van je bestelling.
+  description: "Nieuwe persoonlijke OV&#8209;chipkaart nodig? Ontvang gratis bij de bestelling van een jaarabonnement. <br><b class='dib mt-2 f-red'>Let op:</b> We hebben tijdens het bestellen een foto van je nodig voor op de kaart."
+- icon: subscription--large
+  description: Heb je al een persoonlijke OV&#8209;chipkaart met foto? Voer dan tijdens het bestellen je kaartnummer in. Je abonnement kun je binnen een uur na het betalen van je bestelling ophalen bij een NS-kaartautomaat.
+- icon: euro--medium
+  description: Je betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling. Na het eerste jaar worden de abonnementskosten jaarlijks van je rekening afgeschreven, via automatische incasso.
 
 
 banks:
