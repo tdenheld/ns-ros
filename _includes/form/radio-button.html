@@ -1,0 +1,38 @@
+<div class="tk-ff tk-ff--grid js-ff-{{ include.class }}">
+    <label for="{{ include.title }}" class="tk-ff__label">
+        {{ include.title | capitalize }}
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container {{ include.width }} mb-1">
+            <ul class="list formfield__inputGroup">
+                <li class="list__item formfield__inputGroupItem">
+                    <div class="radioButton">
+                        <input type="radio" class="radioButton__input tk-ff__input" id="aanhef-dhr" name="aanhef" required>
+                        <label class="radioButton__label" for="aanhef-dhr" tabindex="-1">Dhr.</label>
+                    </div>
+                </li>
+                <li class="list__item formfield__inputGroupItem">
+                    <div class="radioButton">
+                        <input type="radio" class="radioButton__input tk-ff__input" id="aanhef-mevr" name="aanhef">
+                        <label class="radioButton__label" for="aanhef-mevr" tabindex="-1">Mevr.</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tk-ff__error">
+            {{ include.error }}
+        </div>
+
+        <div class="tk-ff__message">
+            {{ include.message }}
+        </div>
+
+        {% if include.description %}
+        <p class="tk-ff__description">
+            {{ include.description }}
+        </p>
+        {% endif %}
+    </div>
+</div>

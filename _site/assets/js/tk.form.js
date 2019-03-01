@@ -47,6 +47,12 @@ function form() {
             tick.removeClass("is-active");
         });
 
+        input.click(() => {
+            if (input.is(":checked")) {
+                errorMessage.hide();
+            };
+        });
+
         input.focusout(function () {
             checkValue();
             if ($(this).prop("required")) {

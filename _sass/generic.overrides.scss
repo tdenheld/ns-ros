@@ -6,21 +6,16 @@
 .notificationBar,
 .notificationList,
 .container--article {
-    //box-shadow: 0 1px 0 0 rgba(7, 7, 33, .15);
     box-shadow: none;
 }
-
-// .header {
-//     box-shadow: 0 1px 0 0 rgba(7, 7, 33, .15);
-// }
 
 .tile--fullyTransparent {
     box-shadow: none;
 }
 
-.button, 
+.button,
 .textInput {
-	border-radius: 4px;
+    border-radius: 4px;
 }
 
 .h1,
@@ -48,7 +43,6 @@ p {
 }
 
 .content {
-    //padding: 0;
     background-color: $ns-white;
 
     @include sm-max {
@@ -83,6 +77,7 @@ p {
     @include sm-max {
         margin: auto;
         width: 100%;
+
         .overlay__close {
             position: fixed;
         }
@@ -96,16 +91,15 @@ p {
 }
 
 
-
-
 // extra ovr-classes
 // ------------------------------------------
 .ovr-container {
     margin: 0 0 $half-gutter;
 
     @include sm {
-        margin: $half-gutter; 
+        margin: $half-gutter;
     }
+
     @include lg {
         margin: $gutter auto;
     }
@@ -114,7 +108,7 @@ p {
 .ovr-grid__unit {
     padding-top: 0;
     padding-bottom: 0;
-    
+
     @include md-max {
         margin-bottom: $half-gutter;
 
