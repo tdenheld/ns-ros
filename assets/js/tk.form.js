@@ -81,8 +81,8 @@ function form() {
 
     // radio button
     // --------------------------------------------------------------------------
-    function radio() {
-        var obj = ".js-ff-radio";
+    function toggle() {
+        var obj = ".js-ff-toggle";
         var input = $(obj + " .tk-ff__input");
         var tick = $(obj + " .tk-ff__icon--approved");
         var error = $(obj + " .tk-ff__error");
@@ -112,7 +112,7 @@ function form() {
 
         submitButton(input, error);
     };
-    radio();
+    toggle();
 
 
 
