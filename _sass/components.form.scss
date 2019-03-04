@@ -290,10 +290,9 @@ $bs-autofill-focus:     $bs-focus, $bs-autofill;
     display: grid;
     grid-template-columns: 1fr 2px 1fr;
     width: 100%;
-    padding-right: 44px;
 
     @include xs {
-        width: 200px + 44px;
+        width: 200px;
     }
 }
 
