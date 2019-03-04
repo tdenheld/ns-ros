@@ -6,6 +6,7 @@ $input-border:          1px solid $ns-grey-6b;
 $input-border-hover:    1px solid $ns-grey-5;
 
 $bs-focus:              0 0 0 1px $ns-light-blue, 0 2px 28px rgba($ns-black, 0.1);
+$bs-focus-toggle:       0 0 0 2px $ns-light-blue, 0 2px 28px rgba($ns-black, 0.1);
 $bs-autofill:           0 0 0px 1000px $ns-blue-4 inset;
 $bs-autofill-focus:     $bs-focus, $bs-autofill;
 
@@ -279,6 +280,53 @@ $bs-autofill-focus:     $bs-focus, $bs-autofill;
     }
 }
 
+
+
+
+// toggle button
+// ------------------------------------
+.tk-toggle {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    width: 100%;
+    padding-right: 44px;
+
+    @include xs {
+        width: 200px + 44px;
+    }
+}
+
+.tk-toggle__label {
+    width: 100%;
+    color: $ns-grey-3;
+    box-shadow: inset 0 -4px 0 $ns-grey-7;
+    transition: $fade-link;
+
+    &:hover {
+        box-shadow: inset 0 -4px 0 $ns-grey-7;
+    }
+}
+
+.toggleButton__input:checked+.toggleButton__label {
+    background-color: $ns-green-sexy;
+    box-shadow: inset 0 -2px 0 $ns-green-sexy-2;
+    font-weight: bold;
+
+    &:hover {
+        box-shadow: inset 0 -2px 0 $ns-green-sexy-2;
+    }
+}
+
+.toggleButton__label:focus,
+.toggleButton__input:focus+.toggleButton__label {
+    outline: none;
+    box-shadow: inset 0 -4px 0 $ns-grey-7, $bs-focus-toggle;
+}
+
+.toggleButton__input:checked:focus+.toggleButton__label {
+    box-shadow: inset 0 -2px 0 $ns-green-sexy-2, $bs-focus-toggle;
+}
 
 
 

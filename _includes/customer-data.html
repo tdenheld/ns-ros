@@ -18,7 +18,7 @@
 
     {% include /form/input-field.html
     title="geboortedatum"
-    error="Vul je geboortedatum in (dd-mm-jjjj)"
+    error="Sorry, we hebben echt je geboortedatum nodig"
     message="Bestel je voor je kind? Vul hier je eigen gegevens in en bij de volgende stap de gegevens van je kind."
     type="text"
     placeholder="dd-mm-jjjj"
@@ -27,12 +27,38 @@
     width="mxw-200"
     %}
 
-    {% include /form/radio-button.html
+    <div class="tk-ff tk-ff--grid js-ff-radio">
+        <div class="tk-ff__label">
+            Geslacht
+        </div>
+        <div>
+            <div class="tk-toggle">
+                <div class="toggleButton w-100">
+                    <input type="radio" class="toggleButton__input tk-ff__input" id="input54" name="geslacht"
+                        value="man" required>
+                    <label class="toggleButton__label tk-toggle__label" for="input54" tabindex="-1">Man</label>
+                </div>
+                <div></div>
+                <div class="toggleButton w-100">
+                    <input type="radio" class="toggleButton__input tk-ff__input" id="input53" name="geslacht" value="vrouw">
+                    <label class="toggleButton__label tk-toggle__label" for="input53" tabindex="-1">Vrouw</label>
+                </div>
+                <span class="tk-ff__icon tk-ff__icon--approved">
+                    {% include /icons/check-fat--small.svg %}
+                </span>
+            </div>
+            <div class="tk-ff__error">
+                Vul je geslacht in
+            </div>
+        </div>
+    </div>
+
+    <!-- {% include /form/radio-button.html
     title="Aanhef"
     error="Vul aanhef in"
     class="default"
     required="required"
-    %}
+    %} -->
 
     {% include /form/input-field.html
     title="voornaam"

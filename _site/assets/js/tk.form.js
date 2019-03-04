@@ -79,6 +79,41 @@ function form() {
 
 
 
+    // radio button
+    // --------------------------------------------------------------------------
+    function radio() {
+        var obj = ".js-ff-radio";
+        var input = $(obj + " .tk-ff__input");
+        var tick = $(obj + " .tk-ff__icon--approved");
+        var error = $(obj + " .tk-ff__error");
+        var errorMessage = new DisplayError(input, error);
+
+        input.click(() => {
+            if (input.is(":checked")) {
+                tick.addClass("is-active");
+                errorMessage.hide();
+            } else {
+                tick.removeClass("is-active");
+            }
+        });
+
+        input.focusout(function () {
+            if ($(this).prop("required")) {
+                if (!input.is(":checked")) {
+                    errorMessage.show();
+                    submit = false;
+                } else {
+                    submit = true;
+                };
+            };
+        });
+        
+        submitButton(input, error);
+    };
+    radio();
+
+
+
 
 
 

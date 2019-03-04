@@ -1624,7 +1624,7 @@
         </div>
 
         <div class="tk-ff__error">
-            Vul je geboortedatum in (dd-mm-jjjj)
+            Sorry, we hebben echt je geboortedatum nodig
         </div>
 
         <div class="tk-ff__message fw-normal f-red">
@@ -1635,10 +1635,36 @@
     </div>
 </div>
 
-    <div class="tk-ff tk-ff--grid js-ff-default">
-    <label for="Aanhef" class="tk-ff__label">
+    <div class="tk-ff tk-ff--grid js-ff-radio">
+        <div class="tk-ff__label">
+            Geslacht
+        </div>
+        <div>
+            <div class="tk-toggle">
+                <div class="toggleButton w-100">
+                    <input type="radio" class="toggleButton__input tk-ff__input" id="input54" name="geslacht"
+                        value="man" required>
+                    <label class="toggleButton__label tk-toggle__label" for="input54" tabindex="-1">Man</label>
+                </div>
+                <div></div>
+                <div class="toggleButton w-100">
+                    <input type="radio" class="toggleButton__input tk-ff__input" id="input53" name="geslacht" value="vrouw">
+                    <label class="toggleButton__label tk-toggle__label" for="input53" tabindex="-1">Vrouw</label>
+                </div>
+                <span class="tk-ff__icon tk-ff__icon--approved">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+                </span>
+            </div>
+            <div class="tk-ff__error">
+                Vul je geslacht in
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="tk-ff tk-ff--grid js-ff-default">
+    <div class="tk-ff__label">
         Aanhef
-    </label>
+    </div>
 
     <div>
         <div class="tk-ff__input-container  mb-1">
@@ -1668,7 +1694,7 @@
 
         
     </div>
-</div>
+</div> -->
 
     <div class="tk-ff tk-ff--grid js-ff-default">
     <label for="voornaam" class="tk-ff__label">
