@@ -92,9 +92,11 @@ function form() {
             if (input.is(":checked")) {
                 tick.addClass("is-active");
                 errorMessage.hide();
+                submit = true;
             } else {
                 tick.removeClass("is-active");
-            }
+                submit = false;
+            };
         });
 
         input.focusout(function () {
@@ -107,7 +109,7 @@ function form() {
                 };
             };
         });
-        
+
         submitButton(input, error);
     };
     radio();
@@ -173,6 +175,10 @@ function form() {
             input.focusout(() => {
                 if (input.val().length == 10) {
                     submit = true;
+                } else if (input.val().length > 0 && input.val().length < 10) {
+                    errorMessage.show();
+                    submit = false;
+                    error.text("Kijk nog even. Deze geboortedatum lijkt niet correct.");
                 } else {
                     errorMessage.show();
                     submit = false;
