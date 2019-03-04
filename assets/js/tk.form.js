@@ -89,7 +89,6 @@ function form() {
         var input = $(obj + " .tk-ff__input");
         var error = $(obj + " .tk-ff__error");
         var tick = $(obj + " .tk-ff__icon--approved");
-        var known = $(obj + " .tk-ff__icon--known");
         var knownMessage = $(obj + " .tk-ff__message");
         var errorMessage = new DisplayError(input, error);
 
@@ -103,11 +102,11 @@ function form() {
             };
 
             if (input.val() == "01-01-2006") {
-                known.addClass("is-active");
                 knownMessage.slideDown(200);
+                input.addClass("is-error");
             } else {
-                known.removeClass("is-active");
                 knownMessage.slideUp(200);
+                input.removeClass("is-error");
             };
         };
 
