@@ -50,6 +50,7 @@ function form() {
         input.click(() => {
             if (input.is(":checked")) {
                 errorMessage.hide();
+                submit = true;
             };
         });
 
@@ -110,7 +111,7 @@ function form() {
                     };
                 };
             });
-
+            
             submitButton(input, error);
         };
     };
