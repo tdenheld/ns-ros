@@ -88,29 +88,31 @@ function form() {
         var error = $(obj + " .tk-ff__error");
         var errorMessage = new DisplayError(input, error);
 
-        input.click(() => {
-            if (input.is(":checked")) {
-                tick.addClass("is-active");
-                errorMessage.hide();
-                submit = true;
-            } else {
-                tick.removeClass("is-active");
-                submit = false;
-            };
-        });
-
-        input.focusout(function () {
-            if ($(this).prop("required")) {
-                if (!input.is(":checked")) {
-                    errorMessage.show();
-                    submit = false;
-                } else {
+        if (input[0]) {
+            input.click(() => {
+                if (input.is(":checked")) {
+                    tick.addClass("is-active");
+                    errorMessage.hide();
                     submit = true;
+                } else {
+                    tick.removeClass("is-active");
+                    submit = false;
                 };
-            };
-        });
+            });
 
-        submitButton(input, error);
+            input.focusout(function () {
+                if ($(this).prop("required")) {
+                    if (!input.is(":checked")) {
+                        errorMessage.show();
+                        submit = false;
+                    } else {
+                        submit = true;
+                    };
+                };
+            });
+
+            submitButton(input, error);
+        };
     };
     toggle();
 
@@ -184,9 +186,9 @@ function form() {
                     submit = false;
                 };
             });
-        };
 
-        submitButton(input, error);
+            submitButton(input, error);
+        };
     };
     checkDate("customer");
     checkDate("child");
@@ -326,9 +328,9 @@ function form() {
                     errorMessage.show();
                 };
             });
-        };
 
-        submitButton(input, error);
+            submitButton(input, error);
+        };
     };
     checkPostal();
 
@@ -536,14 +538,15 @@ function form() {
         var obj = $(className);
 
         if (obj[0]) {
-            submit = true;
             obj.click(function () {
                 if (!$(this).hasClass("is-active")) {
                     $(".js-other-margin").show();
-                    submit = false;
+                    $(".js-other-card-heading").text("OV-chipkaart van je kind");
+                    $(".js-other-card-photo").text("Kies of maak foto van je kind");
                 } else {
                     $(".js-other-margin").delay(100).hide(time);
-                    submit = true;
+                    $(".js-other-card-heading").text("Nieuwe OV-chipkaart");
+                    $(".js-other-card-photo").text("Kies of maak foto");
                 }
                 $(this).toggleClass("is-active");
                 $(".js-other-form").slideToggle(time);

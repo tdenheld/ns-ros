@@ -288,7 +288,8 @@ $bs-autofill-focus:     $bs-focus, $bs-autofill;
 .tk-toggle {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 2px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2px;
     width: 100%;
 
     @include xs {

@@ -494,6 +494,7 @@
 .tk-pasfoto__description {
     @include font-style(14px, bold, 1.25);
     color: $ns-light-blue;
+    padding: 0 $gutter;
 }
 
 .tk-pasfoto__description--filled {

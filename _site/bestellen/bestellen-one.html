@@ -1660,7 +1660,6 @@
                 <label class="toggleButton__label tk-toggle__label" for="man"
                     tabindex="-1">Man</label>
             </div>
-            <div></div>
             <div class="toggleButton w-100">
                 <input type="radio" class="toggleButton__input tk-ff__input" id="vrouw"
                     name="Geslacht" value="vrouw">
@@ -1937,6 +1936,37 @@
     </div>
     <div class="mb-4 js-other-margin is-hidden"></div>
     <form class="tk-other__form js-other-form is-hidden mb-2">
+        <div class="tk-ff tk-ff--grid js-ff-date-child">
+    <label for="geboortedatum" class="tk-ff__label">
+        Geboortedatum
+    </label>
+
+    <div>
+        <div class="tk-ff__input-container mxw-200">
+            <input class="textInput tk-ff__input" type="text"
+                id="geboortedatum-kind"
+                placeholder="dd-mm-jjjj" maxlength="10" value=""
+                required />
+            <span class="tk-ff__icon tk-ff__icon--approved">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+            </span>
+            <span class="tk-ff__icon tk-ff__icon--known">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
+            </span>
+        </div>
+
+        <div class="tk-ff__error">
+            Vul je geboortedatum in (dd-mm-jjjj)
+        </div>
+
+        <div class="tk-ff__message fw-normal f-red">
+            
+        </div>
+
+        
+    </div>
+</div>
+        
         <div class="tk-ff tk-ff--grid js-ff-default">
     <label for="voornaam" class="tk-ff__label">
         Voornaam
@@ -2029,232 +2059,6 @@
         
     </div>
 </div>
-
-        <div class="tk-ff tk-ff--grid js-ff-date-child">
-    <label for="geboortedatum" class="tk-ff__label">
-        Geboortedatum
-    </label>
-
-    <div>
-        <div class="tk-ff__input-container mxw-200">
-            <input class="textInput tk-ff__input" type="text"
-                id="geboortedatum-kind"
-                placeholder="dd-mm-jjjj" maxlength="10" value=""
-                required />
-            <span class="tk-ff__icon tk-ff__icon--approved">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-            </span>
-            <span class="tk-ff__icon tk-ff__icon--known">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
-            </span>
-        </div>
-
-        <div class="tk-ff__error">
-            Vul je geboortedatum in (dd-mm-jjjj)
-        </div>
-
-        <div class="tk-ff__message fw-normal f-red">
-            
-        </div>
-
-        
-    </div>
-</div>
-
-<!--
-        <div class="tk-ff tk-ff--grid js-ff-postal">
-    <label for="postcode" class="tk-ff__label">
-        Postcode
-    </label>
-
-    <div>
-        <div class="tk-ff__input-container mxw-150">
-            <input class="textInput tk-ff__input" type="text"
-                id="postcode"
-                placeholder="3517AK" maxlength="6" value=""
-                required />
-            <span class="tk-ff__icon tk-ff__icon--approved">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-            </span>
-            <span class="tk-ff__icon tk-ff__icon--known">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
-            </span>
-        </div>
-
-        <div class="tk-ff__error">
-            Vul je postcode in, bijv. "1234AB"
-        </div>
-
-        <div class="tk-ff__message fw-normal f-red">
-            
-        </div>
-
-        
-    </div>
-</div>
-
-        <div class="tk-ff tk-ff--grid">
-
-    <label for="huisnummer" class="tk-ff__label">
-        Huisnummer
-    </label>
-
-    <div class="g g-2 col-gap-2">
-        <div class="js-ff-default">
-            <div class="tk-ff__input-container">
-                <input class="textInput tk-ff__input" 
-                    type="number" 
-                    id="huisnummer" 
-                    placeholder="" 
-                    maxlength="" 
-                    required 
-                />
-                <span class="tk-ff__icon tk-ff__icon--approved">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-                </span>
-            </div>
-
-            <div class="tk-ff__error">
-                Vul je huisnummer in
-            </div>
-
-            
-        </div>
-
-        <div class="js-ff-">
-            <div class="tk-ff__input-container">
-                <input class="textInput tk-ff__input" 
-                        type="text" 
-                        id="toevoeging" 
-                        placeholder="Toevoeging" 
-                        maxlength="" 
-                         
-                />
-                <span class="tk-ff__icon tk-ff__icon--approved">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-                </span>
-            </div>
-            
-            <div class="tk-ff__error">
-                
-            </div>
-
-            
-        </div>
-    </div>
-    
-</div>
-
-        <div class="tk-ff tk-ff--grid tk-ff__address">
-            <div></div>
-            <div class="tk-ff__address-container">
-                Jan van Galenstraat<span class="tk-ff__address-number"></span>,<br>
-                Veenendaal
-                <span class="tk-ff__address-icon svg-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17">
-    <path d="M13.5,17H.5a.472.472,0,0,1-.5-.5v-.1A.458.458,0,0,1,.5,16h13a.472.472,0,0,1,.5.5v.1A.458.458,0,0,1,13.5,17Z"/>
-    <path d="M11.9,8.2,3.7,0H2.3L0,2.3V3.7l8.2,8.2,5.6,1.9ZM1,3.3V2.7L2.7,1h.6l7.8,7.8.8,2.4-.7.7-2.4-.8Z"/>
-</svg>
-                </span>
-            </div>
-        </div>
-
-        <div class="js-address-additional dn o-0">
-            <div class="tk-ff tk-ff--grid js-ff-default">
-    <label for="straatnaam" class="tk-ff__label">
-        Straatnaam
-    </label>
-
-    <div>
-        <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" type="text"
-                id="straatnaam"
-                placeholder="" maxlength="" value="Jan van Galenstraat"
-                 />
-            <span class="tk-ff__icon tk-ff__icon--approved">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-            </span>
-            <span class="tk-ff__icon tk-ff__icon--known">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
-            </span>
-        </div>
-
-        <div class="tk-ff__error">
-            Vul je straatnaam in
-        </div>
-
-        <div class="tk-ff__message fw-normal f-red">
-            
-        </div>
-
-        
-    </div>
-</div>
-
-            <div class="tk-ff tk-ff--grid js-ff-default">
-    <label for="woonplaats" class="tk-ff__label">
-        Woonplaats
-    </label>
-
-    <div>
-        <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" type="text"
-                id="woonplaats"
-                placeholder="" maxlength="" value="Veenendaal"
-                 />
-            <span class="tk-ff__icon tk-ff__icon--approved">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-            </span>
-            <span class="tk-ff__icon tk-ff__icon--known">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
-            </span>
-        </div>
-
-        <div class="tk-ff__error">
-            Vul je woonplaats in
-        </div>
-
-        <div class="tk-ff__message fw-normal f-red">
-            
-        </div>
-
-        
-    </div>
-</div>
-        </div>
-
-        <div class="tk-ff tk-ff--grid js-ff-default">
-    <label for="e-mailadres" class="tk-ff__label">
-        E-mailadres
-    </label>
-
-    <div>
-        <div class="tk-ff__input-container ">
-            <input class="textInput tk-ff__input" type="text"
-                id="e-mailadres"
-                placeholder="" maxlength="" value=""
-                required />
-            <span class="tk-ff__icon tk-ff__icon--approved">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-            </span>
-            <span class="tk-ff__icon tk-ff__icon--known">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22.267" height="21.178" viewBox="0 0 22.267 21.178"><title>star--small</title><path d="M18.014,21.178l-6.881-3.9-6.881,3.9,1.58-7.748L0,8.088,7.857,7.2,11.133,0,14.41,7.2l7.857.892L16.435,13.43ZM2.294,8.835l4.63,4.239L5.671,19.225l5.462-3.094L16.6,19.225l-1.253-6.151,4.63-4.239-6.238-.708-2.6-5.714-2.6,5.713Z"/></svg>
-            </span>
-        </div>
-
-        <div class="tk-ff__error">
-            Vul je e-mail adres in
-        </div>
-
-        <div class="tk-ff__message fw-normal f-red">
-            
-        </div>
-
-        
-    </div>
-</div>
-
-        -->
     </form>
 </div>
                     <div class="tk-choice-selector">
@@ -2264,7 +2068,7 @@
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
-                <h3 class="tk-choice-selector__title">Nieuwe OV&#8209;chipkaart</h3>
+                <h3 class="tk-choice-selector__title js-other-card-heading">Nieuwe OV&#8209;chipkaart</h3>
                 <p class="tk-choice-selector__description">Binnen 5 werkdagen in huis</p>
             </div>
             <div class="tk-choice-selector__price">
@@ -2283,8 +2087,8 @@
     <path d="M17,19H8a.5.5,0,1,1,0-1h8V16c0-1.9-1.6-4.2-3.5-4.2a.5.5,0,0,1,0-1C15,10.8,17,13.6,17,16Z"/>
 </svg>
                     </div>
-                    <div class="tk-pasfoto__description">
-                        Kies of<br>maak foto
+                    <div class="tk-pasfoto__description js-other-card-photo">
+                        Kies of maak foto
                     </div>
                 </div>
                 <div class="tk-pasfoto__description tk-pasfoto__description--filled js-photo-filled is-hidden">
@@ -2528,11 +2332,11 @@
                     <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
                     <form>
     <div class="checkbox formfield__checkbox tk-ff__checkbox mb-4 js-ff-default">
-        <input required type="checkbox" class="checkbox__input tk-ff__input is-error">
+        <input required type="checkbox" class="checkbox__input tk-ff__input">
         <label class="checkbox__label" tabindex="-1">
             Ik ga akkoord met:
         </label>
-        <div class="tk-ff__error db">
+        <div class="tk-ff__error">
             Om verder te gaan dien je akkoord te gaan met de voorwaarden.
         </div>
         <ul class="pl-4 pt-1 mb-0 f12 lh-copy">
@@ -2774,8 +2578,8 @@
     <footer class="footer bo-t">
     <div class="container">
         <div class="grid grid--footer" data-type="bottomfootermenu">
-            <div class="grid__unit">
-                <div class="footer__menuContainer pv-4 mb-0">
+            <div class="grid__unit pv-0">
+                <div class="footer__menuContainer bo-none pv-4 mb-0">
                     <ul class="footer__menu list list--horizontal" data-controller="generic/ui/EqualWidth">
                         <li class="list__item">
                             <a href="/disclaimer.html" class="arrowLink arrowLink--grey">
