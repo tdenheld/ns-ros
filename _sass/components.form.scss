@@ -246,13 +246,17 @@ $bs-autofill-focus:     $bs-focus, $bs-autofill;
         transition: $fade-link;
     }
 
+    .checkbox__label:before {
+        border: $input-border;
+        transition: $fade-link;
+    }
+
     .checkbox__input:checked+.checkbox__label:after {
         opacity: 1;
     }
 
-    .checkbox__label:before {
-        border: $input-border;
-        transition: $fade-link;
+    .checkbox__input.is-error+.checkbox__label:before {
+        border: 1px solid $ns-red-alert !important;
     }
 
     // remove focus outline

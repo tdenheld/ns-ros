@@ -476,8 +476,6 @@ function form() {
 
 
 
-
-
     // give checkboxes id's
     if ($(".tk-ff__checkbox")[0]) {
         $(".tk-ff__checkbox").each(function (i) {
