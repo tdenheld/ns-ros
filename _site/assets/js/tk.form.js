@@ -78,6 +78,15 @@ function form() {
         });
     };
 
+    // give checkboxes id's
+    if ($(".tk-ff__checkbox")[0]) {
+        $(".tk-ff__checkbox").each(function (i) {
+            var obj = "checkbox" + i;
+            $(".checkbox__input", this).attr("id", obj).attr("name", obj);
+            $(".checkbox__label", this).attr("id", obj).attr("for", obj);
+        });
+    };
+
 
 
     // radio button
@@ -111,7 +120,7 @@ function form() {
                     };
                 };
             });
-            
+
             submitButton(input, error);
         };
     };
@@ -515,19 +524,6 @@ function form() {
         });
     };
 
-
-
-
-
-
-    // give checkboxes id's
-    if ($(".tk-ff__checkbox")[0]) {
-        $(".tk-ff__checkbox").each(function (i) {
-            var obj = "checkbox" + i;
-            $(".checkbox__input", this).attr("id", obj).attr("name", obj);
-            $(".checkbox__label", this).attr("id", obj).attr("for", obj);
-        });
-    };
 
 
 
