@@ -478,7 +478,6 @@ function form() {
                 if (unkownCard.is(":checked")) {
                     formFieldCard.slideDown(150);
                     input.val("3528    ").focus();
-                    //input.focus();
                 } else {
                     formFieldCard.slideUp(150);
                 };
