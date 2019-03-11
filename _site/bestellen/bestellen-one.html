@@ -2189,21 +2189,30 @@
         </div>
         <div class="tk-choice-selector__content">
             <div class="tk-choice-selector__divider"></div>
-            <form>
+            <form id="currentCardSelect">
                 <div class="radioButton tk-ff__radio">
-                    <input type="radio" class="radioButton__input" id="Today_TravelDate" name="TravelDate" checked>
-                    <label class="radioButton__label" for="Today_TravelDate">
+                    <input type="radio" class="radioButton__input" id="currentCard-known" name="currentCard" checked>
+                    <label class="radioButton__label" for="currentCard-known">
                         <span class="tk-ov-chip">3528</span>
                         <span class="tk-ov-chip">6543</span>
                         <span class="tk-ov-chip">2345</span>
                         <span class="tk-ov-chip">1121</span>
                     </label>
                 </div>
-                <div class="radioButton tk-ff__radio">
-                    <input type="radio" class="radioButton__input" id="Tomorrow_TravelDate" name="TravelDate">
-                    <label class="radioButton__label" for="Tomorrow_TravelDate">
+                <div class="radioButton tk-ff__radio mb-0">
+                    <input type="radio" class="radioButton__input" id="currentCard-unknown" name="currentCard">
+                    <label class="radioButton__label" for="currentCard-unknown">
                         Andere kaart invoeren
                     </label>
+                </div>
+                <div class="tk-ff tk-ff--ov js-formFieldCard">
+                    <div class="tk-ff__ov-lines">
+                        <div></div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <input class="textInput tk-ff__input" type="text">
                 </div>
             </form>
             <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>

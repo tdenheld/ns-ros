@@ -2,13 +2,16 @@
         Form
 --------------------*/
 
-$input-border:          1px solid $ns-grey-6b;
-$input-border-hover:    1px solid $ns-grey-5;
+$input-border: 1px solid $ns-grey-6b;
+$input-border-hover: 1px solid $ns-grey-5;
 
-$bs-focus:              0 0 0 1px $ns-light-blue, 0 2px 28px rgba($ns-black, 0.1);
-$bs-focus-toggle:       0 0 0 2px $ns-light-blue, 0 2px 28px rgba($ns-black, 0.1);
-$bs-autofill:           0 0 0px 1000px $ns-blue-4 inset;
-$bs-autofill-focus:     $bs-focus, $bs-autofill;
+$bs-focus: 0 0 0 1px $ns-light-blue,
+0 2px 28px rgba($ns-black, 0.1);
+$bs-focus-toggle: 0 0 0 2px $ns-light-blue,
+0 2px 28px rgba($ns-black, 0.1);
+$bs-autofill: 0 0 0px 1000px $ns-blue-4 inset;
+$bs-autofill-focus: $bs-focus,
+$bs-autofill;
 
 
 
@@ -389,6 +392,49 @@ $bs-autofill-focus:     $bs-focus, $bs-autofill;
 
     .tk-ff__input:-webkit-autofill:focus {
         box-shadow: $bs-autofill-focus;
+    }
+}
+
+
+
+// ov-chipcard field
+// -----------------------------------------
+.tk-ff--ov {
+    display: none;
+    margin: 10px 0 0 0;
+    max-width: 256px;
+
+    .tk-ff__input {
+        position: relative;
+        background-color: transparent;
+    }
+
+    &:hover {
+        .tk-ff__ov-lines span {
+            border-left: $input-border-hover;
+        }
+    }
+}
+
+.tk-ff__ov-lines {
+    @include full(absolute);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    span {
+        width: 1px;
+        height: 100%;
+        border-left: $input-border;
+        transition: $fade-link;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            top: 20%;
+            background-color: $ns-white;
+        }
     }
 }
 

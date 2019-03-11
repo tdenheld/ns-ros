@@ -207,7 +207,11 @@ $(".js-clear-session").click(() => {
 
 // resolve overflow bug in chrome
 setTimeout(() => {
-    $(".js-content").css({"overflow": "visible"});
+    if (!mobile) {
+        $(".js-content").css({
+            "overflow": "visible"
+        });
+    };
 }, 100);
 
 

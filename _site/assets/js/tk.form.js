@@ -465,6 +465,27 @@ function form() {
 
 
 
+    // current card selection
+    // ----------------------------------------------------------------
+    function currentCard() {
+        var obj = $("#currentCardSelect");
+        var unkownCard = $("#currentCard-unknown");
+        var formFieldCard = $(".js-formFieldCard");
+        var input = $(".js-formFieldCard .tk-ff__input");
+
+        if (obj[0]) {
+            obj.click(() => {
+                if (unkownCard.is(":checked")) {
+                    formFieldCard.slideDown(150);
+                    input.val("3528    ").focus();
+                    //input.focus();
+                } else {
+                    formFieldCard.slideUp(150);
+                };
+            });
+        };
+    };
+    currentCard();
 
 
 
