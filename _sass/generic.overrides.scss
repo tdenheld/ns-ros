@@ -13,6 +13,7 @@
     box-shadow: none;
 }
 
+button,
 .button,
 .textInput {
     border-radius: 4px;
@@ -43,12 +44,9 @@ p {
 }
 
 .content {
+    overflow: hidden;
     background-color: $ns-white;
-
-    @include sm-max {
-        overflow: hidden;
-    }
-
+    
     @include md {
         min-height: calc(100vh - 140px);
     }

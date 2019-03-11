@@ -28,7 +28,7 @@ function form() {
     // default form field
     // --------------------------------------------------------------------------
     function formField(i) {
-        var id = "#js-ff-default-" + i;
+        var id = "#js-formFieldDefault-" + i;
         var input = $(id + " .tk-ff__input");
         var tick = $(id + " .tk-ff__icon--approved");
         var error = $(id + " .tk-ff__error");
@@ -70,10 +70,10 @@ function form() {
         submitButton(input, error);
     };
 
-    if ($(".js-ff-default")[0]) {
+    if ($(".js-formFieldDefault")[0]) {
         submit = false;
-        $(".js-ff-default").each(function (i) {
-            $(this).attr("id", "js-ff-default-" + i);
+        $(".js-formFieldDefault").each(function (i) {
+            $(this).attr("id", "js-formFieldDefault-" + i);
             formField(i);
         });
     };
@@ -542,7 +542,7 @@ function form() {
                     $(".js-other-card-photo").text("Kies of maak foto van je kind");
                 } else {
                     $(".js-other-margin").delay(100).hide(time);
-                    $(".js-other-card-heading").text("Nieuwe OV-chipkaart");
+                    $(".js-other-card-heading").text("Ik heb al een OV-chipkaart");
                     $(".js-other-card-photo").text("Kies of maak foto");
                 }
                 $(this).toggleClass("is-active");

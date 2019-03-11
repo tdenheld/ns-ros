@@ -46,7 +46,6 @@ $(".js-radio").click(function () {
 
 // sticky receipt
 // ------------------------------------------------------------
-
 var receipt = {
     className: $(".js-receipt"),
     top: 90,
@@ -159,7 +158,7 @@ addOns();
 
 // clear session data when clicked on logo in header
 // ------------------------------------------------------------
-$(".js-photo").click(function (){
+$(".js-photo").click(function () {
     $(this).toggleClass("is-filled");
     $(".js-photo-empty, .js-photo-filled").toggleClass("is-hidden");
 });
@@ -205,6 +204,11 @@ choiceSelector();
 $(".js-clear-session").click(() => {
     sessionStorage.clear();
 });
+
+// resolve overflow bug in chrome
+setTimeout(() => {
+    $(".js-content").css({"overflow": "visible"});
+}, 100);
 
 
 
