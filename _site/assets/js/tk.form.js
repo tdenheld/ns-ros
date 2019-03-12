@@ -28,7 +28,7 @@ function form() {
     // default form field
     // --------------------------------------------------------------------------
     function formField(i) {
-        var id = "#js-formFieldDefault-" + i;
+        var id = "#js-ff-default-" + i;
         var input = $(id + " .tk-ff__input");
         var tick = $(id + " .tk-ff__icon--approved");
         var error = $(id + " .tk-ff__error");
@@ -70,10 +70,10 @@ function form() {
         submitButton(input, error);
     };
 
-    if ($(".js-formFieldDefault")[0]) {
+    if ($(".js-ff-default")[0]) {
         submit = false;
-        $(".js-formFieldDefault").each(function (i) {
-            $(this).attr("id", "js-formFieldDefault-" + i);
+        $(".js-ff-default").each(function (i) {
+            $(this).attr("id", "js-ff-default-" + i);
             formField(i);
         });
     };

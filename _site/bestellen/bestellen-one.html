@@ -1531,12 +1531,12 @@
         </ul>
     </div>
 </header>
-    <div class="content  js-content">
+    <div class="content ">
         <section>
     <div class="container ovr-container">
         <div class="tk-funnel-container tk-funnel-container--2-columns pa-2r a a-fi-right-small">
             <div class="hidden-xs hidden-sm">
-                <div class="tk-receipt js-receipt">
+                <div class="tk-receipt js-receipt a a-fi">
     
     <div class="mb-2"></div>
 
@@ -1592,7 +1592,7 @@
                     <div class="tk-ff js-ff-email">
                         <label for="email" class="tk-ff__label mb-1">E-mailadres</label>
                         <div class="tk-ff__input-container">
-                            <input class="textInput tk-ff__input" type="email" id="email" required />
+                            <input class="textInput tk-ff__input tk-ff__input--pr-40" type="email" id="email" required />
                             <span class="tk-ff__icon tk-ff__icon--loading">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"><title>loader--small</title><path d="M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z"/><path d="M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z"/></svg>
                             </span>
@@ -2190,31 +2190,31 @@
         <div class="tk-choice-selector__content">
             <div class="tk-choice-selector__divider"></div>
             <form id="currentCardSelect">
-                <div class="radioButton tk-ff__radio">
-                    <input type="radio" class="radioButton__input" id="currentCard-known" name="currentCard" checked>
-                    <label class="radioButton__label" for="currentCard-known">
-                        <span class="tk-ov-chip">3528</span>
-                        <span class="tk-ov-chip">6543</span>
-                        <span class="tk-ov-chip">2345</span>
-                        <span class="tk-ov-chip">1121</span>
-                    </label>
-                </div>
-                <div class="radioButton tk-ff__radio mb-0">
-                    <input type="radio" class="radioButton__input" id="currentCard-unknown" name="currentCard">
-                    <label class="radioButton__label" for="currentCard-unknown">
-                        Andere kaart invoeren
-                    </label>
-                </div>
-                <div class="tk-ff tk-ff--ov js-formFieldCard">
-                    <div class="tk-ff__ov-lines">
-                        <div></div>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <input class="textInput tk-ff__input" type="text">
-                </div>
-            </form>
+    <div class="radioButton tk-ff__radio">
+        <input type="radio" class="radioButton__input" id="currentCard-known" name="currentCard" checked>
+        <label class="radioButton__label" for="currentCard-known">
+            <span class="tk-ov-chip">3528</span>
+            <span class="tk-ov-chip">6543</span>
+            <span class="tk-ov-chip">2345</span>
+            <span class="tk-ov-chip">1121</span>
+        </label>
+    </div>
+    <div class="radioButton tk-ff__radio mb-0">
+        <input type="radio" class="radioButton__input" id="currentCard-unknown" name="currentCard">
+        <label class="radioButton__label" for="currentCard-unknown">
+            Andere kaart invoeren
+        </label>
+    </div>
+    <div class="tk-ff tk-ff--ov js-formFieldCard">
+        <div class="tk-ff__ov-lines">
+            <div></div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <input class="textInput tk-ff__input" type="text" id="cardNumber">
+    </div>
+</form>
             <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
             <span class="f-blue">Ingangsdatum bestelling: </span>
             <span class="f-grey no-wrap">
@@ -2296,7 +2296,7 @@
     </div>
 </div>
                     <div class="hidden-md hidden-lg mb-8">
-                        <div class="tk-receipt ">
+                        <div class="tk-receipt  a a-fi">
     
     <div class="mb-2"></div>
 
@@ -2340,7 +2340,7 @@
                     <!-- legal -->
                     <h2 class="tk-heading__subtitle">Nog even akkoord gaan</h2>
                     <form>
-    <div class="checkbox formfield__checkbox tk-ff__checkbox js-formFieldDefault">
+    <div class="checkbox formfield__checkbox tk-ff__checkbox js-ff-default">
         <input required type="checkbox" class="checkbox__input tk-ff__input">
         <label class="checkbox__label" tabindex="-1">
             Ik ga akkoord met:

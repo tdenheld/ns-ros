@@ -706,10 +706,10 @@
     margin-left: auto;
 
     @include md {
+        width: 320px;
+
         &.is-active {
-            position: sticky;
-            position: -webkit-sticky;
-            height: 600px;
+            position: fixed;
             top: 90px;
         }
     }

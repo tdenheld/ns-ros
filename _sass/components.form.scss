@@ -374,6 +374,10 @@ $bs-autofill;
     }
 }
 
+.tk-ff__input--pr-40 {
+    padding-right: 40px;
+}
+
 .tk-ff__input-container {
     position: relative;
 }
@@ -423,7 +427,7 @@ $bs-autofill;
 
     span {
         width: 1px;
-        height: 100%;
+        height: $button-height;
         border-left: $input-border;
         transition: $fade-link;
 

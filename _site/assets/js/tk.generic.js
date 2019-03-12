@@ -205,15 +205,6 @@ $(".js-clear-session").click(() => {
     sessionStorage.clear();
 });
 
-// resolve overflow bug in chrome
-setTimeout(() => {
-    if (!mobile) {
-        $(".js-content").css({
-            "overflow": "visible"
-        });
-    };
-}, 100);
-
 
 
 

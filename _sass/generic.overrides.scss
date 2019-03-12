@@ -44,8 +44,8 @@ p {
 }
 
 .content {
-    overflow: hidden;
     background-color: $ns-white;
+    overflow: hidden;
     
     @include md {
         min-height: calc(100vh - 140px);
