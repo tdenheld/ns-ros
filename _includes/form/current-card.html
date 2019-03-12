@@ -1,4 +1,4 @@
-<form id="currentCardSelect">
+<div id="currentCardSelect">
     <div class="radioButton tk-ff__radio">
         <input type="radio" class="radioButton__input" id="currentCard-known" name="currentCard" checked>
         <label class="radioButton__label" for="currentCard-known">
@@ -7,6 +7,12 @@
             <span class="tk-ov-chip">2345</span>
             <span class="tk-ov-chip">1121</span>
         </label>
+        <span class="tk-ff__icon tk-ff__icon--loading top-1px right-0px">
+            {% include /icons/loader--small.svg %}
+        </span>
+        <span class="tk-ff__icon tk-ff__icon--approved is-active top-1px right-0px">
+            {% include /icons/check-fat--small.svg %}
+        </span>
     </div>
     <div class="radioButton tk-ff__radio mb-0">
         <input type="radio" class="radioButton__input" id="currentCard-unknown" name="currentCard">
@@ -14,13 +20,13 @@
             Andere kaart invoeren
         </label>
     </div>
-    <div class="tk-ff tk-ff--ov js-formFieldCard">
-        <div class="tk-ff__ov-lines">
-            <div></div>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <input class="textInput tk-ff__input" type="text" id="cardNumber">
+</div>
+<div class="tk-ff tk-ff--ov js-formFieldCard">
+    <div class="tk-ff__ov-lines">
+        <div></div>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-</form>
+    <input class="textInput tk-ff__input" type="text" id="cardNumber">
+</div>

@@ -470,17 +470,28 @@ function form() {
     function currentCard() {
         var obj = $("#currentCardSelect");
         var unkownCard = $("#currentCard-unknown");
+        var knownCard = $("#currentCard-known");
         var formFieldCard = $(".js-formFieldCard");
         var input = $(".js-formFieldCard .tk-ff__input");
+        var tick = $("#currentCardSelect .tk-ff__icon--approved");
+        var loader = $("#currentCardSelect .tk-ff__icon--loading");
 
         if (obj[0]) {
             obj.click(() => {
                 if (unkownCard.is(":checked")) {
                     formFieldCard.slideDown(150);
                     input.val("3528    ").focus();
+                    tick.removeClass("is-active");
                 } else {
                     formFieldCard.slideUp(150);
                 };
+            });
+            knownCard.click(() => {
+                loader.addClass("is-active");
+                setTimeout(() => {
+                    loader.removeClass("is-active");
+                    tick.addClass("is-active");
+                }, 500);
             });
         };
     };
