@@ -468,25 +468,22 @@ function form() {
     // current card selection
     // ----------------------------------------------------------------
     function currentCard() {
-        var obj = $("#currentCardSelect");
+        var obj = "#currentCardSelect";
         var unkownCard = $("#currentCard-unknown");
         var knownCard = $("#currentCard-known");
         var formFieldCard = $(".js-formFieldCard");
         var input = $(".js-formFieldCard .tk-ff__input");
-        var tick = $("#currentCardSelect .tk-ff__icon--approved");
-        var loader = $("#currentCardSelect .tk-ff__icon--loading");
+        var tick = $(obj + " .tk-ff__icon--approved");
+        var loader = $(obj + " .tk-ff__icon--loading");
 
-        if (obj[0]) {
-            obj.click(() => {
-                if (unkownCard.is(":checked")) {
-                    formFieldCard.slideDown(150);
-                    input.val("3528    ").focus();
-                    tick.removeClass("is-active");
-                } else {
-                    formFieldCard.slideUp(150);
-                };
+        if ($(obj)[0]) {
+            unkownCard.click(() => {
+                formFieldCard.slideDown(150);
+                input.val("3528    ").focus();
+                tick.removeClass("is-active");
             });
             knownCard.click(() => {
+                formFieldCard.slideUp(150);
                 loader.addClass("is-active");
                 setTimeout(() => {
                     loader.removeClass("is-active");

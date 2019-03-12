@@ -120,6 +120,11 @@ $bs-autofill;
     }
 }
 
+.tk-ff__icon--card {
+    top: 1px;
+    right: 0;
+}
+
 
 // ------------------------------------
 .tk-ff__filled {
@@ -198,6 +203,11 @@ $bs-autofill;
     &:last-child {
         margin-bottom: 0;
     }
+}
+
+.tk-ff__radio--card {
+    padding-right: 16px;
+    max-width: 280px;
 }
 
 .radioButton__input+.radioButton__label:before {
