@@ -375,6 +375,19 @@
 .g-5-3 {grid-template-columns: 5fr 3fr;}
 .g-3-5 {grid-template-columns: 3fr 5fr;}
 
+@include xs {
+	.g-m-1-xs {grid-template-columns: max-content 1fr;}
+	.g-1-m-xs {grid-template-columns: 1fr max-content;}
+	.g-m-m-xs {grid-template-columns: max-content max-content;}
+	.g-2-1-xs {grid-template-columns: 2fr 1fr;}
+	.g-1-2-xs {grid-template-columns: 1fr 2fr;}
+	.g-3-2-xs {grid-template-columns: 3fr 2fr;}
+	.g-2-3-xs {grid-template-columns: 2fr 3fr;}
+	.g-4-1-xs {grid-template-columns: 4fr 1fr;}
+	.g-1-4-xs {grid-template-columns: 1fr 4fr;}
+	.g-5-3-xs {grid-template-columns: 5fr 3fr;}
+	.g-3-5-xs {grid-template-columns: 3fr 5fr;}
+}
 @include sm {
 	.g-m-1-sm {grid-template-columns: max-content 1fr;}
 	.g-1-m-sm {grid-template-columns: 1fr max-content;}
@@ -415,7 +428,7 @@
 	.g-3-5-lg {grid-template-columns: 3fr 5fr;}
 }
 
-//childs
+// childs
 // -------------------------
 .gc-1 {grid-column: span 1;}
 .gc-2 {grid-column: span 2;}

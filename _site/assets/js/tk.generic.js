@@ -48,7 +48,7 @@ $(".js-radio").click(function () {
 // ------------------------------------------------------------
 var receipt = {
     className: $(".js-receipt"),
-    top: 90,
+    top: 106,
     offset: function () {
         return this.className.offset().top - this.top
     },
@@ -156,12 +156,16 @@ addOns();
 
 
 
-// clear session data when clicked on logo in header
+// pasfoto
 // ------------------------------------------------------------
-$(".js-photo").click(function () {
-    $(this).toggleClass("is-filled");
-    $(".js-photo-empty, .js-photo-filled").toggleClass("is-hidden");
-});
+if ($(".js-photo")[0]) {
+    $(".js-photo").click(function () {
+        $(this).toggleClass("is-filled");
+        $(".js-photo-empty, .js-photo-filled").toggleClass("is-hidden");
+        $(this).removeClass("is-error");
+        $(".js-photo-error-label").hide();
+    });
+};
 
 
 
@@ -199,7 +203,7 @@ choiceSelector();
 
 
 
-// pasfoto
+// clear session data when clicked on logo in header
 // ------------------------------------------------------------
 $(".js-clear-session").click(() => {
     sessionStorage.clear();
