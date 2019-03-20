@@ -30,15 +30,37 @@ $(window).resize(function () {
 
 
 
-// basic toggle classes
+// basic functions
 // ------------------------------------------------------------
-$(".js-toggle").click(function () {
-    $(this).toggleClass("is-active");
-});
-
-$(".js-radio").click(function () {
-    $(".js-radio").removeClass("is-active");
-    $(this).toggleClass("is-active");
+function toggle() {
+    var obj = $(".js-toggle");
+    if (obj[0]) {
+        obj.click(function () {
+            $(this).toggleClass("is-active");
+        });
+    };
+};
+function radio() {
+    var obj = $(".js-radio");
+    if (obj[0]) {
+        obj.click(function () {
+            obj.removeClass("is-active");
+            $(this).toggleClass("is-active");
+        });
+    };
+};
+function clearSession() {
+    var obj = $(".js-clear-session");
+    if (obj[0]) {
+        obj.click(function () {
+            sessionStorage.clear();
+        });
+    };
+};
+$(function () {
+    toggle();
+    radio();
+    clearSession();
 });
 
 
@@ -200,14 +222,6 @@ function choiceSelector() {
     };
 };
 choiceSelector();
-
-
-
-// clear session data when clicked on logo in header
-// ------------------------------------------------------------
-$(".js-clear-session").click(() => {
-    sessionStorage.clear();
-});
 
 
 
