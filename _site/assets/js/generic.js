@@ -146,12 +146,13 @@ function addOns() {
     var kd = $(".js-add-on-kd");
     var trash = $(".js-add-on-trash");
     var data = "rcpt-price";
+    var dvdPrice = $(".js-rcpt-price:first").text();
 
     if (sessionStorage.getItem(data) !== null) {
         priceLabel.text(sessionStorage.getItem(data));
     };
 
-    if (sessionStorage.getItem(data) == "€ 77,50") {
+    if (sessionStorage.getItem(data) == "€ 29,84") {
         kd.show();
     } else {
         kd.hide();
@@ -160,7 +161,7 @@ function addOns() {
     btn.click(() => {
         banner.hide();
         order.show();
-        sessionStorage.setItem(data, "€ 77,50");
+        sessionStorage.setItem(data, "€ 29,84");
         priceLabel.text(sessionStorage.getItem(data));
         kd.show();
     });
@@ -168,7 +169,7 @@ function addOns() {
     trash.click(() => {
         banner.show();
         order.hide();
-        sessionStorage.setItem(data, "€ 52,00");
+        sessionStorage.setItem(data, dvdPrice);
         priceLabel.text(sessionStorage.getItem(data));
         kd.hide();
     });

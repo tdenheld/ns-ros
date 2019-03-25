@@ -568,10 +568,12 @@ function form() {
                     $(".js-other-margin").show();
                     $(".js-other-card-heading").text("OV-chipkaart van je kind");
                     $(".js-other-card-photo").text("Kies of maak foto van je kind");
+                    $(".js-photo-error-label").text("Voor een nieuwe OV-chipkaart hebben we een foto van je kind nodig.");
                 } else {
                     $(".js-other-margin").delay(100).hide(time);
                     $(".js-other-card-heading").text("Ik heb al een OV-chipkaart");
                     $(".js-other-card-photo").text("Kies of maak foto");
+                    $(".js-photo-error-label").text("Voor een nieuwe OV-chipkaart hebben we je foto nodig.");
                 }
                 $(this).toggleClass("is-active");
                 $(".js-other-form").slideToggle(time);

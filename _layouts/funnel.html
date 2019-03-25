@@ -17,6 +17,9 @@ layout: default
             {% endif %}
 
             <div>
+                {% if page.heading=='Kies je bank' %}
+                    {% include notification.html %}
+                {% endif %}
                 <div class="tk-heading tk-heading--funnel">
                     <h1 class="tk-heading__title">{{ page.heading }}</h1>
                 </div>

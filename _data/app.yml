@@ -1,3 +1,8 @@
+price:
+  dvd: € 4,34
+  kd: € 25,50
+
+
 progress:
   step1: Gegevens
   step2: Bestellen
@@ -43,11 +48,10 @@ banks:
 
 thanks:
 - icon: mail
-  copy: "Je ontvangt een bevestiging op <blue class='js-customer-data' id='email'>maartendevries@gmail.com</blue>."
+  copy: "Je ontvangt een bevestiging van je bestelling op <blue class='js-customer-data' id='email'>maartendevries@gmail.com</blue>."
 - icon: ov-chipkaart
-  copy: "Binnen <blue>7 dagen</blue> wordt je OV&#8209;chipkaart opgestuurd naar Jan van Galenstraat 56. Je kunt dan meteen gebruik maken van jouw abonnement."
-  # copy: "Binnen <blue>1 uur</blue> kun je met je OV&#8209;Chipkaart (3528 1865 9452 0045) jouw bestelling ophalen bij een NS&#8209;kaartautomaat. Daarna kan je er direct mee reizen."
+  copy: "Je ontvangt een e&#8209;mail wanneer je jouw bestelling kunt <blue>ophalen bij een NS kaartautomaat</blue>, met OV-Chipkaart 3528 2565 1121 9854."
 - icon: user
-  copy: "Je ontvangt een mail om <blue>Mijn NS</blue> te activeren. Hier vind je alles rondom jouw reizen, abonnementen en jouw gegevens."
+  copy: "De ingangsdatum van je abonnement is <blue>1 december 2019</blue>"
 - icon: invoice
-  copy: "Je hebt betaald voor <blue>1 jaar</blue>. Na deze periode wordt het bedrag automatisch van jouw bankrekening afgeschreven."
+  copy: "Je hebt betaald voor <blue>1 maand</blue>. Hierna wordt maandelijks € 4,34 van jouw bankrekening afgeschreven."
