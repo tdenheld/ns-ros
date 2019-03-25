@@ -437,6 +437,7 @@ $bs-autofill;
 }
 
 .tk-ff__ov-line {
+    position: relative;
     width: 1px;
     height: $button-height;
     transition: $fade-link;
