@@ -425,30 +425,30 @@ $bs-autofill;
 
     &:hover {
         .tk-ff__ov-lines span {
-            border-left: $input-border-hover;
+            background-color: $ns-grey-5;
         }
     }
 }
 
 .tk-ff__ov-lines {
     @include full(absolute);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
+}
 
-    span {
-        width: 1px;
-        height: $button-height;
-        border-left: $input-border;
-        transition: $fade-link;
+.tk-ff__ov-line {
+    width: 1px;
+    height: $button-height;
+    transition: $fade-link;
+    background-color: $ns-grey-6b;
 
-        &:after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 60%;
-            top: 20%;
-            background-color: $ns-white;
-        }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 20%;
+        bottom: 20%;
+        background-color: $ns-white;
     }
 }
 
