@@ -201,11 +201,25 @@ if ($(".js-cs-item")[0]) {
 };
 
 function choiceSelector() {
-    var time = 250;
-    var obj = ".js-cs-item";
-    var toggleClass = "is-selected";
-    var initID = "#js-cs-item-1"; // set default on current card
-    var content = ".tk-choice-selector__content";
+    const time = 250;
+    const obj = ".js-cs-item";
+    const toggleClass = "is-selected";
+    const initID = "#js-cs-item-1"; // set default on current card
+    const content = ".tk-choice-selector__content";
+
+    function receiptLoader() {
+        const loader = $(".js-receipt-loader");
+        const receiptContent = $(".js-receipt-content");
+        let fadeLoader = TweenLite.to(loader, 0.4, {
+            ease: Power3.easeInOut,
+            opacity: 1,
+        });
+        receiptContent.addClass("is-loading");
+        setTimeout(() => {
+            receiptContent.removeClass("is-loading");
+            fadeLoader.reverse();
+        }, 1250);
+    };
 
     if ($(obj)[0]) {
         $(content).slideUp(time);
@@ -219,6 +233,7 @@ function choiceSelector() {
                 $(content).slideUp(time);
                 $(content, this).slideDown(time);
             };
+            receiptLoader();
         });
     };
 };

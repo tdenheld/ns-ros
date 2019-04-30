@@ -649,6 +649,15 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
     }
 }
 
+.tk-receipt__content {
+    transition: $fade-all;
+
+    &.is-loading {
+        filter: blur(7px);
+        opacity: 0.4;
+    }
+}
+
 // order for somebody else
 // --------------------------------------------
 .tk-other {
@@ -745,6 +754,16 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
         fill: $ns-blue;
         @extend .a-l;
         @extend .a-rotate;
+    }
+
+    &--receipt {
+        @include full(absolute);
+        min-height: auto;
+        background: none;
+
+        svg {
+            width: 19px;
+        }
     }
 }
 
