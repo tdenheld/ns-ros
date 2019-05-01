@@ -1,5 +1,5 @@
 price:
-  dvd: € 4,34
+  dvd: € 52,00
   kd: € 25,50
 
 
@@ -54,4 +54,4 @@ thanks:
 - icon: user
   copy: "De ingangsdatum van je abonnement is <blue>1 december 2019</blue>"
 - icon: invoice
-  copy: "Je hebt betaald voor <blue>1 maand</blue>. Hierna wordt maandelijks € 4,34 van jouw bankrekening afgeschreven."
+  copy: "Je hebt betaald voor <blue>1 maand</blue>. Hierna wordt jaarlijks € 52,00 van jouw bankrekening afgeschreven."
