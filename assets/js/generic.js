@@ -206,18 +206,15 @@ function choiceSelector() {
     const toggleClass = "is-selected";
     const initID = "#js-cs-item-1"; // set default on current card
     const content = ".tk-choice-selector__content";
+    const loader = $(".js-receipt-loader");
+    const receiptContent = $(".js-receipt-content");
 
     function receiptLoader() {
-        const loader = $(".js-receipt-loader");
-        const receiptContent = $(".js-receipt-content");
-        let fadeLoader = TweenLite.to(loader, 0.4, {
-            ease: Power3.easeInOut,
-            opacity: 1,
-        });
         receiptContent.addClass("is-loading");
+        loader.addClass("is-loading");
         setTimeout(() => {
             receiptContent.removeClass("is-loading");
-            fadeLoader.reverse();
+            loader.removeClass("is-loading");
         }, 1250);
     };
 
@@ -232,8 +229,8 @@ function choiceSelector() {
                 $(this).addClass(toggleClass);
                 $(content).slideUp(time);
                 $(content, this).slideDown(time);
+                receiptLoader();
             };
-            receiptLoader();
         });
     };
 };
