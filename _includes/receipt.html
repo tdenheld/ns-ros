@@ -3,51 +3,35 @@
     {% if include.option %}
     <div class="mb-2"></div>
     <h3 class="f24 mb-3">Dit is je bestelling</h3>
-    {% endif %}
-
-    <div class="pos-r">
-        <div class="tk-receipt__content js-receipt-content">
-
-            {% if include.option %}
-            <div class="g g-1-m gap-2 items-baseline">
-                <div class="f-grey-4">Dal Voordeel</div>
-                <div class="f-grey-4 txt-r">{{ site.data.app.price.dvd }}</div>
-            </div>
-            <div class="g g-1-m gap-2 items-baseline mb-1">
-                <div class="f-grey-4">2e klas</div>
-                <div class="f-grey-4 txt-r"></div>
-            </div>
-
-            <div class="js-add-on-kd is-hidden mb-1">
-                <div class="g g-1-m gap-2 items-baseline">
-                    <div class="f-grey-4">Keuzedagen</div>
-                    <div class="f-grey-4 txt-r">{{ site.data.app.price.kd }}</div>
-                </div>
-            </div>
-
-            <div class="bo-b mb-1"></div>
-            {% endif %}
-
-            <div class="g g-1-m gap-2 items-baseline mb-4">
-                <div class="f-blue fw-b">Totaal per maand</div>
-                <div class="f-blue fw-b txt-r">{{ site.data.app.price.dvd }}</div>
-            </div>
-            <div class="g g-1-m gap-2 items-baseline mb-1">
-                <div class="f-grey-4">Eerste factuur (1 maand)</div>
-                <div class="f-grey-4 txt-r js-rcpt-price">{{ site.data.app.price.dvd }}</div>
-            </div>
-            <div class="bo-b-blue-2px mb-1"></div>
-            <div class="g g-1-m gap-2 items-baseline">
-                <div class="f-blue fw-b">Nu te betalen</div>
-                <div class="f-blue fw-b txt-r js-rcpt-price">{{ site.data.app.price.dvd }}</div>
-            </div>
-        </div>
-
-        <div class="tk-receipt__loader js-receipt-loader">
-            <div class="tk-loader tk-loader--receipt">
-                {% include /icons/loader-res--small.svg %}
-                <span class="f14 f-blue ml-2">Controleren prijsgegevens</span>
-            </div>
+    <div class="g g-1-m gap-2 items-baseline">
+        <div class="f-grey-4">Dal Voordeel</div>
+        <div class="f-grey-4 txt-r js-update-price">{{ site.data.app.price.dvd }}</div>
+    </div>
+    <div class="g g-1-m gap-2 items-baseline mb-1">
+        <div class="f-grey-4">2e klas</div>
+        <div class="f-grey-4 txt-r"></div>
+    </div>
+    <div class="js-add-on-kd is-hidden mb-1">
+        <div class="g g-1-m gap-2 items-baseline">
+            <div class="f-grey-4">Keuzedagen</div>
+            <div class="f-grey-4 txt-r js-add-on-kd-price">{{ site.data.app.price.kd }}</div>
         </div>
     </div>
+    <div class="bo-b mb-1"></div>
+    {% endif %}
+
+    <div class="g g-1-m gap-2 items-baseline mb-4">
+        <div class="f-blue fw-b">Totaal per maand</div>
+        <div class="f-blue fw-b txt-r js-update-price">{{ site.data.app.price.dvd }}</div>
+    </div>
+    <div class="g g-1-m gap-2 items-baseline mb-1">
+        <div class="f-grey-4">Eerste factuur (1 maand)</div>
+        <div class="f-grey-4 txt-r js-rcpt-price js-update-price">{{ site.data.app.price.dvd }}</div>
+    </div>
+    <div class="bo-b-blue-2px mb-1"></div>
+    <div class="g g-1-m gap-2 items-baseline">
+        <div class="f-blue fw-b">Nu te betalen</div>
+        <div class="f-blue fw-b txt-r js-rcpt-price js-update-price">{{ site.data.app.price.dvd }}</div>
+    </div>
+
 </div>

@@ -40,6 +40,7 @@ function toggle() {
         });
     };
 };
+
 function radio() {
     var obj = $(".js-radio");
     if (obj[0]) {
@@ -49,6 +50,7 @@ function radio() {
         });
     };
 };
+
 function clearSession() {
     var obj = $(".js-clear-session");
     if (obj[0]) {
@@ -139,14 +141,14 @@ stickyBar();
 // add-ons
 // ------------------------------------------------------------
 function addOns() {
-    var btn = $(".js-add-on-btn");
-    var priceLabel = $(".js-rcpt-price");
-    var banner = $(".js-add-on-banner");
-    var order = $(".js-add-on-order");
-    var kd = $(".js-add-on-kd");
-    var trash = $(".js-add-on-trash");
-    var data = "rcpt-price";
-    var dvdPrice = $(".js-rcpt-price:first").text();
+    const btn = $(".js-add-on-btn");
+    const priceLabel = $(".js-rcpt-price");
+    const banner = $(".js-add-on-banner");
+    const order = $(".js-add-on-order");
+    const kd = $(".js-add-on-kd");
+    const trash = $(".js-add-on-trash");
+    const data = "rcpt-price";
+    const dvdPrice = $(".js-rcpt-price:first").text();
 
     if (sessionStorage.getItem(data) !== null) {
         priceLabel.text(sessionStorage.getItem(data));
@@ -206,16 +208,20 @@ function choiceSelector() {
     const toggleClass = "is-selected";
     const initID = "#js-cs-item-1"; // set default on current card
     const content = ".tk-choice-selector__content";
-    const loader = $(".js-receipt-loader");
-    const receiptContent = $(".js-receipt-content");
 
-    function receiptLoader() {
-        receiptContent.addClass("is-loading");
-        loader.addClass("is-loading");
-        setTimeout(() => {
-            receiptContent.removeClass("is-loading");
-            loader.removeClass("is-loading");
-        }, 1250);
+    function updatePrice() {
+        const obj = ".js-update-price";
+        $(obj).each(function (i) {
+            var tween = TweenMax.to(this, 0.25, {
+                ease: Power3.easeIn,
+                delay: 0.6 + (i * 0.125),
+                opacity: 0.1,
+                scale: 1.5,
+                onComplete: function () {
+                    tween.reverse();
+                }
+            });
+        });
     };
 
     if ($(obj)[0]) {
@@ -229,7 +235,7 @@ function choiceSelector() {
                 $(this).addClass(toggleClass);
                 $(content).slideUp(time);
                 $(content, this).slideDown(time);
-                receiptLoader();
+                updatePrice();
             };
         });
     };
