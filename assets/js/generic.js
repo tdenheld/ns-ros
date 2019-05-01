@@ -152,7 +152,7 @@ function addOns() {
         priceLabel.text(sessionStorage.getItem(data));
     };
 
-    if (sessionStorage.getItem(data) == "€ 29,84") {
+    if (sessionStorage.getItem(data) == "€ 77,50") {
         kd.show();
     } else {
         kd.hide();
@@ -161,7 +161,7 @@ function addOns() {
     btn.click(() => {
         banner.hide();
         order.show();
-        sessionStorage.setItem(data, "€ 29,84");
+        sessionStorage.setItem(data, "€ 77,50");
         priceLabel.text(sessionStorage.getItem(data));
         kd.show();
     });
