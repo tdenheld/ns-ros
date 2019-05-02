@@ -14,9 +14,9 @@ comfort:
 - icon: ov-chipkaart--large
   description: "Nieuwe persoonlijke OV&#8209;chipkaart nodig? Ontvang gratis bij de bestelling van een jaarabonnement. <br><b class='dib mt-2 f-red'>Let op:</b> We hebben tijdens het bestellen een foto van je nodig voor op de kaart."
 - icon: subscription--large
-  description: Heb je al een persoonlijke OV&#8209;chipkaart met foto? Voer dan tijdens het bestellen je kaartnummer in. Je abonnement kun je binnen een uur na het betalen van je bestelling ophalen bij een NS-kaartautomaat.
+  description: Heb je al een persoonlijke OV&#8209;chipkaart met foto? Voer dan tijdens het bestellen je kaartnummer in. Je abonnement kun je binnen 1 uur na het betalen van je bestelling ophalen bij een NS-kaartautomaat.
 - icon: euro--medium
-  description: Je betaalt de abonnementskosten voor het eerste jaar aan het einde van uw bestelling. Na het eerste jaar worden de abonnementskosten jaarlijks van je rekening afgeschreven, via automatische incasso.
+  description: Je betaalt de abonnementskosten voor het eerste jaar aan het einde van je bestelling. Na het eerste jaar schrijven we de abonnementskosten jaarlijks van je rekening af, via automatische incasso.
 
 
 banks:
