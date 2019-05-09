@@ -1,0 +1,49 @@
+.tk-tooltip {
+    position: relative;
+    top: 5px;
+    z-index: 519;
+    margin-left: 4px;
+    cursor: pointer;
+
+    svg {
+        fill: $ns-grey-4;
+        transition: $fade-link;
+    }
+
+    &:hover {
+        svg {
+            fill: $ns-blue;
+        }
+    }
+}
+
+.tk-tooltip__content {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    top: 28px;
+    left: -130px;
+    width: 280px;
+    padding: $half-gutter;
+    background-color: $ns-white;
+    color: $ns-grey;
+    box-shadow: $box-shadow-medium;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 28px;
+        top: -28px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: -9px;
+        left: 132px;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 14px solid $ns-white;
+    }
+}

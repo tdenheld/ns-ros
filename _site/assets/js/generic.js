@@ -59,6 +59,7 @@ function clearSession() {
         });
     };
 };
+
 $(function () {
     toggle();
     radio();
@@ -194,6 +195,30 @@ if ($(".js-photo")[0]) {
 
 
 
+// tooltip
+// ------------------------------------------------------------
+function tooltip() {
+    const tooltip = $(".js-tooltip");
+    const content = $(".js-tooltip-content");
+    var tween;
+
+    if (tooltip[0]) {
+        tooltip.mouseenter(() => {
+            tween = TweenLite.to(content, 0.35, {
+                ease: Power3.easeInOut,
+                opacity: 1,
+                display: "block"
+            });
+        });
+        tooltip.mouseleave(() => {
+            tween.reverse();
+        });
+    };
+};
+tooltip();
+
+
+
 // choice selector
 // ------------------------------------------------------------
 if ($(".js-cs-item")[0]) {
@@ -206,7 +231,7 @@ function choiceSelector() {
     const time = 250;
     const obj = ".js-cs-item";
     const toggleClass = "is-selected";
-    const initID = "#js-cs-item-1"; // set default on current card
+    const initID = "#js-cs-item-0"; // set default on current card
     const content = ".tk-choice-selector__content";
 
     function updatePrice() {
