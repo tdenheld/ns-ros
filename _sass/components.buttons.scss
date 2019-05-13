@@ -35,8 +35,8 @@
 
     &.is-loading,
     &.is-loading:hover {
-        background-color: $ns-grey-8;
-        box-shadow: inset 0 -2px $ns-grey-7;
+        background-color: $ns-yellow;
+        box-shadow: inset 0 -2px $ns-yellow-2;
         outline: none;
 
         &:after {
@@ -64,7 +64,7 @@
     svg {
         transform-origin: 50% 50%;
         animation: rotate $loader-speed linear infinite;
-        fill: $ns-grey-5;
+        fill: $ns-blue;
         transition: $fade-link;
     }
 
