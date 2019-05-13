@@ -72,7 +72,7 @@
 
 .tk-heading__title {
     margin: 0;
-    @include font-style(38px, bold, 1.25);
+    @include font(38px, bold, 1.25);
 
     @include sm {
         font-size: calculate-rem(48px);
@@ -85,7 +85,7 @@
 
 .tk-heading__subtitle {
     margin-bottom: $half-gutter;
-    @include font-style(24px, normal, 1.25);
+    @include font(24px, normal, 1.25);
 
     @include md {
         margin-bottom: 20px;
@@ -368,13 +368,13 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
 
 .tk-choice-selector__title {
     margin: 0 0 4px;
-    @include font-style(18px, bold, 1.5);
+    @include font(18px, bold, 1.5);
     color: $ns-blue;
 }
 
 .tk-choice-selector__description {
     margin: 0;
-    @include font-style(14px, normal, 1.5);
+    @include font(14px, normal, 1.5);
     color: $ns-grey-4;
 }
 
@@ -391,7 +391,7 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
 }
 
 .tk-choice-selector__new-price {
-    @include font-style(14px, normal, 1.5);
+    @include font(14px, normal, 1.5);
     color: $ns-blue;
 
     @include sm {
@@ -400,7 +400,7 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
 }
 
 .tk-choice-selector__old-price {
-    @include font-style(14px, normal, 1.5);
+    @include font(14px, normal, 1.5);
     color: $ns-grey-4;
     text-decoration: line-through;
 }
@@ -470,7 +470,7 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
 }
 
 .tk-order__title {
-    @include font-style(20px, bold, 1.25);
+    @include font(20px, bold, 1.25);
     margin-bottom: 7px;
 
     @include sm {
@@ -571,7 +571,7 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
     grid-template-columns: max-content 1fr;
     grid-gap: 7px;
     margin-bottom: $gutter;
-    @include font-style(16px, normal, 1.5);
+    @include font(16px, normal, 1.5);
     color: $ns-grey;
 
     a {
@@ -640,7 +640,7 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
 }
 
 .tk-add-on__title {
-    @include font-style(20px, bold, 1.25);
+    @include font(20px, bold, 1.25);
     margin-bottom: 4px;
 }
 
@@ -720,7 +720,7 @@ $tick-grey:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
     border-bottom: 1px solid $ns-grey-7;
     border-right: 1px solid $ns-grey-7;
     border-left: 4px solid $ns-red-alert;
-    @include font-style(14px, normal, $lh-copy);
+    @include font(14px, normal, $lh-copy);
     color: $ns-blue;
 
     @include sm {

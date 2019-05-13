@@ -1784,54 +1784,51 @@
 <div class="tk-choice-selector">
     <h2 class="tk-heading__subtitle">Kies OV&#8209;chipkaart</h2>
 
-    <!-- option 1 -->
-    <div class="tk-choice-selector__item tk-choice-selector__item--inactive">
+    <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
-                <h3 class="tk-choice-selector__title">Nieuwe OV&#8209;chipkaart</h3>
-                <p class="tk-choice-selector__description">
-                    Niet beschikbaar 
-                    <span class="tk-tooltip js-tooltip">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg></span>
-                        <span class="tk-tooltip__content js-tooltip-content">
-                            Dit reisproduct kun je helaas alleen bestellen 
-                            als je een persoonlijke OV&#8209;Chipkaart hebt.
-                            <br><br>
-                            Heb jij, of diegene waar je voor bestelt, geen 
-                            persoonlijke OV&#8209;Chipkaart? Bekijk dan de <a class="unlink tk-link">veelgestelde
-                            vragen</a> voor de mogelijkheden.
-                        </span>
-                    </span>
-                </p>
+                <h3 class="tk-choice-selector__title js-other-card-heading">Ik heb al een OV&#8209;chipkaart</h3>
+                <p class="tk-choice-selector__description">Binnen 1 uur op te halen bij een NS kaartautomaat</p>
             </div>
             <div class="tk-choice-selector__price">
-                <div class="tk-choice-selector__new-price">Gratis</div>
-                <div class="tk-choice-selector__old-price">€ 7,50</div>
+                <div class="tk-choice-selector__new-price"></div>
+                <div class="tk-choice-selector__old-price"></div>
             </div>
         </div>
         <div class="tk-choice-selector__content">
             <div class="tk-choice-selector__divider"></div>
-            <div class="g g-m-1-xs gap-2 items-center">
-    <div class="tk-pasfoto is-error js-photo">
-        <div class="txt-c js-photo-empty">
-            <div class="tk-pasfoto__photo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19">
-    <path d="M8.5,10a4.269,4.269,0,0,1-4-4.5v-1A4.269,4.269,0,0,1,8.5,0a4.269,4.269,0,0,1,4,4.5v1A4.269,4.269,0,0,1,8.5,10Zm0-9a3.271,3.271,0,0,0-3,3.5v1A3.271,3.271,0,0,0,8.5,9a3.271,3.271,0,0,0,3-3.5v-1A3.271,3.271,0,0,0,8.5,1Z"/>
-    <path d="M9,19H0V16c0-2.4,2-5.2,4.5-5.2a.5.5,0,1,1,0,1C2.6,11.8,1,14.1,1,16v2H9a.5.5,0,1,1,0,1Z"/>
-    <path d="M17,19H8a.5.5,0,1,1,0-1h8V16c0-1.9-1.6-4.2-3.5-4.2a.5.5,0,0,1,0-1C15,10.8,17,13.6,17,16Z"/>
-</svg>
-            </div>
-            <div class="tk-pasfoto__description js-other-card-photo">
-                Kies of maak foto
-            </div>
-        </div>
-        <div class="tk-pasfoto__description tk-pasfoto__description--filled js-photo-filled is-hidden">
-            Aanpassen
-        </div>
+            <div id="currentCardSelect">
+    <div class="radioButton tk-ff__radio tk-ff__radio--card">
+        <input type="radio" class="radioButton__input" id="currentCard-known" name="currentCard" checked>
+        <label class="radioButton__label" for="currentCard-known">
+            <span class="tk-ov-chip">3528</span>
+            <span class="tk-ov-chip">6543</span>
+            <span class="tk-ov-chip">2345</span>
+            <span class="tk-ov-chip">0038</span>
+        </label>
+        <span class="tk-ff__icon tk-ff__icon--loading tk-ff__icon--card">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"><title>loader--small</title><path d="M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z"/><path d="M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z"/></svg>
+        </span>
+        <span class="tk-ff__icon tk-ff__icon--approved tk-ff__icon--card is-active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
+        </span>
     </div>
-    <label class="f14 f-red mxw-250 lh-copy js-photo-error-label">
-        Voor een nieuwe OV-chipkaart hebben we je foto nodig.
-    </label>
+    <div class="radioButton tk-ff__radio mb-0">
+        <input type="radio" class="radioButton__input" id="currentCard-unknown" name="currentCard">
+        <label class="radioButton__label" for="currentCard-unknown">
+            Andere kaart invoeren
+        </label>
+    </div>
+</div>
+<div class="tk-ff tk-ff--ov js-formFieldCard">
+    <div class="tk-ff__ov-lines">
+        <div></div>
+        <span class="tk-ff__ov-line"></span>
+        <span class="tk-ff__ov-line"></span>
+        <span class="tk-ff__ov-line"></span>
+        <div></div>
+    </div>
+    <input class="textInput tk-ff__input" type="text" id="cardNumber">
 </div>
             <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
             <span class="f-blue">Ingangsdatum bestelling: </span>
@@ -1913,52 +1910,53 @@
         </div>
     </div>
 
-    <!-- option 2 -->
-    <div class="tk-choice-selector__item js-cs-item">
+    <div class="tk-choice-selector__item tk-choice-selector__item--inactive">
         <div class="tk-choice-selector__header">
             <div>
-                <h3 class="tk-choice-selector__title js-other-card-heading">Ik heb al een OV&#8209;chipkaart</h3>
-                <p class="tk-choice-selector__description">Binnen 1 uur op te halen bij een NS kaartautomaat</p>
+                <h3 class="tk-choice-selector__title">Nieuwe OV&#8209;chipkaart</h3>
+                <p class="tk-choice-selector__description">
+                    Niet beschikbaar
+                    <span class="tk-tooltip js-tooltip">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,1a9,9,0,1,0,9,9A9.011,9.011,0,0,0,10,1Z"/><path d="M10,6.5h0a.75.75,0,0,1-.75-.75h0A.75.75,0,0,1,10,5h0a.75.75,0,0,1,.75.75h0A.75.75,0,0,1,10,6.5Z"/><path d="M10,8.5a.5.5,0,0,0-.5.5v6.5h1V9A.5.5,0,0,0,10,8.5Z"/></svg></span>
+                        <span class="tk-tooltip__content js-tooltip-content">
+                            Dit reisproduct kun je helaas alleen bestellen
+                            als je een persoonlijke OV&#8209;Chipkaart hebt.
+                            <br><br>
+                            Heb jij, of diegene waar je voor bestelt, geen
+                            persoonlijke OV&#8209;Chipkaart? Bekijk dan de <a class="unlink tk-link">veelgestelde
+                                vragen</a> voor de mogelijkheden.
+                        </span>
+                    </span>
+                </p>
             </div>
             <div class="tk-choice-selector__price">
-                <div class="tk-choice-selector__new-price"></div>
-                <div class="tk-choice-selector__old-price"></div>
+                <div class="tk-choice-selector__new-price">Gratis</div>
+                <div class="tk-choice-selector__old-price">€ 7,50</div>
             </div>
         </div>
         <div class="tk-choice-selector__content">
             <div class="tk-choice-selector__divider"></div>
-            <div id="currentCardSelect">
-    <div class="radioButton tk-ff__radio tk-ff__radio--card">
-        <input type="radio" class="radioButton__input" id="currentCard-known" name="currentCard" checked>
-        <label class="radioButton__label" for="currentCard-known">
-            <span class="tk-ov-chip">3528</span>
-            <span class="tk-ov-chip">6543</span>
-            <span class="tk-ov-chip">2345</span>
-            <span class="tk-ov-chip">0038</span>
-        </label>
-        <span class="tk-ff__icon tk-ff__icon--loading tk-ff__icon--card">
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19"><title>loader--small</title><path d="M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z"/><path d="M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z"/></svg>
-        </span>
-        <span class="tk-ff__icon tk-ff__icon--approved tk-ff__icon--card is-active">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.75 8.125"><path d="M3.5,8.125a1,1,0,0,1-.707-.293l-2.5-2.5A1,1,0,0,1,1.707,3.918L3.443,5.654,7.991.349a1,1,0,1,1,1.518,1.3L4.259,7.775a1,1,0,0,1-.72.349Z"/></svg>
-        </span>
+            <div class="g g-m-1-xs gap-2 items-center">
+    <div class="tk-pasfoto is-error js-photo">
+        <div class="txt-c js-photo-empty">
+            <div class="tk-pasfoto__photo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19">
+    <path d="M8.5,10a4.269,4.269,0,0,1-4-4.5v-1A4.269,4.269,0,0,1,8.5,0a4.269,4.269,0,0,1,4,4.5v1A4.269,4.269,0,0,1,8.5,10Zm0-9a3.271,3.271,0,0,0-3,3.5v1A3.271,3.271,0,0,0,8.5,9a3.271,3.271,0,0,0,3-3.5v-1A3.271,3.271,0,0,0,8.5,1Z"/>
+    <path d="M9,19H0V16c0-2.4,2-5.2,4.5-5.2a.5.5,0,1,1,0,1C2.6,11.8,1,14.1,1,16v2H9a.5.5,0,1,1,0,1Z"/>
+    <path d="M17,19H8a.5.5,0,1,1,0-1h8V16c0-1.9-1.6-4.2-3.5-4.2a.5.5,0,0,1,0-1C15,10.8,17,13.6,17,16Z"/>
+</svg>
+            </div>
+            <div class="tk-pasfoto__description js-other-card-photo">
+                Kies of maak foto
+            </div>
+        </div>
+        <div class="tk-pasfoto__description tk-pasfoto__description--filled js-photo-filled is-hidden">
+            Aanpassen
+        </div>
     </div>
-    <div class="radioButton tk-ff__radio mb-0">
-        <input type="radio" class="radioButton__input" id="currentCard-unknown" name="currentCard">
-        <label class="radioButton__label" for="currentCard-unknown">
-            Andere kaart invoeren
-        </label>
-    </div>
-</div>
-<div class="tk-ff tk-ff--ov js-formFieldCard">
-    <div class="tk-ff__ov-lines">
-        <div></div>
-        <span class="tk-ff__ov-line"></span>
-        <span class="tk-ff__ov-line"></span>
-        <span class="tk-ff__ov-line"></span>
-        <div></div>
-    </div>
-    <input class="textInput tk-ff__input" type="text" id="cardNumber">
+    <label class="f14 f-red mxw-250 lh-copy js-photo-error-label">
+        Voor een nieuwe OV-chipkaart hebben we je foto nodig.
+    </label>
 </div>
             <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
             <span class="f-blue">Ingangsdatum bestelling: </span>

@@ -1,49 +1,6 @@
 <div class="tk-choice-selector">
     <h2 class="tk-heading__subtitle">Kies OV&#8209;chipkaart</h2>
 
-    <!-- option 1 -->
-    <div class="tk-choice-selector__item tk-choice-selector__item--inactive">
-        <div class="tk-choice-selector__header">
-            <div>
-                <h3 class="tk-choice-selector__title">Nieuwe OV&#8209;chipkaart</h3>
-                <p class="tk-choice-selector__description">
-                    Niet beschikbaar 
-                    <span class="tk-tooltip js-tooltip">
-                        <span>{% include icons/info--small.svg %}</span>
-                        <span class="tk-tooltip__content js-tooltip-content">
-                            Dit reisproduct kun je helaas alleen bestellen 
-                            als je een persoonlijke OV&#8209;Chipkaart hebt.
-                            <br><br>
-                            Heb jij, of diegene waar je voor bestelt, geen 
-                            persoonlijke OV&#8209;Chipkaart? Bekijk dan de <a class="unlink tk-link">veelgestelde
-                            vragen</a> voor de mogelijkheden.
-                        </span>
-                    </span>
-                </p>
-            </div>
-            <div class="tk-choice-selector__price">
-                <div class="tk-choice-selector__new-price">Gratis</div>
-                <div class="tk-choice-selector__old-price">€ 7,50</div>
-            </div>
-        </div>
-        <div class="tk-choice-selector__content">
-            <div class="tk-choice-selector__divider"></div>
-            {% include pasfoto.html %}
-            <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
-            <span class="f-blue">Ingangsdatum bestelling: </span>
-            <span class="f-grey no-wrap">
-                {{ page.date }}
-                <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
-                    <div class="svg-link">
-                        {% include /icons/edit-s--small.svg %}
-                    </div>
-                    <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
-                </span>
-            </span>
-        </div>
-    </div>
-
-    <!-- option 2 -->
     <div class="tk-choice-selector__item js-cs-item">
         <div class="tk-choice-selector__header">
             <div>
@@ -58,6 +15,47 @@
         <div class="tk-choice-selector__content">
             <div class="tk-choice-selector__divider"></div>
             {% include form/current-card.html %}
+            <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
+            <span class="f-blue">Ingangsdatum bestelling: </span>
+            <span class="f-grey no-wrap">
+                {{ page.date }}
+                <span class="tk-choice-selector__edit js-dp-btn js-dp-bs-btn">
+                    <div class="svg-link">
+                        {% include /icons/edit-s--small.svg %}
+                    </div>
+                    <div class="tk-datepicker-lg tk-datepicker-lg--edit">{% include datepicker.html %}</div>
+                </span>
+            </span>
+        </div>
+    </div>
+
+    <div class="tk-choice-selector__item tk-choice-selector__item--inactive">
+        <div class="tk-choice-selector__header">
+            <div>
+                <h3 class="tk-choice-selector__title">Nieuwe OV&#8209;chipkaart</h3>
+                <p class="tk-choice-selector__description">
+                    Niet beschikbaar
+                    <span class="tk-tooltip js-tooltip">
+                        <span>{% include icons/info--small.svg %}</span>
+                        <span class="tk-tooltip__content js-tooltip-content">
+                            Dit reisproduct kun je helaas alleen bestellen
+                            als je een persoonlijke OV&#8209;Chipkaart hebt.
+                            <br><br>
+                            Heb jij, of diegene waar je voor bestelt, geen
+                            persoonlijke OV&#8209;Chipkaart? Bekijk dan de <a class="unlink tk-link">veelgestelde
+                                vragen</a> voor de mogelijkheden.
+                        </span>
+                    </span>
+                </p>
+            </div>
+            <div class="tk-choice-selector__price">
+                <div class="tk-choice-selector__new-price">Gratis</div>
+                <div class="tk-choice-selector__old-price">€ 7,50</div>
+            </div>
+        </div>
+        <div class="tk-choice-selector__content">
+            <div class="tk-choice-selector__divider"></div>
+            {% include pasfoto.html %}
             <div class="tk-choice-selector__divider mb-2 mb-1-sm"></div>
             <span class="f-blue">Ingangsdatum bestelling: </span>
             <span class="f-grey no-wrap">
