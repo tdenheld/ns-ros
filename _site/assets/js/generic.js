@@ -245,6 +245,15 @@ choiceSelector();
 
 
 
+// full screen payment order check loader
+// ------------------------------------------------------------
+function payment() {
+    const obj = $("js-bank");
+};
+payment();
+
+
+
 // preloader
 // ------------------------------------------------------------	
 function loader() {

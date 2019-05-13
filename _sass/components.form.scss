@@ -50,21 +50,21 @@ $bs-autofill;
 
 .tk-ff__description {
     margin: 7px 0 0;
-    @include font-style(14px, normal, 1.5);
+    @include font(14px, normal, 1.5);
     color: $ns-grey-4;
 }
 
 .tk-ff__error {
     display: none;
     margin: 4px 0 0;
-    @include font-style(14px, normal, 1.5);
+    @include font(14px, normal, 1.5);
     color: $ns-red-alert;
 }
 
 .tk-ff__message {
     display: none;
     margin: 6px 0;
-    @include font-style(14px, bold, 1.5);
+    @include font(14px, bold, 1.5);
     color: $ns-green-sexy;
 }
 
@@ -128,7 +128,7 @@ $bs-autofill;
 
 // ------------------------------------
 .tk-ff__filled {
-    @include font-style(18px, bold, ($button-height - 4));
+    @include font(18px, bold, ($button-height - 4));
     color: $ns-blue;
 }
 
@@ -158,7 +158,7 @@ $bs-autofill;
     display: block;
     margin-bottom: 7px;
     transition: $fade-link;
-    @include font-style(16px, normal, 1.25);
+    @include font(16px, normal, 1.25);
     color: $ns-blue;
 
     @include sm {
@@ -178,7 +178,7 @@ $bs-autofill;
 
 .tk-ff__address-container {
     opacity: 0;
-    @include font-style(16px, bold, 1.5);
+    @include font(16px, bold, 1.5);
     color: $ns-blue;
     transition: $fade-all;
 
@@ -355,7 +355,7 @@ $bs-autofill;
     // styling
     -webkit-appearance: none;
     border: $input-border;
-    @include font-style(18px, bold, 1.25);
+    @include font(18px, bold, 1.25);
     color: $ns-blue;
     transition: $fade-link;
 
@@ -364,7 +364,7 @@ $bs-autofill;
     }
 
     &::placeholder {
-        @include font-style(16px, normal, 1.5);
+        @include font(16px, normal, 1.5);
         color: $ns-grey-6;
     }
 

@@ -543,7 +543,7 @@ function form() {
                     loader.addClass("is-active");
                     setTimeout(() => {
                         window.location = linkLocation;
-                    }, 1500);
+                    }, 1000);
                 };
             } else if (i.prop("required")) {
                 errorMessage.show();

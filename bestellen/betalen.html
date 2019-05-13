@@ -11,10 +11,10 @@ dest: bedankt
 </div>
 <div class="tk-banks">
     {% for banks in site.data.app.banks %}
-    <a href="/bestellen/bedankt" class="tk-link-reset">
+    <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/{{ banks.icon }}.svg" class="w-100" />
-            <div class="tk-banks__title">
+            <div class="tk-banks__title js-bank-title">
                 {{ banks.title }}
             </div>
             <span class="lh-none">
@@ -24,3 +24,5 @@ dest: bedankt
     </a>
     {% endfor %}
 </div>
+
+{% include full-screen-loader.html %}
