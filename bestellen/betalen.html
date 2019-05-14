@@ -4,6 +4,7 @@ heading: Kies je bank
 cta: 'false'
 step: 3
 dest: bedankt
+full-screen-loader: true
 ---
 
 <div class="mb-4 mb-6-sm">
@@ -14,7 +15,7 @@ dest: bedankt
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/{{ banks.icon }}.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 {{ banks.title }}
             </div>
             <span class="lh-none">
@@ -24,5 +25,3 @@ dest: bedankt
     </a>
     {% endfor %}
 </div>
-
-{% include full-screen-loader.html %}

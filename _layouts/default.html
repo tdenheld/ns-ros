@@ -26,12 +26,15 @@
 
 <body>
 
-    {% include header.html %}
-    <div class="content {{ page.content-class }}">
+    {% include header.html class="js-header" %}
+    <div class="content {{ page.content-class }} js-content">
         {{ content }}
     </div>
-    {% include footer-light.html class="bo-t" %}
+    {% include footer-light.html class="bo-t js-footer" %}
 
+    {% if page.full-screen-loader %}
+    {% include full-screen-loader.html class="js-bank-loader" %}
+    {% endif %}
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/ns.generic.min.js"></script>

@@ -26,7 +26,7 @@
 
 <body>
 
-    <header class="header " data-controller="generic/ui/Header" data-noindex="true">
+    <header class="header js-header" data-controller="generic/ui/Header" data-noindex="true">
     <div class="container header__content">
         <a href="#mainContent" class="button header__skiplink" data-controller="generic/ui/SmoothScroll">
         Naar content</a>
@@ -1531,7 +1531,7 @@
         </ul>
     </div>
 </header>
-    <div class="content ">
+    <div class="content  js-content">
          <div class="bg-grey-8 bo-b">
     <div class="container ovr-container mv-0">
         <div class="tk-progress">
@@ -1610,7 +1610,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/abn.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 ABN AMRO
             </div>
             <span class="lh-none">
@@ -1622,7 +1622,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/asn.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 ASN Bank
             </div>
             <span class="lh-none">
@@ -1634,7 +1634,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/bunq.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 bunq
             </div>
             <span class="lh-none">
@@ -1646,7 +1646,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/handelsbanken.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 Handelsbanken
             </div>
             <span class="lh-none">
@@ -1658,7 +1658,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/ing.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 ING
             </div>
             <span class="lh-none">
@@ -1670,7 +1670,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/knab.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 Knab
             </div>
             <span class="lh-none">
@@ -1682,7 +1682,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/moneyou.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 Moneyou
             </div>
             <span class="lh-none">
@@ -1694,7 +1694,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/rabobank.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 Rabobank
             </div>
             <span class="lh-none">
@@ -1706,7 +1706,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/regiobank.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 RegioBank
             </div>
             <span class="lh-none">
@@ -1718,7 +1718,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/sns.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 SNS
             </div>
             <span class="lh-none">
@@ -1730,7 +1730,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/triodos.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 Triodos Bank
             </div>
             <span class="lh-none">
@@ -1742,7 +1742,7 @@
     <a class="tk-link-reset js-bank">
         <div class="tk-banks__item">
             <img src="/assets/img/payment/lanschot.svg" class="w-100" />
-            <div class="tk-banks__title js-bank-title">
+            <div class="tk-banks__title js-bank-set">
                 van Lanschot
             </div>
             <span class="lh-none">
@@ -1750,10 +1750,6 @@
             </span>
         </div>
     </a>
-    
-</div>
-
-<div class="full-screen-loader">
     
 </div>
 
@@ -1842,7 +1838,7 @@
     </div>
 </div>
     </div>
-    <footer class="footer bo-t">
+    <footer class="footer bo-t js-footer">
     <div class="container">
         <div class="grid grid--footer" data-type="bottomfootermenu">
             <div class="grid__unit pv-0">
@@ -1880,6 +1876,18 @@
     </div>
 </footer>
 
+    
+    <div class="full-screen-loader js-bank-loader">
+    <div class="tk-loader tk-loader--full-screen">
+        <div class="txt-c">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><path d="M1.132,8A8.5,8.5,0,0,1,17.868,8h1.014A9.5,9.5,0,0,0,.118,8Z"/><path d="M17.868,11A8.5,8.5,0,0,1,1.132,11H.118a9.5,9.5,0,0,0,18.764,0Z"/></svg>
+            <p class="f-blue mt-1 js-loader-txt">
+                Je bestelling wordt klaargezet
+            </p>
+        </div>
+    </div>
+</div>
+    
 
     <!-- JAVASCRIPT -->
     <script src="/assets/js/ns.generic.min.js"></script>
