@@ -1,33 +1,34 @@
 <div id="currentCardSelect">
-    <div class="radioButton tk-ff__radio tk-ff__radio--card">
-        <input type="radio" class="radioButton__input" id="currentCard-known" name="currentCard" checked>
-        <label class="radioButton__label" for="currentCard-known">
-            <span class="tk-ov-chip">3528</span>
-            <span class="tk-ov-chip">6543</span>
-            <span class="tk-ov-chip">2345</span>
-            <span class="tk-ov-chip">0038</span>
-        </label>
+    <label class="f-blue">Voer OV-chipkaartnummer in</label>
+    <div class="tk-ff tk-ff--ov js-formFieldCard">
+        <div class="tk-ff__ov-lines">
+            <div></div>
+            <span class="tk-ff__ov-line"></span>
+            <span class="tk-ff__ov-line"></span>
+            <span class="tk-ff__ov-line"></span>
+            <div></div>
+        </div>
+        <input autocomplete="off" class="textInput tk-ff__input" type="text" id="cardNumber" value="3528    ">
         <span class="tk-ff__icon tk-ff__icon--loading tk-ff__icon--card">
             {% include /icons/loader--small.svg %}
         </span>
-        <span class="tk-ff__icon tk-ff__icon--approved tk-ff__icon--card is-active">
+        <span class="tk-ff__icon tk-ff__icon--approved tk-ff__icon--card">
             {% include /icons/check-fat--small.svg %}
         </span>
+        <div class="tk-suggest js-suggest is-hidden">
+            <legend class="tk-suggest__label">Suggestie van kaarten op jouw naam</legend>
+            <div class="tk-suggest__item js-suggest-item is-active">
+                {% include icons/card--small.svg %}
+                3528 1141 5467 2449
+            </div>
+            <div class="tk-suggest__item js-suggest-item">
+                {% include icons/card--small.svg %}
+                3528 1181 4594 8445
+            </div>
+            <div class="tk-suggest__item js-suggest-item">
+                {% include icons/card--small.svg %}
+                3528 1181 9113 3478
+            </div>
+        </div>
     </div>
-    <div class="radioButton tk-ff__radio mb-0">
-        <input type="radio" class="radioButton__input" id="currentCard-unknown" name="currentCard">
-        <label class="radioButton__label" for="currentCard-unknown">
-            Andere kaart invoeren
-        </label>
-    </div>
-</div>
-<div class="tk-ff tk-ff--ov js-formFieldCard">
-    <div class="tk-ff__ov-lines">
-        <div></div>
-        <span class="tk-ff__ov-line"></span>
-        <span class="tk-ff__ov-line"></span>
-        <span class="tk-ff__ov-line"></span>
-        <div></div>
-    </div>
-    <input class="textInput tk-ff__input" type="text" id="cardNumber">
 </div>

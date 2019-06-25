@@ -1,0 +1,47 @@
+.tk-suggest {
+    position: absolute;
+    top: calc(100% + 3px);
+    left: -1px;
+    width: calc(100% + 2px);
+    border-radius: 4px;
+    background-color: $ns-white;
+    box-shadow: 0 2px 35px rgba($ns-black, 0.15);
+    border: $input-border;
+    transform-origin: 0 0;
+    z-index: 1;
+}
+
+.tk-suggest__label {
+    @include font(14px, normal, $lh-copy);
+    color: $ns-grey-4;
+    margin: 10px 14px 5px;
+}
+
+.tk-suggest__item {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    line-height: 0;
+    color: $ns-light-blue;
+    transition: $fade-all;
+
+    svg {
+        fill: $ns-blue;
+        margin-right: $half-gutter;
+        transition: $fade-all;
+    }
+
+    &.is-active,
+    &:hover {
+        background-color: $ns-light-blue;
+        color: $ns-white;
+
+        svg {
+            fill: $ns-white;
+        }
+    }
+
+    &:last-child {
+        border-radius: 0 0 4px 4px;
+    }
+}

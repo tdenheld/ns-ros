@@ -468,27 +468,36 @@ function form() {
     // current card selection
     // ----------------------------------------------------------------
     function currentCard() {
-        var obj = "#currentCardSelect";
-        var unkownCard = $("#currentCard-unknown");
-        var knownCard = $("#currentCard-known");
-        var formFieldCard = $(".js-formFieldCard");
-        var input = $(".js-formFieldCard .tk-ff__input");
-        var tick = $(obj + " .tk-ff__icon--approved");
-        var loader = $(obj + " .tk-ff__icon--loading");
+        const obj = "#currentCardSelect";
+        const input = $(".js-formFieldCard .tk-ff__input");
+        const tick = $(obj + " .tk-ff__icon--approved");
+        const loader = $(obj + " .tk-ff__icon--loading");
+        const suggest = $(obj + ' .js-suggest');
+        const item = $(obj + ' .js-suggest-item');
+
+        function spinnerTick() {
+            tick.removeClass("is-active");
+            loader.addClass("is-active");
+            setTimeout(() => {
+                loader.removeClass("is-active");
+                tick.addClass("is-active");
+            }, 500);
+        };
 
         if ($(obj)[0]) {
-            unkownCard.click(() => {
-                formFieldCard.slideDown(150);
-                input.val("3528    ").focus();
-                tick.removeClass("is-active");
+            input.focusin(() => {
+                suggest.slideDown(100);
             });
-            knownCard.click(() => {
-                formFieldCard.slideUp(150);
-                loader.addClass("is-active");
-                setTimeout(() => {
-                    loader.removeClass("is-active");
-                    tick.addClass("is-active");
-                }, 500);
+            input.focusout(() => {
+                suggest.slideUp(100);
+            });
+            item.mouseenter(() => {
+                item.removeClass('is-active');
+            });
+            item.click(() => {
+                input.val('3528     1181      8654      7465');
+                spinnerTick();
+                suggest.slideUp(100);
             });
         };
     };

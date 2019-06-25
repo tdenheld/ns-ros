@@ -121,7 +121,7 @@ $bs-autofill;
 }
 
 .tk-ff__icon--card {
-    top: 1px;
+    top: -33px;
     right: 0;
 }
 
@@ -414,7 +414,6 @@ $bs-autofill;
 // ov-chipcard field
 // -----------------------------------------
 .tk-ff--ov {
-    display: none;
     margin: 10px 0 0 0;
     max-width: 280px;
 
