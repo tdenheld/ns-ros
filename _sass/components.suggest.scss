@@ -8,13 +8,13 @@
     box-shadow: 0 2px 35px rgba($ns-black, 0.15);
     border: $input-border;
     transform-origin: 0 0;
-    z-index: 1;
+    z-index: 400;
 }
 
 .tk-suggest__label {
-    @include font(14px, normal, $lh-copy);
+    @include font(12px, normal, $lh-copy);
     color: $ns-grey-4;
-    margin: 10px 14px 5px;
+    margin: 8px 14px 10px;
 }
 
 .tk-suggest__item {
@@ -41,7 +41,17 @@
         }
     }
 
+    &:first-child {
+        border-radius: 4px 4px 0 0;
+    }
+
     &:last-child {
         border-radius: 0 0 4px 4px;
+    }
+}
+
+#cardNumber {
+    @media(max-width: 361px) {
+        letter-spacing: -0.5px;
     }
 }

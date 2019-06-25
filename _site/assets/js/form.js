@@ -487,17 +487,24 @@ function form() {
         if ($(obj)[0]) {
             input.focusin(() => {
                 suggest.slideDown(100);
-            });
-            input.focusout(() => {
-                suggest.slideUp(100);
+                item.first().addClass('is-active');
             });
             item.mouseenter(() => {
                 item.removeClass('is-active');
             });
             item.click(() => {
-                input.val('3528     1181      8654      7465');
+                if (mobile) {
+                    input.val('3528    1181      8654     7465');
+                } else {
+                    input.val('3528     1181      8654      7465');
+                };
                 spinnerTick();
                 suggest.slideUp(100);
+            });
+            input.focusout(() => {
+                setTimeout(() => {
+                    suggest.slideUp(100);
+                }, 50);
             });
         };
     };
