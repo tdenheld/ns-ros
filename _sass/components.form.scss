@@ -365,7 +365,7 @@ $bs-autofill;
 
     &::placeholder {
         @include font(16px, normal, 1.5);
-        color: $ns-grey-6;
+        color: $ns-grey-4;
     }
 
     &:focus {
