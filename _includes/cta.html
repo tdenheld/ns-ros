@@ -1,4 +1,4 @@
-<a href="/bestellen/{{ page.dest }}" class="js-submit-link {% if page.dest == 'betalen' %}js-submit-loader{% endif %}">
+<a href="/bestellen/{{ page.dest }}" class="unlink js-submit-link {% if page.dest == 'betalen' %}js-submit-loader{% endif %}">
     <button type="submit" class="button button--arrowRight button--nsYellow btn w-100 w-auto-sm js-submit-button">
         <span class="btn__content">{{ page.cta }}</span>
         {% if page.dest == 'betalen' %}

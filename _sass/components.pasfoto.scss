@@ -64,7 +64,7 @@
 }
 
 .tk-pasfoto__description--filled {
-    font-size: calculate-rem(12px);
+    font-size: toRem(12px);
     font-weight: normal;
     text-align: center;
     color: $ns-white;
