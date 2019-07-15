@@ -782,6 +782,10 @@ $tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
     @include sm-max {
         order: 999;
     }
+
+    @include xs {
+        font-size: toRem(16px);
+    }
 }
 
 .tk-loader {
