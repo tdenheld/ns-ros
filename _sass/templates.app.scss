@@ -755,25 +755,11 @@ $tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
     }
 }
 
-.tk-ideal {
-    display: flex;
-}
-
-.tk-ideal__img {
-    margin-right: $half-gutter;
-    width: 26px;
-    align-self: center;
-}
-
 .tk-safe-pay {
     display: flex;
     align-items: center;
     font-size: toRem(14px);
     line-height: $lh-copy;
-
-    p {
-        margin-left: 7px;
-    }
 
     img {
         width: 26px;

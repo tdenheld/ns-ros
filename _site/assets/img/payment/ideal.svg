@@ -2,7 +2,6 @@
     <defs>
         <style>.a{fill:#fff;}.b{fill:#cd0067;}</style>
     </defs>
-    <title>ideal</title>
     <path class="a" d="M.99,1H15.019A6.066,6.066,0,0,1,21.085,7.07h0v5.2a6.066,6.066,0,0,1-6.066,6.066H.99V1Z"/>
     <rect fill="#000" x="2.445" y="10.797" width="3.525" height="5.854"/>
     <circle fill="#000" cx="4.241" cy="7.871" r="1.996"/>
