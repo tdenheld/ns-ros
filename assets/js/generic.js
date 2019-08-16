@@ -67,6 +67,25 @@ $(function () {
 
 
 
+// scroll to
+// ------------------------------------------------------------
+$("a[href^='#'].js-scroll-to").click(function () {
+    var obj = {
+        element: $($.attr(this, "href")),
+        offst: $(".header").height() + 28,
+    };
+    TweenMax.to(window, .8, {
+        ease: Power3.easeInOut,
+        scrollTo: {
+            y: obj.element,
+            offsetY: obj.offst,
+            autoKill: false,
+        }
+    });
+    return false;
+});
+
+
 
 // sticky receipt
 // ------------------------------------------------------------
