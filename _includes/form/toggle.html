@@ -3,17 +3,17 @@
         {{ include.title | capitalize }}
     </div>
     <div>
-        <div class="tk-toggle">
-            <div class="toggleButton w-100">
+        <div class="toggle">
+            <div class="toggleButton">
                 <input type="radio" class="toggleButton__input tk-ff__input" id="{{ include.option1 }}"
                     name="{{ include.title }}" value="man" {{ include.required }}>
-                <label class="toggleButton__label tk-toggle__label" for="{{ include.option1 }}"
+                <label class="toggleButton__label" for="{{ include.option1 }}"
                     tabindex="-1">{{ include.option1 | capitalize }}</label>
             </div>
-            <div class="toggleButton w-100">
+            <div class="toggleButton">
                 <input type="radio" class="toggleButton__input tk-ff__input" id="{{ include.option2 }}"
                     name="{{ include.title }}" value="vrouw">
-                <label class="toggleButton__label tk-toggle__label" for="{{ include.option2 }}"
+                <label class="toggleButton__label" for="{{ include.option2 }}"
                     tabindex="-1">{{ include.option2 | capitalize }}</label>
             </div>
         </div>
