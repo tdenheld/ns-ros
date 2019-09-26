@@ -546,17 +546,15 @@ function form() {
     function submitButton(i, e) {
         var obj = $(".js-submit-link");
         var btn = $(".js-submit-button");
-        var loader = $(".js-submit-loader-icon");
         var errorMessage = new DisplayError(i, e);
 
         obj.click((event) => {
             event.preventDefault();
             if (submit) {
-                if (!obj.hasClass("js-submit-loader")) {
+                if (!obj.attr('data-loader')) {
                     window.location = linkLocation;
                 } else {
                     btn.addClass("is-loading");
-                    loader.addClass("is-active");
                     setTimeout(() => {
                         window.location = linkLocation;
                     }, 1000);

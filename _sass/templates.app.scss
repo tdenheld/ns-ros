@@ -483,7 +483,7 @@ $tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
 
 // banks
 // --------------------------------------------
-.tk-banks {
+.banks {
     display: grid;
 
     @include sm {
@@ -496,7 +496,7 @@ $tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
     }
 }
 
-.tk-banks__item {
+.banks__item {
     //layout
     overflow: hidden;
     display: grid;
@@ -521,21 +521,21 @@ $tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
     }
 }
 
-.tk-banks__item--radio {
+.banks__item--radio {
     grid-template-columns: max-content 1fr 36px;
 
     &.is-active {
-        .tk-banks__radio:before {
+        .banks__radio:before {
             opacity: 1;
         }
     }
 }
 
-.tk-banks__title {
+.banks__title {
     color: $ns-blue;
 }
 
-.tk-banks__radio {
+.banks__radio {
     position: relative;
     width: 20px;
     height: 20px;
@@ -557,7 +557,7 @@ $tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
 }
 
 .no-touch {
-    .tk-banks__item:hover {
+    .banks__item:hover {
         box-shadow: 0 2px 28px rgba($ns-black, 0.1);
     }
 }
@@ -573,10 +573,6 @@ $tick-grey: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' vi
     margin-bottom: $gutter;
     @include font(16px, normal, 1.5);
     color: $ns-grey;
-
-    a {
-        @extend .tk-link;
-    }
 
     blue {
         font-weight: bold;

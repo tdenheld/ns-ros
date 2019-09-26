@@ -67,11 +67,11 @@ date: "24-02-2019"
                     <div class="mb-4 mb-6-sm">
                         {% include safe-pay.html %}
                     </div>
-                    <div class="tk-banks">
+                    <div class="banks">
                         {% for banks in site.data.app.banks %}
-                        <div class="tk-banks__item tk-banks__item--radio js-radio">
-                            <div class="tk-banks__radio"></div>
-                            <div class="tk-banks__title">
+                        <div class="banks__item banks__item--radio js-radio">
+                            <div class="banks__radio"></div>
+                            <div class="banks__title">
                                 {{ banks.title }}
                             </div>
                             <img src="/assets/img/payment/{{ banks.icon }}.svg" class="w-100" />
