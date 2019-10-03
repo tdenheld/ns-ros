@@ -4,21 +4,22 @@
     </div>
 
     <div>
-        <div class="tk-ff__input-container {{ include.width }} mb-1">
-            <ul class="list formfield__inputGroup">
-                <li class="list__item formfield__inputGroupItem">
+        <div class="tk-ff__input-container {{ include.width }} {% unless include.1row %}mb-1{% endunless %}">
+            <ul class="list formfield__inputGroup {% if include.1row %}g g-m-m col-gap-4{% endif %}">
+                <li class="list__item {% unless include.1row %}formfield__inputGroupItem{% endunless %}">
                     <div class="radioButton">
-                        <input type="radio" class="radioButton__input tk-ff__input" id="{{ include.option1 }}"
-                            name="{{ include.title }}" {{ include.required }}>
-                        <label class="radioButton__label" for="{{ include.option1 }}"
+                        <input type="radio" class="radioButton__input tk-ff__input"
+                            id="{{ include.option1 | remove: '.' }}" name="{{ include.title }}"
+                            {{ include.required }}>
+                        <label class="radioButton__label" for="{{ include.option1 | remove: '.' }}"
                             tabindex="-1">{{ include.option1 | capitalize }}</label>
                     </div>
                 </li>
-                <li class="list__item formfield__inputGroupItem">
+                <li class="list__item {% unless include.1row %}formfield__inputGroupItem{% endunless %}">
                     <div class="radioButton">
-                        <input type="radio" class="radioButton__input tk-ff__input" id="{{ include.option2 }}"
-                            name="{{ include.title }}">
-                        <label class="radioButton__label" for="{{ include.option2 }}"
+                        <input type="radio" class="radioButton__input tk-ff__input"
+                            id="{{ include.option2 | remove: '.' }}" name="{{ include.title }}">
+                        <label class="radioButton__label" for="{{ include.option2 | remove: '.' }}"
                             tabindex="-1">{{ include.option2 | capitalize }}</label>
                     </div>
                 </li>
