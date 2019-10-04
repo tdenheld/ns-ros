@@ -226,7 +226,7 @@ function choiceSelector() {
     const obj = ".js-cs-item";
     const toggleClass = "is-selected";
     const initID = "#js-cs-item-1"; // set default on current card
-    const content = ".tk-choice-selector__content";
+    const content = ".selector__content";
 
     function updatePrice() {
         const obj = ".js-update-price";
