@@ -1,26 +1,25 @@
 <div class="tk-other mb-6 mb-8-sm">
     <div class="tk-other__switch">
-        <label class="tk-other__label js-other-label">Ik bestel dit voor mijn kind</label>
+        <label class="tk-other__label js-other-label">Ik bestel voor mijn kind</label>
         <div class="switch js-other-switch"></div>
     </div>
     <div class="mb-4 js-other-margin is-hidden"></div>
     <form class="tk-other__form js-other-form is-hidden mb-2">
-        {% include /form/input-field.html
-        title="geboortedatum"
-        id-extra="-kind"
-        error="Vul je geboortedatum in (dd-mm-jjjj)"
-        type="text"
-        placeholder="dd-mm-jjjj"
-        class="date-child" maxlength="10"
+        {% include /form/radio.html
+        title="Geslacht"
+        option1="Jongen"
+        option2="Meisje"
+        error="Vul je gelsacht in."
         required="required"
-        width="mxw-200"
+        1row="true"
         %}
-        
+
         {% include /form/input-field.html
-        title="voornaam"
-        error="Vul je voornaam in"
+        title="voorletters"
+        error="Vul de voorletters van je kind in"
         type="text" class="default"
         required="required"
+        width="mxw-150"
         %}
 
         {% include /form/input-field.html
@@ -31,10 +30,21 @@
 
         {% include /form/input-field.html
         title="achternaam"
-        error="Vul je achternaam in"
+        error="Vul de achternaam van je kind in"
         type="text"
         class="default"
         required="required"
+        %}
+
+        {% include /form/input-field.html
+        title="geboortedatum"
+        id-extra="-kind"
+        error="Vul de geboortedatum van je kind in (dd-mm-jjjj)"
+        type="text"
+        placeholder="dd-mm-jjjj"
+        class="date-child" maxlength="10"
+        required="required"
+        width="mxw-200"
         %}
     </form>
 </div>
