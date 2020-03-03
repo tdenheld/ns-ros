@@ -255,7 +255,20 @@ function choiceSelector() {
                 $(content).slideUp(time);
                 $(content, this).slideDown(time);
                 updatePrice();
-            };
+            }
+
+            if ($('#js-cs-item-0').hasClass(toggleClass)) {
+                $('.js-cs-ovchip').slideDown(200);
+                $('.js-cs-ovchip-line').css({
+                    'border-bottom': '1px solid #e6e6e8',
+                    'height': '2px',
+                });
+            } else {
+                $('.js-cs-ovchip').slideUp(200);
+                $('.js-cs-ovchip-line').css({
+                    'border-bottom': '2px solid #003082'
+                });
+            }
         });
     };
 };

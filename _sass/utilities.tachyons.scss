@@ -795,7 +795,7 @@
 .f-grey-7 {color: $ns-grey-7;}
 .f-grey-8 {color: $ns-grey-8;} 
 
-// font weights
+// font weights, decoration
 // ----------------------------------------------------------------------
 .fw-normal {font-weight: normal;}
 .fw-b {font-weight: bold;}
@@ -805,6 +805,8 @@
 		font-weight: $weight;
 	}
 }
+
+.td-lt { text-decoration: line-through; }
 
 // word wraps
 // ----------------------------------------------------------------------
