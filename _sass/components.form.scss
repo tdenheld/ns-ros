@@ -197,12 +197,8 @@ $bs-autofill;
 
 // radio button
 // ------------------------------------
-.tk-ff__radio {
+.ff-radio:not(:last-of-type) {
     margin-bottom: 10px;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
 }
 
 .tk-ff__radio--card {
@@ -210,27 +206,37 @@ $bs-autofill;
     max-width: 280px;
 }
 
-.radioButton__input+.radioButton__label:before {
+// button
+.radioButton__label:before {
     outline: none !important;
     border: $input-border;
     transition: $fade-link;
 }
 
-.radioButton__input:focus+.radioButton__label:before {
-    border: 1px solid $ns-light-blue !important;
-    box-shadow: $bs-focus;
-}
-
-.radioButton__input.is-error+.radioButton__label:before {
-    border: 1px solid $ns-red-alert !important;
-}
-
-.radioButton__input:checked+.radioButton__label:after {
+.radioButton__label:after {
     background-color: $ns-green-sexy;
+    transition: $fade-all;
+    transform: scale(0);
 }
 
-.no-touch {
-    .radioButton__input:hover+.radioButton__label:before {
+// input
+.radioButton__input {
+    &:checked+.radioButton__label:after {
+        background-color: $ns-green-sexy;
+        transition: $fade-all;
+        transform: scale(1);
+    }
+
+    &.is-error+.radioButton__label:before {
+        border: 1px solid $ns-red-alert;
+    }
+
+    &:focus+.radioButton__label:before {
+        border: 1px solid $ns-light-blue;
+        box-shadow: $bs-focus;
+    }
+
+    &:hover:not(:focus)+.radioButton__label:before {
         border: $input-border-hover;
     }
 }
@@ -241,39 +247,51 @@ $bs-autofill;
 // checkbox
 // ------------------------------------
 .tk-ff__checkbox {
-    .checkbox__label:after {
-        border: none;
-        transform: none;
-        width: 14px;
-        height: 14px;
-        top: 5px;
-        left: 3px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.25 7.626'%3E%3Cpath fill='%23ffffff' d='M3.25,7.626a.747.747,0,0,1-.53-.22l-2.5-2.5A.75.75,0,1,1,1.28,3.845L3.208,5.773,7.931.262a.75.75,0,1,1,1.138.977L3.819,7.364a.75.75,0,0,1-.54.261Z'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        transition: $fade-all;
-        transform: scale(0);
-        transform-origin: 30% 70%;
-        opacity: 1;
+    .checkbox__label {
+        &:after {
+            border: none;
+            transform: none;
+            width: 14px;
+            height: 14px;
+            top: 5px;
+            left: 3px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.25 7.626'%3E%3Cpath fill='%23ffffff' d='M3.25,7.626a.747.747,0,0,1-.53-.22l-2.5-2.5A.75.75,0,1,1,1.28,3.845L3.208,5.773,7.931.262a.75.75,0,1,1,1.138.977L3.819,7.364a.75.75,0,0,1-.54.261Z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            transition: $fade-all;
+            transform: scale(0);
+            transform-origin: 30% 70%;
+            opacity: 1;
+        }
+
+        &:before {
+            border: $input-border;
+            transition: $fade-link;
+        }
     }
 
-    .checkbox__label:before {
-        border: $input-border;
-        transition: $fade-link;
-    }
+    .checkbox__input {
+        &:checked+.checkbox__label:before {
+            border-color: $ns-green-sexy;
+            background-color: $ns-green-sexy;
+        }
 
-    .checkbox__input:checked+.checkbox__label:before {
-        border-color: $ns-green-sexy;
-        background-color: $ns-green-sexy;
-    }
+        &:checked+.checkbox__label:after {
+            transform: scale(1);
+        }
 
-    .checkbox__input:checked+.checkbox__label:after {
-        transform: scale(1);
-    }
+        &.is-error+.checkbox__label:before {
+            border-color: $ns-red-alert;
+        }
 
+        &:focus+.checkbox__label:before {
+            border-color: $ns-light-blue;
+            box-shadow: $bs-focus;
+        }
 
-    .checkbox__input.is-error+.checkbox__label:before {
-        border-color: $ns-red-alert;
+        &:hover:not(:focus, :checked)+.checkbox__label:before {
+            border: $input-border-hover;
+        }
     }
 
     // remove focus outline
@@ -282,11 +300,6 @@ $bs-autofill;
     .checkbox__input+.checkbox__label:before,
     .checkbox__input:checked+.checkbox__label:before {
         outline: none;
-    }
-
-    .checkbox__input:focus+.checkbox__label:before {
-        border-color: $ns-light-blue;
-        box-shadow: $bs-focus;
     }
 }
 
