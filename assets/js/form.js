@@ -494,9 +494,9 @@ function form() {
             });
             item.click(() => {
                 if (mobile) {
-                    input.val('3528    1181      8654     7465');
+                    input.val('3528      1181        8654       7465');
                 } else {
-                    input.val('3528     1181      8654      7465');
+                    input.val('3528       1181        8654       7465');
                 };
                 spinnerTick();
                 suggest.slideUp(100);

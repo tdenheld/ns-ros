@@ -128,7 +128,7 @@ $bs-autofill;
 
 // ------------------------------------
 .tk-ff__filled {
-    @include font(18px, bold, ($button-height - 4));
+    @include font(16px, bold, ($button-height - 4));
     color: $ns-blue;
 }
 
@@ -380,7 +380,7 @@ $bs-autofill;
     // styling
     -webkit-appearance: none;
     border: $input-border;
-    @include font(18px, bold, 1.25);
+    @include font(16px, bold, 1.25);
     color: $ns-blue;
     transition: $fade-link;
 
